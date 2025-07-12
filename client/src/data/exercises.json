@@ -18,5 +18,21 @@
   { "id": "flutter-kicks", "name": "Flutter Kicks", "category": "Advanced", "duration": "1 min", "rest": "30 sec", "description": "Core exercise that targets lower abdominals and hip flexors." },
   { "id": "calf-raises", "name": "Calf Raises", "category": "Light", "reps": "20", "rest": "30 sec", "description": "Lower leg exercise that strengthens calf muscles." },
   { "id": "side-lunges", "name": "Side Lunges", "category": "Moderate", "reps": "10 each side", "rest": "45 sec", "description": "Lateral movement exercise that targets inner and outer thighs." },
-  { "id": "bear-crawl", "name": "Bear Crawl", "category": "Advanced", "duration": "30 sec", "rest": "60 sec", "description": "Full-body exercise that improves coordination and strength." }
+  { "id": "bear-crawl", "name": "Bear Crawl", "category": "Advanced", "duration": "30 sec", "rest": "60 sec", "description": "Full-body exercise that improves coordination and strength." },  
+  { "id": "knee-push-ups", "name": "Knee Push-Ups", "category": "Light", "reps": "12–15", "rest": "30 sec", "description": "Modified push-up for beginners focusing on chest and arms." },
+  { "id": "march-in-place", "name": "March in Place", "category": "Light", "duration": "2 min", "rest": "30 sec", "description": "Gentle cardio movement ideal for warming up or cool down." },
+  { "id": "seated-leg-extensions", "name": "Seated Leg Extensions", "category": "Light", "reps": "15 each leg", "rest": "30 sec", "description": "Strengthens quadriceps while seated." },
+  { "id": "cat-cow-stretch", "name": "Cat-Cow Stretch", "category": "Light", "duration": "1 min", "rest": "30 sec", "description": "Gentle spinal mobility stretch improving flexibility." },
+  { "id": "donkey-kicks", "name": "Donkey Kicks", "category": "Moderate", "reps": "12 each leg", "rest": "45 sec", "description": "Glute-focused exercise improving lower body strength." },
+  { "id": "reverse-crunches", "name": "Reverse Crunches", "category": "Moderate", "reps": "15", "rest": "45 sec", "description": "Abdominal exercise emphasizing lower abs." },
+  { "id": "inchworms", "name": "Inchworms", "category": "Moderate", "reps": "8–10", "rest": "45 sec", "description": "Dynamic stretch and strength exercise for full body." },
+  { "id": "single-leg-glute-bridge", "name": "Single Leg Glute Bridge", "category": "Moderate", "reps": "10 each leg", "rest": "45 sec", "description": "Challenging glute and hamstring isolation movement." },
+  { "id": "jump-squats", "name": "Jump Squats", "category": "Advanced", "reps": "12", "rest": "60 sec", "description": "Plyometric squat variation improving power and explosiveness." },
+  { "id": "pike-push-ups", "name": "Pike Push-Ups", "category": "Advanced", "reps": "8–12", "rest": "60 sec", "description": "Shoulder-focused push-up variation increasing upper body strength." },
+  { "id": "plank-to-push-up", "name": "Plank to Push-Up", "category": "Advanced", "reps": "10", "rest": "60 sec", "description": "Core and upper body exercise improving stability and strength." },
+  { "id": "jump-lunges", "name": "Jump Lunges", "category": "Advanced", "reps": "10 each leg", "rest": "60 sec", "description": "Explosive lunge variation building strength and balance." },
+  { "id": "handstand-hold", "name": "Handstand Hold", "category": "Advanced", "duration": "20–30 sec", "rest": "60 sec", "description": "Upper body and core strength exercise that challenges balance." },
+  { "id": "plank-jacks", "name": "Plank Jacks", "category": "Advanced", "duration": "1 min", "rest": "45 sec", "description": "Cardio and core exercise combining plank with jumping legs." },
+  { "id": "cross-body-mountain-climbers", "name": "Cross-Body Mountain Climbers", "category": "Advanced", "duration": "1 min", "rest": "45 sec", "description": "Core-intense variation of mountain climbers targeting obliques." },
+  { "id": "broad-jumps", "name": "Broad Jumps", "category": "Advanced", "reps": "8–10", "rest": "60 sec", "description": "Powerful plyometric jump for lower body explosiveness." }
 ]
