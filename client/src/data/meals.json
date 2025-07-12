@@ -1,272 +1,254 @@
 [
   {
-    "id": "jollof-rice",
-    "name": "Jollof Rice",
-    "description": "Spiced tomato-based rice dish popular across West Africa.",
-    "ingredients": ["rice", "tomatoes", "onions", "pepper", "vegetable oil", "spices"],
-    "calories": 450,
-    "additionalInfo": "Served at parties and family meals. High in carbohydrates.",
+    "id": "bobotie",
+    "name": "Bobotie",
+    "description": "Spiced minced meat baked with egg custard topping.",
+    "ingredients": ["minced beef", "onions", "egg", "milk", "spices"],
+    "calories": 350,
+    "additionalInfo": "South African classic, often served with yellow rice.",
     "category": "lunch"
   },
   {
-    "id": "egusi-soup",
-    "name": "Egusi Soup",
-    "description": "Thick soup made with ground melon seeds, vegetables, and meat.",
-    "ingredients": ["melon seeds", "spinach", "meat or fish", "palm oil", "pepper", "seasonings"],
-    "calories": 600,
-    "additionalInfo": "Often served with pounded yam. Rich in protein and fat.",
+    "id": "snoek-braai",
+    "name": "Snoek Braai",
+    "description": "Grilled snoek fish over open fire with apricot glaze.",
+    "ingredients": ["snoek fish", "apricot jam", "spices", "lemon"],
+    "calories": 300,
+    "additionalInfo": "Popular coastal dish, high in protein.",
     "category": "dinner"
   },
   {
-    "id": "fufu",
-    "name": "Fufu",
-    "description": "Soft dough made from cassava, yam, or plantain, served with soup.",
-    "ingredients": ["cassava", "yam", "plantain"],
-    "calories": 300,
-    "additionalInfo": "Staple side dish, eaten with hands.",
-    "category": "lunch"
-  },
-  {
-    "id": "moi-moi",
-    "name": "Moi Moi",
-    "description": "Steamed bean pudding made from ground peeled beans.",
-    "ingredients": ["black-eyed peas", "onions", "pepper", "oil", "seasonings"],
+    "id": "biltong-salad",
+    "name": "Biltong Salad",
+    "description": "Green salad topped with slices of cured beef.",
+    "ingredients": ["lettuce", "biltong", "tomatoes", "cucumber", "vinaigrette"],
     "calories": 250,
-    "additionalInfo": "Low in fat, high in protein. Common at breakfast.",
-    "category": "breakfast"
+    "additionalInfo": "Light and high-protein.",
+    "category": "lunch"
   },
   {
-    "id": "grilled-tilapia-attieke",
-    "name": "Grilled Tilapia with Attiéké",
-    "description": "Spicy grilled fish served with cassava couscous.",
-    "ingredients": ["tilapia", "cassava", "onions", "pepper", "spices"],
+    "id": "boerewors-skewer",
+    "name": "Boerewors Skewers",
+    "description": "Grilled South African sausage on skewers with veggies.",
+    "ingredients": ["boerewors", "peppers", "onions", "spices"],
     "calories": 400,
-    "additionalInfo": "Very popular in Côte d'Ivoire.",
+    "additionalInfo": "Lean sausage can be used to reduce calories.",
     "category": "dinner"
   },
   {
-    "id": "peanut-stew",
-    "name": "Peanut Stew",
-    "description": "Savory peanut-based stew with meat and vegetables.",
-    "ingredients": ["peanuts", "tomatoes", "onions", "meat", "spinach", "spices"],
-    "calories": 550,
-    "additionalInfo": "Rich and filling. High in protein and fat.",
-    "category": "dinner"
-  },
-  {
-    "id": "kelewele",
-    "name": "Kelewele",
-    "description": "Fried spicy plantain cubes.",
-    "ingredients": ["ripe plantains", "ginger", "pepper", "oil", "spices"],
-    "calories": 300,
-    "additionalInfo": "Street snack. High in carbs and fat.",
-    "category": "snack"
-  },
-  {
-    "id": "alloco",
-    "name": "Alloco",
-    "description": "Fried plantains served with spicy sauce and sometimes fish.",
-    "ingredients": ["ripe plantains", "onions", "pepper", "oil"],
-    "calories": 350,
-    "additionalInfo": "Common street food in Côte d'Ivoire.",
-    "category": "snack"
-  },
-  {
-    "id": "abacha",
-    "name": "Abacha (African Salad)",
-    "description": "Cassava salad mixed with vegetables and fish.",
-    "ingredients": ["cassava", "garden eggs", "fish", "oil", "pepper", "spices"],
-    "calories": 400,
-    "additionalInfo": "Often eaten as a light lunch.",
+    "id": "chakalaka",
+    "name": "Chakalaka",
+    "description": "Spicy vegetable relish made with carrots, beans, and peppers.",
+    "ingredients": ["carrots", "beans", "onions", "peppers", "spices"],
+    "calories": 200,
+    "additionalInfo": "Vegan-friendly, served with meat or pap.",
     "category": "lunch"
   },
   {
-    "id": "yam-porridge",
-    "name": "Yam Porridge",
-    "description": "Cooked yam chunks in a flavorful tomato sauce.",
-    "ingredients": ["yam", "tomatoes", "onions", "oil", "spinach"],
-    "calories": 350,
-    "additionalInfo": "Comfort food. Moderate calories.",
-    "category": "lunch"
-  },
-  {
-    "id": "cassava-leaves-stew",
-    "name": "Cassava Leaves Stew",
-    "description": "Stew made from ground cassava leaves and meat.",
-    "ingredients": ["cassava leaves", "meat", "oil", "pepper", "onions"],
-    "calories": 500,
-    "additionalInfo": "Rich in fiber and iron.",
-    "category": "dinner"
-  },
-  {
-    "id": "banku-okro",
-    "name": "Banku & Okro Soup",
-    "description": "Fermented corn & cassava dough with okra-based soup.",
-    "ingredients": ["corn", "cassava", "okra", "meat or fish", "spices"],
-    "calories": 600,
-    "additionalInfo": "Sticky texture. High in fiber and carbs.",
-    "category": "dinner"
-  },
-  {
-    "id": "akara",
-    "name": "Akara",
-    "description": "Deep-fried bean cakes.",
-    "ingredients": ["black-eyed peas", "onions", "pepper", "oil"],
-    "calories": 300,
-    "additionalInfo": "Breakfast or snack. Protein-rich.",
-    "category": "breakfast"
-  },
-  {
-    "id": "attieke",
-    "name": "Attiéké",
-    "description": "Fermented cassava granules similar to couscous.",
-    "ingredients": ["cassava"],
-    "calories": 350,
-    "additionalInfo": "Staple in Côte d'Ivoire. Often paired with fish.",
-    "category": "lunch"
-  },
-  {
-    "id": "suya",
-    "name": "Suya",
-    "description": "Spicy skewered meat grilled over open flames.",
-    "ingredients": ["beef", "peanut spice mix", "onions"],
-    "calories": 450,
-    "additionalInfo": "Popular Nigerian street food. High in protein.",
-    "category": "snack"
-  },
-  {
-    "id": "puff-puff",
-    "name": "Puff-Puff",
-    "description": "Sweet deep-fried dough balls.",
-    "ingredients": ["flour", "sugar", "yeast", "oil"],
+    "id": "grilled-ostrich",
+    "name": "Grilled Ostrich Steak",
+    "description": "Lean ostrich steak grilled and served with greens.",
+    "ingredients": ["ostrich steak", "spices", "olive oil", "lemon"],
     "calories": 250,
-    "additionalInfo": "Dessert or snack. High in carbs.",
+    "additionalInfo": "High in protein, very lean meat.",
+    "category": "dinner"
+  },
+  {
+    "id": "gem-squash",
+    "name": "Stuffed Gem Squash",
+    "description": "Baked gem squash filled with spiced vegetables.",
+    "ingredients": ["gem squash", "tomatoes", "spinach", "spices"],
+    "calories": 150,
+    "additionalInfo": "Low-carb vegetarian option.",
+    "category": "lunch"
+  },
+  {
+    "id": "waterblommetjiebredie",
+    "name": "Waterblommetjie Bredie",
+    "description": "Stew of waterblommetjies (pondweed flowers) and lamb.",
+    "ingredients": ["lamb", "waterblommetjies", "onions", "spices"],
+    "calories": 350,
+    "additionalInfo": "Traditional Cape dish, fiber-rich.",
+    "category": "dinner"
+  },
+  {
+    "id": "pap-chakalaka",
+    "name": "Pap & Chakalaka",
+    "description": "Maize porridge served with spicy vegetable relish.",
+    "ingredients": ["maize", "beans", "peppers", "spices"],
+    "calories": 300,
+    "additionalInfo": "Staple, high fiber.",
+    "category": "lunch"
+  },
+  {
+    "id": "grilled-kudu",
+    "name": "Grilled Kudu",
+    "description": "Lean game meat grilled with herbs.",
+    "ingredients": ["kudu", "spices", "lemon", "olive oil"],
+    "calories": 300,
+    "additionalInfo": "Low fat, high in iron.",
+    "category": "dinner"
+  },
+  {
+    "id": "spinach-mieliepap",
+    "name": "Spinach & Mieliepap",
+    "description": "Cornmeal porridge served with sautéed spinach.",
+    "ingredients": ["mielie meal", "spinach", "onions", "spices"],
+    "calories": 250,
+    "additionalInfo": "Balanced and filling.",
+    "category": "lunch"
+  },
+  {
+    "id": "avocado-salad",
+    "name": "Avocado & Tomato Salad",
+    "description": "Fresh tomatoes and avocados with herbs.",
+    "ingredients": ["avocado", "tomato", "onion", "lemon", "herbs"],
+    "calories": 200,
+    "additionalInfo": "Healthy fats and fiber.",
+    "category": "lunch"
+  },
+  {
+    "id": "samp-beans",
+    "name": "Samp & Beans",
+    "description": "Slow-cooked maize kernels and beans.",
+    "ingredients": ["samp", "beans", "onions", "spices"],
+    "calories": 350,
+    "additionalInfo": "Hearty vegetarian dish.",
+    "category": "lunch"
+  },
+  {
+    "id": "tomato-bredie",
+    "name": "Tomato Bredie",
+    "description": "Stew of lamb and tomatoes with mild spices.",
+    "ingredients": ["lamb", "tomatoes", "onions", "spices"],
+    "calories": 350,
+    "additionalInfo": "Comforting Cape Malay dish.",
+    "category": "dinner"
+  },
+  {
+    "id": "bunny-chow",
+    "name": "Mini Bunny Chow",
+    "description": "Small portion of hollow bread filled with spicy curry.",
+    "ingredients": ["bread", "curry", "chicken", "spices"],
+    "calories": 400,
+    "additionalInfo": "Half-portion for lower carbs.",
+    "category": "lunch"
+  },
+  {
+    "id": "periperi-chicken",
+    "name": "Peri-Peri Chicken",
+    "description": "Spicy grilled chicken marinated in chili sauce.",
+    "ingredients": ["chicken", "peri-peri sauce", "spices", "lemon"],
+    "calories": 350,
+    "additionalInfo": "Fiery and lean.",
+    "category": "dinner"
+  },
+  {
+    "id": "pickled-fish",
+    "name": "Cape Pickled Fish",
+    "description": "Fish marinated in sweet and sour curry sauce.",
+    "ingredients": ["fish", "vinegar", "onions", "spices"],
+    "calories": 300,
+    "additionalInfo": "Eaten cold, light yet flavorful.",
+    "category": "lunch"
+  },
+  {
+    "id": "butternut-soup",
+    "name": "Butternut Soup",
+    "description": "Creamy roasted butternut soup with mild spices.",
+    "ingredients": ["butternut", "onions", "spices", "cream (optional)"],
+    "calories": 200,
+    "additionalInfo": "Velvety and low-calorie.",
+    "category": "lunch"
+  },
+  {
+    "id": "roosterkoek",
+    "name": "Roosterkoek",
+    "description": "Grilled bread rolls cooked over coals.",
+    "ingredients": ["flour", "yeast", "salt", "water"],
+    "calories": 300,
+    "additionalInfo": "Best eaten with light toppings.",
     "category": "snack"
   },
   {
-    "id": "garri",
-    "name": "Garri",
-    "description": "Granulated cassava eaten with soups or as a drink.",
-    "ingredients": ["cassava"],
+    "id": "cabbage-bredie",
+    "name": "Cabbage Bredie",
+    "description": "Stew made with cabbage, meat, and mild spices.",
+    "ingredients": ["cabbage", "lamb", "onions", "spices"],
     "calories": 300,
-    "additionalInfo": "Light and versatile. High in carbs.",
-    "category": "lunch"
-  },
-  {
-    "id": "beans-fried-plantain",
-    "name": "Beans & Fried Plantain",
-    "description": "Stewed beans served with fried plantain.",
-    "ingredients": ["beans", "plantain", "oil", "onions", "pepper"],
-    "calories": 400,
-    "additionalInfo": "Good balance of protein and carbs.",
-    "category": "lunch"
-  },
-  {
-    "id": "coconut-rice",
-    "name": "Coconut Rice",
-    "description": "Rice cooked in coconut milk with spices.",
-    "ingredients": ["rice", "coconut milk", "onions", "pepper", "oil"],
-    "calories": 450,
-    "additionalInfo": "Creamy and aromatic. High in fat.",
-    "category": "lunch"
-  },
-  {
-    "id": "grilled-chicken",
-    "name": "Grilled Chicken",
-    "description": "Spicy marinated chicken roasted over fire.",
-    "ingredients": ["chicken", "spices", "oil"],
-    "calories": 400,
-    "additionalInfo": "Lean protein. Popular at parties.",
+    "additionalInfo": "Fiber-rich and filling.",
     "category": "dinner"
   },
   {
-    "id": "fufu-okra-soup",
-    "name": "Fufu with Okra Soup",
-    "description": "Fufu served with slimy okra-based soup.",
-    "ingredients": ["cassava", "okra", "meat", "spices"],
-    "calories": 500,
-    "additionalInfo": "Traditional and filling.",
-    "category": "dinner"
-  },
-  {
-    "id": "peanut-butter-soup",
-    "name": "Peanut Butter Soup",
-    "description": "Soup made with ground peanuts and meat.",
-    "ingredients": ["peanuts", "meat", "onions", "spices"],
-    "calories": 550,
-    "additionalInfo": "Creamy and rich in protein.",
-    "category": "dinner"
-  },
-  {
-    "id": "okra-soup",
-    "name": "Okra Soup",
-    "description": "Soup made mainly from chopped okra and spices.",
-    "ingredients": ["okra", "meat", "onions", "spices"],
+    "id": "grilled-warhog",
+    "name": "Grilled Warthog",
+    "description": "Game meat grilled and served with greens.",
+    "ingredients": ["warthog", "spices", "olive oil", "lemon"],
     "calories": 300,
-    "additionalInfo": "Low calorie and fiber-rich.",
+    "additionalInfo": "Low in fat, unique flavor.",
     "category": "dinner"
   },
   {
-    "id": "vegetable-stew",
-    "name": "Vegetable Stew",
-    "description": "Tomato-based stew packed with green vegetables.",
-    "ingredients": ["spinach", "tomatoes", "onions", "oil", "meat"],
-    "calories": 350,
-    "additionalInfo": "Nutrient-rich. Often served with rice or fufu.",
-    "category": "dinner"
-  },
-  {
-    "id": "grilled-fish",
-    "name": "Grilled Fish",
-    "description": "Whole fish marinated and grilled.",
-    "ingredients": ["fish", "onions", "spices", "oil"],
-    "calories": 350,
-    "additionalInfo": "Lean protein. Popular street food.",
-    "category": "dinner"
-  },
-  {
-    "id": "fried-rice",
-    "name": "Fried Rice",
-    "description": "Rice stir-fried with vegetables and meat.",
-    "ingredients": ["rice", "vegetables", "oil", "chicken"],
-    "calories": 500,
-    "additionalInfo": "Colorful and festive.",
-    "category": "lunch"
-  },
-  {
-    "id": "palm-nut-soup",
-    "name": "Palm Nut Soup",
-    "description": "Soup made from palm fruit pulp and meat.",
-    "ingredients": ["palm fruit", "meat", "onions", "spices"],
-    "calories": 550,
-    "additionalInfo": "Rich and hearty. High in fat.",
-    "category": "dinner"
-  },
-  {
-    "id": "abacha-ugba",
-    "name": "Abacha & Ugba",
-    "description": "Cassava salad with African oil bean and spices.",
-    "ingredients": ["cassava", "ugba", "onions", "oil", "pepper"],
-    "calories": 350,
-    "additionalInfo": "Light and spicy snack.",
+    "id": "pumpkin-fritters",
+    "name": "Pumpkin Fritters",
+    "description": "Baked pumpkin fritters lightly spiced.",
+    "ingredients": ["pumpkin", "eggs", "spices", "flour"],
+    "calories": 200,
+    "additionalInfo": "Sweet but low in calories.",
     "category": "snack"
   },
   {
-    "id": "ofe-nsala",
-    "name": "Ofe Nsala",
-    "description": "White soup made with fish, yam, and spices.",
-    "ingredients": ["fish", "yam", "spices", "onions"],
-    "calories": 450,
-    "additionalInfo": "Comforting and mild.",
+    "id": "venison-stew",
+    "name": "Venison Stew",
+    "description": "Lean game meat stewed with root vegetables.",
+    "ingredients": ["venison", "carrots", "onions", "spices"],
+    "calories": 350,
+    "additionalInfo": "High in protein and iron.",
     "category": "dinner"
   },
   {
-    "id": "efo-riro",
-    "name": "Efo Riro",
-    "description": "Spinach stew cooked with pepper and meat.",
-    "ingredients": ["spinach", "pepper", "onions", "meat", "oil"],
-    "calories": 350,
-    "additionalInfo": "Nutritious and flavorful.",
+    "id": "grilled-prawns",
+    "name": "Grilled Prawns",
+    "description": "Prawns grilled with garlic and lemon.",
+    "ingredients": ["prawns", "garlic", "lemon", "spices"],
+    "calories": 250,
+    "additionalInfo": "Light seafood option.",
     "category": "dinner"
+  },
+  {
+    "id": "green-bean-salad",
+    "name": "Green Bean Salad",
+    "description": "Chilled salad of green beans, onions, and dressing.",
+    "ingredients": ["green beans", "onions", "vinegar", "spices"],
+    "calories": 150,
+    "additionalInfo": "Crisp and refreshing.",
+    "category": "lunch"
+  },
+  {
+    "id": "ostrich-burger",
+    "name": "Ostrich Burger",
+    "description": "Grilled ostrich patty on a whole-wheat bun.",
+    "ingredients": ["ostrich patty", "bun", "lettuce", "tomato", "spices"],
+    "calories": 350,
+    "additionalInfo": "Lower fat than beef burger.",
+    "category": "lunch"
+  },
+  {
+    "id": "curried-lentils",
+    "name": "Curried Lentils",
+    "description": "Spiced lentils cooked with onions and tomatoes.",
+    "ingredients": ["lentils", "onions", "tomatoes", "spices"],
+    "calories": 250,
+    "additionalInfo": "Protein-rich vegetarian option.",
+    "category": "lunch"
+  },
+  {
+    "id": "marogo",
+    "name": "Marogo (Wild Spinach)",
+    "description": "Sautéed wild spinach with onions and spices.",
+    "ingredients": ["wild spinach", "onions", "spices", "oil"],
+    "calories": 150,
+    "additionalInfo": "Traditional leafy green side dish.",
+    "category": "lunch"
   }
 ]
