@@ -1,0 +1,22 @@
+[
+  { "id": "jumping-jacks", "name": "Jumping Jacks", "category": "Light", "duration": "1 min", "rest": "30 sec", "description": "Full-body cardio exercise great for warming up and burning calories." },
+  { "id": "push-ups", "name": "Push-Ups", "category": "Moderate", "reps": "10–15", "rest": "45 sec", "description": "Upper body strength exercise targeting chest, shoulders, and triceps." },
+  { "id": "squats", "name": "Squats", "category": "Moderate", "reps": "15–20", "rest": "45 sec", "description": "Lower body exercise targeting quadriceps, glutes, and hamstrings." },
+  { "id": "lunges", "name": "Lunges", "category": "Moderate", "reps": "10 each leg", "rest": "45 sec", "description": "Unilateral leg exercise that improves balance and leg strength." },
+  { "id": "plank", "name": "Plank", "category": "Moderate", "duration": "30–60 sec", "rest": "30 sec", "description": "Core strengthening exercise that engages multiple muscle groups." },
+  { "id": "burpees", "name": "Burpees", "category": "Advanced", "reps": "10", "rest": "60 sec", "description": "Full-body high-intensity exercise combining squat, plank, and jump." },
+  { "id": "mountain-climbers", "name": "Mountain Climbers", "category": "Advanced", "duration": "1 min", "rest": "45 sec", "description": "High-intensity cardio exercise that strengthens core and legs." },
+  { "id": "high-knees", "name": "High Knees", "category": "Light", "duration": "1 min", "rest": "30 sec", "description": "Cardio exercise that improves coordination and leg strength." },
+  { "id": "wall-sit", "name": "Wall Sit", "category": "Light", "duration": "30–60 sec", "rest": "30 sec", "description": "Isometric exercise that strengthens quadriceps and glutes." },
+  { "id": "arm-circles", "name": "Arm Circles", "category": "Light", "duration": "1 min", "rest": "30 sec", "description": "Simple warm-up exercise for shoulder mobility and activation." },
+  { "id": "side-plank", "name": "Side Plank", "category": "Moderate", "duration": "30–60 sec each side", "rest": "30 sec", "description": "Core exercise that targets obliques and improves stability." },
+  { "id": "bicycle-crunches", "name": "Bicycle Crunches", "category": "Moderate", "reps": "20", "rest": "45 sec", "description": "Abdominal exercise that targets rectus abdominis and obliques." },
+  { "id": "glute-bridges", "name": "Glute Bridges", "category": "Light", "reps": "15", "rest": "30 sec", "description": "Lower body exercise that strengthens glutes and hamstrings." },
+  { "id": "step-ups", "name": "Step-Ups", "category": "Moderate", "reps": "10 each leg", "rest": "45 sec", "description": "Functional exercise that improves leg strength and balance." },
+  { "id": "skater-jumps", "name": "Skater Jumps", "category": "Advanced", "duration": "1 min", "rest": "45 sec", "description": "Lateral movement exercise that improves agility and leg power." },
+  { "id": "tricep-dips", "name": "Tricep Dips", "category": "Moderate", "reps": "10–15", "rest": "45 sec", "description": "Upper body exercise targeting triceps using body weight." },
+  { "id": "flutter-kicks", "name": "Flutter Kicks", "category": "Advanced", "duration": "1 min", "rest": "30 sec", "description": "Core exercise that targets lower abdominals and hip flexors." },
+  { "id": "calf-raises", "name": "Calf Raises", "category": "Light", "reps": "20", "rest": "30 sec", "description": "Lower leg exercise that strengthens calf muscles." },
+  { "id": "side-lunges", "name": "Side Lunges", "category": "Moderate", "reps": "10 each side", "rest": "45 sec", "description": "Lateral movement exercise that targets inner and outer thighs." },
+  { "id": "bear-crawl", "name": "Bear Crawl", "category": "Advanced", "duration": "30 sec", "rest": "60 sec", "description": "Full-body exercise that improves coordination and strength." }
+]

@@ -1,0 +1,168 @@
+{
+  "welcome": {
+    "title": "Wellness Tracker",
+    "subtitle": "Your journey to better health starts here",
+    "chooseLanguage": "Choose Your Language",
+    "english": "English (Nigeria)",
+    "french": "Français (Côte d'Ivoire)"
+  },
+  "onboarding": {
+    "title": "Set Up Your Profile",
+    "step": "Step {{current}} of {{total}}",
+    "continue": "Continue",
+    "back": "Back",
+    "finish": "Finish Setup",
+    "fields": {
+      "name": "What's your name?",
+      "namePlaceholder": "Enter your name",
+      "age": "How old are you?",
+      "agePlaceholder": "Age",
+      "height": "Height (cm)",
+      "heightPlaceholder": "Height in cm",
+      "weight": "Current Weight (kg)",
+      "weightPlaceholder": "Weight in kg",
+      "targetWeight": "Target Weight (kg)",
+      "targetWeightPlaceholder": "Target weight in kg",
+      "gender": "Gender",
+      "genderOptions": {
+        "male": "Male",
+        "female": "Female", 
+        "other": "Other"
+      },
+      "exerciseLevel": "Exercise Frequency",
+      "exerciseOptions": {
+        "sedentary": "Sedentary (little or no exercise)",
+        "light": "Light (1-3 days/week)",
+        "moderate": "Moderate (3-5 days/week)",
+        "active": "Active (6-7 days/week)",
+        "very_active": "Very Active (2x/day or intense exercise)"
+      },
+      "diet": "Dietary Preferences",
+      "dietOptions": {
+        "none": "No restrictions",
+        "vegetarian": "Vegetarian",
+        "vegan": "Vegan",
+        "halal": "Halal",
+        "kosher": "Kosher",
+        "gluten_free": "Gluten Free",
+        "dairy_free": "Dairy Free"
+      }
+    }
+  },
+  "dashboard": {
+    "greeting": "Good morning, {{name}}!",
+    "subtitle": "Ready to crush your goals today?",
+    "stats": {
+      "currentWeight": "Current Weight",
+      "waterToday": "Water Today",
+      "streak": "Streak",
+      "badges": "Badges",
+      "days": "days"
+    },
+    "activeChallenges": "Active Challenges",
+    "todayMealSuggestions": "Today's Meal Suggestions",
+    "quickExercise": "Quick Exercise",
+    "weightProgress": "Weight Progress",
+    "recentAchievements": "Recent Achievements"
+  },
+  "challenges": {
+    "title": "Challenges",
+    "startChallenge": "Start Challenge",
+    "continueChallenge": "Continue Challenge",
+    "viewDetails": "View Challenge Details",
+    "dayOf": "Day {{current}} of {{total}}",
+    "markDone": "Mark Done",
+    "completed": "Completed",
+    "taskTypes": {
+      "water": "Drink water",
+      "exercise": "Exercise",
+      "meal": "Eat healthy",
+      "mood": "Log mood",
+      "weight": "Log weight"
+    }
+  },
+  "exercises": {
+    "title": "Exercise Library",
+    "categories": {
+      "Light": "Light",
+      "Moderate": "Moderate", 
+      "Advanced": "Advanced"
+    },
+    "startExercise": "Start Exercise",
+    "addToFavorites": "Add to Favorites",
+    "removeFromFavorites": "Remove from Favorites",
+    "duration": "Duration",
+    "reps": "Reps",
+    "rest": "Rest"
+  },
+  "meals": {
+    "title": "Meal Library",
+    "categories": {
+      "breakfast": "Breakfast",
+      "lunch": "Lunch",
+      "dinner": "Dinner",
+      "snack": "Snack"
+    },
+    "calories": "calories",
+    "addToFavorites": "Add to Favorites",
+    "removeFromFavorites": "Remove from Favorites",
+    "logMeal": "Log Meal",
+    "ingredients": "Ingredients"
+  },
+  "progress": {
+    "title": "Progress",
+    "weightProgress": "Weight Progress",
+    "moodTracking": "Mood Tracking",
+    "waterIntake": "Water Intake",
+    "weeklyView": "Weekly View",
+    "monthlyView": "Monthly View",
+    "exportData": "Export Data"
+  },
+  "badges": {
+    "title": "Badges & Achievements",
+    "unlocked": "Unlocked",
+    "locked": "Locked",
+    "unlockedAt": "Unlocked on {{date}}",
+    "badgeTypes": {
+      "first_step": "First Step",
+      "hydrated": "Hydrated",
+      "consistent": "Consistent",
+      "no_sugar_hero": "No Sugar Hero",
+      "halfway": "Halfway"
+    }
+  },
+  "navigation": {
+    "home": "Home",
+    "challenges": "Challenges",
+    "exercises": "Exercise",
+    "meals": "Meals",
+    "progress": "Progress",
+    "badges": "Badges",
+    "faq": "FAQ"
+  },
+  "common": {
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "close": "Close",
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "kg": "kg",
+    "liters": "L",
+    "minutes": "min",
+    "calories": "cal"
+  },
+  "cultural": {
+    "slimDown": "Slim Down",
+    "chop": "Chop",
+    "motivationalQuotes": [
+      "Small steps daily lead to big changes yearly.",
+      "Your health is your wealth.",
+      "Every healthy choice is a step toward your best self.",
+      "Progress, not perfection.",
+      "Believe in yourself and your journey."
+    ]
+  }
+}

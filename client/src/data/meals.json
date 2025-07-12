@@ -1,0 +1,272 @@
+[
+  {
+    "id": "jollof-rice",
+    "name": "Jollof Rice",
+    "description": "Spiced tomato-based rice dish popular across West Africa.",
+    "ingredients": ["rice", "tomatoes", "onions", "pepper", "vegetable oil", "spices"],
+    "calories": 450,
+    "additionalInfo": "Served at parties and family meals. High in carbohydrates.",
+    "category": "lunch"
+  },
+  {
+    "id": "egusi-soup",
+    "name": "Egusi Soup",
+    "description": "Thick soup made with ground melon seeds, vegetables, and meat.",
+    "ingredients": ["melon seeds", "spinach", "meat or fish", "palm oil", "pepper", "seasonings"],
+    "calories": 600,
+    "additionalInfo": "Often served with pounded yam. Rich in protein and fat.",
+    "category": "dinner"
+  },
+  {
+    "id": "fufu",
+    "name": "Fufu",
+    "description": "Soft dough made from cassava, yam, or plantain, served with soup.",
+    "ingredients": ["cassava", "yam", "plantain"],
+    "calories": 300,
+    "additionalInfo": "Staple side dish, eaten with hands.",
+    "category": "lunch"
+  },
+  {
+    "id": "moi-moi",
+    "name": "Moi Moi",
+    "description": "Steamed bean pudding made from ground peeled beans.",
+    "ingredients": ["black-eyed peas", "onions", "pepper", "oil", "seasonings"],
+    "calories": 250,
+    "additionalInfo": "Low in fat, high in protein. Common at breakfast.",
+    "category": "breakfast"
+  },
+  {
+    "id": "grilled-tilapia-attieke",
+    "name": "Grilled Tilapia with Attiéké",
+    "description": "Spicy grilled fish served with cassava couscous.",
+    "ingredients": ["tilapia", "cassava", "onions", "pepper", "spices"],
+    "calories": 400,
+    "additionalInfo": "Very popular in Côte d'Ivoire.",
+    "category": "dinner"
+  },
+  {
+    "id": "peanut-stew",
+    "name": "Peanut Stew",
+    "description": "Savory peanut-based stew with meat and vegetables.",
+    "ingredients": ["peanuts", "tomatoes", "onions", "meat", "spinach", "spices"],
+    "calories": 550,
+    "additionalInfo": "Rich and filling. High in protein and fat.",
+    "category": "dinner"
+  },
+  {
+    "id": "kelewele",
+    "name": "Kelewele",
+    "description": "Fried spicy plantain cubes.",
+    "ingredients": ["ripe plantains", "ginger", "pepper", "oil", "spices"],
+    "calories": 300,
+    "additionalInfo": "Street snack. High in carbs and fat.",
+    "category": "snack"
+  },
+  {
+    "id": "alloco",
+    "name": "Alloco",
+    "description": "Fried plantains served with spicy sauce and sometimes fish.",
+    "ingredients": ["ripe plantains", "onions", "pepper", "oil"],
+    "calories": 350,
+    "additionalInfo": "Common street food in Côte d'Ivoire.",
+    "category": "snack"
+  },
+  {
+    "id": "abacha",
+    "name": "Abacha (African Salad)",
+    "description": "Cassava salad mixed with vegetables and fish.",
+    "ingredients": ["cassava", "garden eggs", "fish", "oil", "pepper", "spices"],
+    "calories": 400,
+    "additionalInfo": "Often eaten as a light lunch.",
+    "category": "lunch"
+  },
+  {
+    "id": "yam-porridge",
+    "name": "Yam Porridge",
+    "description": "Cooked yam chunks in a flavorful tomato sauce.",
+    "ingredients": ["yam", "tomatoes", "onions", "oil", "spinach"],
+    "calories": 350,
+    "additionalInfo": "Comfort food. Moderate calories.",
+    "category": "lunch"
+  },
+  {
+    "id": "cassava-leaves-stew",
+    "name": "Cassava Leaves Stew",
+    "description": "Stew made from ground cassava leaves and meat.",
+    "ingredients": ["cassava leaves", "meat", "oil", "pepper", "onions"],
+    "calories": 500,
+    "additionalInfo": "Rich in fiber and iron.",
+    "category": "dinner"
+  },
+  {
+    "id": "banku-okro",
+    "name": "Banku & Okro Soup",
+    "description": "Fermented corn & cassava dough with okra-based soup.",
+    "ingredients": ["corn", "cassava", "okra", "meat or fish", "spices"],
+    "calories": 600,
+    "additionalInfo": "Sticky texture. High in fiber and carbs.",
+    "category": "dinner"
+  },
+  {
+    "id": "akara",
+    "name": "Akara",
+    "description": "Deep-fried bean cakes.",
+    "ingredients": ["black-eyed peas", "onions", "pepper", "oil"],
+    "calories": 300,
+    "additionalInfo": "Breakfast or snack. Protein-rich.",
+    "category": "breakfast"
+  },
+  {
+    "id": "attieke",
+    "name": "Attiéké",
+    "description": "Fermented cassava granules similar to couscous.",
+    "ingredients": ["cassava"],
+    "calories": 350,
+    "additionalInfo": "Staple in Côte d'Ivoire. Often paired with fish.",
+    "category": "lunch"
+  },
+  {
+    "id": "suya",
+    "name": "Suya",
+    "description": "Spicy skewered meat grilled over open flames.",
+    "ingredients": ["beef", "peanut spice mix", "onions"],
+    "calories": 450,
+    "additionalInfo": "Popular Nigerian street food. High in protein.",
+    "category": "snack"
+  },
+  {
+    "id": "puff-puff",
+    "name": "Puff-Puff",
+    "description": "Sweet deep-fried dough balls.",
+    "ingredients": ["flour", "sugar", "yeast", "oil"],
+    "calories": 250,
+    "additionalInfo": "Dessert or snack. High in carbs.",
+    "category": "snack"
+  },
+  {
+    "id": "garri",
+    "name": "Garri",
+    "description": "Granulated cassava eaten with soups or as a drink.",
+    "ingredients": ["cassava"],
+    "calories": 300,
+    "additionalInfo": "Light and versatile. High in carbs.",
+    "category": "lunch"
+  },
+  {
+    "id": "beans-fried-plantain",
+    "name": "Beans & Fried Plantain",
+    "description": "Stewed beans served with fried plantain.",
+    "ingredients": ["beans", "plantain", "oil", "onions", "pepper"],
+    "calories": 400,
+    "additionalInfo": "Good balance of protein and carbs.",
+    "category": "lunch"
+  },
+  {
+    "id": "coconut-rice",
+    "name": "Coconut Rice",
+    "description": "Rice cooked in coconut milk with spices.",
+    "ingredients": ["rice", "coconut milk", "onions", "pepper", "oil"],
+    "calories": 450,
+    "additionalInfo": "Creamy and aromatic. High in fat.",
+    "category": "lunch"
+  },
+  {
+    "id": "grilled-chicken",
+    "name": "Grilled Chicken",
+    "description": "Spicy marinated chicken roasted over fire.",
+    "ingredients": ["chicken", "spices", "oil"],
+    "calories": 400,
+    "additionalInfo": "Lean protein. Popular at parties.",
+    "category": "dinner"
+  },
+  {
+    "id": "fufu-okra-soup",
+    "name": "Fufu with Okra Soup",
+    "description": "Fufu served with slimy okra-based soup.",
+    "ingredients": ["cassava", "okra", "meat", "spices"],
+    "calories": 500,
+    "additionalInfo": "Traditional and filling.",
+    "category": "dinner"
+  },
+  {
+    "id": "peanut-butter-soup",
+    "name": "Peanut Butter Soup",
+    "description": "Soup made with ground peanuts and meat.",
+    "ingredients": ["peanuts", "meat", "onions", "spices"],
+    "calories": 550,
+    "additionalInfo": "Creamy and rich in protein.",
+    "category": "dinner"
+  },
+  {
+    "id": "okra-soup",
+    "name": "Okra Soup",
+    "description": "Soup made mainly from chopped okra and spices.",
+    "ingredients": ["okra", "meat", "onions", "spices"],
+    "calories": 300,
+    "additionalInfo": "Low calorie and fiber-rich.",
+    "category": "dinner"
+  },
+  {
+    "id": "vegetable-stew",
+    "name": "Vegetable Stew",
+    "description": "Tomato-based stew packed with green vegetables.",
+    "ingredients": ["spinach", "tomatoes", "onions", "oil", "meat"],
+    "calories": 350,
+    "additionalInfo": "Nutrient-rich. Often served with rice or fufu.",
+    "category": "dinner"
+  },
+  {
+    "id": "grilled-fish",
+    "name": "Grilled Fish",
+    "description": "Whole fish marinated and grilled.",
+    "ingredients": ["fish", "onions", "spices", "oil"],
+    "calories": 350,
+    "additionalInfo": "Lean protein. Popular street food.",
+    "category": "dinner"
+  },
+  {
+    "id": "fried-rice",
+    "name": "Fried Rice",
+    "description": "Rice stir-fried with vegetables and meat.",
+    "ingredients": ["rice", "vegetables", "oil", "chicken"],
+    "calories": 500,
+    "additionalInfo": "Colorful and festive.",
+    "category": "lunch"
+  },
+  {
+    "id": "palm-nut-soup",
+    "name": "Palm Nut Soup",
+    "description": "Soup made from palm fruit pulp and meat.",
+    "ingredients": ["palm fruit", "meat", "onions", "spices"],
+    "calories": 550,
+    "additionalInfo": "Rich and hearty. High in fat.",
+    "category": "dinner"
+  },
+  {
+    "id": "abacha-ugba",
+    "name": "Abacha & Ugba",
+    "description": "Cassava salad with African oil bean and spices.",
+    "ingredients": ["cassava", "ugba", "onions", "oil", "pepper"],
+    "calories": 350,
+    "additionalInfo": "Light and spicy snack.",
+    "category": "snack"
+  },
+  {
+    "id": "ofe-nsala",
+    "name": "Ofe Nsala",
+    "description": "White soup made with fish, yam, and spices.",
+    "ingredients": ["fish", "yam", "spices", "onions"],
+    "calories": 450,
+    "additionalInfo": "Comforting and mild.",
+    "category": "dinner"
+  },
+  {
+    "id": "efo-riro",
+    "name": "Efo Riro",
+    "description": "Spinach stew cooked with pepper and meat.",
+    "ingredients": ["spinach", "pepper", "onions", "meat", "oil"],
+    "calories": 350,
+    "additionalInfo": "Nutritious and flavorful.",
+    "category": "dinner"
+  }
+]
