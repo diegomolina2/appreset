@@ -1,7 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { useLocation } from "wouter";
 import { Button } from "../components/ui/button";
 import { Card, CardContent } from "../components/ui/card";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "../components/ui/select";
 import { useTranslation } from "../hooks/useTranslation";
 import { useApp } from "../contexts/AppContext";
 
@@ -9,11 +16,26 @@ export default function Welcome() {
   const [, setLocation] = useLocation();
   const { t, changeLanguage } = useTranslation();
   const { updateUserProfile } = useApp();
+  const [selectedLanguage, setSelectedLanguage] = useState<string>("");
 
-  const handleLanguageSelect = (language: "en-NG" | "fr-CI") => {
-    changeLanguage(language);
-    updateUserProfile({ language });
-    setLocation("/onboarding");
+  const languages = [
+    { code: "en-NG", name: "English (Nigeria)", flag: "🇳🇬" },
+    { code: "en-ZA", name: "English (South Africa)", flag: "🇿🇦" },
+    { code: "en-KE", name: "English (Kenya)", flag: "🇰🇪" },
+    { code: "en-GH", name: "English (Ghana)", flag: "🇬🇭" },
+    { code: "fr-CI", name: "Français (Côte d'Ivoire)", flag: "🇨🇮" },
+  ];
+
+  const handleLanguageSelect = (languageCode: string) => {
+    setSelectedLanguage(languageCode);
+  };
+
+  const handleContinue = () => {
+    if (selectedLanguage) {
+      changeLanguage(selectedLanguage);
+      updateUserProfile({ language: selectedLanguage as any });
+      setLocation("/onboarding");
+    }
   };
 
   return (
@@ -23,19 +45,18 @@ export default function Welcome() {
           <CardContent className="space-y-6">
             {/* App Logo */}
             <div className="w-32 h-32 mx-auto mb-6 bg-white rounded-full flex items-center justify-center shadow-lg">
-              <img 
-                src="/logo.png" 
-                alt="App Logo" 
-                className="w-24 h-24 object-contain"
+              <img
+                src="/logo.png"
+                alt="NaijaReset Logo"
+                className="w-24 h-24 object-contain rounded-full"
                 onError={(e) => {
-                  // Fallback to SVG icon if logo fails to load
+                  // Fallback to text logo if image fails to load
                   const target = e.target as HTMLImageElement;
-                  target.style.display = 'none';
-                  target.parentElement!.innerHTML = `
+                  target.style.display = "none";
+                  const container = target.parentElement!;
+                  container.innerHTML = `
                     <div class="w-24 h-24 bg-gradient-to-br from-accent to-primary rounded-full flex items-center justify-center">
-                      <svg class="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
-                      </svg>
+                      <span class="text-white font-bold text-lg">NR</span>
                     </div>
                   `;
                 }}
@@ -44,16 +65,9 @@ export default function Welcome() {
 
             {/* Welcome Text */}
             <div className="space-y-2">
-              <div className="flex items-center justify-center gap-3 mb-2">
-                <img
-                  src="/attached_assets/logo.png"
-                  alt="NaijaReset Logo"
-                  className="w-8 h-8 rounded-full"
-                />
-                <h1 className="text-3xl font-poppins font-bold text-gray-800 dark:text-gray-100">
-                  NaijaReset
-                </h1>
-              </div>
+              <h1 className="text-3xl font-poppins font-bold text-gray-800 dark:text-gray-100">
+                My Reset
+              </h1>
               <p className="text-gray-600 dark:text-gray-300">
                 {t("welcome.subtitle")}
               </p>
@@ -65,25 +79,36 @@ export default function Welcome() {
                 {t("welcome.chooseLanguage")}
               </h2>
 
-              <div className="space-y-3">
-                <Button
-                  onClick={() => handleLanguageSelect("en-NG")}
-                  className="w-full bg-primary hover:bg-primary/90 text-white py-4 px-6 rounded-2xl font-medium transition-all duration-200 transform hover:scale-105"
+              <div className="space-y-4">
+                <Select
+                  onValueChange={handleLanguageSelect}
+                  value={selectedLanguage}
                 >
-                  <span className="flex items-center justify-center space-x-3">
-                    <span className="text-2xl">🇳🇬</span>
-                    <span>{t("welcome.english")}</span>
-                  </span>
-                </Button>
+                  <SelectTrigger className="w-full py-4 px-6 rounded-2xl border-2 border-gray-200 dark:border-gray-600">
+                    <SelectValue placeholder="Select your language / Choisissez votre langue" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    {languages.map((language) => (
+                      <SelectItem key={language.code} value={language.code}>
+                        <span className="flex items-center space-x-3">
+                          <span className="text-xl">{language.flag}</span>
+                          <span>{language.name}</span>
+                        </span>
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
 
                 <Button
-                  onClick={() => handleLanguageSelect("fr-CI")}
-                  className="w-full bg-secondary hover:bg-secondary/90 text-white py-4 px-6 rounded-2xl font-medium transition-all duration-200 transform hover:scale-105"
+                  onClick={handleContinue}
+                  disabled={!selectedLanguage}
+                  className="w-full bg-primary hover:bg-primary/90 disabled:bg-gray-300 disabled:cursor-not-allowed text-white py-4 px-6 rounded-2xl font-medium transition-all duration-200 transform hover:scale-105 disabled:hover:scale-100"
                 >
-                  <span className="flex items-center justify-center space-x-3">
-                    <span className="text-2xl">🇨🇮</span>
-                    <span>{t("welcome.french")}</span>
-                  </span>
+                  {selectedLanguage
+                    ? selectedLanguage.startsWith("fr")
+                      ? "Continuer"
+                      : "Continue"
+                    : "Continue / Continuer"}
                 </Button>
               </div>
             </div>
