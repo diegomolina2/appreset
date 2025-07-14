@@ -129,3 +129,27 @@ export interface AppState {
   isOnboarded: boolean;
   currentChallenge?: string;
 }
+
+export interface AppContextType {
+  state: AppState;
+  dispatch: React.Dispatch<AppAction>;
+  toggleDarkMode: () => void;
+  setLanguage: (language: 'en-NG' | 'fr-CI') => void;
+  setOnboarded: () => void;
+  startChallenge: (challengeId: string) => void;
+  completeChallenge: (challengeId: string, day: number) => void;
+  restartChallenge: (challengeId: string) => void;
+  updateUserProfile: (profileData: Partial<UserData>) => void;
+  importCSVData: (csvData: any[]) => Promise<{ success: boolean; imported: number; skipped: number; message?: string }>;
+}
+
+export type AppAction =
+  | { type: 'TOGGLE_DARK_MODE' }
+  | { type: 'SET_LANGUAGE'; payload: 'en-NG' | 'fr-CI' }
+  | { type: 'SET_ONBOARDED' }
+  | { type: 'SET_USER_DATA'; payload: UserData }
+  | { type: 'START_CHALLENGE'; payload: string }
+  | { type: 'COMPLETE_CHALLENGE'; payload: { challengeId: string; day: number } }
+  | { type: 'RESTART_CHALLENGE'; payload: string }
+  | { type: 'UPDATE_USER_PROFILE'; payload: Partial<UserData> }
+  | { type: 'IMPORT_CSV_DATA'; payload: any[] };

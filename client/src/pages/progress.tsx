@@ -1,29 +1,13 @@
-import { useState, useEffect } from "react";
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-} from "../components/ui/card";
-import { Button } from "../components/ui/button";
-import { Input } from "../components/ui/input";
-import { Label } from "../components/ui/label";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "../components/ui/select";
-import {
-  Tabs,
-  TabsContent,
-  TabsList,
-  TabsTrigger,
-} from "../components/ui/tabs";
-import { Progress as ProgressBar } from "../components/ui/progress";
-import { Badge } from "../components/ui/badge";
-import { Separator } from "../components/ui/separator";
+import React, { useState, useEffect } from 'react';
+import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
+import { Button } from '../components/ui/button';
+import { Input } from '../components/ui/input';
+import { Label } from '../components/ui/label';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../components/ui/select';
+import { Progress as ProgressBar } from '../components/ui/progress';
+import { Badge } from '../components/ui/badge';
+import { Separator } from '../components/ui/separator';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '../components/ui/tabs';
 import {
   TrendingUp,
   Droplets,
@@ -36,6 +20,7 @@ import {
   Target,
   Activity,
   Download,
+  Upload,
 } from "lucide-react";
 import { useTranslation } from "../hooks/useTranslation";
 import { useApp } from "../contexts/AppContext";
@@ -75,10 +60,16 @@ import {
   getTodayDate,
 } from "../utils/progressCalculations";
 import { exportAllDataAsCSV } from "../utils/csvExport";
+import { CSVImport } from '../components/CSVImport';
+import { Dialog, DialogContent, DialogTrigger } from '../components/ui/dialog';
+import { DailyWeightLogger } from "../components/DailyWeightLogger";
+import { DailyMoodLogger } from "../components/DailyMoodLogger";
 
 export default function Progress() {
+  const { state } = useApp();
+  const [showImportDialog, setShowImportDialog] = useState(false);
   const { t } = useTranslation();
-  const { state, logWeight, logMood, logWater, logCalories } = useApp();
+  const { logWeight, logMood, logWater, logCalories } = useApp();
 
   // Water Intake State
   const [waterData, setWaterData] = useState<WaterIntakeData>({
@@ -196,6 +187,8 @@ export default function Progress() {
       updateWaterCalculations({
         loggedMlToday: waterData.loggedMlToday + amount * 1000,
       });
+      // Also log to global context for charts
+      logWater(amount);
       setWaterInput("");
     }
   };
@@ -253,7 +246,7 @@ export default function Progress() {
 
   const waterChartData = userData.waterLog.slice(-7).map((w) => ({
     date: new Date(w.date).toLocaleDateString("en-US", { weekday: "short" }),
-    liters: w.liters,
+    liters: Number(w.liters.toFixed(1)),
   }));
 
   const waterPercentage = Math.min(
@@ -269,7 +262,7 @@ export default function Progress() {
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
               <img
-                src="/attached_assets/logo.png"
+                src="/logo.png"
                 alt="NaijaReset Logo"
                 className="w-10 h-10 rounded-full"
               />
@@ -282,26 +275,7 @@ export default function Progress() {
                 </p>
               </div>
             </div>
-            <div className="flex gap-2">
-              <Button
-                onClick={() => exportAllDataAsCSV(userData)}
-                variant="outline"
-                size="sm"
-                className="text-green-600 hover:text-green-700"
-              >
-                <Download className="w-4 h-4 mr-2" />
-                Export CSV
-              </Button>
-              <Button
-                onClick={handleResetProgression}
-                variant="outline"
-                size="sm"
-                className="text-red-600 hover:text-red-700"
-              >
-                <RefreshCw className="w-4 h-4 mr-2" />
-                Reset Data
-              </Button>
-            </div>
+
           </div>
         </div>
       </header>
@@ -816,15 +790,23 @@ export default function Progress() {
               </CardHeader>
               <CardContent>
                 {waterChartData.length > 0 ? (
-                  <ResponsiveContainer width="100%" height={300}>
-                    <BarChart data={waterChartData}>
-                      <CartesianGrid strokeDasharray="3 3" />
-                      <XAxis dataKey="date" />
-                      <YAxis />
-                      <Tooltip />
-                      <Bar dataKey="liters" fill="#3b82f6" />
-                    </BarChart>
-                  </ResponsiveContainer>
+                  <div>
+                    <div className="mb-4 text-sm text-gray-600 dark:text-gray-400">
+                      Showing {waterChartData.length} days of data
+                    </div>
+                    <ResponsiveContainer width="100%" height={300}>
+                      <BarChart data={waterChartData}>
+                        <CartesianGrid strokeDasharray="3 3" />
+                        <XAxis dataKey="date" />
+                        <YAxis />
+                        <Tooltip 
+                          formatter={(value: any) => [`${value} L`, 'Water Intake']}
+                          labelFormatter={(label) => `Day: ${label}`}
+                        />
+                        <Bar dataKey="liters" fill="#3b82f6" />
+                      </BarChart>
+                    </ResponsiveContainer>
+                  </div>
                 ) : (
                   <div className="text-center py-12 text-gray-500">
                     No water data available. Start logging your water intake!

@@ -89,13 +89,13 @@ export default function Dashboard() {
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
               <img
-                src="/attached_assets/logo.png"
-                alt="NaijaReset Logo"
+                src="/logo.png"
+                alt="My Reset Logo"
                 className="w-10 h-10 rounded-full"
               />
               <div>
                 <h1 className="text-2xl font-poppins font-bold text-gray-800 dark:text-gray-100">
-                  NaijaReset
+                  My Reset
                 </h1>
                 <p className="text-gray-600 dark:text-gray-400 text-sm">
                   {getGreeting()}
@@ -129,9 +129,16 @@ export default function Dashboard() {
 
               {/* Notification Bell */}
               <Button
+                onClick={() => {
+                  if (activeChallenges.length > 0) {
+                    setLocation("/challenges");
+                  } else {
+                    alert("No active challenges. Start a challenge to get notifications!");
+                  }
+                }}
                 variant="ghost"
                 size="sm"
-                className="p-2 rounded-full relative"
+                className="p-2 rounded-full relative hover:bg-gray-100 dark:hover:bg-gray-700"
               >
                 <Bell className="w-6 h-6" />
                 {activeChallenges.length > 0 && (

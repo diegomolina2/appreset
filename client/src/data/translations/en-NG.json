@@ -84,6 +84,7 @@
   "exercises": {
     "title": "Exercise Library",
     "categories": {
+      "all": "All",
       "Light": "Light",
       "Moderate": "Moderate", 
       "Advanced": "Advanced"
@@ -114,9 +115,15 @@
     "weightProgress": "Weight Progress",
     "moodTracking": "Mood Tracking",
     "waterIntake": "Water Intake",
-    "weeklyView": "Weekly View",
-    "monthlyView": "Monthly View",
-    "exportData": "Export Data"
+    "exerciseStats": "Exercise Statistics", 
+    "mealTracking": "Meal Tracking",
+    "badges": "Badges Earned",
+    "exportData": "Export Data",
+    "last30Days": "Last 30 Days",
+    "thisWeek": "This Week",
+    "today": "Today",
+    "dailyMood": "Daily Mood",
+    "moodProgress": "Mood Progress"
   },
   "badges": {
     "title": "Badges & Achievements",

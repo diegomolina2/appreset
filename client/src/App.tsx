@@ -15,16 +15,17 @@ import Meals from "./pages/meals";
 import Progress from "./pages/progress";
 import Badges from "./pages/badges";
 import FAQ from "./pages/faq";
-import { BottomNavigation } from "./components/BottomNavigation";
+import Settings from './pages/settings';
+import BottomNavigation from "./components/BottomNavigation";
 import { useApp } from "./contexts/AppContext";
 import { useLocation } from "wouter";
 
 function AppContent() {
   const { state } = useApp();
   const [location] = useLocation();
-  
+
   const hideBottomNav = ['/', '/onboarding'].includes(location);
-  
+
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Switch>
@@ -39,9 +40,10 @@ function AppContent() {
         <Route path="/progress" component={Progress} />
         <Route path="/badges" component={Badges} />
         <Route path="/faq" component={FAQ} />
+        <Route path="/settings" component={Settings} />
         <Route component={NotFound} />
       </Switch>
-      
+
       {!hideBottomNav && <BottomNavigation />}
     </div>
   );

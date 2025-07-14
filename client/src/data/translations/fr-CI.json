@@ -1,13 +1,14 @@
+
 {
   "welcome": {
-    "title": "Tracker Bien-être",
+    "title": "Tracker de Bien-être",
     "subtitle": "Votre voyage vers une meilleure santé commence ici",
     "chooseLanguage": "Choisissez votre langue",
     "english": "English (Nigeria)",
     "french": "Français (Côte d'Ivoire)"
   },
   "onboarding": {
-    "title": "Configurer votre profil",
+    "title": "Configurez votre profil",
     "step": "Étape {{current}} sur {{total}}",
     "continue": "Continuer",
     "back": "Retour",
@@ -23,7 +24,7 @@
       "weightPlaceholder": "Poids en kg",
       "targetWeight": "Poids cible (kg)",
       "targetWeightPlaceholder": "Poids cible en kg",
-      "gender": "Sexe",
+      "gender": "Genre",
       "genderOptions": {
         "male": "Homme",
         "female": "Femme",
@@ -60,10 +61,10 @@
       "days": "jours"
     },
     "activeChallenges": "Défis actifs",
-    "todayMealSuggestions": "Suggestions de repas d'aujourd'hui",
+    "todayMealSuggestions": "Suggestions de repas du jour",
     "quickExercise": "Exercice rapide",
     "weightProgress": "Progression du poids",
-    "recentAchievements": "Réalisations récentes"
+    "recentAchievements": "Réussites récentes"
   },
   "challenges": {
     "title": "Défis",
@@ -71,19 +72,20 @@
     "continueChallenge": "Continuer le défi",
     "viewDetails": "Voir les détails du défi",
     "dayOf": "Jour {{current}} sur {{total}}",
-    "markDone": "Marquer terminé",
+    "markDone": "Marquer comme terminé",
     "completed": "Terminé",
     "taskTypes": {
       "water": "Boire de l'eau",
-      "exercise": "Exercice",
+      "exercise": "Faire de l'exercice",
       "meal": "Manger sainement",
-      "mood": "Enregistrer l'humeur",
-      "weight": "Enregistrer le poids"
+      "mood": "Noter l'humeur",
+      "weight": "Noter le poids"
     }
   },
   "exercises": {
     "title": "Bibliothèque d'exercices",
     "categories": {
+      "all": "Tous",
       "Light": "Léger",
       "Moderate": "Modéré",
       "Advanced": "Avancé"
@@ -106,7 +108,7 @@
     "calories": "calories",
     "addToFavorites": "Ajouter aux favoris",
     "removeFromFavorites": "Retirer des favoris",
-    "logMeal": "Enregistrer le repas",
+    "logMeal": "Noter le repas",
     "ingredients": "Ingrédients"
   },
   "progress": {
@@ -119,14 +121,14 @@
     "exportData": "Exporter les données"
   },
   "badges": {
-    "title": "Badges et réalisations",
+    "title": "Badges et réussites",
     "unlocked": "Débloqué",
     "locked": "Verrouillé",
     "unlockedAt": "Débloqué le {{date}}",
     "badgeTypes": {
       "first_step": "Premier pas",
       "hydrated": "Hydraté",
-      "consistent": "Cohérent",
+      "consistent": "Consistant",
       "no_sugar_hero": "Héros sans sucre",
       "halfway": "À mi-chemin"
     }
@@ -140,8 +142,16 @@
     "badges": "Badges",
     "faq": "FAQ"
   },
+  "settings": {
+    "title": "Paramètres",
+    "profile": "Profil",
+    "language": "Langue",
+    "theme": "Thème",
+    "save": "Sauvegarder",
+    "cancel": "Annuler"
+  },
   "common": {
-    "save": "Enregistrer",
+    "save": "Sauvegarder",
     "cancel": "Annuler",
     "delete": "Supprimer",
     "edit": "Modifier",

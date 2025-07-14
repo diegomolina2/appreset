@@ -62,8 +62,31 @@ export default function Exercises() {
   );
 
   const handleStartExercise = (exerciseId: string) => {
-    // Add exercise start logic here
-    console.log('Starting exercise:', exerciseId);
+    // Log the exercise in user's exercise history
+    const userData = state.userData;
+    const today = new Date().toISOString().split('T')[0];
+    
+    const newExerciseEntry = {
+      exerciseId,
+      date: today,
+      duration: exercisesData.find(e => e.id === exerciseId)?.duration || 0,
+      completed: true
+    };
+    
+    const updatedUserData = {
+      ...userData,
+      exerciseHistory: [...userData.exerciseHistory, newExerciseEntry]
+    };
+    
+    // Save to localStorage
+    localStorage.setItem('wellness_tracker_data', JSON.stringify(updatedUserData));
+    
+    // Check for badge unlocks
+    import('../utils/storage').then(({ checkAndUnlockBadges }) => {
+      checkAndUnlockBadges();
+    });
+    
+    alert(`Started ${exercisesData.find(e => e.id === exerciseId)?.name}! Keep up the good work!`);
   };
 
   return (

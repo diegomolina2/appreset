@@ -9,21 +9,22 @@ interface TranslationData {
 
 const translations: Record<string, TranslationData> = {};
 
+type SupportedLanguage = 'en-NG' | 'en-ZA' | 'en-KE' | 'en-GH' | 'fr-CI';
+
 export function useTranslation() {
-  const [currentLanguage, setCurrentLanguage] = useState<'en-NG' | 'fr-CI'>('en-NG');
+  const [currentLanguage, setCurrentLanguage] = useState<SupportedLanguage>('en-NG');
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const loadTranslations = async () => {
       try {
-        if (!translations['en-NG']) {
-          const enNgModule = await import('../data/translations/en-NG.json');
-          translations['en-NG'] = enNgModule.default;
-        }
+        const languages: SupportedLanguage[] = ['en-NG', 'en-ZA', 'en-KE', 'en-GH', 'fr-CI'];
         
-        if (!translations['fr-CI']) {
-          const frCiModule = await import('../data/translations/fr-CI.json');
-          translations['fr-CI'] = frCiModule.default;
+        for (const lang of languages) {
+          if (!translations[lang]) {
+            const module = await import(`../data/translations/${lang}.json`);
+            translations[lang] = module.default;
+          }
         }
         
         setIsLoading(false);
@@ -37,15 +38,16 @@ export function useTranslation() {
   }, []);
 
   useEffect(() => {
-    const savedLanguage = localStorage.getItem('wellness_tracker_language') as 'en-NG' | 'fr-CI';
-    if (savedLanguage && (savedLanguage === 'en-NG' || savedLanguage === 'fr-CI')) {
+    const savedLanguage = localStorage.getItem('wellness_tracker_language') as SupportedLanguage;
+    if (savedLanguage && ['en-NG', 'en-ZA', 'en-KE', 'en-GH', 'fr-CI'].includes(savedLanguage)) {
       setCurrentLanguage(savedLanguage);
     }
   }, []);
 
-  const changeLanguage = (language: 'en-NG' | 'fr-CI') => {
-    setCurrentLanguage(language);
-    localStorage.setItem('wellness_tracker_language', language);
+  const changeLanguage = (language: string) => {
+    const supportedLang = language as SupportedLanguage;
+    setCurrentLanguage(supportedLang);
+    localStorage.setItem('wellness_tracker_language', supportedLang);
   };
 
   const t = (key: TranslationKey, params?: TranslationParams): string => {
@@ -58,6 +60,19 @@ export function useTranslation() {
       if (value && typeof value === 'object' && k in value) {
         value = value[k];
       } else {
+        // Try fallback to en-NG if current language doesn't have the key
+        if (currentLanguage !== 'en-NG' && translations['en-NG']) {
+          let fallbackValue = translations['en-NG'];
+          for (const fallbackK of keys) {
+            if (fallbackValue && typeof fallbackValue === 'object' && fallbackK in fallbackValue) {
+              fallbackValue = fallbackValue[fallbackK];
+            } else {
+              return key; // Return key if translation not found even in fallback
+            }
+          }
+          value = fallbackValue;
+          break;
+        }
         return key; // Return key if translation not found
       }
     }

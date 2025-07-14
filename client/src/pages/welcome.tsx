@@ -21,15 +21,25 @@ export default function Welcome() {
       <div className="animate-fadeIn">
         <Card className="bg-white dark:bg-gray-800 rounded-3xl shadow-2xl p-8 max-w-md w-full text-center">
           <CardContent className="space-y-6">
-            {/* App Icon */}
-            <div className="w-32 h-32 mx-auto mb-6 bg-gradient-to-br from-accent to-primary rounded-full flex items-center justify-center animate-pulse-soft">
-              <svg
-                className="w-16 h-16 text-white"
-                fill="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
-              </svg>
+            {/* App Logo */}
+            <div className="w-32 h-32 mx-auto mb-6 bg-white rounded-full flex items-center justify-center shadow-lg">
+              <img 
+                src="/logo.png" 
+                alt="App Logo" 
+                className="w-24 h-24 object-contain"
+                onError={(e) => {
+                  // Fallback to SVG icon if logo fails to load
+                  const target = e.target as HTMLImageElement;
+                  target.style.display = 'none';
+                  target.parentElement!.innerHTML = `
+                    <div class="w-24 h-24 bg-gradient-to-br from-accent to-primary rounded-full flex items-center justify-center">
+                      <svg class="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+                      </svg>
+                    </div>
+                  `;
+                }}
+              />
             </div>
 
             {/* Welcome Text */}

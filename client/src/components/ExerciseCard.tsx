@@ -14,6 +14,17 @@ interface ExerciseCardProps {
   showCategory?: boolean;
 }
 
+interface Exercise {
+  id: string;
+  name: string;
+  category: string;
+  duration: number;
+  instructions: string;
+  tips: string;
+  difficulty: string;
+  media?: string;
+}
+
 export function ExerciseCard({ exercise, onStart, showCategory = true }: ExerciseCardProps) {
   const { t } = useTranslation();
   const { state, toggleFavorite } = useApp();
@@ -103,7 +114,7 @@ export function ExerciseCard({ exercise, onStart, showCategory = true }: Exercis
                 </div>
               </div>
             )}
-            
+
             {exercise.reps && (
               <div className="flex items-center space-x-2">
                 <RotateCcw className="w-4 h-4 text-gray-500" />
@@ -140,6 +151,18 @@ export function ExerciseCard({ exercise, onStart, showCategory = true }: Exercis
             {t('exercises.startExercise')}
           </Button>
         </div>
+              {exercise.media && (
+            <div className="mb-4 rounded-lg overflow-hidden bg-gray-100 dark:bg-gray-700">
+              <img 
+                src={exercise.media} 
+                alt={`${exercise.name} demonstration`}
+                className="w-full h-32 object-cover"
+                onError={(e) => {
+                  (e.target as HTMLImageElement).style.display = 'none';
+                }}
+              />
+            </div>
+          )}
       </CardContent>
 
       {/* Exercise Timer Modal */}
