@@ -8,13 +8,16 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '.
 import { useTranslation } from '../hooks/useTranslation';
 import { useApp } from '../contexts/AppContext';
 import { LanguageSwitcher } from '../components/LanguageSwitcher';
-import { Settings as SettingsIcon, Save, User, Ruler, Weight, Calendar, Globe, Download, Upload, RefreshCw } from 'lucide-react';
+import { Settings as SettingsIcon, Save, User, Ruler, Weight, Calendar, Globe, Download, Upload, RefreshCw, Crown, Clock, Key, AlertTriangle } from 'lucide-react';
 import { DailyWeightLogger } from '../components/DailyWeightLogger';
 import { Dialog, DialogContent, DialogTrigger } from '../components/ui/dialog';
 import { CSVImport } from '../components/CSVImport';
 import { exportAllDataAsCSV } from '../utils/csvExport';
 import { resetProgressData } from '../utils/progressCalculations';
 import { clearUserData } from '../utils/storage';
+import { getCurrentPlan, getRemainingDays, loadPlanData, deactivatePlan, isAccessExpired } from '../utils/planManager';
+import { PlanActivationDialog } from '../components/PlanActivation';
+import { Badge } from '../components/ui/badge';
 
 export default function Settings() {
   const { t } = useTranslation();
@@ -29,6 +32,39 @@ export default function Settings() {
     goal: ''
   });
   const [isSaving, setIsSaving] = useState(false);
+  const [currentPlan, setCurrentPlan] = useState(getCurrentPlan());
+  const [remainingDays, setRemainingDays] = useState(getRemainingDays());
+  const [planData, setPlanData] = useState(loadPlanData());
+  const [timeLeft, setTimeLeft] = useState('');
+
+  useEffect(() => {
+    const updatePlanInfo = () => {
+      setCurrentPlan(getCurrentPlan());
+      setRemainingDays(getRemainingDays());
+      setPlanData(loadPlanData());
+      
+      if (planData && !isAccessExpired()) {
+        const expirationDate = new Date(planData.expirationDate);
+        const now = new Date();
+        const diff = expirationDate.getTime() - now.getTime();
+        
+        if (diff > 0) {
+          const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+          const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+          
+          setTimeLeft(`${days}d ${hours}h ${minutes}m`);
+        } else {
+          setTimeLeft('Expirado');
+        }
+      }
+    };
+
+    updatePlanInfo();
+    const interval = setInterval(updatePlanInfo, 60000); // Atualizar a cada minuto
+    
+    return () => clearInterval(interval);
+  }, [planData]);
 
   useEffect(() => {
     // Load existing user data from localStorage and state
@@ -108,8 +144,25 @@ export default function Settings() {
     if (confirm('Are you sure you want to reset all data? This cannot be undone.')) {
       resetProgressData();
       clearUserData();
+      deactivatePlan();
       alert('All data has been reset successfully!');
       window.location.reload();
+    }
+  };
+
+  const handlePlanActivation = () => {
+    setCurrentPlan(getCurrentPlan());
+    setRemainingDays(getRemainingDays());
+    setPlanData(loadPlanData());
+  };
+
+  const handleDeactivatePlan = () => {
+    if (confirm('Tem certeza que deseja desativar seu plano atual?')) {
+      deactivatePlan();
+      setCurrentPlan(null);
+      setRemainingDays(0);
+      setPlanData(null);
+      alert('Plano desativado com sucesso!');
     }
   };
 
@@ -132,6 +185,109 @@ export default function Settings() {
       </header>
 
       <div className="px-4 py-6 space-y-6">
+        {/* Plan Information Card */}
+        <Card>
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2">
+              <Crown className="w-5 h-5" />
+              Informações do Plano
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-4">
+            {currentPlan ? (
+              <>
+                <div className="flex items-center justify-between">
+                  <div>
+                    <h3 className="font-semibold text-gray-800 dark:text-gray-100">
+                      {currentPlan.name}
+                    </h3>
+                    <p className="text-sm text-gray-600 dark:text-gray-400">
+                      Plano ativo
+                    </p>
+                  </div>
+                  <Badge className="bg-green-100 text-green-800 dark:bg-green-800 dark:text-green-100">
+                    Ativo
+                  </Badge>
+                </div>
+
+                {remainingDays !== -1 && (
+                  <div className="p-3 bg-blue-50 dark:bg-blue-900 rounded-lg">
+                    <div className="flex items-center gap-2 mb-1">
+                      <Clock className="w-4 h-4 text-blue-600 dark:text-blue-400" />
+                      <span className="text-sm font-medium text-blue-800 dark:text-blue-200">
+                        Tempo Restante
+                      </span>
+                    </div>
+                    <p className="text-lg font-bold text-blue-900 dark:text-blue-100">
+                      {timeLeft}
+                    </p>
+                    <p className="text-xs text-blue-700 dark:text-blue-300">
+                      {remainingDays} dias restantes
+                    </p>
+                  </div>
+                )}
+
+                {remainingDays === -1 && (
+                  <div className="p-3 bg-purple-50 dark:bg-purple-900 rounded-lg">
+                    <div className="flex items-center gap-2">
+                      <Crown className="w-4 h-4 text-purple-600 dark:text-purple-400" />
+                      <span className="text-sm font-medium text-purple-800 dark:text-purple-200">
+                        Acesso Ilimitado
+                      </span>
+                    </div>
+                  </div>
+                )}
+
+                {remainingDays <= 3 && remainingDays > 0 && (
+                  <div className="p-3 bg-orange-50 dark:bg-orange-900 rounded-lg border border-orange-200">
+                    <div className="flex items-center gap-2">
+                      <AlertTriangle className="w-4 h-4 text-orange-600 dark:text-orange-400" />
+                      <span className="text-sm font-medium text-orange-800 dark:text-orange-200">
+                        Seu plano expira em breve!
+                      </span>
+                    </div>
+                  </div>
+                )}
+
+                <div className="space-y-2">
+                  <h4 className="text-sm font-medium text-gray-700 dark:text-gray-300">
+                    Recursos Inclusos:
+                  </h4>
+                  <ul className="text-sm text-gray-600 dark:text-gray-400 space-y-1">
+                    {currentPlan.features.map((feature, index) => (
+                      <li key={index}>• {feature}</li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="flex gap-2">
+                  <PlanActivationDialog onActivation={handlePlanActivation} />
+                  <Button 
+                    onClick={handleDeactivatePlan}
+                    variant="outline"
+                    className="flex-1 text-red-600 hover:text-red-700"
+                  >
+                    Desativar Plano
+                  </Button>
+                </div>
+              </>
+            ) : (
+              <div className="text-center py-6">
+                <div className="w-16 h-16 bg-gray-100 dark:bg-gray-800 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Key className="w-8 h-8 text-gray-400" />
+                </div>
+                <h3 className="font-semibold text-gray-800 dark:text-gray-100 mb-2">
+                  Nenhum plano ativo
+                </h3>
+                <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
+                  Ative um plano para acessar os desafios
+                </p>
+                <PlanActivationDialog onActivation={handlePlanActivation} />
+              </div>
+            )}
+          </CardContent>
+        </Card>
+
         <Card>
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
