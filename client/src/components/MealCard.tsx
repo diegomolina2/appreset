@@ -45,6 +45,32 @@ export function MealCard({
   };
 
   const handleConfirmLog = (date: string) => {
+    // Create meal log entry
+    const { state, dispatch } = useApp();
+    const mealLog = {
+      id: `${meal.id}-${Date.now()}`,
+      mealId: meal.id,
+      mealName: getMealName(),
+      calories: meal.calories,
+      protein: meal.protein,
+      carbs: meal.carbs,
+      fat: meal.fat,
+      date: date,
+      time: new Date().toLocaleTimeString(),
+      timestamp: new Date().toISOString(),
+    };
+
+    const existingLogs = state.userData.mealLogs || [];
+    const updatedLogs = [...existingLogs, mealLog];
+
+    dispatch({
+      type: "SET_USER_DATA",
+      payload: {
+        ...state.userData,
+        mealLogs: updatedLogs,
+      },
+    });
+
     if (onLogMeal) {
       onLogMeal();
     }

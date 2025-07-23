@@ -18,6 +18,8 @@ import {
   Utensils,
   ChevronLeft,
   ChevronRight,
+  Weight,
+  Trash2,
 } from "lucide-react";
 import { Button } from "./ui/button";
 import { useTranslation } from "../hooks/useTranslation";
@@ -25,7 +27,7 @@ import { useApp } from "../contexts/AppContext";
 
 export function Journal() {
   const { t } = useTranslation();
-  const { state } = useApp();
+  const { state, dispatch } = useApp();
   const [selectedDate, setSelectedDate] = useState(
     new Date().toISOString().split("T")[0]
   );
@@ -48,6 +50,21 @@ export function Journal() {
     }
   };
 
+  // Function to delete a meal log
+  const deleteMealLog = (mealLogId: string) => {
+    const updatedMealLogs = state.userData.mealLogs?.filter(
+      log => log.id !== mealLogId
+    ) || [];
+
+    dispatch({
+      type: "SET_USER_DATA",
+      payload: {
+        ...state.userData,
+        mealLogs: updatedMealLogs,
+      },
+    });
+  };
+
   // Get data for selected date
   const dayData = useMemo(() => {
     const waterLogs = state.userData.waterLog?.filter(
@@ -59,15 +76,26 @@ export function Journal() {
     const moodLogs = state.userData.moodLogs?.filter(
       (log) => log.date === selectedDate
     ) || [];
+    const weightLogs = state.userData.weights?.filter(
+      (log) => log.date === selectedDate
+    ) || [];
 
     const totalWater = waterLogs.reduce((sum, log) => sum + log.liters, 0);
     const totalCalories = mealLogs.reduce((sum, log) => sum + log.calories, 0);
+    const totalProtein = mealLogs.reduce((sum, log) => sum + log.protein, 0);
+    const totalCarbs = mealLogs.reduce((sum, log) => sum + log.carbs, 0);
+    const totalFat = mealLogs.reduce((sum, log) => sum + log.fat, 0);
     const lastMood = moodLogs.length > 0 ? moodLogs[moodLogs.length - 1] : null;
+    const dayWeight = weightLogs.length > 0 ? weightLogs[weightLogs.length - 1] : null;
 
     return {
       water: totalWater,
       calories: totalCalories,
+      protein: totalProtein,
+      carbs: totalCarbs,
+      fat: totalFat,
       mood: lastMood,
+      weight: dayWeight,
       mealLogs,
       waterLogs,
     };
@@ -164,7 +192,7 @@ export function Journal() {
       </Card>
 
       {/* Daily Summary */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
         {/* Water Intake */}
         <Card>
           <CardHeader className="pb-3">
@@ -236,7 +264,70 @@ export function Journal() {
             </div>
           </CardContent>
         </Card>
+
+        {/* Weight */}
+        <Card>
+          <CardHeader className="pb-3">
+            <CardTitle className="text-base flex items-center gap-2">
+              <Weight className="w-4 h-4 text-purple-500" />
+              Weight
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="text-center">
+              {dayData.weight ? (
+                <>
+                  <div className="text-2xl font-bold text-purple-600">
+                    {dayData.weight.weight} kg
+                  </div>
+                  <div className="text-xs text-muted-foreground">
+                    {dayData.weight.time}
+                  </div>
+                </>
+              ) : (
+                <div className="text-muted-foreground">
+                  <div className="text-2xl">-</div>
+                  <div className="text-sm">No weight logged</div>
+                </div>
+              )}
+            </div>
+          </CardContent>
+        </Card>
       </div>
+
+      {/* Macronutrients Summary */}
+      {dayData.mealLogs.length > 0 && (
+        <Card>
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2">
+              <Target className="w-5 h-5" />
+              Daily Macronutrients
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="grid grid-cols-3 gap-4">
+              <div className="text-center p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
+                <div className="text-2xl font-bold text-blue-600">
+                  {dayData.protein.toFixed(1)}g
+                </div>
+                <div className="text-sm text-muted-foreground">Protein</div>
+              </div>
+              <div className="text-center p-4 bg-green-50 dark:bg-green-900/20 rounded-lg">
+                <div className="text-2xl font-bold text-green-600">
+                  {dayData.carbs.toFixed(1)}g
+                </div>
+                <div className="text-sm text-muted-foreground">Carbs</div>
+              </div>
+              <div className="text-center p-4 bg-purple-50 dark:bg-purple-900/20 rounded-lg">
+                <div className="text-2xl font-bold text-purple-600">
+                  {dayData.fat.toFixed(1)}g
+                </div>
+                <div className="text-sm text-muted-foreground">Fat</div>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+      )}
 
       {/* Detailed Logs */}
       {dayData.mealLogs.length > 0 && (
@@ -251,13 +342,13 @@ export function Journal() {
             <div className="space-y-3">
               {dayData.mealLogs.map((meal, index) => (
                 <div key={meal.id} className="flex items-center justify-between p-3 bg-gray-50 dark:bg-gray-800 rounded-lg">
-                  <div>
+                  <div className="flex-1">
                     <div className="font-medium">{meal.mealName}</div>
                     <div className="text-sm text-muted-foreground">
                       {meal.time}
                     </div>
                   </div>
-                  <div className="text-right">
+                  <div className="text-right mr-4">
                     <div className="font-semibold text-orange-600">
                       {meal.calories} cal
                     </div>
@@ -265,6 +356,14 @@ export function Journal() {
                       P: {meal.protein}g • C: {meal.carbs}g • F: {meal.fat}g
                     </div>
                   </div>
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    onClick={() => deleteMealLog(meal.id)}
+                    className="text-red-600 hover:text-red-700 hover:bg-red-50"
+                  >
+                    <Trash2 className="w-4 h-4" />
+                  </Button>
                 </div>
               ))}
             </div>
@@ -273,14 +372,14 @@ export function Journal() {
       )}
 
       {/* Empty State */}
-      {dayData.water === 0 && dayData.calories === 0 && !dayData.mood && (
+      {dayData.water === 0 && dayData.calories === 0 && !dayData.mood && !dayData.weight && (
         <Card>
           <CardContent className="text-center py-12">
             <Calendar className="w-16 h-16 mx-auto text-muted-foreground mb-4" />
             <h3 className="text-lg font-semibold mb-2">No data for this day</h3>
             <p className="text-muted-foreground">
               {isToday
-                ? "Start logging your meals, water intake, and mood to see your daily progress."
+                ? "Start logging your meals, water intake, mood, and weight to see your daily progress."
                 : "No activities were logged on this date."}
             </p>
           </CardContent>

@@ -1,27 +1,27 @@
-
 import React from 'react';
 import { Router, Route, Switch } from 'wouter';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { Toaster } from '@/components/ui/toaster';
-import { ThemeProvider } from '@/components/ThemeProvider';
-import { AppProvider } from '@/contexts/AppContext';
-import BottomNavigation from '@/components/BottomNavigation';
+import { Toaster } from './components/ui/toaster';
+import { ThemeProvider } from './components/ThemeProvider';
+import { AppProvider } from './contexts/AppContext';
+import BottomNavigation from './components/BottomNavigation';
+import { FloatingActionButton } from './components/FloatingActionButton';
 
-// Import pages
-import Dashboard from '@/pages/dashboard';
-import Challenges from '@/pages/challenges';
-import Exercises from '@/pages/exercises';
-import Meals from '@/pages/meals';
-import Progress from '@/pages/progress';
-import Badges from '@/pages/badges';
-import Courses from '@/pages/courses';
-import CourseDetails from '@/pages/course-details';
-import LessonPage from '@/pages/lesson';
-import FAQ from '@/pages/faq';
-import Settings from '@/pages/settings';
-import Welcome from '@/pages/welcome';
-import Onboarding from '@/pages/onboarding';
-import NotFound from '@/pages/not-found';
+// Pages
+import Dashboard from './pages/dashboard';
+import Meals from './pages/meals';
+import Exercises from './pages/exercises';
+import Courses from './pages/courses';
+import CourseDetails from './pages/course-details'; 
+import Lesson from './pages/lesson';
+import Badges from './pages/badges';
+import Challenges from './pages/challenges';
+import Progress from './pages/progress';
+import Settings from './pages/settings';
+import FAQ from './pages/faq';
+import Welcome from './pages/welcome';
+import Onboarding from './pages/onboarding';
+import NotFound from './pages/not-found';
 
 const queryClient = new QueryClient();
 
@@ -58,6 +58,7 @@ function AppContent() {
         </Switch>
       </main>
       <BottomNavigation />
+      <FloatingActionButton />
       <Toaster />
     </div>
   );

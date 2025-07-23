@@ -26,6 +26,7 @@ import {
 } from "../components/ui/select";
 import { useTranslation } from "../hooks/useTranslation";
 import { useApp } from "../contexts/AppContext";
+import { MealLogDialog } from "../components/MealLogDialog";
 import mealsData from "../data/meals.json";
 
 interface Meal {
@@ -53,9 +54,10 @@ function Meals() {
   const [searchTerm, setSearchTerm] = useState("");
   const [categoryFilter, setCategoryFilter] = useState("all");
   const [selectedMeal, setSelectedMeal] = useState<Meal | null>(null);
+  const [mealToLog, setMealToLog] = useState<Meal | null>(null);
+  const [showLogDialog, setShowLogDialog] = useState(false);
 
-  const logMeal = (meal: Meal, date?: string) => {
-    const logDate = date || new Date().toISOString().split("T")[0];
+  const logMeal = (meal: Meal, date: string) => {
     const mealLog = {
       id: `${meal.id}-${Date.now()}`,
       mealId: meal.id,
@@ -64,7 +66,7 @@ function Meals() {
       protein: meal.protein,
       carbs: meal.carbs,
       fat: meal.fat,
-      date: logDate,
+      date: date,
       time: new Date().toLocaleTimeString(),
       timestamp: new Date().toISOString(),
     };
@@ -84,8 +86,20 @@ function Meals() {
       "Logging meal:",
       meal.name[currentLanguage] || meal.name["en-NG"],
       "for date:",
-      logDate,
+      date,
     );
+  };
+
+  const handleLogMealClick = (meal: Meal) => {
+    setMealToLog(meal);
+    setShowLogDialog(true);
+  };
+
+  const handleConfirmLog = (date: string) => {
+    if (mealToLog) {
+      logMeal(mealToLog, date);
+      setMealToLog(null);
+    }
   };
 
   const getCategoryVariant = (category: string) => {
@@ -329,7 +343,7 @@ function Meals() {
                         </DialogContent>
                       </Dialog>
 
-                      <Button className="flex-1" onClick={() => logMeal(meal)}>
+                      <Button className="flex-1" onClick={() => handleLogMealClick(meal)}>
                         <Plus className="w-4 h-4 mr-2" />
                         {t("meals.logMeal")}
                       </Button>
@@ -352,6 +366,14 @@ function Meals() {
           </div>
         </CardContent>
       </Card>
+
+      {/* Meal Log Dialog */}
+      <MealLogDialog
+        isOpen={showLogDialog}
+        onClose={() => setShowLogDialog(false)}
+        onConfirm={handleConfirmLog}
+        mealName={mealToLog ? (mealToLog.name[currentLanguage] || mealToLog.name["en-NG"]) : ""}
+      />
     </div>
   );
 }
