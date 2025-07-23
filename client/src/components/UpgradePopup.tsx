@@ -9,7 +9,7 @@ import { PlanActivationDialog } from './PlanActivation';
 interface UpgradePopupProps {
   isOpen: boolean;
   onClose: () => void;
-  onUpgrade: () => void;
+  onUpgrade?: () => void;
 }
 
 export const UpgradePopup: React.FC<UpgradePopupProps> = ({ 

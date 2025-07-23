@@ -9,12 +9,14 @@ import { useTranslation } from '../hooks/useTranslation';
 import { useApp } from '../contexts/AppContext';
 import { ExerciseCard } from '../components/ExerciseCard';
 import exercisesData from '../data/exercises.json';
+import { hasAccessToContent, getCurrentPlan, PLANS } from '../utils/planManager';
 
 export default function Exercises() {
   const { t } = useTranslation();
   const { state } = useApp();
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedPlan, setSelectedPlan] = useState('all');
 
   const { userData } = state;
   const favoriteExercises = exercisesData.filter(exercise => 
@@ -25,7 +27,16 @@ export default function Exercises() {
     const matchesSearch = exercise.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          exercise.description?.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesCategory = selectedCategory === 'all' || exercise.category === selectedCategory;
-    return matchesSearch && matchesCategory;
+    const matchesPlan = selectedPlan === 'all' || 
+                       (exercise.accessPlans && exercise.accessPlans.some(planId => {
+                         const plan = getCurrentPlan();
+                         return selectedPlan === 'accessible' ? (plan && exercise.accessPlans.includes(plan.id)) :
+                                selectedPlan === 'kickstart' ? exercise.accessPlans.includes(1) :
+                                selectedPlan === 'momentum' ? exercise.accessPlans.includes(2) :
+                                selectedPlan === 'thrive' ? exercise.accessPlans.includes(3) :
+                                selectedPlan === 'total' ? exercise.accessPlans.includes(4) : true;
+                       }));
+    return matchesSearch && matchesCategory && matchesPlan;
   });
 
   const categories = ['all', 'Light', 'Moderate', 'Advanced'];
@@ -34,6 +45,16 @@ export default function Exercises() {
     Light: exercisesData.filter(e => e.category === 'Light').length,
     Moderate: exercisesData.filter(e => e.category === 'Moderate').length,
     Advanced: exercisesData.filter(e => e.category === 'Advanced').length,
+  };
+
+  const plans = ['all', 'accessible', 'kickstart', 'momentum', 'thrive', 'total'];
+  const planCounts = {
+    all: exercisesData.length,
+    accessible: exercisesData.filter(e => hasAccessToContent(e)).length,
+    kickstart: exercisesData.filter(e => e.accessPlans && e.accessPlans.includes(1)).length,
+    momentum: exercisesData.filter(e => e.accessPlans && e.accessPlans.includes(2)).length,
+    thrive: exercisesData.filter(e => e.accessPlans && e.accessPlans.includes(3)).length,
+    total: exercisesData.filter(e => e.accessPlans && e.accessPlans.includes(4)).length,
   };
 
   const ExerciseStats = () => (
@@ -94,12 +115,21 @@ export default function Exercises() {
       {/* Header */}
       <header className="bg-white dark:bg-gray-800 shadow-sm">
         <div className="px-4 py-6">
-          <h1 className="text-2xl font-poppins font-bold text-gray-800 dark:text-gray-100">
-            {t('exercises.title')}
-          </h1>
-          <p className="text-gray-600 dark:text-gray-400 text-sm">
-            Home-friendly exercises for every fitness level
-          </p>
+          <div className="flex items-center justify-between">
+            <div>
+              <h1 className="text-2xl font-poppins font-bold text-gray-800 dark:text-gray-100">
+                {t('exercises.title')}
+              </h1>
+              <p className="text-gray-600 dark:text-gray-400 text-sm">
+                Home-friendly exercises for every fitness level
+              </p>
+            </div>
+            {getCurrentPlan() && (
+              <Badge className="bg-blue-100 text-blue-800 dark:bg-blue-800 dark:text-blue-100">
+                {getCurrentPlan()?.name}
+              </Badge>
+            )}
+          </div>
         </div>
       </header>
 
@@ -140,6 +170,29 @@ export default function Exercises() {
                   {category === 'all' ? 'All' : t(`exercises.categories.${category}`)}
                   <Badge variant="secondary" className="ml-2">
                     {categoryCounts[category as keyof typeof categoryCounts]}
+                  </Badge>
+                </Button>
+              ))}
+            </div>
+
+            {/* Plan Filter */}
+            <div className="flex space-x-2 mb-6 overflow-x-auto">
+              {plans.map((plan) => (
+                <Button
+                  key={plan}
+                  variant={selectedPlan === plan ? 'default' : 'outline'}
+                  size="sm"
+                  onClick={() => setSelectedPlan(plan)}
+                  className="whitespace-nowrap"
+                >
+                  {plan === 'all' ? 'Todos os Planos' : 
+                   plan === 'accessible' ? 'Acessíveis' :
+                   plan === 'kickstart' ? 'Kickstart' :
+                   plan === 'momentum' ? 'Momentum' :
+                   plan === 'thrive' ? 'Thrive' :
+                   plan === 'total' ? 'Total' : plan}
+                  <Badge variant="secondary" className="ml-2">
+                    {planCounts[plan as keyof typeof planCounts]}
                   </Badge>
                 </Button>
               ))}

@@ -1,13 +1,29 @@
-import React, { useState, useEffect } from 'react';
-import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
-import { Button } from '../components/ui/button';
-import { Input } from '../components/ui/input';
-import { Label } from '../components/ui/label';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../components/ui/select';
-import { Progress as ProgressBar } from '../components/ui/progress';
-import { Badge } from '../components/ui/badge';
-import { Separator } from '../components/ui/separator';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '../components/ui/tabs';
+import React, { useState, useEffect, useMemo } from "react";
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+} from "../components/ui/card";
+import { Button } from "../components/ui/button";
+import { Input } from "../components/ui/input";
+import { Label } from "../components/ui/label";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "../components/ui/select";
+import { Progress as ProgressBar } from "../components/ui/progress";
+import { Badge } from "../components/ui/badge";
+import { Separator } from "../components/ui/separator";
+import {
+  Tabs,
+  TabsContent,
+  TabsList,
+  TabsTrigger,
+} from "../components/ui/tabs";
 import {
   TrendingUp,
   Droplets,
@@ -21,6 +37,7 @@ import {
   Activity,
   Download,
   Upload,
+  Utensils,
 } from "lucide-react";
 import { useTranslation } from "../hooks/useTranslation";
 import { useApp } from "../contexts/AppContext";
@@ -60,8 +77,8 @@ import {
   getTodayDate,
 } from "../utils/progressCalculations";
 import { exportAllDataAsCSV } from "../utils/csvExport";
-import { CSVImport } from '../components/CSVImport';
-import { Dialog, DialogContent, DialogTrigger } from '../components/ui/dialog';
+import { CSVImport } from "../components/CSVImport";
+import { Dialog, DialogContent, DialogTrigger } from "../components/ui/dialog";
 import { DailyWeightLogger } from "../components/DailyWeightLogger";
 import { DailyMoodLogger } from "../components/DailyMoodLogger";
 
@@ -70,6 +87,38 @@ export default function Progress() {
   const [showImportDialog, setShowImportDialog] = useState(false);
   const { t } = useTranslation();
   const { logWeight, logMood, logWater, logCalories } = useApp();
+  const [timeFilter, setTimeFilter] = useState("1month");
+  const [calorieTimeFilter, setCalorieTimeFilter] = useState("1month");
+
+  // Helper function to filter data by time period
+  const filterDataByTime = (data: any[], filter: string) => {
+    if (!Array.isArray(data)) {
+      console.warn("filterDataByTime recebeu um valor inválido:", data);
+      return [];
+    }
+
+    const now = new Date();
+    const filterDate = new Date();
+
+    switch (filter) {
+      case "1week":
+        filterDate.setDate(now.getDate() - 7);
+        break;
+      case "1month":
+        filterDate.setMonth(now.getMonth() - 1);
+        break;
+      case "3months":
+        filterDate.setMonth(now.getMonth() - 3);
+        break;
+      case "6months":
+        filterDate.setMonth(now.getMonth() - 6);
+        break;
+      default:
+        return data;
+    }
+
+    return data.filter((item) => new Date(item.date) >= filterDate);
+  };
 
   // Water Intake State
   const [waterData, setWaterData] = useState<WaterIntakeData>({
@@ -254,6 +303,33 @@ export default function Progress() {
     (waterData.loggedMlToday / waterData.recommendedMl) * 100,
   );
 
+  // Process calorie data
+  const calorieData = useMemo(() => {
+    const mealLogs = state.userData.mealLogs || [];
+    const dailyCalories: { [key: string]: number } = {};
+
+    mealLogs.forEach((log) => {
+      if (dailyCalories[log.date]) {
+        dailyCalories[log.date] += log.calories;
+      } else {
+        dailyCalories[log.date] = log.calories;
+      }
+    });
+
+    const chartData = Object.entries(dailyCalories)
+      .map(([date, calories]) => ({
+        date,
+        calories,
+        formattedDate: new Date(date).toLocaleDateString(),
+      }))
+      .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
+
+    return filterDataByTime(chartData, calorieTimeFilter);
+  }, [state.userData.mealLogs, calorieTimeFilter]);
+
+  const filteredWeightData = filterDataByTime(weightData, timeFilter);
+  const filteredWaterData = filterDataByTime(waterData, timeFilter);
+
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 pb-20">
       {/* Header */}
@@ -275,7 +351,6 @@ export default function Progress() {
                 </p>
               </div>
             </div>
-
           </div>
         </div>
       </header>
@@ -748,70 +823,151 @@ export default function Progress() {
           <TabsContent value="charts" className="mt-6 space-y-6">
             {/* Weight Progress Chart */}
             <Card>
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <TrendingUp className="w-5 h-5 text-primary" />
-                  Weight Progress (Last 30 Days)
+              <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+                <CardTitle className="text-base font-medium">
+                  <div className="flex items-center gap-2">
+                    <TrendingUp className="h-4 w-4 text-primary" />
+                    {t("progress.charts.weightProgress")}
+                  </div>
                 </CardTitle>
+                <Select value={timeFilter} onValueChange={setTimeFilter}>
+                  <SelectTrigger className="w-32">
+                    <SelectValue />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="1week">
+                      {t("progress.timeFilters.1week")}
+                    </SelectItem>
+                    <SelectItem value="1month">
+                      {t("progress.timeFilters.1month")}
+                    </SelectItem>
+                    <SelectItem value="3months">
+                      {t("progress.timeFilters.3months")}
+                    </SelectItem>
+                    <SelectItem value="6months">
+                      {t("progress.timeFilters.6months")}
+                    </SelectItem>
+                    <SelectItem value="max">
+                      {t("progress.timeFilters.max")}
+                    </SelectItem>
+                  </SelectContent>
+                </Select>
               </CardHeader>
               <CardContent>
-                {weightData.length > 0 ? (
-                  <ResponsiveContainer width="100%" height={300}>
-                    <LineChart data={weightData}>
-                      <CartesianGrid strokeDasharray="3 3" />
-                      <XAxis dataKey="date" />
-                      <YAxis />
-                      <Tooltip />
-                      <Line
-                        type="monotone"
-                        dataKey="weight"
-                        stroke="#8884d8"
-                        strokeWidth={2}
-                        dot={{ fill: "#8884d8" }}
-                      />
-                    </LineChart>
-                  </ResponsiveContainer>
-                ) : (
-                  <div className="text-center py-12 text-gray-500">
-                    No weight data available. Start logging your weight to see
-                    progress!
-                  </div>
-                )}
+                <ResponsiveContainer width="100%" height={200}>
+                  <LineChart data={filteredWeightData}>
+                    <CartesianGrid strokeDasharray="3 3" />
+                    <XAxis dataKey="date" />
+                    <YAxis />
+                    <Tooltip
+                      labelFormatter={(value) => `Date: ${value}`}
+                      formatter={(value: any) => [`${value} kg`, "Weight"]}
+                    />
+                    <Line
+                      type="monotone"
+                      dataKey="weight"
+                      stroke="#8884d8"
+                      activeDot={{ r: 8 }}
+                    />
+                  </LineChart>
+                </ResponsiveContainer>
               </CardContent>
             </Card>
 
-            {/* Water Intake Chart */}
             <Card>
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <Droplets className="w-5 h-5 text-blue-500" />
-                  Water Intake (Last 7 Days)
+              <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+                <CardTitle className="text-base font-medium">
+                  <div className="flex items-center gap-2">
+                    <Droplets className="h-4 w-4 text-blue-500" />
+                    {t("progress.charts.waterIntake")}
+                  </div>
                 </CardTitle>
+                <Select value={timeFilter} onValueChange={setTimeFilter}>
+                  <SelectTrigger className="w-32">
+                    <SelectValue />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="1week">
+                      {t("progress.timeFilters.1week")}
+                    </SelectItem>
+                    <SelectItem value="1month">
+                      {t("progress.timeFilters.1month")}
+                    </SelectItem>
+                    <SelectItem value="3months">
+                      {t("progress.timeFilters.3months")}
+                    </SelectItem>
+                    <SelectItem value="6months">
+                      {t("progress.timeFilters.6months")}
+                    </SelectItem>
+                    <SelectItem value="max">
+                      {t("progress.timeFilters.max")}
+                    </SelectItem>
+                  </SelectContent>
+                </Select>
               </CardHeader>
               <CardContent>
-                {waterChartData.length > 0 ? (
-                  <div>
-                    <div className="mb-4 text-sm text-gray-600 dark:text-gray-400">
-                      Showing {waterChartData.length} days of data
-                    </div>
-                    <ResponsiveContainer width="100%" height={300}>
-                      <BarChart data={waterChartData}>
-                        <CartesianGrid strokeDasharray="3 3" />
-                        <XAxis dataKey="date" />
-                        <YAxis />
-                        <Tooltip 
-                          formatter={(value: any) => [`${value} L`, 'Water Intake']}
-                          labelFormatter={(label) => `Day: ${label}`}
-                        />
-                        <Bar dataKey="liters" fill="#3b82f6" />
-                      </BarChart>
-                    </ResponsiveContainer>
+                <ResponsiveContainer width="100%" height={200}>
+                  <BarChart data={filteredWaterData}>
+                    <CartesianGrid strokeDasharray="3 3" />
+                    <XAxis dataKey="date" />
+                    <YAxis />
+                    <Tooltip
+                      labelFormatter={(value) => `Date: ${value}`}
+                      formatter={(value: any) => [`${value}L`, "Water"]}
+                    />
+                    <Bar dataKey="amount" fill="#3b82f6" />
+                  </BarChart>
+                </ResponsiveContainer>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+                <CardTitle className="text-base font-medium">
+                  <div className="flex items-center gap-2">
+                    <Utensils className="h-4 w-4 text-orange-500" />
+                    {t("progress.charts.calorieIntake")}
                   </div>
-                ) : (
-                  <div className="text-center py-12 text-gray-500">
-                    No water data available. Start logging your water intake!
-                  </div>
-                )}
+                </CardTitle>
+                <Select
+                  value={calorieTimeFilter}
+                  onValueChange={setCalorieTimeFilter}
+                >
+                  <SelectTrigger className="w-32">
+                    <SelectValue />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="1week">
+                      {t("progress.timeFilters.1week")}
+                    </SelectItem>
+                    <SelectItem value="1month">
+                      {t("progress.timeFilters.1month")}
+                    </SelectItem>
+                    <SelectItem value="3months">
+                      {t("progress.timeFilters.3months")}
+                    </SelectItem>
+                    <SelectItem value="6months">
+                      {t("progress.timeFilters.6months")}
+                    </SelectItem>
+                    <SelectItem value="max">
+                      {t("progress.timeFilters.max")}
+                    </SelectItem>
+                  </SelectContent>
+                </Select>
+              </CardHeader>
+              <CardContent>
+                <ResponsiveContainer width="100%" height={200}>
+                  <BarChart data={calorieData}>
+                    <CartesianGrid strokeDasharray="3 3" />
+                    <XAxis dataKey="formattedDate" />
+                    <YAxis />
+                    <Tooltip
+                      labelFormatter={(value) => `Date: ${value}`}
+                      formatter={(value: any) => [`${value} cal`, "Calories"]}
+                    />
+                    <Bar dataKey="calories" fill="#f97316" />
+                  </BarChart>
+                </ResponsiveContainer>
               </CardContent>
             </Card>
           </TabsContent>

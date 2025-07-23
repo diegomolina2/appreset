@@ -1,177 +1,358 @@
-import React, { useState } from 'react';
-import { Card, CardContent } from '../components/ui/card';
-import { Button } from '../components/ui/button';
-import { Input } from '../components/ui/input';
-import { Badge } from '../components/ui/badge';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '../components/ui/tabs';
-import { Search, Heart, Utensils } from 'lucide-react';
-import { useTranslation } from '../hooks/useTranslation';
-import { useApp } from '../contexts/AppContext';
-import { MealCard } from '../components/MealCard';
-import mealsData from '../data/meals.json';
 
-export default function Meals() {
-  const { t } = useTranslation();
-  const { state } = useApp();
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
+import React, { useState } from "react";
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+} from "../components/ui/card";
+import { Button } from "../components/ui/button";
+import { Badge } from "../components/ui/badge";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "../components/ui/dialog";
+import { Utensils, Search, Filter, Eye, Plus, Clock, Target } from "lucide-react";
+import { Input } from "../components/ui/input";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "../components/ui/select";
+import { useTranslation } from "../hooks/useTranslation";
+import { useApp } from "../contexts/AppContext";
+import mealsData from "../data/meals.json";
 
-  const { userData } = state;
-  const favoriteMeals = mealsData.filter(meal => 
-    userData.favorites.meals.includes(meal.id)
-  );
+interface Meal {
+  id: string;
+  name: {
+    [key: string]: string;
+  };
+  calories: number;
+  protein: number;
+  carbs: number;
+  fat: number;
+  category: string;
+  image?: string;
+  preparation?: {
+    [key: string]: string;
+  };
+  accessPlans: number[];
+}
 
-  const filteredMeals = mealsData.filter(meal => {
-    const matchesSearch = meal.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         meal.description?.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         meal.ingredients.some(ing => ing.toLowerCase().includes(searchTerm.toLowerCase()));
-    const matchesCategory = selectedCategory === 'all' || meal.category === selectedCategory;
+const meals = mealsData as Meal[];
+
+function Meals() {
+  const { t, currentLanguage } = useTranslation();
+  const { state, dispatch } = useApp();
+  const [searchTerm, setSearchTerm] = useState("");
+  const [categoryFilter, setCategoryFilter] = useState("all");
+  const [selectedMeal, setSelectedMeal] = useState<Meal | null>(null);
+
+  const logMeal = (meal: Meal) => {
+    const mealLog = {
+      id: `${meal.id}-${Date.now()}`,
+      mealId: meal.id,
+      mealName: meal.name[currentLanguage] || meal.name["en-NG"],
+      calories: meal.calories,
+      protein: meal.protein,
+      carbs: meal.carbs,
+      fat: meal.fat,
+      date: new Date().toISOString().split("T")[0],
+      time: new Date().toLocaleTimeString(),
+      timestamp: new Date().toISOString(),
+    };
+
+    const existingLogs = state.userData.mealLogs || [];
+    const updatedLogs = [...existingLogs, mealLog];
+
+    dispatch({
+      type: "SET_USER_DATA",
+      payload: {
+        ...state.userData,
+        mealLogs: updatedLogs,
+      },
+    });
+
+    console.log(
+      "Logging meal:",
+      meal.name[currentLanguage] || meal.name["en-NG"],
+      "for date:",
+      mealLog.date,
+    );
+  };
+
+  const getCategoryVariant = (category: string) => {
+    switch (category) {
+      case "breakfast":
+        return "secondary";
+      case "lunch":
+        return "default";
+      case "dinner":
+        return "destructive";
+      case "snack":
+        return "outline";
+      default:
+        return "default";
+    }
+  };
+
+  const filteredMeals = meals.filter((meal) => {
+    const searchTermLower = searchTerm.toLowerCase();
+
+    const mealName =
+      meal.name[currentLanguage] ||
+      meal.name["en-NG"] ||
+      Object.values(meal.name)[0] ||
+      "";
+
+    const mealNameLower = mealName.toLowerCase();
+
+    const matchesSearch = mealNameLower.includes(searchTermLower);
+    const matchesCategory =
+      categoryFilter === "all" || meal.category === categoryFilter;
+
     return matchesSearch && matchesCategory;
   });
 
-  const categories = ['all', 'breakfast', 'lunch', 'dinner', 'snack'];
-  const categoryCounts = {
-    all: mealsData.length,
-    breakfast: mealsData.filter(m => m.category === 'breakfast').length,
-    lunch: mealsData.filter(m => m.category === 'lunch').length,
-    dinner: mealsData.filter(m => m.category === 'dinner').length,
-    snack: mealsData.filter(m => m.category === 'snack').length,
-  };
-
-  const MealStats = () => (
-    <div className="grid grid-cols-5 gap-2 mb-6">
-      {categories.map((category) => (
-        <Card 
-          key={category}
-          className={`text-center cursor-pointer transition-colors ${
-            selectedCategory === category 
-              ? 'border-primary bg-primary/10' 
-              : 'hover:bg-gray-50 dark:hover:bg-gray-800'
-          }`}
-          onClick={() => setSelectedCategory(category)}
-        >
-          <CardContent className="p-3">
-            <div className="text-lg font-bold text-gray-800 dark:text-gray-100">
-              {categoryCounts[category as keyof typeof categoryCounts]}
-            </div>
-            <div className="text-xs text-gray-600 dark:text-gray-400">
-              {category === 'all' ? 'All' : t(`meals.categories.${category}`)}
-            </div>
-          </CardContent>
-        </Card>
-      ))}
-    </div>
-  );
-
-  const handleLogMeal = (mealId: string) => {
-    // Add meal logging logic here
-    const today = new Date().toISOString().split('T')[0];
-    console.log('Logging meal:', mealId, 'for date:', today);
-  };
-
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 pb-20">
-      {/* Header */}
-      <header className="bg-white dark:bg-gray-800 shadow-sm">
-        <div className="px-4 py-6">
-          <h1 className="text-2xl font-poppins font-bold text-gray-800 dark:text-gray-100">
-            {t('meals.title')}
-          </h1>
-          <p className="text-gray-600 dark:text-gray-400 text-sm">
-            Authentic West African cuisine for your wellness journey
+    <div className="container mx-auto py-6 px-4">
+      <Card className="shadow-lg">
+        <CardHeader className="bg-gradient-to-r from-green-50 to-blue-50 dark:from-green-900/20 dark:to-blue-900/20">
+          <CardTitle className="text-3xl font-bold text-center mb-2">
+            <Utensils className="w-8 h-8 inline mr-3" />
+            {t("meals.title")}
+          </CardTitle>
+          <p className="text-center text-muted-foreground">
+            {t("meals.subtitle")}
           </p>
-        </div>
-      </header>
+        </CardHeader>
+        <CardContent className="p-6">
+          <div className="grid gap-6">
+            {/* Search and Filter Controls */}
+            <div className="flex flex-col md:flex-row gap-4">
+              <div className="flex-1 relative">
+                <Search className="w-5 h-5 text-gray-500 absolute left-3 top-1/2 transform -translate-y-1/2" />
+                <Input
+                  type="search"
+                  placeholder={t("meals.search")}
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  className="pl-10"
+                />
+              </div>
 
-      <div className="px-4 py-6">
-        {/* Search Bar */}
-        <div className="relative mb-6">
-          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-          <Input
-            type="text"
-            placeholder="Search meals and ingredients..."
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-            className="pl-10 rounded-2xl"
-          />
-        </div>
+              <div className="flex items-center gap-2">
+                <Filter className="w-5 h-5 text-gray-500" />
+                <Select value={categoryFilter} onValueChange={setCategoryFilter}>
+                  <SelectTrigger className="w-[200px]">
+                    <SelectValue placeholder={t("meals.filter")} />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="all">{t("meals.categories.all")}</SelectItem>
+                    <SelectItem value="breakfast">
+                      {t("meals.categories.breakfast")}
+                    </SelectItem>
+                    <SelectItem value="lunch">{t("meals.categories.lunch")}</SelectItem>
+                    <SelectItem value="dinner">{t("meals.categories.dinner")}</SelectItem>
+                    <SelectItem value="snack">{t("meals.categories.snack")}</SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
+            </div>
 
-        <MealStats />
+            {/* Results Count */}
+            <div className="text-sm text-muted-foreground">
+              {filteredMeals.length} {filteredMeals.length === 1 ? 'meal' : 'meals'} found
+            </div>
 
-        <Tabs defaultValue="all" className="w-full">
-          <TabsList className="grid w-full grid-cols-2">
-            <TabsTrigger value="all">All Meals</TabsTrigger>
-            <TabsTrigger value="favorites">
-              Favorites ({favoriteMeals.length})
-            </TabsTrigger>
-          </TabsList>
+            {/* Meals Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {filteredMeals.map((meal) => (
+                <Card key={meal.id} className="overflow-hidden hover:shadow-lg transition-shadow duration-200">
+                  {meal.image && (
+                    <div className="aspect-video w-full overflow-hidden">
+                      <img
+                        src={meal.image}
+                        alt={meal.name[currentLanguage] || meal.name["en-NG"]}
+                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-200"
+                      />
+                    </div>
+                  )}
 
-          <TabsContent value="all" className="mt-6">
-            {/* Category Filter */}
-            <div className="flex space-x-2 mb-4 overflow-x-auto">
-              {categories.map((category) => (
-                <Button
-                  key={category}
-                  variant={selectedCategory === category ? 'default' : 'outline'}
-                  size="sm"
-                  onClick={() => setSelectedCategory(category)}
-                  className="whitespace-nowrap"
-                >
-                  {category === 'all' ? 'All' : t(`meals.categories.${category}`)}
-                  <Badge variant="secondary" className="ml-2">
-                    {categoryCounts[category as keyof typeof categoryCounts]}
-                  </Badge>
-                </Button>
+                  <CardHeader className="pb-3">
+                    <div className="flex items-start justify-between gap-2">
+                      <CardTitle className="text-lg line-clamp-2">
+                        {meal.name[currentLanguage] || meal.name["en-NG"]}
+                      </CardTitle>
+                      <Badge variant={getCategoryVariant(meal.category)} className="shrink-0">
+                        {t(`meals.categories.${meal.category}`)}
+                      </Badge>
+                    </div>
+                  </CardHeader>
+
+                  <CardContent className="space-y-4">
+                    {/* Macronutrients Display */}
+                    <div className="grid grid-cols-4 gap-2 text-center">
+                      <div className="bg-orange-50 dark:bg-orange-900/20 p-2 rounded">
+                        <div className="text-xl font-bold text-orange-600">
+                          {meal.calories}
+                        </div>
+                        <div className="text-xs text-muted-foreground">
+                          {t("meals.calories")}
+                        </div>
+                      </div>
+                      <div className="bg-blue-50 dark:bg-blue-900/20 p-2 rounded">
+                        <div className="text-lg font-semibold text-blue-600">
+                          {meal.protein}g
+                        </div>
+                        <div className="text-xs text-muted-foreground">
+                          {t("meals.protein")}
+                        </div>
+                      </div>
+                      <div className="bg-green-50 dark:bg-green-900/20 p-2 rounded">
+                        <div className="text-lg font-semibold text-green-600">
+                          {meal.carbs}g
+                        </div>
+                        <div className="text-xs text-muted-foreground">
+                          {t("meals.carbs")}
+                        </div>
+                      </div>
+                      <div className="bg-purple-50 dark:bg-purple-900/20 p-2 rounded">
+                        <div className="text-lg font-semibold text-purple-600">
+                          {meal.fat}g
+                        </div>
+                        <div className="text-xs text-muted-foreground">
+                          {t("meals.fats")}
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Action Buttons */}
+                    <div className="flex gap-2">
+                      <Dialog>
+                        <DialogTrigger asChild>
+                          <Button
+                            variant="outline"
+                            className="flex-1"
+                            onClick={() => setSelectedMeal(meal)}
+                          >
+                            <Eye className="w-4 h-4 mr-2" />
+                            {t("meals.view")}
+                          </Button>
+                        </DialogTrigger>
+                        <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto">
+                          <DialogHeader>
+                            <DialogTitle className="text-xl">
+                              {meal.name[currentLanguage] || meal.name["en-NG"]}
+                            </DialogTitle>
+                          </DialogHeader>
+
+                          <div className="space-y-6">
+                            {meal.image && (
+                              <img
+                                src={meal.image}
+                                alt={meal.name[currentLanguage] || meal.name["en-NG"]}
+                                className="w-full h-64 object-cover rounded-lg"
+                              />
+                            )}
+
+                            {/* Detailed Macronutrients */}
+                            <div className="grid grid-cols-4 gap-4 p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
+                              <div className="text-center">
+                                <Target className="w-6 h-6 mx-auto mb-1 text-orange-500" />
+                                <div className="font-bold text-xl text-orange-600">
+                                  {meal.calories}
+                                </div>
+                                <div className="text-sm text-muted-foreground">
+                                  {t("meals.calories")}
+                                </div>
+                              </div>
+                              <div className="text-center">
+                                <div className="w-6 h-6 mx-auto mb-1 bg-blue-500 rounded"></div>
+                                <div className="font-semibold text-lg text-blue-600">
+                                  {meal.protein}g
+                                </div>
+                                <div className="text-sm text-muted-foreground">
+                                  {t("meals.protein")}
+                                </div>
+                              </div>
+                              <div className="text-center">
+                                <div className="w-6 h-6 mx-auto mb-1 bg-green-500 rounded"></div>
+                                <div className="font-semibold text-lg text-green-600">
+                                  {meal.carbs}g
+                                </div>
+                                <div className="text-sm text-muted-foreground">
+                                  {t("meals.carbs")}
+                                </div>
+                              </div>
+                              <div className="text-center">
+                                <div className="w-6 h-6 mx-auto mb-1 bg-purple-500 rounded"></div>
+                                <div className="font-semibold text-lg text-purple-600">
+                                  {meal.fat}g
+                                </div>
+                                <div className="text-sm text-muted-foreground">
+                                  {t("meals.fats")}
+                                </div>
+                              </div>
+                            </div>
+
+                            {/* Preparation Instructions */}
+                            {meal.preparation && (
+                              <div className="space-y-3">
+                                <h4 className="font-semibold text-lg flex items-center gap-2">
+                                  <Clock className="w-5 h-5" />
+                                  {t("meals.preparation")}
+                                </h4>
+                                <div className="p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
+                                  <p className="text-sm leading-relaxed">
+                                    {meal.preparation[currentLanguage] ||
+                                      meal.preparation["en-NG"]}
+                                  </p>
+                                </div>
+                              </div>
+                            )}
+
+                            {/* Category Badge */}
+                            <div className="flex justify-center">
+                              <Badge variant={getCategoryVariant(meal.category)} className="text-sm px-4 py-1">
+                                {t(`meals.categories.${meal.category}`)}
+                              </Badge>
+                            </div>
+                          </div>
+                        </DialogContent>
+                      </Dialog>
+
+                      <Button className="flex-1" onClick={() => logMeal(meal)}>
+                        <Plus className="w-4 h-4 mr-2" />
+                        {t("meals.logMeal")}
+                      </Button>
+                    </div>
+                  </CardContent>
+                </Card>
               ))}
             </div>
 
-            {filteredMeals.length > 0 ? (
-              <div className="grid gap-4 md:grid-cols-2">
-                {filteredMeals.map((meal) => (
-                  <MealCard 
-                    key={meal.id}
-                    meal={meal}
-                    onLogMeal={() => handleLogMeal(meal.id)}
-                  />
-                ))}
-              </div>
-            ) : (
-              <Card className="p-6 text-center">
-                <p className="text-gray-600 dark:text-gray-400">
-                  No meals found matching your criteria.
+            {/* No Results Message */}
+            {filteredMeals.length === 0 && (
+              <div className="text-center py-12">
+                <Utensils className="w-16 h-16 mx-auto text-muted-foreground mb-4" />
+                <h3 className="text-lg font-semibold mb-2">No meals found</h3>
+                <p className="text-muted-foreground">
+                  Try adjusting your search terms or filters
                 </p>
-              </Card>
-            )}
-          </TabsContent>
-
-          <TabsContent value="favorites" className="mt-6">
-            {favoriteMeals.length > 0 ? (
-              <div className="grid gap-4 md:grid-cols-2">
-                {favoriteMeals.map((meal) => (
-                  <MealCard 
-                    key={meal.id}
-                    meal={meal}
-                    onLogMeal={() => handleLogMeal(meal.id)}
-                  />
-                ))}
               </div>
-            ) : (
-              <Card className="p-6 text-center">
-                <Heart className="w-12 h-12 text-gray-400 mx-auto mb-4" />
-                <p className="text-gray-600 dark:text-gray-400 mb-4">
-                  No favorite meals yet. Start adding meals to your favorites!
-                </p>
-                <Button 
-                  onClick={() => setSelectedCategory('all')}
-                  className="bg-primary hover:bg-primary/90"
-                >
-                  Browse All Meals
-                </Button>
-              </Card>
             )}
-          </TabsContent>
-        </Tabs>
-      </div>
+          </div>
+        </CardContent>
+      </Card>
     </div>
   );
 }
+
+export default Meals;

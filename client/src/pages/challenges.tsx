@@ -9,7 +9,7 @@ import { useTranslation } from '../hooks/useTranslation';
 import { useApp } from '../contexts/AppContext';
 import { ChallengeCard } from '../components/ChallengeCard';
 import challengesData from '../data/challenges.json';
-import { hasAccessToChallenge, getCurrentPlan, isAccessExpired } from '../utils/planManager';
+import { hasAccessToChallenge, getCurrentPlan, isAccessExpired, hasAccessToContent } from '../utils/planManager';
 import { UpgradePopup } from '../components/UpgradePopup';
 import { PlanActivationDialog } from '../components/PlanActivation';
 
@@ -52,8 +52,9 @@ export default function Challenges() {
       return;
     }
 
-    if (!hasAccessToChallenge(challengeId)) {
-      alert('Você não tem acesso a este desafio com seu plano atual. Faça upgrade para desbloqueá-lo.');
+    const challenge = challengesData.find(c => c.id === challengeId);
+    if (challenge && !hasAccessToContent(challenge)) {
+      setShowUpgradePopup(true);
       return;
     }
 
@@ -88,7 +89,7 @@ export default function Challenges() {
   );
 
   const AvailableChallengeCard = ({ challenge }: { challenge: any }) => {
-    const hasAccess = hasAccessToChallenge(challenge.id);
+    const hasAccess = hasAccessToContent(challenge);
     const isLocked = !hasAccess;
 
     return (
@@ -141,23 +142,23 @@ export default function Challenges() {
             ))}
           </div>
 
-          <Button 
-            onClick={() => handleStartChallenge(challenge.id)}
-            disabled={isLocked}
-            className={`w-full ${isLocked ? 'bg-gray-400' : 'bg-primary hover:bg-primary/90'}`}
-          >
-            {isLocked ? (
-              <>
-                <Lock className="w-4 h-4 mr-2" />
-                Upgrade Required
-              </>
-            ) : (
-              <>
-                <Play className="w-4 h-4 mr-2" />
-                {t('challenges.startChallenge')}
-              </>
-            )}
-          </Button>
+          {isLocked ? (
+            <Button 
+              onClick={() => setShowUpgradePopup(true)}
+              className="w-full bg-orange-500 hover:bg-orange-600 text-white"
+            >
+              <Lock className="w-4 h-4 mr-2" />
+              Fazer Upgrade
+            </Button>
+          ) : (
+            <Button 
+              onClick={() => handleStartChallenge(challenge.id)}
+              className="w-full bg-primary hover:bg-primary/90"
+            >
+              <Play className="w-4 h-4 mr-2" />
+              {t('challenges.startChallenge')}
+            </Button>
+          )}
         </CardContent>
       </Card>
     );

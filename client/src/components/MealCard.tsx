@@ -1,11 +1,13 @@
-import React from 'react';
-import { Meal } from '../types';
-import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
-import { Button } from './ui/button';
-import { Badge } from './ui/badge';
-import { Heart, Plus, Clock, Utensils } from 'lucide-react';
-import { useTranslation } from '../hooks/useTranslation';
-import { useApp } from '../contexts/AppContext';
+import React, { useState } from "react";
+import { Meal } from "../types";
+import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
+import { Button } from "./ui/button";
+import { Badge } from "./ui/badge";
+import { Heart, Plus, Clock, Utensils, Lock, Crown } from "lucide-react";
+import { useTranslation } from "../hooks/useTranslation";
+import { useApp } from "../contexts/AppContext";
+import { hasAccessToContent } from "../utils/planManager";
+import { UpgradePopup } from "./UpgradePopup";
 
 interface MealCardProps {
   meal: Meal;
@@ -13,52 +15,84 @@ interface MealCardProps {
   showCategory?: boolean;
 }
 
-export function MealCard({ meal, onLogMeal, showCategory = true }: MealCardProps) {
+export function MealCard({
+  meal,
+  onLogMeal,
+  showCategory = true,
+}: MealCardProps) {
   const { t } = useTranslation();
   const { state, toggleFavorite } = useApp();
+  const [showUpgradePopup, setShowUpgradePopup] = useState(false);
+
+  const hasAccess = hasAccessToContent(meal);
+  const isLocked = !hasAccess;
 
   const isFavorite = state.userData.favorites.meals.includes(meal.id);
 
   const handleToggleFavorite = () => {
-    toggleFavorite('meals', meal.id);
+    toggleFavorite("meals", meal.id);
+  };
+
+  const handleLogMeal = () => {
+    if (isLocked) {
+      setShowUpgradePopup(true);
+      return;
+    }
+
+    if (onLogMeal) {
+      onLogMeal();
+    }
   };
 
   const getCategoryColor = (category?: string) => {
     switch (category) {
-      case 'breakfast':
-        return 'bg-yellow-100 text-yellow-800 dark:bg-yellow-800 dark:text-yellow-100';
-      case 'lunch':
-        return 'bg-green-100 text-green-800 dark:bg-green-800 dark:text-green-100';
-      case 'dinner':
-        return 'bg-blue-100 text-blue-800 dark:bg-blue-800 dark:text-blue-100';
-      case 'snack':
-        return 'bg-purple-100 text-purple-800 dark:bg-purple-800 dark:text-purple-100';
+      case "breakfast":
+        return "bg-yellow-100 text-yellow-800 dark:bg-yellow-800 dark:text-yellow-100";
+      case "lunch":
+        return "bg-green-100 text-green-800 dark:bg-green-800 dark:text-green-100";
+      case "dinner":
+        return "bg-blue-100 text-blue-800 dark:bg-blue-800 dark:text-blue-100";
+      case "snack":
+        return "bg-purple-100 text-purple-800 dark:bg-purple-800 dark:text-purple-100";
       default:
-        return 'bg-gray-100 text-gray-800 dark:bg-gray-800 dark:text-gray-100';
+        return "bg-gray-100 text-gray-800 dark:bg-gray-800 dark:text-gray-100";
     }
   };
 
   return (
-    <Card className="w-full shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+    <Card
+      className={`w-full shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden ${isLocked ? "opacity-75" : ""}`}
+    >
       <CardHeader className="pb-3">
         <div className="flex items-start justify-between">
           <div className="flex-1">
-            <CardTitle className="text-lg font-poppins font-bold text-gray-800 dark:text-gray-100 mb-1">
-              {meal.name}
-            </CardTitle>
+            <div className="flex items-center gap-2">
+              <CardTitle className="text-lg font-poppins font-bold text-gray-800 dark:text-gray-100 mb-1">
+                {meal.name}
+              </CardTitle>
+              {isLocked && <Lock className="w-4 h-4 text-gray-500" />}
+            </div>
             <p className="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">
               {meal.description}
             </p>
+            {isLocked && (
+              <Badge variant="secondary" className="mt-1 text-xs">
+                Requer upgrade do plano
+              </Badge>
+            )}
           </div>
           <button
             onClick={handleToggleFavorite}
             className={`p-2 rounded-full transition-colors ${
-              isFavorite 
-                ? 'bg-red-100 text-red-500 hover:bg-red-200 dark:bg-red-800 dark:text-red-300' 
-                : 'bg-gray-100 text-gray-400 hover:bg-gray-200 dark:bg-gray-800 dark:text-gray-500'
+              isFavorite
+                ? "bg-red-100 text-red-500 hover:bg-red-200 dark:bg-red-800 dark:text-red-300"
+                : "bg-gray-100 text-gray-400 hover:bg-gray-200 dark:bg-gray-800 dark:text-gray-500"
             }`}
           >
-            <Heart className="w-5 h-5" fill={isFavorite ? 'currentColor' : 'none'} />
+            <Heart
+              className="w-5 h-5"
+              fill={isFavorite ? "currentColor" : "none"}
+            />
           </button>
         </div>
       </CardHeader>
@@ -71,7 +105,7 @@ export function MealCard({ meal, onLogMeal, showCategory = true }: MealCardProps
               <div className="flex items-center space-x-1">
                 <Utensils className="w-4 h-4 text-gray-500" />
                 <span className="text-sm font-medium text-primary">
-                  {meal.calories} {t('common.calories')}
+                  {meal.calories} {t("common.calories")}
                 </span>
               </div>
               {showCategory && meal.category && (
@@ -85,15 +119,15 @@ export function MealCard({ meal, onLogMeal, showCategory = true }: MealCardProps
           {/* Ingredients */}
           <div>
             <p className="text-xs text-gray-500 dark:text-gray-400 mb-1">
-              {t('meals.ingredients')}:
+              {t("meals.ingredients")}:
             </p>
             <div className="flex flex-wrap gap-1">
-              {meal.ingredients.slice(0, 4).map((ingredient, index) => (
+              {(meal.ingredients ?? []).slice(0, 4).map((ingredient, index) => (
                 <Badge key={index} variant="outline" className="text-xs">
                   {ingredient}
                 </Badge>
               ))}
-              {meal.ingredients.length > 4 && (
+              {(meal.ingredients ?? []).length > 4 && (
                 <Badge variant="outline" className="text-xs">
                   +{meal.ingredients.length - 4} more
                 </Badge>
@@ -107,14 +141,36 @@ export function MealCard({ meal, onLogMeal, showCategory = true }: MealCardProps
           </p>
 
           {/* Action Button */}
-          {onLogMeal && (
-            <Button onClick={onLogMeal} className="w-full bg-secondary hover:bg-secondary/90">
-              <Plus className="w-4 h-4 mr-2" />
-              {t('meals.logMeal')}
-            </Button>
-          )}
+          {onLogMeal &&
+            (isLocked ? (
+              <Button
+                onClick={() => setShowUpgradePopup(true)}
+                className="w-full bg-orange-500 hover:bg-orange-600 text-white"
+              >
+                <Lock className="w-4 h-4 mr-2" />
+                Fazer Upgrade
+              </Button>
+            ) : (
+              <Button
+                onClick={handleLogMeal}
+                className="w-full bg-secondary hover:bg-secondary/90"
+              >
+                <Plus className="w-4 h-4 mr-2" />
+                {t("meals.logMeal")}
+              </Button>
+            ))}
         </div>
       </CardContent>
+
+      {/* Upgrade Popup */}
+      <UpgradePopup
+        isOpen={showUpgradePopup}
+        onClose={() => setShowUpgradePopup(false)}
+        onUpgrade={() => {
+          setShowUpgradePopup(false);
+          window.location.reload();
+        }}
+      />
     </Card>
   );
 }

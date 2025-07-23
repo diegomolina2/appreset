@@ -3,10 +3,12 @@ import { Exercise } from '../types';
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import { Button } from './ui/button';
 import { Badge } from './ui/badge';
-import { Heart, Play, Clock, RotateCcw } from 'lucide-react';
+import { Heart, Play, Clock, RotateCcw, Lock, Crown } from 'lucide-react';
 import { useTranslation } from '../hooks/useTranslation';
 import { useApp } from '../contexts/AppContext';
 import { ExerciseTimer } from './ExerciseTimer';
+import { hasAccessToContent } from '../utils/planManager';
+import { UpgradePopup } from './UpgradePopup';
 
 interface ExerciseCardProps {
   exercise: Exercise;
@@ -29,6 +31,10 @@ export function ExerciseCard({ exercise, onStart, showCategory = true }: Exercis
   const { t } = useTranslation();
   const { state, toggleFavorite } = useApp();
   const [showTimer, setShowTimer] = useState(false);
+  const [showUpgradePopup, setShowUpgradePopup] = useState(false);
+  
+  const hasAccess = hasAccessToContent(exercise);
+  const isLocked = !hasAccess;
 
   const isFavorite = state.userData.favorites.exercises.includes(exercise.id);
 
@@ -37,6 +43,11 @@ export function ExerciseCard({ exercise, onStart, showCategory = true }: Exercis
   };
 
   const handleStart = () => {
+    if (isLocked) {
+      setShowUpgradePopup(true);
+      return;
+    }
+    
     setShowTimer(true);
     if (onStart) {
       onStart();
@@ -62,17 +73,27 @@ export function ExerciseCard({ exercise, onStart, showCategory = true }: Exercis
   };
 
   return (
-    <Card className="w-full shadow-lg hover:shadow-xl transition-shadow duration-300">
+    <Card className={`w-full shadow-lg hover:shadow-xl transition-shadow duration-300 ${isLocked ? 'opacity-75' : ''}`}>
       <CardHeader className="pb-3">
         <div className="flex items-start justify-between">
           <div className="flex-1">
-            <CardTitle className="text-lg font-poppins font-bold text-gray-800 dark:text-gray-100 mb-1">
-              {exercise.name}
-            </CardTitle>
+            <div className="flex items-center gap-2">
+              <CardTitle className="text-lg font-poppins font-bold text-gray-800 dark:text-gray-100 mb-1">
+                {exercise.name}
+              </CardTitle>
+              {isLocked && (
+                <Lock className="w-4 h-4 text-gray-500" />
+              )}
+            </div>
             {exercise.description && (
               <p className="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">
                 {exercise.description}
               </p>
+            )}
+            {isLocked && (
+              <Badge variant="secondary" className="mt-1 text-xs">
+                Requer upgrade do plano
+              </Badge>
             )}
           </div>
           <button
@@ -146,10 +167,17 @@ export function ExerciseCard({ exercise, onStart, showCategory = true }: Exercis
           </div>
 
           {/* Action Button */}
-          <Button onClick={handleStart} className="w-full bg-primary hover:bg-primary/90">
-            <Play className="w-4 h-4 mr-2" />
-            {t('exercises.startExercise')}
-          </Button>
+          {isLocked ? (
+            <Button onClick={() => setShowUpgradePopup(true)} className="w-full bg-orange-500 hover:bg-orange-600 text-white">
+              <Lock className="w-4 h-4 mr-2" />
+              Fazer Upgrade
+            </Button>
+          ) : (
+            <Button onClick={handleStart} className="w-full bg-primary hover:bg-primary/90">
+              <Play className="w-4 h-4 mr-2" />
+              {t('exercises.startExercise')}
+            </Button>
+          )}
         </div>
               {exercise.media && (
             <div className="mb-4 rounded-lg overflow-hidden bg-gray-100 dark:bg-gray-700">
@@ -171,6 +199,16 @@ export function ExerciseCard({ exercise, onStart, showCategory = true }: Exercis
         isOpen={showTimer}
         onClose={() => setShowTimer(false)}
         onComplete={handleTimerComplete}
+      />
+      
+      {/* Upgrade Popup */}
+      <UpgradePopup 
+        isOpen={showUpgradePopup} 
+        onClose={() => setShowUpgradePopup(false)}
+        onUpgrade={() => {
+          setShowUpgradePopup(false);
+          window.location.reload();
+        }}
       />
     </Card>
   );

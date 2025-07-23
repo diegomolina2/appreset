@@ -20,6 +20,7 @@ export interface Challenge {
   completedDays: number[];
   isActive: boolean;
   startDate?: string;
+  accessPlans?: number[];
 }
 
 export interface DailyTask {
@@ -37,6 +38,7 @@ export interface Exercise {
   rest: string;
   description?: string;
   isFavorite?: boolean;
+  accessPlans?: number[];
 }
 
 export interface Meal {
@@ -48,6 +50,7 @@ export interface Meal {
   additionalInfo: string;
   isFavorite?: boolean;
   category?: 'breakfast' | 'lunch' | 'dinner' | 'snack';
+  accessPlans?: number[];
 }
 
 export interface WeightLog {
@@ -84,15 +87,69 @@ export interface Badge {
   name: string;
   description: string;
   icon: string;
-  unlockedAt?: string;
   isUnlocked: boolean;
+  unlockedAt?: string;
 }
 
-export interface Quote {
+export interface Course {
   id: string;
-  text: string;
-  author?: string;
-  isFavorite?: boolean;
+  title: {
+    'en-NG': string;
+    'fr-CI': string;
+  };
+  description: {
+    'en-NG': string;
+    'fr-CI': string;
+  };
+  image: string;
+  accessPlans: number[];
+  totalLessons: number;
+  modules: CourseModule[];
+}
+
+export interface CourseModule {
+  id: string;
+  title: {
+    'en-NG': string;
+    'fr-CI': string;
+  };
+  lessons: Lesson[];
+}
+
+export interface Lesson {
+  id: string;
+  title: {
+    'en-NG': string;
+    'fr-CI': string;
+  };
+  type: 'video' | 'text';
+  duration: string;
+  videoUrl?: string;
+  description?: {
+    'en-NG': string;
+    'fr-CI': string;
+  };
+  content?: {
+    text: {
+      'en-NG': string;
+      'fr-CI': string;
+    };
+    images?: string[];
+  };
+}
+
+export interface CourseProgress {
+  courseId: string;
+  completedLessons: string[];
+  currentModule: string;
+  currentLesson: string;
+  startedAt: string;
+  lastAccessedAt: string;
+}
+
+export interface LessonProgress {
+  lessonId: string;
+  completed: boolean;
 }
 
 export interface UserData {
@@ -103,6 +160,8 @@ export interface UserData {
   measurements: Measurements[];
   waterLog: WaterLog[];
   caloriesLog: CaloriesLog[];
+  courseProgress: CourseProgress[];
+  lessonProgress: LessonProgress[];
   badges: Badge[];
   favorites: {
     exercises: string[];
