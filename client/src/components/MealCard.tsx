@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import { Meal } from "../types";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
@@ -6,7 +7,7 @@ import { Badge } from "./ui/badge";
 import { Heart, Plus, Clock, Utensils, Lock, Crown } from "lucide-react";
 import { useTranslation } from "../hooks/useTranslation";
 import { useApp } from "../contexts/AppContext";
-import { hasAccessToContent } from "../utils/planManager";
+import { usePlanAccess } from "../hooks/usePlanAccess";
 import { UpgradePopup } from "./UpgradePopup";
 import { MealLogDialog } from "./MealLogDialog";
 
@@ -23,15 +24,20 @@ export function MealCard({
 }: MealCardProps) {
   const { t, currentLanguage } = useTranslation();
   const { state, toggleFavorite } = useApp();
+  const { hasAccess } = usePlanAccess();
   const [showUpgradePopup, setShowUpgradePopup] = useState(false);
   const [showLogDialog, setShowLogDialog] = useState(false);
 
-  const hasAccess = hasAccessToContent(meal);
-  const isLocked = !hasAccess;
+  const hasAccessToMeal = hasAccess(meal.accessPlans);
+  const isLocked = !hasAccessToMeal;
 
   const isFavorite = state.userData.favorites.meals.includes(meal.id);
 
   const handleToggleFavorite = () => {
+    if (isLocked) {
+      setShowUpgradePopup(true);
+      return;
+    }
     toggleFavorite("meals", meal.id);
   };
 
@@ -46,7 +52,7 @@ export function MealCard({
 
   const handleConfirmLog = (date: string) => {
     // Create meal log entry
-    const { state, dispatch } = useApp();
+    const { dispatch } = useApp();
     const mealLog = {
       id: `${meal.id}-${Date.now()}`,
       mealId: meal.id,
@@ -106,25 +112,17 @@ export function MealCard({
     }
     return meal.description?.[currentLanguage] || meal.description?.['en-NG'] || '';
   };
-  
-  const handleLogMeal = () => {
-    if (isLocked) {
-      setShowUpgradePopup(true);
-      return;
-    }
-    // Handle log meal logic here
-  };
 
-  const handleViewMeal = () => {
-      if (isLocked) {
-          setShowUpgradePopup(true);
-          return;
-      }
-  }
+  // Get the next available plan name
+  const getNextPlanName = () => {
+    const planNames = ["Free", "Momentum", "Premium", "Pro"];
+    const minPlan = Math.min(...meal.accessPlans);
+    return planNames[minPlan - 1] || "Premium";
+  };
 
   return (
     <Card
-      className={`w-full shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden ${isLocked ? "opacity-75" : ""}`}
+      className={`w-full shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden ${isLocked ? "opacity-90" : ""}`}
     >
       <CardHeader className="pb-3">
         <div className="flex items-start justify-between">
@@ -135,26 +133,35 @@ export function MealCard({
               </CardTitle>
               {isLocked && <Lock className="w-4 h-4 text-gray-500" />}
             </div>
-            <p className="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">
-              {getMealDescription()}
-            </p>
-            {isLocked && (
-              <Badge variant="secondary" className="mt-1 text-xs">
-                Requer upgrade do plano
+            
+            {/* Show category */}
+            {showCategory && meal.category && (
+              <Badge className={`text-xs mb-2 ${getCategoryColor(meal.category)}`}>
+                {t(`meals.categories.${meal.category}`)}
               </Badge>
             )}
+
+            {/* Show unlock message if locked */}
+            {isLocked && (
+              <div className="space-y-2">
+                <Badge variant="secondary" className="text-xs bg-orange-100 text-orange-800">
+                  {t("meals.unlockedFrom", { plan: t(`meals.plans.${getNextPlanName()}`) })}
+                </Badge>
+              </div>
+            )}
           </div>
+          
           <button
             onClick={handleToggleFavorite}
             className={`p-2 rounded-full transition-colors ${
-              isFavorite
+              isFavorite && !isLocked
                 ? "bg-red-100 text-red-500 hover:bg-red-200 dark:bg-red-800 dark:text-red-300"
                 : "bg-gray-100 text-gray-400 hover:bg-gray-200 dark:bg-gray-800 dark:text-gray-500"
             }`}
           >
             <Heart
               className="w-5 h-5"
-              fill={isFavorite ? "currentColor" : "none"}
+              fill={isFavorite && !isLocked ? "currentColor" : "none"}
             />
           </button>
         </div>
@@ -162,46 +169,96 @@ export function MealCard({
 
       <CardContent>
         <div className="space-y-3">
+          {/* Meal Image - Show lock icon if locked */}
+          <div className="relative h-40 bg-gray-200 dark:bg-gray-700 rounded-lg overflow-hidden">
+            {isLocked ? (
+              <div className="flex items-center justify-center h-full">
+                <Lock className="w-16 h-16 text-gray-400" />
+              </div>
+            ) : meal.image ? (
+              <img
+                src={meal.image}
+                alt={getMealName()}
+                className="w-full h-full object-cover"
+              />
+            ) : (
+              <div className="flex items-center justify-center h-full">
+                <Utensils className="w-16 h-16 text-gray-400" />
+              </div>
+            )}
+          </div>
+
           {/* Meal Info */}
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-4">
               <div className="flex items-center space-x-1">
                 <Utensils className="w-4 h-4 text-gray-500" />
-                <span className="text-sm font-medium text-primary">
-                  {meal.calories} {t("common.calories")}
-                </span>
+                {isLocked ? (
+                  <div className="flex items-center space-x-1">
+                    <Lock className="w-3 h-3 text-gray-400" />
+                    <span className="text-sm font-medium text-gray-400">
+                      {t("common.calories")}
+                    </span>
+                  </div>
+                ) : (
+                  <span className="text-sm font-medium text-primary">
+                    {meal.calories} {t("common.calories")}
+                  </span>
+                )}
               </div>
-              {showCategory && meal.category && (
-                <Badge className={`text-xs ${getCategoryColor(meal.category)}`}>
-                  {t(`meals.categories.${meal.category}`)}
-                </Badge>
-              )}
             </div>
           </div>
 
-          {/* Ingredients */}
-          <div>
-            <p className="text-xs text-gray-500 dark:text-gray-400 mb-1">
-              {t("meals.ingredients")}:
-            </p>
-            <div className="flex flex-wrap gap-1">
-              {(meal.ingredients ?? []).slice(0, 4).map((ingredient, index) => (
-                <Badge key={index} variant="outline" className="text-xs">
-                  {ingredient}
-                </Badge>
-              ))}
-              {(meal.ingredients ?? []).length > 4 && (
-                <Badge variant="outline" className="text-xs">
-                  +{meal.ingredients.length - 4} more
-                </Badge>
-              )}
+          {/* Nutritional Info - Show locks if locked */}
+          {isLocked ? (
+            <div className="grid grid-cols-3 gap-2 text-center">
+              <div className="p-2 bg-gray-50 dark:bg-gray-800 rounded">
+                <Lock className="w-4 h-4 mx-auto text-gray-400 mb-1" />
+                <div className="text-xs text-gray-400">Protein</div>
+              </div>
+              <div className="p-2 bg-gray-50 dark:bg-gray-800 rounded">
+                <Lock className="w-4 h-4 mx-auto text-gray-400 mb-1" />
+                <div className="text-xs text-gray-400">Carbs</div>
+              </div>
+              <div className="p-2 bg-gray-50 dark:bg-gray-800 rounded">
+                <Lock className="w-4 h-4 mx-auto text-gray-400 mb-1" />
+                <div className="text-xs text-gray-400">Fat</div>
+              </div>
             </div>
-          </div>
+          ) : (
+            <div className="grid grid-cols-3 gap-2 text-center">
+              <div className="p-2 bg-blue-50 dark:bg-blue-900/20 rounded">
+                <div className="text-sm font-bold text-blue-600">{meal.protein}g</div>
+                <div className="text-xs text-gray-600 dark:text-gray-400">Protein</div>
+              </div>
+              <div className="p-2 bg-green-50 dark:bg-green-900/20 rounded">
+                <div className="text-sm font-bold text-green-600">{meal.carbs}g</div>
+                <div className="text-xs text-gray-600 dark:text-gray-400">Carbs</div>
+              </div>
+              <div className="p-2 bg-purple-50 dark:bg-purple-900/20 rounded">
+                <div className="text-sm font-bold text-purple-600">{meal.fat}g</div>
+                <div className="text-xs text-gray-600 dark:text-gray-400">Fat</div>
+              </div>
+            </div>
+          )}
 
-          {/* Additional Info */}
-          <p className="text-xs text-gray-500 dark:text-gray-400 italic">
-            {meal.additionalInfo}
-          </p>
+          {/* Preparation - Show lock if locked */}
+          {isLocked ? (
+            <div className="flex items-center space-x-2 p-3 bg-gray-50 dark:bg-gray-800 rounded">
+              <Lock className="w-4 h-4 text-gray-400" />
+              <span className="text-sm text-gray-400">Preparation locked</span>
+            </div>
+          ) : (
+            meal.preparation && (
+              <div className="p-3 bg-gray-50 dark:bg-gray-800 rounded">
+                <p className="text-sm text-gray-600 dark:text-gray-400">
+                  {typeof meal.preparation === 'string' 
+                    ? meal.preparation 
+                    : meal.preparation[currentLanguage] || meal.preparation['en-NG'] || ''}
+                </p>
+              </div>
+            )
+          )}
 
           {/* Action Button */}
           {onLogMeal &&
@@ -210,8 +267,8 @@ export function MealCard({
                 onClick={() => setShowUpgradePopup(true)}
                 className="w-full bg-orange-500 hover:bg-orange-600 text-white"
               >
-                <Lock className="w-4 h-4 mr-2" />
-                Fazer Upgrade
+                <Crown className="w-4 h-4 mr-2" />
+                {t("meals.upgradeRequired")}
               </Button>
             ) : (
               <Button

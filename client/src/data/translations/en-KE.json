@@ -177,6 +177,15 @@
     "logWater": "Log Water",
     "startWorkout": "Start Workout",
     "logMeal": "Log Meal",
+    "search": "Search meals...",
+    "unlockedFrom": "Unlocked from {plan} plan",
+    "upgradeRequired": "Upgrade Required",
+    "plans": {
+      "Free": "Free",
+      "Momentum": "Momentum", 
+      "Premium": "Premium",
+      "Pro": "Pro"
+    },
     "currentWeight": "Current Weight",
     "waterIntake": "Water Intake",
     "activeChallenges": "Active Challenges",

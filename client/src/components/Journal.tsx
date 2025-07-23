@@ -329,6 +329,39 @@ export function Journal() {
         </Card>
       )}
 
+      {/* Water Logs */}
+      {dayData.waterLogs.length > 0 && (
+        <Card>
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2">
+              <Droplets className="w-5 h-5" />
+              Water Intake Logs
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="space-y-3">
+              {dayData.waterLogs.map((waterLog, index) => (
+                <div key={waterLog.id || index} className="flex items-center justify-between p-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
+                  <div className="flex-1">
+                    <div className="font-medium text-blue-700 dark:text-blue-300">
+                      {waterLog.liters}L water
+                    </div>
+                    <div className="text-sm text-muted-foreground">
+                      {waterLog.time}
+                    </div>
+                  </div>
+                  <div className="text-right">
+                    <div className="font-semibold text-blue-600">
+                      {(waterLog.liters * 1000).toFixed(0)}ml
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </CardContent>
+        </Card>
+      )}
+
       {/* Detailed Logs */}
       {dayData.mealLogs.length > 0 && (
         <Card>

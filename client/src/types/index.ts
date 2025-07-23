@@ -70,8 +70,11 @@ export interface MoodLog {
 }
 
 export interface WaterLog {
+  id?: string;
   date: string;
   liters: number;
+  time: string;
+  timestamp: string;
 }
 
 export interface CaloriesLog {

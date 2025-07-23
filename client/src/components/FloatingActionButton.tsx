@@ -84,14 +84,14 @@ export function FloatingActionButton() {
 
   return (
     <>
-      {/* Floating Action Button */}
-      <div className="fixed bottom-20 right-4 z-50">
-        {/* Quick Action Options */}
+      {/* Floating Action Button Container */}
+      <div className="fixed bottom-20 right-4 z-50 flex flex-col items-end">
+        {/* Quick Action Options - positioned above the main button */}
         {isOpen && (
-          <div className="mb-4 space-y-2">
+          <div className="flex flex-col items-end space-y-2 mb-4">
             <Button
               onClick={() => setShowWaterDialog(true)}
-              className="w-full bg-blue-500 hover:bg-blue-600 text-white shadow-lg"
+              className="bg-blue-500 hover:bg-blue-600 text-white shadow-lg w-auto px-4"
               size="sm"
             >
               <Droplets className="w-4 h-4 mr-2" />
@@ -99,7 +99,7 @@ export function FloatingActionButton() {
             </Button>
             <Button
               onClick={() => setShowWeightDialog(true)}
-              className="w-full bg-purple-500 hover:bg-purple-600 text-white shadow-lg"
+              className="bg-purple-500 hover:bg-purple-600 text-white shadow-lg w-auto px-4"
               size="sm"
             >
               <Weight className="w-4 h-4 mr-2" />
@@ -107,7 +107,7 @@ export function FloatingActionButton() {
             </Button>
             <Button
               onClick={() => setShowMoodDialog(true)}
-              className="w-full bg-pink-500 hover:bg-pink-600 text-white shadow-lg"
+              className="bg-pink-500 hover:bg-pink-600 text-white shadow-lg w-auto px-4"
               size="sm"
             >
               <Heart className="w-4 h-4 mr-2" />
@@ -116,10 +116,10 @@ export function FloatingActionButton() {
           </div>
         )}
 
-        {/* Main FAB */}
+        {/* Main FAB - always stays in the same position */}
         <Button
           onClick={() => setIsOpen(!isOpen)}
-          className="h-14 w-14 rounded-full bg-primary hover:bg-primary/90 text-white shadow-lg transition-transform hover:scale-105"
+          className="h-14 w-14 rounded-full bg-primary hover:bg-primary/90 text-white shadow-lg transition-transform hover:scale-105 flex-shrink-0"
           size="sm"
         >
           {isOpen ? (
