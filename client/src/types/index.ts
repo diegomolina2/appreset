@@ -43,13 +43,19 @@ export interface Exercise {
 
 export interface Meal {
   id: string;
-  name: string;
-  description: string;
-  ingredients: string[];
+  name: string | { [key: string]: string };
+  description?: string | { [key: string]: string };
+  category: 'breakfast' | 'lunch' | 'dinner' | 'snack';
   calories: number;
-  additionalInfo: string;
-  isFavorite?: boolean;
-  category?: 'breakfast' | 'lunch' | 'dinner' | 'snack';
+  protein: number;
+  carbs: number;
+  fats: number;
+  cookingTime: string;
+  servings: number;
+  difficulty: 'easy' | 'medium' | 'hard';
+  ingredients: string[] | { [key: string]: string[] };
+  instructions: string[] | { [key: string]: string[] };
+  image?: string;
   accessPlans?: number[];
 }
 

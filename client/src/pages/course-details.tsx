@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { useApp } from '../contexts/AppContext';
 import { Button } from '../components/ui/button';
@@ -8,187 +9,192 @@ import coursesData from '../data/courses.json';
 import { Course, CourseProgress } from '../types';
 import { RouteComponentProps } from 'wouter';
 import { useTranslation } from '../hooks/useTranslation';
-const courses = coursesData as Course[];
-interface CourseDetailsPageProps {
-  courseId: string;
-}
-export default function CourseDetails({ params }: RouteComponentProps<{ id: string }>) {
-  const courseId = params.id;
-  const { state, dispatch } = useApp();
-  const { t, currentLanguage } = useTranslation();
 
-  const course = courses.find(c => c.id === courseId);
-  const progress = state.userData.courseProgress.find(p => p.courseId === courseId);
+const courses = coursesData as Course[];
+
+interface CourseDetailsProps extends RouteComponentProps {
+  params: { id: string };
+}
+
+export default function CourseDetails({ params }: CourseDetailsProps) {
+  const { t, currentLanguage } = useTranslation();
+  const { user, updateUser } = useApp();
   
-  // Calculate total lessons dynamically
-  const totalLessons = course ? course.modules.reduce((total, module) => total + module.lessons.length, 0) : 0;
+  const course = courses.find(c => c.id === params.id);
+  const courseProgress = user?.courseProgress?.[params.id];
+  
   if (!course) {
     return (
       <div className="p-4 text-center">
-        <h1 className="text-2xl font-bold mb-4">Curso não encontrado</h1>
-        <Button onClick={() => window.location.hash = '#/courses'}>
-          Voltar aos Cursos
+        <h1 className="text-2xl font-bold mb-4">Course Not Found</h1>
+        <Button onClick={() => window.history.back()}>
+          <ArrowLeft className="w-4 h-4 mr-2" />
+          Go Back
         </Button>
       </div>
     );
   }
-  const startCourse = () => {
-    if (!progress) {
-      const newProgress: CourseProgress = {
-        courseId: course.id,
-        completedLessons: [],
-        currentModule: course.modules[0].id,
-        currentLesson: course.modules[0].lessons[0].id,
-        startedAt: new Date().toISOString(),
-        lastAccessedAt: new Date().toISOString()
-      };
-      dispatch({
-        type: 'SET_USER_DATA',
-        payload: {
-          ...state.userData,
-          courseProgress: [...state.userData.courseProgress, newProgress]
-        }
-      });
+
+  const getCourseName = () => {
+    if (typeof course.name === 'string') {
+      return course.name;
     }
-    // Navigate to first lesson
-    const firstModule = course.modules[0];
-    const firstLesson = firstModule.lessons[0];
-    window.location.hash = `#/lesson/${course.id}/${firstModule.id}/${firstLesson.id}`;
+    return course.name[currentLanguage] || course.name['en-NG'] || 'Course';
   };
+
+  const getCourseDescription = () => {
+    if (typeof course.description === 'string') {
+      return course.description;
+    }
+    return course.description[currentLanguage] || course.description['en-NG'] || '';
+  };
+
+  const getLessonTitle = (lesson: any) => {
+    if (typeof lesson.title === 'string') {
+      return lesson.title;
+    }
+    return lesson.title[currentLanguage] || lesson.title['en-NG'] || 'Lesson';
+  };
+
+  const getLessonDescription = (lesson: any) => {
+    if (typeof lesson.description === 'string') {
+      return lesson.description;
+    }
+    return lesson.description?.[currentLanguage] || lesson.description?.['en-NG'] || '';
+  };
+
+  const startCourse = () => {
+    if (!user) return;
+    
+    const newProgress: CourseProgress = {
+      currentLessonId: course.lessons[0].id,
+      completedLessons: [],
+      startedAt: new Date().toISOString(),
+      lastAccessedAt: new Date().toISOString()
+    };
+    
+    updateUser({
+      ...user,
+      courseProgress: {
+        ...user.courseProgress,
+        [course.id]: newProgress
+      }
+    });
+  };
+
   const continueCourse = () => {
-    if (!progress) return;
+    if (!user || !courseProgress) return;
+    
+    updateUser({
+      ...user,
+      courseProgress: {
+        ...user.courseProgress,
+        [course.id]: {
+          ...courseProgress,
+          lastAccessedAt: new Date().toISOString()
+        }
+      }
+    });
+  };
 
-    window.location.hash = `#/lesson/${course.id}/${progress.currentModule}/${progress.currentLesson}`;
-  };
-  const goToLesson = (moduleId: string, lessonId: string) => {
-    window.location.hash = `#/lesson/${course.id}/${moduleId}/${lessonId}`;
-  };
-  const isLessonCompleted = (lessonId: string) => {
-    return progress?.completedLessons.includes(lessonId) || false;
-  };
-  const getModuleProgress = (moduleId: string) => {
-    const module = course.modules.find(m => m.id === moduleId);
-    if (!module || !progress) return 0;
+  const completedLessons = courseProgress?.completedLessons?.length || 0;
+  const progressPercentage = (completedLessons / course.lessons.length) * 100;
 
-    const completedInModule = module.lessons.filter(lesson => 
-      progress.completedLessons.includes(lesson.id)
-    ).length;
-
-    return Math.round((completedInModule / module.lessons.length) * 100);
-  };
-  const totalProgress = progress 
-    ? Math.round((progress.completedLessons.length / totalLessons) * 100)
-    : 0;
   return (
     <div className="p-4 space-y-6">
-      <Button
-        variant="ghost"
-        onClick={() => window.location.hash = '#/courses'}
-        className="mb-4"
-      >
-        <ArrowLeft className="w-4 h-4 mr-2" />
-        Voltar aos Cursos
-      </Button>
-      <div className="relative">
-        <img
-          src={course.image}
-          alt={course.title}
-          className="w-full h-48 object-cover rounded-lg"
-        />
+      <div className="flex items-center gap-4 mb-6">
+        <Button variant="ghost" size="sm" onClick={() => window.history.back()}>
+          <ArrowLeft className="w-4 h-4" />
+        </Button>
+        <h1 className="text-2xl font-bold">{getCourseName()}</h1>
       </div>
-      <div className="space-y-4">
-        <div>
-          <h1 className="text-2xl font-bold mb-2">
-            {course.title[currentLanguage] || course.title['en-NG']}
-          </h1>
-          <p className="text-muted-foreground mb-4">
-            {course.description[currentLanguage] || course.description['en-NG']}
-          </p>
 
-          <div className="flex items-center gap-4 text-sm text-muted-foreground mb-4">
-            <div className="flex items-center gap-1">
-              <Clock className="w-4 h-4" />
-              {totalLessons} {t('courses.lessons')}
-            </div>
-            {progress && (
-              <div>
-                {t('courses.progress')}: {totalProgress}%
+      <Card>
+        <CardContent className="p-6">
+          <div className="space-y-4">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-2">
+                <Clock className="w-4 h-4 text-muted-foreground" />
+                <span className="text-sm text-muted-foreground">
+                  {course.lessons.length} {t('courses.lessons')}
+                </span>
               </div>
-            )}
+              <div className="text-sm text-muted-foreground">
+                {t('courses.progress')}: {Math.round(progressPercentage)}%
+              </div>
+            </div>
+            
+            <p className="text-muted-foreground">
+              {getCourseDescription()}
+            </p>
+            
+            <div className="flex gap-2">
+              {!courseProgress ? (
+                <Button onClick={startCourse} className="flex-1">
+                  <Play className="w-4 h-4 mr-2" />
+                  {t('courses.startCourse')}
+                </Button>
+              ) : (
+                <Button onClick={continueCourse} className="flex-1">
+                  <Play className="w-4 h-4 mr-2" />
+                  {t('courses.continueCourse')}
+                </Button>
+              )}
+            </div>
           </div>
-          <Button onClick={progress ? continueCourse : startCourse} size="lg" className="w-full">
-            <Play className="w-4 h-4 mr-2" />
-            {progress ? 'Continuar Curso' : 'Começar Curso'}
-          </Button>
-        </div>
-        <div className="space-y-4">
-          <h2 className="text-xl font-semibold">Módulos do Curso</h2>
+        </CardContent>
+      </Card>
 
-          <Accordion type="multiple" className="space-y-2">
-            {course.modules.map((module) => (
-              <AccordionItem key={module.id} value={module.id}>
-                <AccordionTrigger className="hover:no-underline">
-                  <div className="flex items-center justify-between w-full mr-4">
-                    <span className="font-medium">
-                      {module.title[currentLanguage] || module.title['en-NG']}
-                    </span>
-                    <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                      <span>{getModuleProgress(module.id)}%</span>
-                      <span>({module.lessons.length} {t('courses.lessons')})</span>
+      <Card>
+        <CardContent className="p-6">
+          <h2 className="text-lg font-semibold mb-4">Course Content</h2>
+          <Accordion type="single" collapsible>
+            {course.lessons.map((lesson, index) => {
+              const isCompleted = courseProgress?.completedLessons?.includes(lesson.id);
+              const isCurrent = courseProgress?.currentLessonId === lesson.id;
+              
+              return (
+                <AccordionItem key={lesson.id} value={lesson.id}>
+                  <AccordionTrigger className="text-left">
+                    <div className="flex items-center gap-3">
+                      {isCompleted ? (
+                        <CheckCircle2 className="w-5 h-5 text-green-500" />
+                      ) : isCurrent ? (
+                        <Play className="w-5 h-5 text-blue-500" />
+                      ) : (
+                        <div className="w-5 h-5 rounded-full border-2 border-muted-foreground" />
+                      )}
+                      <div>
+                        <div className="font-medium">
+                          {index + 1}. {getLessonTitle(lesson)}
+                        </div>
+                        <div className="text-sm text-muted-foreground flex items-center gap-2">
+                          {lesson.type === 'video' ? (
+                            <Video className="w-3 h-3" />
+                          ) : (
+                            <FileText className="w-3 h-3" />
+                          )}
+                          {lesson.duration}
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                </AccordionTrigger>
-
-                <AccordionContent className="space-y-2">
-                  {module.lessons.map((lesson) => {
-                    const isCompleted = isLessonCompleted(lesson.id);
-
-                    return (
-                      <Card 
-                        key={lesson.id} 
-                        className={`cursor-pointer hover:bg-accent transition-colors ${
-                          isCompleted ? 'bg-green-50 dark:bg-green-950' : ''
-                        }`}
-                        onClick={() => goToLesson(module.id, lesson.id)}
-                      >
-                        <CardContent className="p-4">
-                          <div className="flex items-center justify-between">
-                            <div className="flex items-center gap-3">
-                              <div className="flex items-center gap-2">
-                                {lesson.type === 'video' ? (
-                                  <Video className="w-4 h-4 text-blue-500" />
-                                ) : (
-                                  <FileText className="w-4 h-4 text-green-500" />
-                                )}
-                                {isCompleted && (
-                                  <CheckCircle2 className="w-4 h-4 text-green-500" />
-                                )}
-                              </div>
-
-                              <div>
-                                <h4 className="font-medium">
-                                  {lesson.title[currentLanguage] || lesson.title['en-NG']}
-                                </h4>
-                                <p className="text-sm text-muted-foreground">
-                                  {lesson.duration}
-                                </p>
-                              </div>
-                            </div>
-
-                            <Button variant="ghost" size="sm">
-                              <Play className="w-4 h-4" />
-                            </Button>
-                          </div>
-                        </CardContent>
-                      </Card>
-                    );
-                  })}
-                </AccordionContent>
-              </AccordionItem>
-            ))}
+                  </AccordionTrigger>
+                  <AccordionContent>
+                    <div className="pl-8 space-y-2">
+                      <p className="text-sm text-muted-foreground">
+                        {getLessonDescription(lesson)}
+                      </p>
+                      <Button size="sm" variant="outline">
+                        Start Lesson
+                      </Button>
+                    </div>
+                  </AccordionContent>
+                </AccordionItem>
+              );
+            })}
           </Accordion>
-        </div>
-      </div>
+        </CardContent>
+      </Card>
     </div>
   );
 }

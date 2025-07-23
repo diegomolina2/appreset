@@ -1,6 +1,7 @@
+
 import React from 'react';
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '../components/ui/accordion';
 import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '../components/ui/accordion';
 import { HelpCircle } from 'lucide-react';
 import { useTranslation } from '../hooks/useTranslation';
 import faqData from '../data/faq.json';
@@ -41,10 +42,10 @@ export default function FAQ() {
             {faq.map((item) => (
               <AccordionItem key={item.id} value={item.id}>
                 <AccordionTrigger className="text-left">
-                  {item.question[currentLanguage] || item.question['en-NG']}
+                  {item.question[currentLanguage] || item.question['en-NG'] || 'Question'}
                 </AccordionTrigger>
                 <AccordionContent className="text-muted-foreground">
-                  {item.answer[currentLanguage] || item.answer['en-NG']}
+                  {item.answer[currentLanguage] || item.answer['en-NG'] || 'Answer'}
                 </AccordionContent>
               </AccordionItem>
             ))}

@@ -20,7 +20,7 @@ export function MealCard({
   onLogMeal,
   showCategory = true,
 }: MealCardProps) {
-  const { t } = useTranslation();
+  const { t, currentLanguage } = useTranslation();
   const { state, toggleFavorite } = useApp();
   const [showUpgradePopup, setShowUpgradePopup] = useState(false);
 
@@ -33,7 +33,7 @@ export function MealCard({
     toggleFavorite("meals", meal.id);
   };
 
-  const handleLogMeal = () => {
+  const handleLogMealOriginal = () => {
     if (isLocked) {
       setShowUpgradePopup(true);
       return;
@@ -59,6 +59,37 @@ export function MealCard({
     }
   };
 
+  // Get the meal name for the current language, fallback to English Nigeria
+  const getMealName = () => {
+    if (typeof meal.name === 'string') {
+      return meal.name;
+    }
+    return meal.name[currentLanguage] || meal.name['en-NG'] || 'Meal';
+  };
+
+  // Get the meal description for the current language, fallback to English Nigeria
+  const getMealDescription = () => {
+    if (typeof meal.description === 'string') {
+      return meal.description;
+    }
+    return meal.description?.[currentLanguage] || meal.description?.['en-NG'] || '';
+  };
+  
+  const handleLogMeal = () => {
+    if (isLocked) {
+      setShowUpgradePopup(true);
+      return;
+    }
+    // Handle log meal logic here
+  };
+
+  const handleViewMeal = () => {
+      if (isLocked) {
+          setShowUpgradePopup(true);
+          return;
+      }
+  }
+
   return (
     <Card
       className={`w-full shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden ${isLocked ? "opacity-75" : ""}`}
@@ -68,12 +99,12 @@ export function MealCard({
           <div className="flex-1">
             <div className="flex items-center gap-2">
               <CardTitle className="text-lg font-poppins font-bold text-gray-800 dark:text-gray-100 mb-1">
-                {meal.name}
+                {getMealName()}
               </CardTitle>
               {isLocked && <Lock className="w-4 h-4 text-gray-500" />}
             </div>
             <p className="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">
-              {meal.description}
+              {getMealDescription()}
             </p>
             {isLocked && (
               <Badge variant="secondary" className="mt-1 text-xs">
@@ -152,7 +183,7 @@ export function MealCard({
               </Button>
             ) : (
               <Button
-                onClick={handleLogMeal}
+                onClick={handleLogMealOriginal}
                 className="w-full bg-secondary hover:bg-secondary/90"
               >
                 <Plus className="w-4 h-4 mr-2" />
