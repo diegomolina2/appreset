@@ -15,7 +15,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "../components/ui/dialog";
-import { Utensils, Search, Filter, Eye, Plus, Clock, Target } from "lucide-react";
+import { Utensils, Search, Filter, Eye, Plus, Clock, Target, Lock, Crown } from "lucide-react";
 import { Input } from "../components/ui/input";
 import {
   Select,
@@ -27,6 +27,8 @@ import {
 import { useTranslation } from "../hooks/useTranslation";
 import { useApp } from "../contexts/AppContext";
 import { MealLogDialog } from "../components/MealLogDialog";
+import { usePlanAccess } from "../hooks/usePlanAccess";
+import { UpgradePopup } from "../components/UpgradePopup";
 import mealsData from "../data/meals.json";
 
 interface Meal {
@@ -51,11 +53,13 @@ const meals = mealsData as Meal[];
 function Meals() {
   const { t, currentLanguage } = useTranslation();
   const { state, dispatch } = useApp();
+  const { hasAccess } = usePlanAccess();
   const [searchTerm, setSearchTerm] = useState("");
   const [categoryFilter, setCategoryFilter] = useState("all");
   const [selectedMeal, setSelectedMeal] = useState<Meal | null>(null);
   const [mealToLog, setMealToLog] = useState<Meal | null>(null);
   const [showLogDialog, setShowLogDialog] = useState(false);
+  const [showUpgradePopup, setShowUpgradePopup] = useState(false);
 
   const logMeal = (meal: Meal, date: string) => {
     const mealLog = {
@@ -91,6 +95,11 @@ function Meals() {
   };
 
   const handleLogMealClick = (meal: Meal) => {
+    const hasAccessToMeal = hasAccess(meal.accessPlans);
+    if (!hasAccessToMeal) {
+      setShowUpgradePopup(true);
+      return;
+    }
     setMealToLog(meal);
     setShowLogDialog(true);
   };
@@ -100,6 +109,13 @@ function Meals() {
       logMeal(mealToLog, date);
       setMealToLog(null);
     }
+  };
+
+  // Get the next available plan name
+  const getNextPlanName = (meal: Meal) => {
+    const planNames = ["Free", "Momentum", "Premium", "Pro"];
+    const minPlan = Math.min(...meal.accessPlans);
+    return planNames[minPlan - 1] || "Premium";
   };
 
   const getCategoryVariant = (category: string) => {
@@ -188,169 +204,226 @@ function Meals() {
 
             {/* Meals Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {filteredMeals.map((meal) => (
-                <Card key={meal.id} className="overflow-hidden hover:shadow-lg transition-shadow duration-200">
-                  {meal.image && (
+              {filteredMeals.map((meal) => {
+                const hasAccessToMeal = hasAccess(meal.accessPlans);
+                const isLocked = !hasAccessToMeal;
+                
+                return (
+                  <Card key={meal.id} className={`overflow-hidden hover:shadow-lg transition-shadow duration-200 ${isLocked ? "opacity-90" : ""}`}>
+                    {/* Meal Image - Show lock icon if locked */}
                     <div className="aspect-video w-full overflow-hidden">
-                      <img
-                        src={meal.image}
-                        alt={meal.name[currentLanguage] || meal.name["en-NG"]}
-                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-200"
-                      />
-                    </div>
-                  )}
-
-                  <CardHeader className="pb-3">
-                    <div className="flex items-start justify-between gap-2">
-                      <CardTitle className="text-lg line-clamp-2">
-                        {meal.name[currentLanguage] || meal.name["en-NG"]}
-                      </CardTitle>
-                      <Badge variant={getCategoryVariant(meal.category)} className="shrink-0">
-                        {t(`meals.categories.${meal.category}`)}
-                      </Badge>
-                    </div>
-                  </CardHeader>
-
-                  <CardContent className="space-y-4">
-                    {/* Macronutrients Display */}
-                    <div className="grid grid-cols-4 gap-2 text-center">
-                      <div className="bg-orange-50 dark:bg-orange-900/20 p-2 rounded">
-                        <div className="text-xl font-bold text-orange-600">
-                          {meal.calories}
+                      {isLocked ? (
+                        <div className="flex items-center justify-center h-full bg-gray-200 dark:bg-gray-700">
+                          <Lock className="w-16 h-16 text-gray-400" />
                         </div>
-                        <div className="text-xs text-muted-foreground">
-                          {t("meals.calories")}
+                      ) : meal.image ? (
+                        <img
+                          src={meal.image}
+                          alt={meal.name[currentLanguage] || meal.name["en-NG"]}
+                          className="w-full h-full object-cover hover:scale-105 transition-transform duration-200"
+                        />
+                      ) : (
+                        <div className="flex items-center justify-center h-full bg-gray-200 dark:bg-gray-700">
+                          <Utensils className="w-16 h-16 text-gray-400" />
                         </div>
-                      </div>
-                      <div className="bg-blue-50 dark:bg-blue-900/20 p-2 rounded">
-                        <div className="text-lg font-semibold text-blue-600">
-                          {meal.protein}g
-                        </div>
-                        <div className="text-xs text-muted-foreground">
-                          {t("meals.protein")}
-                        </div>
-                      </div>
-                      <div className="bg-green-50 dark:bg-green-900/20 p-2 rounded">
-                        <div className="text-lg font-semibold text-green-600">
-                          {meal.carbs}g
-                        </div>
-                        <div className="text-xs text-muted-foreground">
-                          {t("meals.carbs")}
-                        </div>
-                      </div>
-                      <div className="bg-purple-50 dark:bg-purple-900/20 p-2 rounded">
-                        <div className="text-lg font-semibold text-purple-600">
-                          {meal.fat}g
-                        </div>
-                        <div className="text-xs text-muted-foreground">
-                          {t("meals.fats")}
-                        </div>
-                      </div>
+                      )}
                     </div>
 
-                    {/* Action Buttons */}
-                    <div className="flex gap-2">
-                      <Dialog>
-                        <DialogTrigger asChild>
-                          <Button
-                            variant="outline"
-                            className="flex-1"
-                            onClick={() => setSelectedMeal(meal)}
-                          >
-                            <Eye className="w-4 h-4 mr-2" />
-                            {t("meals.view")}
-                          </Button>
-                        </DialogTrigger>
-                        <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto">
-                          <DialogHeader>
-                            <DialogTitle className="text-xl">
+                    <CardHeader className="pb-3">
+                      <div className="flex items-start justify-between gap-2">
+                        <div className="flex-1">
+                          <div className="flex items-center gap-2">
+                            <CardTitle className="text-lg line-clamp-2">
                               {meal.name[currentLanguage] || meal.name["en-NG"]}
-                            </DialogTitle>
-                          </DialogHeader>
+                            </CardTitle>
+                            {isLocked && <Lock className="w-4 h-4 text-gray-500" />}
+                          </div>
+                          <Badge variant={getCategoryVariant(meal.category)} className="shrink-0 mt-1">
+                            {t(`meals.categories.${meal.category}`)}
+                          </Badge>
+                          
+                          {/* Show unlock message if locked */}
+                          {isLocked && (
+                            <Badge variant="secondary" className="text-xs bg-orange-100 text-orange-800 mt-2">
+                              {t("meals.unlockedFrom", { plan: t(`meals.plans.${getNextPlanName(meal)}`) })}
+                            </Badge>
+                          )}
+                        </div>
+                      </div>
+                    </CardHeader>
 
-                          <div className="space-y-6">
-                            {meal.image && (
-                              <img
-                                src={meal.image}
-                                alt={meal.name[currentLanguage] || meal.name["en-NG"]}
-                                className="w-full h-64 object-cover rounded-lg"
-                              />
-                            )}
-
-                            {/* Detailed Macronutrients */}
-                            <div className="grid grid-cols-4 gap-4 p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
-                              <div className="text-center">
-                                <Target className="w-6 h-6 mx-auto mb-1 text-orange-500" />
-                                <div className="font-bold text-xl text-orange-600">
-                                  {meal.calories}
-                                </div>
-                                <div className="text-sm text-muted-foreground">
-                                  {t("meals.calories")}
-                                </div>
-                              </div>
-                              <div className="text-center">
-                                <div className="w-6 h-6 mx-auto mb-1 bg-blue-500 rounded"></div>
-                                <div className="font-semibold text-lg text-blue-600">
-                                  {meal.protein}g
-                                </div>
-                                <div className="text-sm text-muted-foreground">
-                                  {t("meals.protein")}
-                                </div>
-                              </div>
-                              <div className="text-center">
-                                <div className="w-6 h-6 mx-auto mb-1 bg-green-500 rounded"></div>
-                                <div className="font-semibold text-lg text-green-600">
-                                  {meal.carbs}g
-                                </div>
-                                <div className="text-sm text-muted-foreground">
-                                  {t("meals.carbs")}
-                                </div>
-                              </div>
-                              <div className="text-center">
-                                <div className="w-6 h-6 mx-auto mb-1 bg-purple-500 rounded"></div>
-                                <div className="font-semibold text-lg text-purple-600">
-                                  {meal.fat}g
-                                </div>
-                                <div className="text-sm text-muted-foreground">
-                                  {t("meals.fats")}
-                                </div>
-                              </div>
+                    <CardContent className="space-y-4">
+                      {/* Macronutrients Display - Show locks if locked */}
+                      {isLocked ? (
+                        <div className="grid grid-cols-4 gap-2 text-center">
+                          <div className="bg-gray-50 dark:bg-gray-800 p-2 rounded">
+                            <Lock className="w-4 h-4 mx-auto text-gray-400 mb-1" />
+                            <div className="text-xs text-gray-400">{t("meals.calories")}</div>
+                          </div>
+                          <div className="bg-gray-50 dark:bg-gray-800 p-2 rounded">
+                            <Lock className="w-4 h-4 mx-auto text-gray-400 mb-1" />
+                            <div className="text-xs text-gray-400">{t("meals.protein")}</div>
+                          </div>
+                          <div className="bg-gray-50 dark:bg-gray-800 p-2 rounded">
+                            <Lock className="w-4 h-4 mx-auto text-gray-400 mb-1" />
+                            <div className="text-xs text-gray-400">{t("meals.carbs")}</div>
+                          </div>
+                          <div className="bg-gray-50 dark:bg-gray-800 p-2 rounded">
+                            <Lock className="w-4 h-4 mx-auto text-gray-400 mb-1" />
+                            <div className="text-xs text-gray-400">{t("meals.fats")}</div>
+                          </div>
+                        </div>
+                      ) : (
+                        <div className="grid grid-cols-4 gap-2 text-center">
+                          <div className="bg-orange-50 dark:bg-orange-900/20 p-2 rounded">
+                            <div className="text-xl font-bold text-orange-600">
+                              {meal.calories}
                             </div>
-
-                            {/* Preparation Instructions */}
-                            {meal.preparation && (
-                              <div className="space-y-3">
-                                <h4 className="font-semibold text-lg flex items-center gap-2">
-                                  <Clock className="w-5 h-5" />
-                                  {t("meals.preparation")}
-                                </h4>
-                                <div className="p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
-                                  <p className="text-sm leading-relaxed">
-                                    {meal.preparation[currentLanguage] ||
-                                      meal.preparation["en-NG"]}
-                                  </p>
-                                </div>
-                              </div>
-                            )}
-
-                            {/* Category Badge */}
-                            <div className="flex justify-center">
-                              <Badge variant={getCategoryVariant(meal.category)} className="text-sm px-4 py-1">
-                                {t(`meals.categories.${meal.category}`)}
-                              </Badge>
+                            <div className="text-xs text-muted-foreground">
+                              {t("meals.calories")}
                             </div>
                           </div>
-                        </DialogContent>
-                      </Dialog>
+                          <div className="bg-blue-50 dark:bg-blue-900/20 p-2 rounded">
+                            <div className="text-lg font-semibold text-blue-600">
+                              {meal.protein}g
+                            </div>
+                            <div className="text-xs text-muted-foreground">
+                              {t("meals.protein")}
+                            </div>
+                          </div>
+                          <div className="bg-green-50 dark:bg-green-900/20 p-2 rounded">
+                            <div className="text-lg font-semibold text-green-600">
+                              {meal.carbs}g
+                            </div>
+                            <div className="text-xs text-muted-foreground">
+                              {t("meals.carbs")}
+                            </div>
+                          </div>
+                          <div className="bg-purple-50 dark:bg-purple-900/20 p-2 rounded">
+                            <div className="text-lg font-semibold text-purple-600">
+                              {meal.fat}g
+                            </div>
+                            <div className="text-xs text-muted-foreground">
+                              {t("meals.fats")}
+                            </div>
+                          </div>
+                        </div>
+                      )}
 
-                      <Button className="flex-1" onClick={() => handleLogMealClick(meal)}>
-                        <Plus className="w-4 h-4 mr-2" />
-                        {t("meals.logMeal")}
-                      </Button>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
+                      {/* Action Buttons */}
+                      {isLocked ? (
+                        <Button
+                          onClick={() => setShowUpgradePopup(true)}
+                          className="w-full bg-orange-500 hover:bg-orange-600 text-white"
+                        >
+                          <Crown className="w-4 h-4 mr-2" />
+                          {t("meals.upgradeRequired")}
+                        </Button>
+                      ) : (
+                        <div className="flex gap-2">
+                          <Dialog>
+                            <DialogTrigger asChild>
+                              <Button
+                                variant="outline"
+                                className="flex-1"
+                                onClick={() => setSelectedMeal(meal)}
+                              >
+                                <Eye className="w-4 h-4 mr-2" />
+                                {t("meals.view")}
+                              </Button>
+                            </DialogTrigger>
+                            <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto">
+                              <DialogHeader>
+                                <DialogTitle className="text-xl">
+                                  {meal.name[currentLanguage] || meal.name["en-NG"]}
+                                </DialogTitle>
+                              </DialogHeader>
+
+                              <div className="space-y-6">
+                                {meal.image && (
+                                  <img
+                                    src={meal.image}
+                                    alt={meal.name[currentLanguage] || meal.name["en-NG"]}
+                                    className="w-full h-64 object-cover rounded-lg"
+                                  />
+                                )}
+
+                                {/* Detailed Macronutrients */}
+                                <div className="grid grid-cols-4 gap-4 p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
+                                  <div className="text-center">
+                                    <Target className="w-6 h-6 mx-auto mb-1 text-orange-500" />
+                                    <div className="font-bold text-xl text-orange-600">
+                                      {meal.calories}
+                                    </div>
+                                    <div className="text-sm text-muted-foreground">
+                                      {t("meals.calories")}
+                                    </div>
+                                  </div>
+                                  <div className="text-center">
+                                    <div className="w-6 h-6 mx-auto mb-1 bg-blue-500 rounded"></div>
+                                    <div className="font-semibold text-lg text-blue-600">
+                                      {meal.protein}g
+                                    </div>
+                                    <div className="text-sm text-muted-foreground">
+                                      {t("meals.protein")}
+                                    </div>
+                                  </div>
+                                  <div className="text-center">
+                                    <div className="w-6 h-6 mx-auto mb-1 bg-green-500 rounded"></div>
+                                    <div className="font-semibold text-lg text-green-600">
+                                      {meal.carbs}g
+                                    </div>
+                                    <div className="text-xs text-muted-foreground">
+                                      {t("meals.carbs")}
+                                    </div>
+                                  </div>
+                                  <div className="text-center">
+                                    <div className="w-6 h-6 mx-auto mb-1 bg-purple-500 rounded"></div>
+                                    <div className="font-semibold text-lg text-purple-600">
+                                      {meal.fat}g
+                                    </div>
+                                    <div className="text-xs text-muted-foreground">
+                                      {t("meals.fats")}
+                                    </div>
+                                  </div>
+                                </div>
+
+                                {/* Preparation Instructions */}
+                                {meal.preparation && (
+                                  <div className="space-y-3">
+                                    <h4 className="font-semibold text-lg flex items-center gap-2">
+                                      <Clock className="w-5 h-5" />
+                                      {t("meals.preparation")}
+                                    </h4>
+                                    <div className="p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
+                                      <p className="text-sm leading-relaxed">
+                                        {meal.preparation[currentLanguage] ||
+                                          meal.preparation["en-NG"]}
+                                      </p>
+                                    </div>
+                                  </div>
+                                )}
+
+                                {/* Category Badge */}
+                                <div className="flex justify-center">
+                                  <Badge variant={getCategoryVariant(meal.category)} className="text-sm px-4 py-1">
+                                    {t(`meals.categories.${meal.category}`)}
+                                  </Badge>
+                                </div>
+                              </div>
+                            </DialogContent>
+                          </Dialog>
+
+                          <Button className="flex-1" onClick={() => handleLogMealClick(meal)}>
+                            <Plus className="w-4 h-4 mr-2" />
+                            {t("meals.logMeal")}
+                          </Button>
+                        </div>
+                      )}
+                    </CardContent>
+                  </Card>
+                );
+              })}
             </div>
 
             {/* No Results Message */}
@@ -373,6 +446,16 @@ function Meals() {
         onClose={() => setShowLogDialog(false)}
         onConfirm={handleConfirmLog}
         mealName={mealToLog ? (mealToLog.name[currentLanguage] || mealToLog.name["en-NG"]) : ""}
+      />
+
+      {/* Upgrade Popup */}
+      <UpgradePopup
+        isOpen={showUpgradePopup}
+        onClose={() => setShowUpgradePopup(false)}
+        onUpgrade={() => {
+          setShowUpgradePopup(false);
+          window.location.reload();
+        }}
       />
     </div>
   );

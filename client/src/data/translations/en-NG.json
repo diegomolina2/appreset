@@ -255,5 +255,13 @@
       "weightProgress": "Weight Progress",
       "waterIntake": "Water Intake",
       "calorieIntake": "Calorie Intake"
+    },
+    "unlockedFrom": "Unlocked from {{plan}} plan",
+    "upgradeRequired": "Upgrade Required",
+    "plans": {
+      "Free": "Free",
+      "Momentum": "Momentum", 
+      "Premium": "Premium",
+      "Pro": "Pro"
     }
 }

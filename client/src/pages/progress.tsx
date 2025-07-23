@@ -121,9 +121,34 @@ export default function Progress() {
     return data.filter((item) => new Date(item.date) >= filterDate);
   };
 
+  // Get user's current weight from saved data
+  const getCurrentUserWeight = () => {
+    const latestWeight = userData.weights && userData.weights.length > 0 
+      ? userData.weights[userData.weights.length - 1].weight 
+      : null;
+    
+    const profileWeight = userData.weight || userData.userProfile?.weight;
+    
+    return latestWeight || profileWeight || 70;
+  };
+
+  // Get user's saved profile data
+  const getUserProfileData = () => {
+    const profile = userData.userProfile || {};
+    const savedData = userData;
+    
+    return {
+      weight: getCurrentUserWeight(),
+      height: savedData.height || profile.height || 175,
+      age: savedData.age || profile.age || 30,
+      sex: savedData.sex || profile.gender || 'male',
+      activityLevel: savedData.activityLevel || profile.exerciseLevel || 'moderate'
+    };
+  };
+
   // Water Intake State
   const [waterData, setWaterData] = useState<WaterIntakeData>({
-    weight: 70,
+    weight: getCurrentUserWeight(),
     activity: "moderate",
     goal: "maintain",
     recommendedMl: 2950,
@@ -132,13 +157,14 @@ export default function Progress() {
   });
   const [waterInput, setWaterInput] = useState("");
 
-  // Daily Calories State
+  // Daily Calories State  
+  const userProfileData = getUserProfileData();
   const [caloriesData, setCaloriesData] = useState<DailyCaloriesData>({
-    weight: 70,
-    height: 175,
-    age: 30,
-    sex: "male",
-    activity: "moderate",
+    weight: userProfileData.weight,
+    height: userProfileData.height,
+    age: userProfileData.age,
+    sex: userProfileData.sex,
+    activity: userProfileData.activityLevel,
     goal: "maintain",
     BMI: 22.86,
     recommendedCalories: 2400,
@@ -329,7 +355,7 @@ export default function Progress() {
   }, [state.userData.mealLogs, calorieTimeFilter]);
 
   const filteredWeightData = filterDataByTime(weightData, timeFilter);
-  const filteredWaterData = filterDataByTime(waterData, timeFilter);
+  const filteredWaterData = filterDataByTime(waterChartData, timeFilter);
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 pb-20">

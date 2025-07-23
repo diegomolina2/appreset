@@ -112,11 +112,11 @@
     "removeFromFavorites": "Retirer des favoris",
     "logMeal": "Enregistrer le repas",
     "search": "Rechercher des repas...",
-    "unlockedFrom": "Débloqué à partir du plan {plan}",
+    "unlockedFrom": "Débloqué à partir du plan {{plan}}",
     "upgradeRequired": "Mise à niveau requise",
     "plans": {
       "Free": "Gratuit",
-      "Momentum": "Momentum", 
+      "Momentum": "Momentum",
       "Premium": "Premium",
       "Pro": "Pro"
     },

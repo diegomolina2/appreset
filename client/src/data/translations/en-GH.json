@@ -1,4 +1,3 @@
-
 {
   "common": {
     "welcome": "Welcome",
@@ -136,7 +135,7 @@
   "navigation": {
     "home": "Home",
     "challenges": "Challenges",
-    "exercises": "Exercises", 
+    "exercises": "Exercises",
     "meals": "Meals",
     "progress": "Progress",
     "badges": "Badges"
@@ -202,7 +201,7 @@
     "restartChallenge": "Restart Challenge"
   },
   "exercises": {
-    "title": "Exercises", 
+    "title": "Exercises",
     "subtitle": "Stay active with our exercise library",
     "categories": {
       "all": "All",
@@ -210,13 +209,13 @@
       "Moderate": "Moderate",
       "Advanced": "Advanced",
       "strength": "Strength",
-      "cardio": "Cardio", 
+      "cardio": "Cardio",
       "flexibility": "Flexibility",
       "core": "Core"
     },
     "difficulty": {
       "beginner": "Beginner",
-      "intermediate": "Intermediate", 
+      "intermediate": "Intermediate",
       "advanced": "Advanced"
     },
     "startExercise": "Start Exercise",
@@ -234,7 +233,7 @@
     "categories": {
       "all": "All",
       "breakfast": "Breakfast",
-      "lunch": "Lunch", 
+      "lunch": "Lunch",
       "dinner": "Dinner",
       "snack": "Snack"
     },
@@ -242,7 +241,7 @@
     "servings": "Servings",
     "calories": "Calories",
     "difficulty": "Difficulty",
-    "ingredients": "Ingredients", 
+    "ingredients": "Ingredients",
     "instructions": "Instructions",
     "tips": "Tips",
     "logMeal": "Log Meal",
@@ -251,7 +250,7 @@
     "upgradeRequired": "Upgrade Required",
     "plans": {
       "Free": "Free",
-      "Momentum": "Momentum", 
+      "Momentum": "Momentum",
       "Premium": "Premium",
       "Pro": "Pro"
     }
@@ -261,7 +260,7 @@
     "subtitle": "Track your wellness journey",
     "weightProgress": "Weight Progress",
     "waterIntake": "Water Intake",
-    "exerciseStats": "Exercise Statistics", 
+    "exerciseStats": "Exercise Statistics",
     "mealTracking": "Meal Tracking",
     "badges": "Badges Earned",
     "exportData": "Export Data",
