@@ -97,18 +97,25 @@
     "rest": "Rest"
   },
   "meals": {
-    "title": "Meal Library",
+    "title": "Meals",
+    "subtitle": "Discover healthy and delicious meal ideas with detailed nutrition information",
+    "search": "Search meals...",
+    "filter": "Filter by category",
+    "all": "All",
     "categories": {
+      "all": "All Categories",
       "breakfast": "Breakfast",
       "lunch": "Lunch",
       "dinner": "Dinner",
-      "snack": "Snack"
+      "snack": "Snacks"
     },
-    "calories": "calories",
-    "addToFavorites": "Add to Favorites",
-    "removeFromFavorites": "Remove from Favorites",
+    "calories": "Calories",
+    "protein": "Protein",
+    "carbs": "Carbs",
+    "fats": "Fats",
+    "view": "View Recipe",
     "logMeal": "Log Meal",
-    "ingredients": "Ingredients"
+    "preparation": "Preparation Instructions"
   },
   "progress": {
     "title": "Progress",
@@ -138,6 +145,40 @@
       "halfway": "Halfway"
     }
   },
+  "settings": {
+    "title": "Settings",
+    "profile": "Profile",
+    "preferences": "Preferences",
+    "language": "Language",
+    "theme": "Theme",
+    "notifications": "Notifications",
+    "subscription": "Subscription",
+    "currentPlan": "Current Plan",
+    "plans": {
+      "free": "Free Plan",
+      "basic": "Basic Plan",
+      "premium": "Premium Plan",
+      "pro": "Pro Plan"
+    },
+    "planFeatures": {
+      "free": "Access to basic features",
+      "basic": "Access to challenges and exercises",
+      "premium": "Access to nutrition guide and meal plans",
+      "pro": "Full access to all premium features"
+    }
+  },
+  "courses": {
+    "title": "Courses",
+    "subtitle": "Learn and grow with our educational content",
+    "lessons": "lessons",
+    "progress": "Progress",
+    "upgrade": "Upgrade Plan",
+    "continueCourse": "Continue Course",
+    "startCourse": "Start Course",
+    "completed": "Completed",
+    "inProgress": "In Progress",
+    "notStarted": "Not Started"
+  },
   "navigation": {
     "home": "Home",
     "challenges": "Challenges",
@@ -145,7 +186,9 @@
     "meals": "Meals",
     "progress": "Progress",
     "badges": "Badges",
-    "faq": "FAQ"
+    "courses": "Courses",
+    "faq": "FAQ",
+    "settings": "Settings"
   },
   "common": {
     "save": "Save",
@@ -171,5 +214,46 @@
       "Progress, not perfection.",
       "Believe in yourself and your journey."
     ]
-  }
+  },
+  "courses": {
+    "title": "My Courses",
+    "subtitle": "Access your courses and continue learning",
+    "progress": "Progress",
+    "lessons": "lessons",
+    "startCourse": "Start Course",
+    "continueCourse": "Continue Course",
+    "upgrade": "Upgrade"
+  },
+  "plans": {
+    "kickstart": "Kickstart",
+    "momentum": "Momentum", 
+    "thrive": "Thrive",
+    "total": "Total",
+    "expired": "Plan Expired",
+    "expiringSoon": "Your plan expires soon!",
+    "upgradeRequired": "Upgrade Required",
+    "upgradeMessage": "To access this content, upgrade to a higher plan.",
+    "features": "Features Included:"
+  },
+  "nav": {
+    "dashboard": "Dashboard",
+    "meals": "Meals",
+    "exercises": "Exercises",
+    "courses": "Courses",
+    "challenges": "Challenges",
+    "progress": "Progress",
+    "badges": "Badges",
+    "settings": "Settings",
+    "faq": "FAQ"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Find answers to common questions about the app",
+    "frequentQuestions": "Common Questions"
+  },
+  "charts": {
+      "weightProgress": "Weight Progress",
+      "waterIntake": "Water Intake",
+      "calorieIntake": "Calorie Intake"
+    }
 }

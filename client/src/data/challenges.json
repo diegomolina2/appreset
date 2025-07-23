@@ -4,6 +4,7 @@
     "name": "14-Day Slim Down Challenge",
     "description": "A quick-start weight loss plan with daily tasks to boost metabolism and burn fat.",
     "days": 14,
+    "accessPlans": [2, 3, 4],
     "dailyTasks": [
       { "day": 1, "tasks": ["Log your weight", "Drink at least 2L of water", "Complete 15 min of Jumping Jacks", "Eat Jollof Rice for lunch", "Mark your mood"] },
       { "day": 2, "tasks": ["Drink 2.5L of water", "Complete 20 squats", "Eat Egusi Soup for dinner", "Avoid sugar", "Log your mood"] },
@@ -26,6 +27,7 @@
     "name": "7-Day Detox",
     "description": "Cleanse your body and reset your habits in just 7 days.",
     "days": 7,
+    "accessPlans": [1, 2, 3, 4],
     "dailyTasks": [
       { "day": 1, "tasks": ["Start day with lemon water", "Eat clean breakfast (Puff-Puff)", "Avoid sugar", "Complete 15 min light exercise", "Reflect on your progress"] },
       { "day": 2, "tasks": ["Start day with warm water", "Eat Coconut Rice for lunch", "Avoid caffeine", "Complete 20 squats", "Log your mood"] },
@@ -41,6 +43,7 @@
     "name": "30-Day No Sugar",
     "description": "Break your sugar habit and boost your health in 30 days.",
     "days": 30,
+    "accessPlans": [3, 4],
     "dailyTasks": [
       { "day": 1, "tasks": ["Log weight", "Drink 2L water", "Replace soda with water", "Eat grilled fish", "Mark your mood"] },
       { "day": 2, "tasks": ["Eat fruit instead of dessert", "Do 15 min of light cardio", "Drink lemon water", "Log your mood"] },
@@ -79,6 +82,7 @@
     "name": "28-Day Full Body Reset",
     "description": "Complete body transformation with comprehensive daily tasks.",
     "days": 28,
+    "accessPlans": [3, 4],
     "dailyTasks": [
       { "day": 1, "tasks": ["Log weight and measurements", "Drink 2L water", "Complete 10 push-ups", "Eat balanced breakfast", "Plan your week"] },
       { "day": 2, "tasks": ["Morning stretching routine", "Drink herbal tea", "Complete 20 squats", "Eat protein-rich lunch", "Log your mood"] },

@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react';
 
 type TranslationKey = string;
@@ -77,7 +78,9 @@ export function useTranslation() {
       }
     }
     
+    // Ensure we return a string, not an object
     if (typeof value !== 'string') {
+      console.warn(`Translation key "${key}" resolved to non-string value:`, value);
       return key;
     }
     
@@ -98,7 +101,7 @@ export function useTranslation() {
     if (quotes.length === 0) return '';
     
     const randomIndex = Math.floor(Math.random() * quotes.length);
-    return quotes[randomIndex];
+    return quotes[randomIndex] || '';
   };
 
   return {

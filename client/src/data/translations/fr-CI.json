@@ -1,4 +1,3 @@
-
 {
   "welcome": {
     "title": "Tracker de Bien-être",
@@ -99,11 +98,14 @@
   },
   "meals": {
     "title": "Bibliothèque de repas",
+    "filter": "Filtrer par catégorie",
+    "all": "Tous",
     "categories": {
+      "all": "Toutes les Catégories",
       "breakfast": "Petit-déjeuner",
       "lunch": "Déjeuner",
       "dinner": "Dîner",
-      "snack": "Collation"
+      "snack": "Collations"
     },
     "calories": "calories",
     "addToFavorites": "Ajouter aux favoris",
@@ -138,9 +140,11 @@
     "challenges": "Défis",
     "exercises": "Exercices",
     "meals": "Repas",
-    "progress": "Progression",
+    "progress": "Progrès",
     "badges": "Badges",
-    "faq": "FAQ"
+    "courses": "Cours",
+    "faq": "FAQ",
+    "settings": "Paramètres"
   },
   "settings": {
     "title": "Paramètres",
@@ -168,11 +172,31 @@
     "slimDown": "Mincir",
     "chop": "Manger",
     "motivationalQuotes": [
-      "Les petits pas quotidiens mènent à de grands changements annuels.",
+      "De petits pas quotidiens mènent à de grands changements annuels.",
       "Votre santé est votre richesse.",
-      "Chaque choix sain est un pas vers votre meilleur vous.",
+      "Chaque choix sain est un pas vers votre meilleur moi.",
       "Progrès, pas perfection.",
       "Croyez en vous et en votre parcours."
     ]
+  },
+  "courses": {
+    "title": "Mes Cours",
+    "subtitle": "Accédez à vos cours et continuez à apprendre",
+    "progress": "Progrès",
+    "lessons": "leçons",
+    "startCourse": "Commencer le Cours",
+    "continueCourse": "Continuer le Cours",
+    "upgrade": "Améliorer"
+  },
+  "plans": {
+    "kickstart": "Démarrage",
+    "momentum": "Élan",
+    "thrive": "Prospérer",
+    "total": "Total",
+    "expired": "Plan Expiré",
+    "expiringSoon": "Votre plan expire bientôt!",
+    "upgradeRequired": "Mise à Niveau Requise",
+    "upgradeMessage": "Pour accéder à ce contenu, passez à un plan supérieur.",
+    "features": "Fonctionnalités Incluses:"
   }
 }
