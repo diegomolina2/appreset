@@ -8,6 +8,7 @@ import { useTranslation } from "../hooks/useTranslation";
 import { useApp } from "../contexts/AppContext";
 import { hasAccessToContent } from "../utils/planManager";
 import { UpgradePopup } from "./UpgradePopup";
+import { MealLogDialog } from "./MealLogDialog";
 
 interface MealCardProps {
   meal: Meal;
@@ -23,6 +24,7 @@ export function MealCard({
   const { t, currentLanguage } = useTranslation();
   const { state, toggleFavorite } = useApp();
   const [showUpgradePopup, setShowUpgradePopup] = useState(false);
+  const [showLogDialog, setShowLogDialog] = useState(false);
 
   const hasAccess = hasAccessToContent(meal);
   const isLocked = !hasAccess;
@@ -39,6 +41,10 @@ export function MealCard({
       return;
     }
 
+    setShowLogDialog(true);
+  };
+
+  const handleConfirmLog = (date: string) => {
     if (onLogMeal) {
       onLogMeal();
     }
@@ -201,6 +207,14 @@ export function MealCard({
           setShowUpgradePopup(false);
           window.location.reload();
         }}
+      />
+
+      {/* Meal Log Dialog */}
+      <MealLogDialog
+        isOpen={showLogDialog}
+        onClose={() => setShowLogDialog(false)}
+        onConfirm={handleConfirmLog}
+        mealName={getMealName()}
       />
     </Card>
   );

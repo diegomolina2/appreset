@@ -54,7 +54,8 @@ function Meals() {
   const [categoryFilter, setCategoryFilter] = useState("all");
   const [selectedMeal, setSelectedMeal] = useState<Meal | null>(null);
 
-  const logMeal = (meal: Meal) => {
+  const logMeal = (meal: Meal, date?: string) => {
+    const logDate = date || new Date().toISOString().split("T")[0];
     const mealLog = {
       id: `${meal.id}-${Date.now()}`,
       mealId: meal.id,
@@ -63,7 +64,7 @@ function Meals() {
       protein: meal.protein,
       carbs: meal.carbs,
       fat: meal.fat,
-      date: new Date().toISOString().split("T")[0],
+      date: logDate,
       time: new Date().toLocaleTimeString(),
       timestamp: new Date().toISOString(),
     };
@@ -83,7 +84,7 @@ function Meals() {
       "Logging meal:",
       meal.name[currentLanguage] || meal.name["en-NG"],
       "for date:",
-      mealLog.date,
+      logDate,
     );
   };
 

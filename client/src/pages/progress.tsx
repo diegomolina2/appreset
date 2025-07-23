@@ -81,6 +81,7 @@ import { CSVImport } from "../components/CSVImport";
 import { Dialog, DialogContent, DialogTrigger } from "../components/ui/dialog";
 import { DailyWeightLogger } from "../components/DailyWeightLogger";
 import { DailyMoodLogger } from "../components/DailyMoodLogger";
+import { Journal } from "../components/Journal";
 
 export default function Progress() {
   const { state } = useApp();
@@ -356,13 +357,19 @@ export default function Progress() {
       </header>
 
       <div className="px-4 py-6">
-        <Tabs defaultValue="water" className="w-full">
-          <TabsList className="grid w-full grid-cols-4">
+        <Tabs defaultValue="journal" className="w-full">
+          <TabsList className="grid w-full grid-cols-5">
+            <TabsTrigger value="journal">📖 Journal</TabsTrigger>
             <TabsTrigger value="water">💧 Water</TabsTrigger>
             <TabsTrigger value="calories">🔥 Calories</TabsTrigger>
             <TabsTrigger value="body">📏 Body Comp</TabsTrigger>
             <TabsTrigger value="charts">📊 Charts</TabsTrigger>
           </TabsList>
+
+          {/* Journal Tab */}
+          <TabsContent value="journal" className="mt-6">
+            <Journal />
+          </TabsContent>
 
           {/* Water Intake Tab */}
           <TabsContent value="water" className="mt-6 space-y-6">
