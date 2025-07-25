@@ -33,9 +33,12 @@ export default function Exercises() {
   );
 
   const filteredExercises = exercisesData.filter((exercise) => {
+    const exerciseName = typeof exercise.name === 'string' ? exercise.name : (exercise.name[state.language] || exercise.name['en-NG']);
+    const exerciseDescription = typeof exercise.description === 'string' ? exercise.description : (exercise.description[state.language] || exercise.description['en-NG']);
+    
     const matchesSearch =
-      exercise.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      exercise.description?.toLowerCase().includes(searchTerm.toLowerCase());
+      exerciseName.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      exerciseDescription?.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesCategory =
       selectedCategory === "all" || exercise.category === selectedCategory;
     const matchesPlan =
@@ -145,8 +148,11 @@ export default function Exercises() {
       checkAndUnlockBadges();
     });
 
+    const exercise = exercisesData.find((e) => e.id === exerciseId);
+    const exerciseName = typeof exercise?.name === 'string' ? exercise.name : (exercise?.name?.[state.language] || exercise?.name?.['en-NG']);
+    
     alert(
-      `Started ${exercisesData.find((e) => e.id === exerciseId)?.name}! Keep up the good work!`,
+      `Started ${exerciseName}! Keep up the good work!`,
     );
   };
 

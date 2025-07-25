@@ -1,8 +1,20 @@
 [
   {
     "id": "14-day-slim-down",
-    "name": "14-Day Slim Down Challenge",
-    "description": "A quick-start weight loss plan with daily tasks to boost metabolism and burn fat.",
+    "name": {
+      "en-NG": "14-Day Slim Down Challenge",
+      "fr-CI": "Défi Minceur 14 Jours",
+      "en-GH": "14-Day Slim Down Challenge",
+      "en-KE": "14-Day Slim Down Challenge",
+      "en-ZA": "14-Day Slim Down Challenge"
+    },
+    "description": {
+      "en-NG": "A quick-start weight loss plan with daily tasks to boost metabolism and burn fat.",
+      "fr-CI": "Un plan de perte de poids rapide avec des tâches quotidiennes pour stimuler le métabolisme et brûler les graisses.",
+      "en-GH": "A quick-start weight loss plan with daily tasks to boost metabolism and burn fat.",
+      "en-KE": "A quick-start weight loss plan with daily tasks to boost metabolism and burn fat.",
+      "en-ZA": "A quick-start weight loss plan with daily tasks to boost metabolism and burn fat."
+    },
     "days": 14,
     "accessPlans": [2, 3, 4],
     "dailyTasks": [
@@ -24,8 +36,20 @@
   },
   {
     "id": "7-day-detox",
-    "name": "7-Day Detox",
-    "description": "Cleanse your body and reset your habits in just 7 days.",
+    "name": {
+      "en-NG": "7-Day Detox",
+      "fr-CI": "Détox 7 Jours",
+      "en-GH": "7-Day Detox",
+      "en-KE": "7-Day Detox",
+      "en-ZA": "7-Day Detox"
+    },
+    "description": {
+      "en-NG": "Cleanse your body and reset your habits in just 7 days.",
+      "fr-CI": "Nettoyez votre corps et réinitialisez vos habitudes en seulement 7 jours.",
+      "en-GH": "Cleanse your body and reset your habits in just 7 days.",
+      "en-KE": "Cleanse your body and reset your habits in just 7 days.",
+      "en-ZA": "Cleanse your body and reset your habits in just 7 days."
+    },
     "days": 7,
     "accessPlans": [1, 2, 3, 4],
     "dailyTasks": [
@@ -40,8 +64,20 @@
   },
   {
     "id": "30-day-no-sugar",
-    "name": "30-Day No Sugar",
-    "description": "Break your sugar habit and boost your health in 30 days.",
+    "name": {
+      "en-NG": "30-Day No Sugar",
+      "fr-CI": "30 jours sans sucre",
+      "en-GH": "30-Day No Sugar",
+      "en-KE": "30-Day No Sugar",
+      "en-ZA": "30-Day No Sugar"
+    },
+    "description": {
+      "en-NG": "Break your sugar habit and boost your health in 30 days.",
+      "fr-CI": "Briser votre habitude de sucre et améliorer votre santé en 30 jours.",
+      "en-GH": "Break your sugar habit and boost your health in 30 days.",
+      "en-KE": "Break your sugar habit and boost your health in 30 days.",
+      "en-ZA": "Break your sugar habit and boost your health in 30 days."
+    },
     "days": 30,
     "accessPlans": [3, 4],
     "dailyTasks": [
@@ -79,8 +115,20 @@
   },
   {
     "id": "28-day-full-body-reset",
-    "name": "28-Day Full Body Reset",
-    "description": "Complete body transformation with comprehensive daily tasks.",
+    "name": {
+      "en-NG": "28-Day Full Body Reset",
+      "fr-CI": "Réinitialisation complète du corps en 28 jours",
+      "en-GH": "28-Day Full Body Reset",
+      "en-KE": "28-Day Full Body Reset",
+      "en-ZA": "28-Day Full Body Reset"
+    },
+    "description": {
+      "en-NG": "Complete body transformation with comprehensive daily tasks.",
+      "fr-CI": "Transformation corporelle complète avec des tâches quotidiennes complètes.",
+      "en-GH": "Complete body transformation with comprehensive daily tasks.",
+      "en-KE": "Complete body transformation with comprehensive daily tasks.",
+      "en-ZA": "Complete body transformation with comprehensive daily tasks."
+    },
     "days": 28,
     "accessPlans": [3, 4],
     "dailyTasks": [
