@@ -115,7 +115,15 @@
     "fats": "Fats",
     "view": "View Recipe",
     "logMeal": "Log Meal",
-    "preparation": "Preparation Instructions"
+    "preparation": "Preparation Instructions",
+    "unlockedFrom": "Unlocked from {{plan}} plan",
+    "upgradeRequired": "Upgrade Required",
+    "plans": {
+      "Free": "Free",
+      "Momentum": "Momentum",
+      "Premium": "Premium",
+      "Pro": "Pro"
+    }
   },
   "progress": {
     "title": "Progress",
@@ -130,7 +138,19 @@
     "thisWeek": "This Week",
     "today": "Today",
     "dailyMood": "Daily Mood",
-    "moodProgress": "Mood Progress"
+    "moodProgress": "Mood Progress",
+    "timeFilters": {
+      "1week": "1 Week",
+      "1month": "1 Month",
+      "3months": "3 Months",
+      "6months": "6 Months",
+      "max": "All Time"
+    },
+    "charts": {
+      "weightProgress": "Weight Progress",
+      "waterIntake": "Water Intake",
+      "calorieIntake": "Calorie Intake"
+    }
   },
   "badges": {
     "title": "Badges & Achievements",
@@ -154,6 +174,16 @@
     "notifications": "Notifications",
     "subscription": "Subscription",
     "currentPlan": "Current Plan",
+    "planInfo": "Plan Information",
+    "activePlan": "Active Plan",
+    "timeRemaining": "Time Remaining",
+    "daysRemaining": "days remaining",
+    "unlimitedAccess": "Unlimited Access",
+    "planExpiringSoon": "Your plan expires soon!",
+    "noPlanActive": "No active plan",
+    "activatePlan": "Activate a plan to access challenges",
+    "deactivatePlan": "Deactivate Plan",
+    "featuresIncluded": "Features Included:",
     "plans": {
       "free": "Free Plan",
       "basic": "Basic Plan",

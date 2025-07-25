@@ -1,4 +1,3 @@
-
 import React, { useState, useMemo } from "react";
 import {
   Card,
@@ -43,7 +42,7 @@ export function Journal() {
     const currentDate = new Date(selectedDate);
     const tomorrow = new Date();
     tomorrow.setDate(tomorrow.getDate() + 1);
-    
+
     if (currentDate < tomorrow) {
       currentDate.setDate(currentDate.getDate() + 1);
       setSelectedDate(currentDate.toISOString().split("T")[0]);

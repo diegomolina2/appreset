@@ -252,7 +252,17 @@
     "difficulty": "Difficulty",
     "ingredients": "Ingredients", 
     "instructions": "Instructions",
-    "tips": "Tips"
+    "tips": "Tips",
+    "logMeal": "Log Meal",
+    "search": "Search meals...",
+    "unlockedFrom": "Unlocked from {{plan}} plan",
+    "upgradeRequired": "Upgrade Required",
+    "plans": {
+      "Free": "Free",
+      "Momentum": "Momentum",
+      "Premium": "Premium",
+      "Pro": "Pro"
+    }
   },
   "progress": {
     "title": "Progress",

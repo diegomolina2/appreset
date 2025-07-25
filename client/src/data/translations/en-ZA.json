@@ -242,7 +242,7 @@
     "categories": {
       "all": "All",
       "breakfast": "Breakfast",
-      "lunch": "Lunch", 
+      "lunch": "Lunch",
       "dinner": "Dinner",
       "snack": "Snack"
     },
@@ -250,9 +250,19 @@
     "servings": "Servings",
     "calories": "Calories",
     "difficulty": "Difficulty",
-    "ingredients": "Ingredients", 
+    "ingredients": "Ingredients",
     "instructions": "Instructions",
-    "tips": "Tips"
+    "tips": "Tips",
+    "logMeal": "Log Meal",
+    "search": "Search meals...",
+    "unlockedFrom": "Unlocked from {{plan}} plan",
+    "upgradeRequired": "Upgrade Required",
+    "plans": {
+      "Free": "Free",
+      "Momentum": "Momentum",
+      "Premium": "Premium",
+      "Pro": "Pro"
+    }
   },
   "progress": {
     "title": "Progress",

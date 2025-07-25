@@ -246,7 +246,7 @@
     "tips": "Tips",
     "logMeal": "Log Meal",
     "search": "Search meals...",
-    "unlockedFrom": "Unlocked from {plan} plan",
+    "unlockedFrom": "Unlocked from {{plan}} plan",
     "upgradeRequired": "Upgrade Required",
     "plans": {
       "Free": "Free",

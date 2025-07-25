@@ -98,6 +98,7 @@
   },
   "meals": {
     "title": "Bibliothèque de repas",
+    "subtitle": "Découvrez des idées de repas sains et délicieux avec des informations nutritionnelles détaillées",
     "filter": "Filtrer par catégorie",
     "all": "Tous",
     "categories": {
@@ -108,6 +109,9 @@
       "snack": "Collations"
     },
     "calories": "calories",
+    "protein": "Protéines",
+    "carbs": "Glucides",
+    "fats": "Lipides",
     "addToFavorites": "Ajouter aux favoris",
     "removeFromFavorites": "Retirer des favoris",
     "logMeal": "Enregistrer le repas",
@@ -120,7 +124,8 @@
       "Premium": "Premium",
       "Pro": "Pro"
     },
-    "ingredients": "Ingrédients"
+    "ingredients": "Ingrédients",
+    "preparation": "Instructions de préparation"
   },
   "progress": {
     "title": "Progression",
@@ -129,7 +134,19 @@
     "waterIntake": "Consommation d'eau",
     "weeklyView": "Vue hebdomadaire",
     "monthlyView": "Vue mensuelle",
-    "exportData": "Exporter les données"
+    "exportData": "Exporter les données",
+    "timeFilters": {
+      "1week": "1 Semaine",
+      "1month": "1 Mois",
+      "3months": "3 Mois",
+      "6months": "6 Mois",
+      "max": "Tout le Temps"
+    },
+    "charts": {
+      "weightProgress": "Progression du Poids",
+      "waterIntake": "Consommation d'Eau",
+      "calorieIntake": "Apport Calorique"
+    }
   },
   "badges": {
     "title": "Badges et réussites",
@@ -161,7 +178,17 @@
     "language": "Langue",
     "theme": "Thème",
     "save": "Sauvegarder",
-    "cancel": "Annuler"
+    "cancel": "Annuler",
+    "planInfo": "Informations du Plan",
+    "activePlan": "Plan Actif",
+    "timeRemaining": "Temps Restant",
+    "daysRemaining": "jours restants",
+    "unlimitedAccess": "Accès Illimité",
+    "planExpiringSoon": "Votre plan expire bientôt!",
+    "noPlanActive": "Aucun plan actif",
+    "activatePlan": "Activer un plan pour accéder aux défis",
+    "deactivatePlan": "Désactiver le Plan",
+    "featuresIncluded": "Fonctionnalités Incluses:"
   },
   "common": {
     "save": "Sauvegarder",

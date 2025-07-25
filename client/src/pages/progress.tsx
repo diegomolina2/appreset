@@ -192,6 +192,7 @@ export default function Progress() {
     const savedWaterData = loadWaterIntake();
     const savedCaloriesData = loadDailyCalories();
     const savedBodyData = loadBodyComposition();
+    const userProfile = getUserProfileData();
 
     if (savedWaterData) {
       // Reset water log if it's a new day
@@ -199,17 +200,84 @@ export default function Progress() {
         savedWaterData.loggedMlToday = 0;
         savedWaterData.lastUpdated = getTodayDate();
       }
+      // Update with current user weight if available
+      savedWaterData.weight = userProfile.weight;
       setWaterData(savedWaterData);
+    } else {
+      // Set initial water data with user profile
+      const initialWaterData = {
+        ...waterData,
+        weight: userProfile.weight,
+        activity: userProfile.activityLevel
+      };
+      initialWaterData.recommendedMl = calculateWaterIntake(
+        initialWaterData.weight,
+        initialWaterData.activity,
+        initialWaterData.goal
+      );
+      setWaterData(initialWaterData);
     }
 
     if (savedCaloriesData) {
-      setCaloriesData(savedCaloriesData);
+      // Update with current user data
+      const updatedCaloriesData = {
+        ...savedCaloriesData,
+        weight: userProfile.weight,
+        height: userProfile.height,
+        age: userProfile.age,
+        sex: userProfile.sex,
+        activity: userProfile.activityLevel
+      };
+      updatedCaloriesData.BMI = calculateBMI(updatedCaloriesData.weight, updatedCaloriesData.height);
+      updatedCaloriesData.recommendedCalories = calculateDailyCalories(
+        updatedCaloriesData.weight,
+        updatedCaloriesData.height,
+        updatedCaloriesData.age,
+        updatedCaloriesData.sex,
+        updatedCaloriesData.activity,
+        updatedCaloriesData.goal
+      );
+      setCaloriesData(updatedCaloriesData);
+    } else {
+      // Set initial calories data with user profile
+      const initialCaloriesData = {
+        ...caloriesData,
+        weight: userProfile.weight,
+        height: userProfile.height,
+        age: userProfile.age,
+        sex: userProfile.sex,
+        activity: userProfile.activityLevel
+      };
+      initialCaloriesData.BMI = calculateBMI(initialCaloriesData.weight, initialCaloriesData.height);
+      initialCaloriesData.recommendedCalories = calculateDailyCalories(
+        initialCaloriesData.weight,
+        initialCaloriesData.height,
+        initialCaloriesData.age,
+        initialCaloriesData.sex,
+        initialCaloriesData.activity,
+        initialCaloriesData.goal
+      );
+      setCaloriesData(initialCaloriesData);
     }
 
     if (savedBodyData) {
-      setBodyData(savedBodyData);
+      // Update with current user data
+      const updatedBodyData = {
+        ...savedBodyData,
+        height: userProfile.height,
+        sex: userProfile.sex
+      };
+      setBodyData(updatedBodyData);
+    } else {
+      // Set initial body data with user profile
+      const initialBodyData = {
+        ...bodyData,
+        height: userProfile.height,
+        sex: userProfile.sex
+      };
+      setBodyData(initialBodyData);
     }
-  }, []);
+  }, [userData]);
 
   // Water calculations
   const updateWaterCalculations = (newData: Partial<WaterIntakeData>) => {
