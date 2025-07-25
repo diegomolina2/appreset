@@ -53,7 +53,9 @@ export function ChallengeCard({ challenge, onStart, onContinue, onViewDetails, o
   };
 
   return (
-    <Card className="w-full shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+    <Card className="w-full shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden">
+      <div className={`h-1 bg-gradient-to-r ${getChallengeStatusColor()}`} />
+      
       <CardHeader className="pb-3">
         <div className="flex items-center justify-between">
           <div className="flex-1">
@@ -69,7 +71,7 @@ export function ChallengeCard({ challenge, onStart, onContinue, onViewDetails, o
             <div className="flex items-center gap-4 text-sm text-gray-600 dark:text-gray-400">
               <div className="flex items-center gap-1">
                 <Calendar className="w-4 h-4" />
-                <span>{t('challenges.dayOf', { current: challenge.currentDay, total: challenge.days })}</span>
+                <span>Dia {challenge.currentDay} de {challenge.days}</span>
               </div>
               <div className="flex items-center gap-1">
                 <Target className="w-4 h-4" />
@@ -129,14 +131,14 @@ export function ChallengeCard({ challenge, onStart, onContinue, onViewDetails, o
               Tarefas de Hoje:
             </h4>
             {currentDayTasks?.tasks.map((task, index) => (
-              <div key={index} className="flex items-center justify-between p-3 bg-gray-50 dark:bg-gray-800 rounded-lg">
+              <div key={index} className="flex items-center justify-between p-3 bg-gray-50 dark:bg-gray-800 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
                 <div className="flex items-center space-x-3">
                   <button
                     onClick={() => handleTaskToggle(index)}
-                    className={`w-6 h-6 rounded-full flex items-center justify-center transition-colors ${
+                    className={`w-6 h-6 rounded-full flex items-center justify-center transition-all duration-200 ${
                       currentDayTasks.completed[index]
-                        ? 'bg-green-500 text-white hover:bg-green-600'
-                        : 'bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600'
+                        ? 'bg-green-500 text-white hover:bg-green-600 scale-110'
+                        : 'bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 hover:scale-105'
                     }`}
                   >
                     {currentDayTasks.completed[index] ? (
@@ -145,7 +147,7 @@ export function ChallengeCard({ challenge, onStart, onContinue, onViewDetails, o
                       <Circle className="w-3 h-3" />
                     )}
                   </button>
-                  <span className={`text-sm ${
+                  <span className={`text-sm transition-all duration-200 ${
                     currentDayTasks.completed[index] 
                       ? 'line-through text-gray-500 dark:text-gray-400' 
                       : 'text-gray-700 dark:text-gray-200'
@@ -167,13 +169,13 @@ export function ChallengeCard({ challenge, onStart, onContinue, onViewDetails, o
             {!challenge.isActive && onStart && (
               <Button onClick={onStart} className="flex-1 bg-primary hover:bg-primary/90">
                 <Play className="w-4 h-4 mr-2" />
-                {t('challenges.startChallenge')}
+                Iniciar Desafio
               </Button>
             )}
             
             {challenge.isActive && onContinue && (
               <Button onClick={onContinue} className="flex-1 bg-secondary hover:bg-secondary/90">
-                {t('challenges.continueChallenge')}
+                Continuar Desafio
               </Button>
             )}
             
