@@ -69,7 +69,8 @@ export function checkAndUnlockBadges(
   userData: UserData,
   dispatch: React.Dispatch<any>,
 ): void {
-  const unlockedBadges = new Set(userData.badges.map((b) => b.id));
+  const unlockedBadges = new Set((userData?.badges ?? []).map((b) => b.id));
+
   const now = new Date().toISOString();
 
   const maybeUnlock = (id: string, name: string, description: string) => {
@@ -84,7 +85,7 @@ export function checkAndUnlockBadges(
   };
 
   // Exemplo: badge por completar todos os dias de um desafio
-  Object.values(userData.challenges).forEach((challenge) => {
+  Object.values(userData?.challenges ?? {}).forEach((challenge) => {
     if (
       challenge.isActive &&
       challenge.completedDays.length === challenge.days &&
@@ -100,7 +101,9 @@ export function checkAndUnlockBadges(
 
   // Exemplo: badge por beber 2 litros de água em um dia
   const today = new Date().toISOString().split("T")[0];
-  const todayWater = userData.waterLog.find((w) => w.date === today);
+
+  const todayWater = (userData?.waterLog ?? []).find((w) => w.date === today);
+
   if (
     todayWater &&
     todayWater.liters >= 2 &&
@@ -147,7 +150,7 @@ export function getCurrentStreak(dates: string[]): number {
 }
 
 export const getUserData = (): UserData => {
-  const data = localStorage.getItem('userData');
+  const data = localStorage.getItem("userData");
   if (!data) {
     return defaultUserData;
   }
@@ -164,5 +167,5 @@ export const getCurrentStreakValue = (): number => {
 };
 
 export const clearUserDataStorage = (): void => {
-  localStorage.removeItem('userData');
+  localStorage.removeItem("userData");
 };

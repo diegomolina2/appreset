@@ -90,7 +90,7 @@ export default function Progress() {
   const { logWeight, logMood, logWater, logCalories } = useApp();
   const [timeFilter, setTimeFilter] = useState("1month");
   const [calorieTimeFilter, setCalorieTimeFilter] = useState("1month");
-
+  const { userData } = state;
   // Helper function to filter data by time period
   const filterDataByTime = (data: any[], filter: string) => {
     if (!Array.isArray(data)) {
@@ -123,12 +123,15 @@ export default function Progress() {
 
   // Get user's current weight from saved data
   const getCurrentUserWeight = () => {
-    const latestWeight = userData.weights && userData.weights.length > 0 
-      ? userData.weights[userData.weights.length - 1].weight 
-      : null;
-    
+    if (!userData) return 70;
+
+    const latestWeight =
+      userData.weights && userData.weights.length > 0
+        ? userData.weights[userData.weights.length - 1].weight
+        : null;
+
     const profileWeight = userData.weight || userData.userProfile?.weight;
-    
+
     return latestWeight || profileWeight || 70;
   };
 
@@ -136,13 +139,14 @@ export default function Progress() {
   const getUserProfileData = () => {
     const profile = userData.userProfile || {};
     const savedData = userData;
-    
+
     return {
       weight: getCurrentUserWeight(),
       height: savedData.height || profile.height || 175,
       age: savedData.age || profile.age || 30,
-      sex: savedData.sex || profile.gender || 'male',
-      activityLevel: savedData.activityLevel || profile.exerciseLevel || 'moderate'
+      sex: savedData.sex || profile.gender || "male",
+      activityLevel:
+        savedData.activityLevel || profile.exerciseLevel || "moderate",
     };
   };
 
@@ -157,7 +161,7 @@ export default function Progress() {
   });
   const [waterInput, setWaterInput] = useState("");
 
-  // Daily Calories State  
+  // Daily Calories State
   const userProfileData = getUserProfileData();
   const [caloriesData, setCaloriesData] = useState<DailyCaloriesData>({
     weight: userProfileData.weight,
@@ -308,8 +312,6 @@ export default function Progress() {
       });
     }
   };
-
-  const { userData } = state;
 
   // Prepare chart data
   const weightData = userData.weights.slice(-30).map((w) => ({
