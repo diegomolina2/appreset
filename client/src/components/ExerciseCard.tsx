@@ -41,9 +41,23 @@ export function ExerciseCard({ exercise, onStart }: ExerciseCardProps) {
   const isFavorite = state.userData.favorites.exercises.includes(exercise.id);
   const hasAccess = hasAccessToContent(exercise);
   
-  const exerciseName = typeof exercise.name === 'string' ? exercise.name : getLocalizedText(exercise.name);
-  const exerciseDescription = typeof exercise.description === 'string' ? exercise.description : getLocalizedText(exercise.description);
-  const exerciseInstructions = typeof exercise.instructions === 'string' ? exercise.instructions : getLocalizedText(exercise.instructions);
+  const exerciseName = typeof exercise.name === 'string' 
+    ? exercise.name 
+    : exercise.name && typeof exercise.name === 'object' 
+      ? getLocalizedText(exercise.name) 
+      : '';
+
+  const exerciseDescription = typeof exercise.description === 'string'
+    ? exercise.description
+    : exercise.description && typeof exercise.description === 'object'
+      ? getLocalizedText(exercise.description)
+      : '';
+
+  const exerciseInstructions = typeof exercise.instructions === 'string'
+    ? exercise.instructions
+    : exercise.instructions && typeof exercise.instructions === 'object'
+      ? getLocalizedText(exercise.instructions)
+      : '';
   
   // Convert duration to seconds for timer
   const getDurationInSeconds = () => {

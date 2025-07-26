@@ -3,8 +3,4 @@ import App from "./App";
 import "./index.css";
 import { AppProvider } from "./contexts/AppContext";
 
-createRoot(document.getElementById("root")!).render(
-  <AppProvider>
-    <App />
-  </AppProvider>,
-);
+createRoot(document.getElementById("root")!).render(<App />);

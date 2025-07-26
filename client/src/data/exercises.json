@@ -604,4 +604,14 @@
     "category": "Moderate",
     "reps": "8–10",
     "rest": "45 sec",
-    "description":
+    "description": {
+      "en-NG": "Dynamic warm-up exercise that stretches the hamstrings and activates the core.",
+      "fr-CI": "Exercice d'échauffement dynamique qui étire les ischio-jambiers et active le tronc.",
+      "en-GH": "Dynamic warm-up exercise that stretches the hamstrings and activates the core.",
+      "en-KE": "Dynamic warm-up exercise that stretches the hamstrings and activates the core.",
+      "en-ZA": "Dynamic warm-up exercise that stretches the hamstrings and activates the core."
+    },
+    "media": "/exercises-media/inchworms.gif",
+    "accessPlans": [2, 3, 4]
+  }
+]
