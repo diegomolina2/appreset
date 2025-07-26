@@ -268,3 +268,254 @@ export default function Onboarding() {
     </div>
   );
 }
+import React, { useState } from 'react';
+import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
+import { Button } from '../components/ui/button';
+import { Input } from '../components/ui/input';
+import { Label } from '../components/ui/label';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../components/ui/select';
+import { Progress } from '../components/ui/progress';
+import { ArrowLeft, ArrowRight } from 'lucide-react';
+import { useTranslation } from '../hooks/useTranslation';
+import { useApp } from '../contexts/AppContext';
+import { useLocation } from 'wouter';
+
+export default function Onboarding() {
+  const { t } = useTranslation();
+  const { updateUserProfile } = useApp();
+  const [, setLocation] = useLocation();
+  
+  const [currentStep, setCurrentStep] = useState(1);
+  const totalSteps = 3;
+  
+  const [formData, setFormData] = useState({
+    name: '',
+    age: '',
+    height: '',
+    weight: '',
+    targetWeight: '',
+    gender: '',
+    exerciseLevel: '',
+    diet: ''
+  });
+
+  const handleInputChange = (field: string, value: string) => {
+    setFormData(prev => ({ ...prev, [field]: value }));
+  };
+
+  const handleNext = () => {
+    if (currentStep < totalSteps) {
+      setCurrentStep(prev => prev + 1);
+    }
+  };
+
+  const handleBack = () => {
+    if (currentStep > 1) {
+      setCurrentStep(prev => prev - 1);
+    }
+  };
+
+  const handleFinish = () => {
+    // Update user profile with form data
+    updateUserProfile({
+      name: formData.name,
+      age: parseInt(formData.age) || 25,
+      height: parseInt(formData.height) || 170,
+      weight: parseInt(formData.weight) || 70,
+      targetWeight: parseInt(formData.targetWeight) || 65,
+      gender: formData.gender || 'other',
+      exerciseLevel: formData.exerciseLevel || 'moderate',
+      diet: formData.diet || 'none'
+    });
+    
+    // Navigate to dashboard
+    setLocation('/dashboard');
+  };
+
+  const renderStep = () => {
+    switch (currentStep) {
+      case 1:
+        return (
+          <div className="space-y-6">
+            <div className="text-center mb-6">
+              <h2 className="text-2xl font-bold mb-2">{t('onboarding.fields.name')}</h2>
+              <p className="text-gray-600">{t('onboarding.personalInfo')}</p>
+            </div>
+            
+            <div className="space-y-4">
+              <div>
+                <Label htmlFor="name">{t('onboarding.fields.name')}</Label>
+                <Input
+                  id="name"
+                  placeholder={t('onboarding.fields.namePlaceholder')}
+                  value={formData.name}
+                  onChange={(e) => handleInputChange('name', e.target.value)}
+                />
+              </div>
+              
+              <div>
+                <Label htmlFor="age">{t('onboarding.fields.age')}</Label>
+                <Input
+                  id="age"
+                  type="number"
+                  placeholder={t('onboarding.fields.agePlaceholder')}
+                  value={formData.age}
+                  onChange={(e) => handleInputChange('age', e.target.value)}
+                />
+              </div>
+              
+              <div>
+                <Label htmlFor="gender">{t('onboarding.fields.gender')}</Label>
+                <Select value={formData.gender} onValueChange={(value) => handleInputChange('gender', value)}>
+                  <SelectTrigger>
+                    <SelectValue placeholder="Select gender" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="male">{t('onboarding.fields.genderOptions.male')}</SelectItem>
+                    <SelectItem value="female">{t('onboarding.fields.genderOptions.female')}</SelectItem>
+                    <SelectItem value="other">{t('onboarding.fields.genderOptions.other')}</SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
+            </div>
+          </div>
+        );
+        
+      case 2:
+        return (
+          <div className="space-y-6">
+            <div className="text-center mb-6">
+              <h2 className="text-2xl font-bold mb-2">Physical Information</h2>
+              <p className="text-gray-600">Tell us about your body measurements</p>
+            </div>
+            
+            <div className="space-y-4">
+              <div>
+                <Label htmlFor="height">{t('onboarding.fields.height')}</Label>
+                <Input
+                  id="height"
+                  type="number"
+                  placeholder={t('onboarding.fields.heightPlaceholder')}
+                  value={formData.height}
+                  onChange={(e) => handleInputChange('height', e.target.value)}
+                />
+              </div>
+              
+              <div>
+                <Label htmlFor="weight">{t('onboarding.fields.weight')}</Label>
+                <Input
+                  id="weight"
+                  type="number"
+                  placeholder={t('onboarding.fields.weightPlaceholder')}
+                  value={formData.weight}
+                  onChange={(e) => handleInputChange('weight', e.target.value)}
+                />
+              </div>
+              
+              <div>
+                <Label htmlFor="targetWeight">{t('onboarding.fields.targetWeight')}</Label>
+                <Input
+                  id="targetWeight"
+                  type="number"
+                  placeholder={t('onboarding.fields.targetWeightPlaceholder')}
+                  value={formData.targetWeight}
+                  onChange={(e) => handleInputChange('targetWeight', e.target.value)}
+                />
+              </div>
+            </div>
+          </div>
+        );
+        
+      case 3:
+        return (
+          <div className="space-y-6">
+            <div className="text-center mb-6">
+              <h2 className="text-2xl font-bold mb-2">Lifestyle Preferences</h2>
+              <p className="text-gray-600">Help us personalize your experience</p>
+            </div>
+            
+            <div className="space-y-4">
+              <div>
+                <Label htmlFor="exerciseLevel">{t('onboarding.fields.exerciseLevel')}</Label>
+                <Select value={formData.exerciseLevel} onValueChange={(value) => handleInputChange('exerciseLevel', value)}>
+                  <SelectTrigger>
+                    <SelectValue placeholder="Select exercise level" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="sedentary">{t('onboarding.fields.exerciseOptions.sedentary')}</SelectItem>
+                    <SelectItem value="light">{t('onboarding.fields.exerciseOptions.light')}</SelectItem>
+                    <SelectItem value="moderate">{t('onboarding.fields.exerciseOptions.moderate')}</SelectItem>
+                    <SelectItem value="active">{t('onboarding.fields.exerciseOptions.active')}</SelectItem>
+                    <SelectItem value="very_active">{t('onboarding.fields.exerciseOptions.very_active')}</SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
+              
+              <div>
+                <Label htmlFor="diet">{t('onboarding.fields.diet')}</Label>
+                <Select value={formData.diet} onValueChange={(value) => handleInputChange('diet', value)}>
+                  <SelectTrigger>
+                    <SelectValue placeholder="Select dietary preference" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="none">{t('onboarding.fields.dietOptions.none')}</SelectItem>
+                    <SelectItem value="vegetarian">{t('onboarding.fields.dietOptions.vegetarian')}</SelectItem>
+                    <SelectItem value="vegan">{t('onboarding.fields.dietOptions.vegan')}</SelectItem>
+                    <SelectItem value="halal">{t('onboarding.fields.dietOptions.halal')}</SelectItem>
+                    <SelectItem value="kosher">{t('onboarding.fields.dietOptions.kosher')}</SelectItem>
+                    <SelectItem value="gluten_free">{t('onboarding.fields.dietOptions.gluten_free')}</SelectItem>
+                    <SelectItem value="dairy_free">{t('onboarding.fields.dietOptions.dairy_free')}</SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
+            </div>
+          </div>
+        );
+        
+      default:
+        return null;
+    }
+  };
+
+  return (
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 flex items-center justify-center p-4">
+      <Card className="w-full max-w-md">
+        <CardHeader>
+          <div className="text-center mb-4">
+            <CardTitle className="text-2xl font-bold">{t('onboarding.title')}</CardTitle>
+            <p className="text-gray-600 mt-2">
+              {t('onboarding.step', { current: currentStep, total: totalSteps })}
+            </p>
+          </div>
+          <Progress value={(currentStep / totalSteps) * 100} className="w-full" />
+        </CardHeader>
+        
+        <CardContent>
+          {renderStep()}
+          
+          <div className="flex justify-between mt-8">
+            <Button
+              onClick={handleBack}
+              variant="outline"
+              disabled={currentStep === 1}
+            >
+              <ArrowLeft className="w-4 h-4 mr-2" />
+              {t('onboarding.back')}
+            </Button>
+            
+            {currentStep === totalSteps ? (
+              <Button onClick={handleFinish} className="bg-primary hover:bg-primary/90">
+                {t('onboarding.finish')}
+              </Button>
+            ) : (
+              <Button onClick={handleNext} className="bg-primary hover:bg-primary/90">
+                {t('onboarding.continue')}
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </Button>
+            )}
+          </div>
+        </CardContent>
+      </Card>
+    </div>
+  );
+}

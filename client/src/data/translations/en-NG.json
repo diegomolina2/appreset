@@ -79,7 +79,25 @@
       "meal": "Eat healthy",
       "mood": "Log mood",
       "weight": "Log weight"
-    }
+    },
+    "challengesTitle": "Challenges",
+    "activeChallengesLabel": "Active",
+    "completedChallengesLabel": "Completed",
+    "availableChallengesLabel": "Available",
+    "daysLabel": "days",
+    "completeChallengeLabel": "Complete Challenge",
+    "startChallengeButton": "Start Challenge",
+    "restartChallengeButton": "Restart Challenge",
+    "daysCompletedLabel": "days completed",
+    "completedBadge": "Completed",
+    "tabAvailable": "Available",
+    "tabActive": "Active",
+    "tabCompleted": "Completed",
+    "noAvailableChallenges": "No challenges available at the moment.",
+    "noActiveChallenges": "You have no active challenges.",
+    "noCompletedChallenges": "No challenges completed yet.",
+    "upgradeMessage": "Your access has expired. Upgrade your plan to continue.",
+    "upgradeAction": "Upgrade Plan"
   },
   "exercises": {
     "title": "Exercise Library",

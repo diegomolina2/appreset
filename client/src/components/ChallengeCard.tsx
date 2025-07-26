@@ -12,6 +12,114 @@ import { ChallengeCompletionPopup } from './ChallengeCompletionPopup';
 
 interface ChallengeCardProps {
   challenge: Challenge;
+  onViewDetails?: () => void;
+}
+
+export function ChallengeCard({ challenge, onViewDetails }: ChallengeCardProps) {
+  const { t, getLocalizedText } = useTranslation();
+  const { markTaskComplete, restartChallenge } = useApp();
+  const [showCompletionPopup, setShowCompletionPopup] = useState(false);
+
+  const progress = (challenge.completedDays.length / challenge.days) * 100;
+  const isCompleted = progress === 100;
+
+  const handleTaskComplete = (taskIndex: number) => {
+    markTaskComplete(challenge.id, taskIndex);
+    if (challenge.completedDays.length + 1 === challenge.days) {
+      setShowCompletionPopup(true);
+    }
+  };
+
+  const handleRestart = () => {
+    restartChallenge(challenge.id);
+  };
+
+  // Get localized challenge name and description
+  const challengeName = getLocalizedText(challenge.name);
+  const challengeDescription = getLocalizedText(challenge.description);
+
+  return (
+    <>
+      <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300">
+        <CardHeader>
+          <div className="flex items-center justify-between">
+            <div>
+              <CardTitle className="text-lg font-poppins font-bold text-gray-800 dark:text-gray-100">
+                {challengeName}
+              </CardTitle>
+              <p className="text-sm text-gray-600 dark:text-gray-400">
+                {challenge.days} {t('challenges.daysLabel')} challenge
+              </p>
+            </div>
+            <div className="w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center">
+              {isCompleted ? (
+                <Trophy className="w-6 h-6 text-white" />
+              ) : (
+                <Target className="w-6 h-6 text-white" />
+              )}
+            </div>
+          </div>
+        </CardHeader>
+
+        <CardContent>
+          <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
+            {challengeDescription}
+          </p>
+
+          <div className="space-y-3 mb-4">
+            <div className="flex items-center justify-between">
+              <span className="text-sm text-gray-600 dark:text-gray-400">
+                {t('common.progress')}
+              </span>
+              <span className="text-sm font-medium text-primary">
+                {Math.round(progress)}%
+              </span>
+            </div>
+            <Progress value={progress} className="w-full" />
+            <div className="text-sm text-gray-600 dark:text-gray-400">
+              {challenge.completedDays.length} / {challenge.days} {t('challenges.daysCompletedLabel')}
+            </div>
+          </div>
+
+          {isCompleted ? (
+            <div className="space-y-2">
+              <Badge className="bg-green-100 text-green-800 dark:bg-green-800 dark:text-green-100">
+                <Trophy className="w-3 h-3 mr-1" />
+                {t('challenges.completedBadge')}
+              </Badge>
+              <Button
+                onClick={handleRestart}
+                variant="outline"
+                className="w-full"
+              >
+                <RotateCcw className="w-4 h-4 mr-2" />
+                {t('challenges.restartChallengeButton')}
+              </Button>
+            </div>
+          ) : (
+            <Button
+              onClick={onViewDetails}
+              className="w-full bg-primary hover:bg-primary/90"
+            >
+              <Play className="w-4 h-4 mr-2" />
+              {t('challenges.continueChallenge')}
+            </Button>
+          )}
+        </CardContent>
+      </Card>
+
+      {showCompletionPopup && (
+        <ChallengeCompletionPopup
+          challengeName={challengeName}
+          onClose={() => setShowCompletionPopup(false)}
+        />
+      )}
+    </>
+  );
+}
+
+interface ChallengeCardProps {
+  challenge: Challenge;
   onStart?: () => void;
   onContinue?: () => void;
   onViewDetails?: () => void;

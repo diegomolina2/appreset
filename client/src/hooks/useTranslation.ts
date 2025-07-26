@@ -101,6 +101,28 @@ export function useTranslation() {
       }
     }
 
+    // Handle multilingual objects
+    if (typeof value === "object" && value !== null) {
+      // If it's a multilingual object, try to get the current language
+      if (value[currentLanguage]) {
+        value = value[currentLanguage];
+      } else if (value["en-NG"]) {
+        value = value["en-NG"];
+      } else {
+        // Get first available value
+        const firstKey = Object.keys(value)[0];
+        if (firstKey) {
+          value = value[firstKey];
+        } else {
+          console.warn(
+            `Translation key "${key}" resolved to non-string value:`,
+            value,
+          );
+          return key;
+        }
+      }
+    }
+
     if (typeof value !== "string") {
       console.warn(
         `Translation key "${key}" resolved to non-string value:`,

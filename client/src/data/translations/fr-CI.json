@@ -79,7 +79,25 @@
       "meal": "Manger sainement",
       "mood": "Noter l'humeur",
       "weight": "Noter le poids"
-    }
+    },
+    "challengesTitle": "Défis",
+    "activeChallengesLabel": "Actifs",
+    "completedChallengesLabel": "Complétés",
+    "availableChallengesLabel": "Disponibles",
+    "daysLabel": "jours",
+    "completeChallengeLabel": "Défi Complet",
+    "startChallengeButton": "Commencer le défi",
+    "restartChallengeButton": "Redémarrer le défi",
+    "daysCompletedLabel": "jours complétés",
+    "completedBadge": "Complété",
+    "tabAvailable": "Disponibles",
+    "tabActive": "Actifs",
+    "tabCompleted": "Complétés",
+    "noAvailableChallenges": "Aucun défi disponible pour le moment.",
+    "noActiveChallenges": "Vous n'avez aucun défi actif.",
+    "noCompletedChallenges": "Aucun défi complété pour le moment.",
+    "upgradeMessage": "Votre accès a expiré. Mettez à jour votre plan pour continuer.",
+    "upgradeAction": "Mettre à jour le plan"
   },
   "exercises": {
     "title": "Bibliothèque d'exercices",
