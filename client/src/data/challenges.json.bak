@@ -76,7 +76,7 @@
       "en-KE": "Break your sugar habit and boost your health in 30 days.",
       "en-ZA": "Break your sugar habit and boost your health in 30 days."
     },
-    "days": 30,
+    "days": 30
     "dailyTasks": [
       { "day": 1, "tasks": ["Log weight", "Drink 2L water", "Replace soda with water", "Eat grilled fish", "Mark your mood"] },
   { "day": 2, "tasks": ["Eat fruit instead of dessert", "Do 15 min of light cardio", "Drink lemon water", "Log your mood"] },
@@ -126,7 +126,7 @@
       "en-KE": "Complete body transformation with comprehensive daily tasks.",
       "en-ZA": "Complete body transformation with comprehensive daily tasks."
     },
-    "days": 28,
+    "days": 28
     "dailyTasks": [
       { "day": 1, "tasks": ["Log weight and measurements", "Drink 2L water", "Complete 10 push-ups", "Eat balanced breakfast", "Plan your week"] },
   { "day": 2, "tasks": ["Morning stretching routine", "Drink herbal tea", "Complete 20 squats", "Eat protein-rich lunch", "Log your mood"] },
