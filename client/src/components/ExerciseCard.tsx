@@ -7,7 +7,6 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } f
 import { Play, Heart, Info, Timer, Pause, RotateCcw, Star } from 'lucide-react';
 import { useApp } from '../contexts/AppContext';
 import { useTranslation } from '../hooks/useTranslation';
-import { hasAccessToContent } from '../utils/planManager';
 
 interface Exercise {
   id: string;
@@ -29,7 +28,7 @@ interface ExerciseCardProps {
 
 export function ExerciseCard({ exercise, onStart }: ExerciseCardProps) {
   const { state, toggleFavorite } = useApp();
-  const { getLocalizedText, language } = useTranslation();
+  const { getLocalizedText, currentLanguage } = useTranslation();
   const [showDetails, setShowDetails] = useState(false);
   const [showTimer, setShowTimer] = useState(false);
   const [timer, setTimer] = useState(0);
@@ -39,7 +38,7 @@ export function ExerciseCard({ exercise, onStart }: ExerciseCardProps) {
   const [prepTimer, setPrepTimer] = useState(10);
 
   const isFavorite = state.userData.favorites.exercises.includes(exercise.id);
-  const hasAccess = hasAccessToContent(exercise);
+  const hasAccess = true; // All exercises are now accessible
   
   const exerciseName = typeof exercise.name === 'string' 
     ? exercise.name 
@@ -206,7 +205,7 @@ export function ExerciseCard({ exercise, onStart }: ExerciseCardProps) {
 
   return (
     <>
-      <Card className={`overflow-hidden transition-all duration-300 hover:shadow-lg ${!hasAccess ? 'opacity-75' : 'hover:scale-[1.01]'}`}>
+      <Card className="overflow-hidden transition-all duration-300 hover:shadow-lg hover:scale-[1.01]">
         {/* Category Badge */}
         <div className="relative p-4 pb-2">
           <div className="flex justify-between items-start mb-3">
@@ -269,7 +268,6 @@ export function ExerciseCard({ exercise, onStart }: ExerciseCardProps) {
             <div className="flex space-x-2">
               <Button
                 onClick={handleStartTimer}
-                disabled={!hasAccess}
                 className="flex-1 bg-gradient-to-r from-green-500 to-blue-500 hover:from-green-600 hover:to-blue-600 text-white"
               >
                 <Play className="w-4 h-4 mr-2" />
@@ -344,7 +342,6 @@ export function ExerciseCard({ exercise, onStart }: ExerciseCardProps) {
                 setShowDetails(false);
                 handleStartTimer();
               }}
-              disabled={!hasAccess}
               className="w-full bg-gradient-to-r from-green-500 to-blue-500 hover:from-green-600 hover:to-blue-600 text-white"
             >
               <Play className="w-4 h-4 mr-2" />
