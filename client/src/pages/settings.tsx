@@ -8,7 +8,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '.
 import { useTranslation } from '../hooks/useTranslation';
 import { useApp } from '../contexts/AppContext';
 import { LanguageSwitcher } from '../components/LanguageSwitcher';
-import { Settings as SettingsIcon, Save, User, Ruler, Weight, Calendar, Globe, Download, Upload, RefreshCw } from 'lucide-react';
+import { Settings as SettingsIcon, Save, User, Ruler, Weight, Calendar, Globe, Download, Upload, RefreshCw, Crown, Clock } from 'lucide-react';
 import { DailyWeightLogger } from '../components/DailyWeightLogger';
 import { Dialog, DialogContent, DialogTrigger } from '../components/ui/dialog';
 import { CSVImport } from '../components/CSVImport';
