@@ -7,7 +7,7 @@ export interface UserProfile {
   gender: 'male' | 'female' | 'other';
   exerciseLevel: 'sedentary' | 'light' | 'moderate' | 'active' | 'very_active';
   diet: string[];
-  language: 'en-NG' | 'fr-CI';
+  language: 'en-US' | 'fr-FR' | 'es-ES';
 }
 
 export interface Challenge {
@@ -192,7 +192,7 @@ export interface UserData {
 
 export interface AppState {
   userData: UserData;
-  currentLanguage: 'en-NG' | 'fr-CI';
+  currentLanguage: 'en-US' | 'fr-FR' | 'es-ES';
   isDarkMode: boolean;
   isOnboarded: boolean;
   currentChallenge?: string;
@@ -202,7 +202,7 @@ export interface AppContextType {
   state: AppState;
   dispatch: React.Dispatch<AppAction>;
   toggleDarkMode: () => void;
-  setLanguage: (language: 'en-NG' | 'fr-CI') => void;
+  setLanguage: (language: 'en-US' | 'fr-FR' | 'es-ES') => void;
   setOnboarded: () => void;
   startChallenge: (challengeId: string) => void;
   completeChallenge: (challengeId: string, day: number) => void;

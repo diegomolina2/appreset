@@ -41,7 +41,7 @@ interface AppContextType {
 type AppAction =
   | { type: "SET_USER_DATA"; payload: UserData }
   | { type: "UPDATE_USER_PROFILE"; payload: Partial<UserData["userProfile"]> }
-  | { type: "SET_LANGUAGE"; payload: "en-NG" | "fr-CI" }
+  | { type: "SET_LANGUAGE"; payload: "en-US" | "fr-FR" | "es-ES" }
   | { type: "SET_DARK_MODE"; payload: boolean }
   | { type: "SET_ONBOARDED"; payload: boolean }
   | { type: "START_CHALLENGE"; payload: string }
@@ -66,7 +66,7 @@ type AppAction =
 
 const initialState: AppState = {
   userData: defaultUserData,
-  currentLanguage: "en-NG",
+  currentLanguage: "en-US",
   isDarkMode: false,
   isOnboarded: false,
   currentChallenge: undefined,
