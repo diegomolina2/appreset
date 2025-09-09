@@ -1,0 +1,1062 @@
+<meta charset="UTF-8">
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "sc4tynkubx");
+</script>
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script>
+  $(document).ready(function () {
+
+  const urlParams = new URLSearchParams(window.location.search);
+
+  for (const [key, value] of urlParams.entries()) {
+    if (key.startsWith('utm_') || key.startsWith('country') || key.startsWith('page_') || key.startsWith('lang')) {
+      const input = document.getElementById(key);
+      if (input) {
+        input.value = value;
+
+        // Dispara evento input para frameworks que escutam
+        const event = new Event('input', { bubbles: true });
+        input.dispatchEvent(event);
+      }
+    }
+  }
+
+  // Esconde todos os inputs dentro da div #utms
+  $('.utms input').css({
+    'display': 'none',
+    'visibility': 'hidden',
+    'position': 'absolute',
+    'left': '-9999px'
+  });
+});
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // Assegure-se de que o documento HTML está salvo com codificação UTF-8.
+        // A meta tag <meta charset="UTF-8"> no <head> é crucial.
+        // Verifique também a configuração do seu servidor (Content-Type header).
+
+      const translations = {
+        "Let's Build Your": {
+          "cs": "Pojďme vytvořit váš",
+          "pt": "Vamos construir o seu",
+          "pl": "Zbudujmy Twój"
+        },
+        "Ideal Transformation Plan": {
+          "cs": "Ideální transformační plán",
+          "pt": "Plano de Transformação Ideal",
+          "pl": "Idealny Plan Transformacji"
+        },
+        "in Less Than 60 Seconds.": {
+          "cs": "za méně než 60 sekund.",
+          "pt": "em menos de 60 segundos.",
+          "pl": "w mniej niż 60 sekund."
+        },
+        "Tailored to your age, body, and lifestyle.": {
+          "cs": "Přizpůsobeno vašemu věku, tělu a životnímu stylu.",
+          "pt": "Personalizado para sua idade, corpo e estilo de vida.",
+          "pl": "Dopasowany do Twojego wieku, ciała i stylu życia."
+        },
+        "By continuing, you accept our Terms of Service and acknowledge our": {
+          "cs": "Pokračováním přijímáte naše Podmínky služby a potvrzujete naše",
+          "pt": "Ao continuar, você aceita nossos Termos de Serviço e reconhece nossa",
+          "pl": "Kontynuując, akceptujesz nasze Warunki świadczenia usług i potwierdzasz naszą"
+        },
+        "Cookie Policy": {
+          "cs": "Zásady používání souborů cookie",
+          "pt": "Política de Cookies",
+          "pl": "Polityka plików cookie"
+        },
+        "Privacy Policy": {
+          "cs": "Zásady ochrany osobních údajů",
+          "pt": "Política de Privacidade",
+          "pl": "Polityka prywatności"
+        },//Guia 2
+        "You're in": {
+          "cs": "Jste v",
+          "pt": "Você está em",
+          "pl": "Jesteś w"
+        },
+        "good": {
+          "cs": "dobrých",
+          "pt": "boas",
+          "pl": "dobrych"
+        },
+        "hands": {
+          "cs": "rukou",
+          "pt": "mãos",
+          "pl": "rękach"
+        },
+         "416,203 people in their 20s": {
+          "cs": "416,203 lidí ve věku 20",
+          "pt": "416,203 pessoas na casa dos 20 anos",
+          "pl": "416,203 osób po dwudziestce"
+        },
+         "started with Naija Reset to get fit, stay active, and feel confident without strict diets.": {
+          "cs": " let začalo s Czech Reset, aby se dostali do formy, zůstali aktivní a cítili se sebevědomě bez přísných diet.",
+          "pt": " começaram com o My Reset para ficar em forma, manter-se ativas e se sentirem confiantes sem dietas restritivas.",
+          "pl": " zaczęło z Polski Reset, aby zadbać o formę, pozostać aktywnymi i zyskać pewność siebie bez restrykcyjnych diet."
+        },
+          "389,102 people in their 30s": {
+          "cs": "389,102 lidí ve věku 30",
+          "pt": "389,102 pessoas na casa dos 30 anos",
+          "pl": "389,102 osób po trzydziestce"
+        },
+         "use Naija Reset to burn fat, boost energy, and stay in control even with a busy life.": {
+          "cs": " let používá Czech Reset k spalování tuku, zvýšení energie a udržení kontroly i při hektickém životním stylu.",
+          "pt": " usam o My Reset para queimar gordura, aumentar a energia e manter o controle mesmo com uma vida agitada.",
+          "pl": " korzysta z Polski Reset, aby spalać tłuszcz, zwiększyć energię i zachować kontrolę nawet przy intensywnym trybie życia."
+        },
+          "308,455 people in their 40s": {
+          "cs": "308,455 lidí ve věku 40",
+          "pt": "308,455 pessoas na casa dos 40 anos",
+          "pl": "308,455 osób po czterdziestce"
+        },
+         "trust Naija Reset to fight slow metabolism and lose stubborn weight the smart way.": {
+          "cs": " let důvěřuje Czech Reset, aby bojovali s pomalým metabolismem a zhubli odolnou váhu chytře",
+          "pt": " confiam no My Reset para combater o metabolismo lento e perder peso teimoso de forma inteligente.",
+          "pl": " ufa Polski Reset, aby walczyć z wolnym metabolizmem i tracić oporną wagę w inteligentny sposób."
+        },
+          "247,601 people in their 50s": {
+          "cs": "247,601 lidí ve věku 50",
+          "pt": "247,601 pessoas na casa dos 50 anos",
+          "pl": "247,601 osób po pięćdziesiątce"
+        },
+         "joined Naija Reset to slim down, stay strong, and protect their health naturally.": {
+          "cs": " let se připojilo k Czech Reset, aby zhubli, zůstali silní a chránili své zdraví přirozeně.",
+          "pt": " aderiram ao My Reset para emagrecer, manter-se fortes e proteger sua saúde de forma natural.",
+          "pl": " dołączyło do Polski Reset, aby schudnąć, pozostać silnymi i chronić swoje zdrowie w naturalny sposób."
+        },
+        "Your Next Move": {
+          "cs": "Váš další krok",
+          "pt": "Seu próximo passo",
+          "pl": "Twój następny krok"
+        },//Guia 3
+         "Select your gender": {
+            "cs": "Vyberte své pohlaví",
+            "pt": "Selecione seu gênero",
+            "pl": "Wybierz swoją płeć"
+        },
+        "Male": {
+            "cs": "Muž",
+            "pt": "Masculino",
+            "pl": "Mężczyzna"
+        },
+        "Female": {
+            "cs": "Žena",
+            "pt": "Feminino",
+            "pl": "Kobieta"
+        },//GUia 4
+        "What is your height? (cm)": {
+          "cs": "Jaká je vaše výška? (cm)",
+          "pt": "Qual é a sua altura? (cm)",
+          "pl": "Jaki jest Twój wzrost? (cm)"
+        },
+        "Calculating your Body Mass Index (BMI)": {
+          "cs": "Výpočet vašeho indexu tělesné hmotnosti (BMI)",
+          "pt": "Calculando seu Índice de Massa Corporal (IMC)",
+          "pl": "Obliczanie Twojego wskaźnika masy ciała (BMI)"
+        },
+        "Your BMI is a widely used indicator of your weight category and helps assess the risk of developing certain health conditions.": {
+          "cs": "Vaše BMI je široce používaný ukazatel vaší hmotnostní kategorie a pomáhá posoudit riziko vzniku některých zdravotních potíží.",
+          "pt": "Seu IMC é um indicador amplamente usado da sua categoria de peso e ajuda a avaliar o risco de desenvolver certas condições de saúde.",
+          "pl": "Twój BMI jest powszechnie używanym wskaźnikiem kategorii wagowej i pomaga ocenić ryzyko rozwoju niektórych schorzeń zdrowotnych."
+        },
+        "Continue": {
+          "cs": "Pokračovat",
+          "pt": "Continuar",
+          "pl": "Kontynuuj"
+        },//Guia 5
+         "What is your weight? (kg)": {
+            "cs": "Jaká je vaše váha? (kg)",
+            "pt": "Qual é o seu peso? (kg)",
+            "pl": "Jaka jest Twoja waga? (kg)"
+        },//Guia 6
+          "What is your main goal right now?": {
+            "cs": "Jaký je váš hlavní cíl právě teď?",
+            "pt": "Qual é o seu principal objetivo agora?",
+            "pl": "Jaki jest Twój główny cel teraz?"
+        },
+        "Lose weight": {
+            "cs": "Zhubnout",
+            "pt": "Perder peso",
+            "pl": "Schudnąć"
+        },
+        "Get fit": {
+            "cs": "Dostat se do formy",
+            "pt": "Entrar em forma",
+            "pl": "Poprawić kondycję"
+        },
+        "Gain weight": {
+            "cs": "Přibrat na váze",
+            "pt": "Ganhar peso",
+            "pl": "Przytyć"
+        },//Guia 7
+         "How tired do you usually feel during the day?": {
+            "cs": "Jak unavení se obvykle cítíte během dne?",
+            "pl": "Jak zmęczony zazwyczaj czujesz się w ciągu dnia?",
+            "pt": "Quão cansado você costuma se sentir durante o dia?"
+        },
+        "I feel tired most of the time": {
+            "cs": "Většinu času se cítím unavený",
+            "pl": "Większość czasu czuję się zmęczony",
+            "pt": "Eu me sinto cansado na maior parte do tempo"
+        },
+        "I feel good in the morning, but crash in the afternoon": {
+            "cs": "Ráno se cítím dobře, ale odpoledne jsem vyčerpaný",
+            "pl": "Rano czuję się dobrze, ale po południu opadam z sił",
+            "pt": "Me sinto bem de manhã, mas desabo à tarde"
+        },
+        "I have energy, but it's inconsistent": {
+            "cs": "Mám energii, ale je to nepravidelné",
+            "pl": "Mam energię, ale jest niestabilna",
+            "pt": "Tenho energia, mas ela é inconsistente"
+        },
+        "I feel good most of the day": {
+            "cs": "Většinu dne se cítím dobře",
+            "pl": "Przez większość dnia czuję się dobrze",
+            "pt": "Eu me sinto bem na maior parte do dia"
+        },//Guia 8
+          "How long do you usually sleep?": {
+            "cs": "Jak dlouho obvykle spíte?",
+            "pl": "Jak długo zazwyczaj śpisz?",
+            "pt": "Quanto tempo você costuma dormir?"
+        },
+        "Minimal rest": {
+            "cs": "Minimální odpočinek",
+            "pl": "Minimalny odpoczynek",
+            "pt": "Descanso mínimo"
+        },
+         "(less than 5 hours)": {
+            "cs": "(méně než 5 hodin)",
+            "pl": "(mniej niż 5 godzin)",
+            "pt": "(menos de 5 horas)"
+        },
+        "I sleep a little": {
+            "cs": "Spím málo",
+            "pl": "Śpię mało",
+            "pt": "Durmo pouco"
+        },
+         "(5-6 hours)": {
+            "cs": "(5–6 hodin)",
+            "pl": "(5–6 godzin)",
+            "pt": "(5–6 horas)"
+        },
+         "I sleep a lot and well": {
+            "cs": "Spím hodně a dobře",
+            "pl": "Śpię dużo i dobrze",
+            "pt": "Durmo muito e bem"
+        },
+        "(7-8 hours)": {
+            "cs": "(7–8 hodin)",
+            "pl": "(7–8 godzin)",
+            "pt": "(7–8 horas)"
+        },
+        "I love my sleep": {
+            "cs": "Miluji spánek",
+            "pl": "Uwielbiam spać",
+            "pt": "Amo dormir"
+        },
+        "(more than 8 hours)": {
+            "cs": "(více než 8 hodin)",
+            "pl": "(więcej niż 8 godzin)",
+            "pt": "(mais de 8 horas)"
+        },//Guia 9
+          "How often do you go for walks?": {
+            "cs": "Jak často chodíte na procházky?",
+            "pl": "Jak często chodzisz na spacery?",
+            "pt": "Com que frequência você faz caminhadas?"
+        },
+        "Almost every day": {
+            "cs": "Téměř každý den",
+            "pl": "Prawie codziennie",
+            "pt": "Quase todos os dias"
+        },
+        "3-4 times a week": {
+            "cs": "3–4krát týdně",
+            "pl": "3–4 razy w tygodniu",
+            "pt": "3–4 vezes por semana"
+        },
+        "1-2 times a week": {
+            "cs": "1–2krát týdně",
+            "pl": "1–2 razy w tygodniu",
+            "pt": "1–2 vezes por semana"
+        },
+        "About once a month": {
+            "cs": "Asi jednou za měsíc",
+            "pl": "Około raz w miesiącu",
+            "pt": "Cerca de uma vez por mês"
+        },//Guia 10
+        "Do you struggle with any of these habits?": {
+            "cs": "Máte problém s některým z těchto návyků?",
+            "pl": "Czy masz problem z którymś z tych nawyków?",
+            "pt": "Você tem dificuldade com algum desses hábitos?"
+        },
+        "I eat late at night": {
+            "cs": "Jím pozdě v noci",
+            "pl": "Jem późno w nocy",
+            "pt": "Eu como tarde da noite"
+        },
+        "I can't stop eating sweets": {
+            "cs": "Nemohu přestat jíst sladkosti",
+            "pl": "Nie mogę przestać jeść słodyczy",
+            "pt": "Não consigo parar de comer doces"
+        },
+        "I love soda": {
+            "cs": "Miluji limonádu",
+            "pl": "Uwielbiam napoje gazowane",
+            "pt": "Eu amo refrigerante"
+        },
+        "I crave greasy or salty foods": {
+            "cs": "Mám chuť na tučná nebo slaná jídla",
+            "pl": "Mam ochotę na tłuste lub słone potrawy",
+            "pt": "Eu tenho desejo por comidas gordurosas ou salgadas"
+        },
+        "None of the above": {
+            "cs": "Nic z výše uvedeného",
+            "pl": "Żadne z powyższych",
+            "pt": "Nenhuma das opções acima"
+        },//Guia 11
+         "How many meals per day would you like to have?": {
+            "cs": "Kolik jídel denně byste chtěli mít?",
+            "pl": "Ile posiłków dziennie chciałbyś mieć?",
+            "pt": "Quantas refeições por dia você gostaria de fazer?"
+        },
+        "2 meals - Breakfast & Dinner": {
+            "cs": "2 jídla — Snídaně a večeře",
+            "pl": "2 posiłki — Śniadanie i kolacja",
+            "pt": "2 refeições — Café da manhã e jantar"
+        },
+        "3 meals - Breakfast, Lunch & Dinner": {
+            "cs": "3 jídla — Snídaně, oběd a večeře",
+            "pl": "3 posiłki — Śniadanie, obiad i kolacja",
+            "pt": "3 refeições — Café da manhã, almoço e jantar"
+        },
+        "4 meals - Breakfast, Lunch, Dinner & Snack": {
+            "cs": "4 jídla — Snídaně, oběd, večeře a svačina",
+            "pl": "4 posiłki — Śniadanie, obiad, kolacja i przekąska",
+            "pt": "4 refeições — Café da manhã, almoço, jantar e lanche"
+        },
+        "5 meals - Breakfast, Lunch, Dinner & 2 Snacks": {
+            "cs": "5 jídel — Snídaně, oběd, večeře a 2 svačiny",
+            "pl": "5 posiłków — Śniadanie, obiad, kolacja i 2 przekąski",
+            "pt": "5 refeições — Café da manhã, almoço, jantar e 2 lanches"
+        },//Guia 12
+         "How much water do you drink daily?": {
+            "cs": "Kolik vody denně vypijete?",
+            "pl": "Ile wody pijesz dziennie?",
+            "pt": "Quanta água você bebe por dia?"
+        },
+        "Less than 0.5L": {
+            "cs": "Méně než 0,5 l",
+            "pl": "Mniej niż 0,5 l",
+            "pt": "Menos de 0,5L"
+        },
+        "Less than 2 cups": {
+            "cs": "Méně než 2 šálky",
+            "pl": "Mniej niż 2 filiżanki",
+            "pt": "Menos de 2 copos"
+        },
+        "0.5 – 1.5L": {
+            "cs": "0,5 – 1,5 l",
+            "pl": "0,5 – 1,5 l",
+            "pt": "0,5 – 1,5L"
+        },
+        "2–6 cups": {
+            "cs": "2–6 šálků",
+            "pl": "2–6 filiżanek",
+            "pt": "2–6 copos"
+        },
+        "1.5 – 2.5L": {
+            "cs": "1,5 – 2,5 l",
+            "pl": "1,5 – 2,5 l",
+            "pt": "1,5 – 2,5L"
+        },
+        "7–10 cups": {
+            "cs": "7–10 šálků",
+            "pl": "7–10 filiżanek",
+            "pt": "7–10 copos"
+        },
+        "More than 2.5L": {
+            "cs": "Více než 2,5 l",
+            "pl": "Więcej niż 2,5 l",
+            "pt": "Mais de 2,5L"
+        },
+        "More than 10 cups": {
+            "cs": "Více než 10 šálků",
+            "pl": "Więcej niż 10 filiżanek",
+            "pt": "Mais de 10 copos"
+        },
+        "I don't measure, it depends": {
+            "cs": "Neměřím, záleží na situaci",
+            "pl": "Nie mierzę, to zależy",
+            "pt": "Eu não meço, depende"
+        },
+        "Hydration tip!": {
+            "cs": "Tip na hydrataci!",
+            "pl": "Wskazówka dotycząca nawodnienia!",
+            "pt": "Dica de hidratação!"
+        },
+        "Studies show that simply paying attention to how much water you drink helps you stay hydrated more easily.": {
+            "cs": "Studie ukazují, že pouhé věnování pozornosti tomu, kolik vody pijete, vám pomáhá zůstat hydratovaní snadněji.",
+            "pl": "Badania pokazują, że samo zwracanie uwagi na to, ile wody pijesz, pomaga utrzymać nawodnienie łatwiej.",
+            "pt": "Estudos mostram que simplesmente prestar atenção em quanta água você bebe ajuda a manter-se hidratado com mais facilidade."
+        },//Guia 13
+         "How would you describe your body type?": {
+            "cs": "Jak byste popsali svůj typ postavy?",
+            "pl": "Jak opisałbyś swój typ sylwetki?",
+            "pt": "Como você descreveria o seu tipo de corpo?"
+        },
+        "Slim": {
+            "cs": "Štíhlá",
+            "pl": "Szczupła",
+            "pt": "Magra"
+        },
+        "Mid-sized": {
+            "cs": "Střední",
+            "pl": "Średnia",
+            "pt": "Médio porte"
+        },
+        "Plump": {
+            "cs": "Plnoštíhlá",
+            "pl": "Krągła",
+            "pt": "Cheinha"
+        },//Guia 14
+          "What is your body goal?": {
+            "cs": "Jaký je váš cíl pro postavu?",
+            "pl": "Jaki jest Twój cel dotyczący sylwetki?",
+            "pt": "Qual é o seu objetivo para o corpo?"
+        },
+        "Thin": {
+            "cs": "Štíhlá",
+            "pl": "Szczupła",
+            "pt": "Magro"
+        },
+        "Curvy": {
+            "cs": "Křivky",
+            "pl": "Krągła",
+            "pt": "Curvilínea"
+        },
+        "Toned": {
+            "cs": "Vyrýsovaná",
+            "pl": "Umięśniona",
+            "pt": "Definido"
+        },
+        "Fat-burning fact": {
+            "cs": "Fakt o spalování tuků",
+            "pl": "Fakt o spalaniu tłuszczu",
+            "pt": "Fato sobre queima de gordura"
+        },
+         "Intermittent fasting helps your body switch to burning stored fat for energy after just 12 hours of fasting, making weight loss more effective.": {
+            "cs": "Přerušovaný půst pomáhá vašemu tělu přepnout na spalování uloženého tuku jako zdroje energie již po 12 hodinách půstu, což činí hubnutí efektivnějším.",
+            "pl": "Przerywany post pomaga twojemu ciału przejść na spalanie zgromadzonego tłuszczu jako źródła energii już po 12 godzinach postu, co czyni utratę wagi bardziej skuteczną.",
+            "pt": "O jejum intermitente ajuda seu corpo a mudar para queimar gordura armazenada como energia após apenas 12 horas de jejum, tornando a perda de peso mais eficaz."
+        },//Guia 15
+          "What do you know about intermittent fasting?": {
+            "cs": "Co víte o přerušovaném půstu?",
+            "pl": "Co wiesz o poście przerywanym?",
+            "pt": "O que você sabe sobre jejum intermitente?"
+        },
+        "Nothing": {
+            "cs": "Nic",
+            "pl": "Nic",
+            "pt": "Nada"
+        },
+        "I've heard a thing or two": {
+            "cs": "Slyšel(a) jsem o tom pár věcí",
+            "pl": "Słyszałem/am o tym trochę",
+            "pt": "Já ouvi uma ou duas coisas"
+        },
+        "I'm experienced at fasting": {
+            "cs": "Mám zkušenosti s půstem",
+            "pl": "Mam doświadczenie w poście",
+            "pt": "Tenho experiência com jejum"
+        },//Guia 16
+          "What is Intermittent Fasting?": {
+            "cs": "Co je přerušovaný půst?",
+            "pl": "Czym jest post przerywany?",
+            "pt": "O que é o Jejum Intermitente?"
+        },
+        "Intermittent fasting helps you focus on when you eat, not just what you eat.": {
+            "cs": "Přerušovaný půst vám pomáhá soustředit se na to, kdy jíte, nejen na to, co jíte.",
+            "pl": "Post przerywany pomaga Ci skupić się na tym, kiedy jesz, a nie tylko na tym, co jesz.",
+            "pt": "O jejum intermitente ajuda você a focar em quando você come, e não apenas no que você come."
+        },
+        "Fasting period:": {
+            "cs": "Doba půstu:",
+            "pl": "Okres postu:",
+            "pt": "Período de jejum:"
+        },
+        "Take a break from eating": {
+            "cs": "Dejte si pauzu od jídla",
+            "pl": "Zrób sobie przerwę od jedzenia",
+            "pt": "Faça uma pausa na alimentação"
+        },
+        "Eating period:": {
+            "cs": "Doba jídla:",
+            "pl": "Okres jedzenia:",
+            "pt": "Período de alimentação:"
+        },
+        "Enjoy your favourite meals!": {
+            "cs": "Užijte si své oblíbené jídlo!",
+            "pl": "Ciesz się swoimi ulubionymi posiłkami!",
+            "pt": "Aproveite suas refeições favoritas!"
+        },
+        "Benefits of intermittent fasting:": {
+            "cs": "Výhody přerušovaného půstu:",
+            "pl": "Korzyści z postu przerywanego:",
+            "pt": "Benefícios do jejum intermitente:"
+        },
+        "Supports weight management": {
+            "cs": "Podporuje kontrolu hmotnosti",
+            "pl": "Wspiera kontrolę wagi",
+            "pt": "Ajuda no controle de peso"
+        },
+        "Improves metabolism": {
+            "cs": "Zlepšuje metabolismus",
+            "pl": "Poprawia metabolizm",
+            "pt": "Melhora o metabolismo"
+        },
+        "Boosts overall health": {
+            "cs": "Posiluje celkové zdraví",
+            "pl": "Wzmacnia ogólne zdrowie",
+            "pt": "Melhora a saúde geral"
+        },//Guia 17
+         "What’s your work schedule like?": {
+            "cs": "Jaký je váš pracovní rozvrh?",
+            "pl": "Jak wygląda Twój harmonogram pracy?",
+            "pt": "Como é a sua rotina de trabalho?"
+        },
+        "9 to 5": {
+            "cs": "Od 9 do 5",
+            "pl": "Od 9 do 17",
+            "pt": "Das 9 às 17"
+        },
+        "Night shifts": {
+            "cs": "Noční směny",
+            "pl": "Nocne zmiany",
+            "pt": "Turnos noturnos"
+        },
+        "Flexible hours": {
+            "cs": "Flexibilní pracovní doba",
+            "pl": "Elastyczne godziny",
+            "pt": "Horários flexíveis"
+        },
+        "Retired": {
+            "cs": "V důchodu",
+            "pl": "Na emeryturze",
+            "pt": "Aposentado"
+        },//Guia 18
+         "Do you have difficulty choosing clothes at your current weight?": {
+            "cs": "Máte potíže s výběrem oblečení při své aktuální váze?",
+            "pl": "Czy masz trudności z wyborem ubrań przy swojej obecnej wadze?",
+            "pt": "Você tem dificuldade em escolher roupas com o seu peso atual?"
+        },
+        "Almost always": {
+            "cs": "Téměř vždy",
+            "pl": "Prawie zawsze",
+            "pt": "Quase sempre"
+        },
+        "Sometimes": {
+            "cs": "Někdy",
+            "pl": "Czasami",
+            "pt": "Às vezes"
+        },
+        "Rarely": {
+            "cs": "Zřídka",
+            "pl": "Rzadko",
+            "pt": "Raramente"
+        },
+        "Never": {
+            "cs": "Nikdy",
+            "pl": "Nigdy",
+            "pt": "Nunca"
+        },//Guia 19
+          "According to statistics...": {
+            "cs": "Podle statistik...",
+            "pl": "Według statystyk...",
+            "pt": "De acordo com as estatísticas..."
+        },
+        "72% Percentage of Naija Reset Users Who Dropped Sizes in 3 Months:": {
+            "cs": "72 % uživatelů Naija Reset, kteří zhubli velikosti za 3 měsíce:",
+            "pl": "72% użytkowników Naija Reset, którzy zmniejszyli rozmiar w 3 miesiące:",
+            "pt": "72% dos usuários do Naija Reset que reduziram medidas em 3 meses:"
+        },
+        "Percentage of Naija Reset Users Who Dropped Sizes in 3 months": {
+            "cs": "Procento uživatelů Naija Reset, kteří zhubli velikosti za 3 měsíce",
+            "pl": "Procent użytkowników Naija Reset, którzy zmniejszyli rozmiar w 3 miesiące",
+            "pt": "Porcentagem de usuários do Naija Reset que reduziram medidas em 3 meses"
+        },
+        "This is a tentative timeline based on your answers.": {
+            "cs": "Tento harmonogram je orientační na základě vašich odpovědí.",
+            "pl": "To jest orientacyjna oś czasu na podstawie Twoich odpowiedzi.",
+            "pt": "Esta é uma previsão baseada nas suas respostas."
+        },//Guia 20
+          "What’s your main reason for wanting to get in shape?": {
+            "cs": "Jaký je váš hlavní důvod, proč se chcete dostat do formy?",
+            "pl": "Jaki jest Twój główny powód, dla którego chcesz się wyrzeźbić?",
+            "pt": "Qual é o seu principal motivo para querer entrar em forma?"
+        },
+        "Feel more confident in my body": {
+            "cs": "Cítit se sebevědoměji ve svém těle",
+            "pl": "Czuć się pewniej w swoim ciele",
+            "pt": "Sentir mais confiança no meu corpo"
+        },
+        "Feel healthier": {
+            "cs": "Cítit se zdravěji",
+            "pl": "Czuć się zdrowiej",
+            "pt": "Sentir-se mais saudável"
+        },
+        "Feel more energetic": {
+            "cs": "Mít více energie",
+            "pl": "Czuć się bardziej energicznie",
+            "pt": "Sentir mais energia"
+        },
+        "Fit into my clothes better": {
+            "cs": "Lépe se vejít do svého oblečení",
+            "pl": "Lepiej mieścić się w swoje ubrania",
+            "pt": "Caber melhor nas minhas roupas"
+        },
+        "Get back in shape after giving birth": {
+            "cs": "Dostat se zpět do formy po porodu",
+            "pl": "Wracać do formy po porodzie",
+            "pt": "Voltar à forma depois do parto"
+        },
+        "Other": {
+            "cs": "Jiné",
+            "pl": "Inne",
+            "pt": "Outro"
+        },//Guia 21
+        "What is your desired weight? (kg)": {
+        "cs": "Jaká je vaše požadovaná váha? (kg)",
+        "pl": "Jaka jest Twoja wymarzona waga? (kg)",
+        "pt": "Qual é o seu peso desejado? (kg)"
+    },//Guia 22
+      "What is your age?": {
+        "cs": "Jaký je váš věk?",
+        "pl": "Ile masz lat?",
+        "pt": "Qual é a sua idade?"
+    },
+    "We ask your age to create your personalized plan.": {
+        "cs": "Ptáme se na váš věk, abychom vytvořili váš personalizovaný plán.",
+        "pl": "Pytamy o Twój wiek, aby stworzyć spersonalizowany plan.",
+        "pt": "Pedimos a sua idade para criar o seu plano personalizado."
+    },
+    "As people get older, they tend to have more body fat than younger individuals with the same BMI. That’s why your age is an important factor in tailoring the right program for you.": {
+        "cs": "S přibývajícím věkem mají lidé tendenci mít více tělesného tuku než mladší jedinci se stejným BMI. Proto je váš věk důležitým faktorem při vytváření správného programu pro vás.",
+        "pl": "Wraz z wiekiem ludzie mają tendencję do posiadania więcej tkanki tłuszczowej niż młodsze osoby z tym samym BMI. Dlatego wiek jest ważnym czynnikiem przy dostosowywaniu odpowiedniego programu dla Ciebie.",
+        "pt": "À medida que as pessoas envelhecem, tendem a ter mais gordura corporal do que indivíduos mais jovens com o mesmo IMC. Por isso, a sua idade é um fator importante para adaptar o programa certo para você."
+    },//Guia 23
+      "Analyzing your answers...": {
+        "cs": "Analyzujeme vaše odpovědi...",
+        "pl": "Analizujemy Twoje odpowiedzi...",
+        "pt": "Analisando suas respostas..."
+    },
+    "We’re reviewing your responses to understand your unique goals and needs": {
+        "cs": "Přezkoumáváme vaše odpovědi, abychom pochopili vaše jedinečné cíle a potřeby",
+        "pl": "Przeglądamy Twoje odpowiedzi, aby zrozumieć Twoje unikalne cele i potrzeby",
+        "pt": "Estamos revisando suas respostas para entender seus objetivos e necessidades únicas"
+    },
+    "Analyzing body parameters...": {
+        "cs": "Analyzujeme tělesné parametry...",
+        "pl": "Analizujemy parametry ciała...",
+        "pt": "Analisando parâmetros corporais..."
+    },
+    "Meals and activity...": {
+        "cs": "Jídla a aktivita...",
+        "pl": "Posiłki i aktywność...",
+        "pt": "Refeições e atividade..."
+    },
+    "Lifestyle and habits...": {
+        "cs": "Životní styl a návyky...",
+        "pl": "Styl życia i nawyki...",
+        "pt": "Estilo de vida e hábitos..."
+    },
+    "Generating your action plan...": {
+        "cs": "Generujeme váš akční plán...",
+        "pl": "Generujemy Twój plan działania...",
+        "pt": "Gerando seu plano de ação..."
+    },
+    "The most effective weight loss assistant.": {
+        "cs": "Nejúčinnější asistent hubnutí.",
+        "pl": "Najskuteczniejszy asystent odchudzania.",
+        "pt": "O assistente de perda de peso mais eficaz."
+    },
+    "Honest Brand Reviews": {
+        "cs": "Recenze značky Honest",
+        "pl": "Recenzje marki Honest",
+        "pt": "Avaliações da marca Honest"
+    },//Guia 24
+      "Enter your email to get your personal Fasting Plan!": {
+        "cs": "Zadejte svůj e-mail a získejte svůj osobní plán půstu!",
+        "pl": "Wpisz swój e-mail, aby otrzymać swój osobisty plan postu!",
+        "pt": "Digite seu e-mail para receber seu plano de jejum personalizado!"
+    },
+    "Email": {
+        "cs": "E-mail",
+        "pl": "E-mail",
+        "pt": "E-mail"
+    },
+    "We respect your privacy and will use your email only to send you your personalized Unimeal program and other important updates. You will not receive spam.": {
+        "cs": "Respektujeme vaše soukromí a váš e-mail použijeme pouze k zaslání vašeho personalizovaného programu Unimeal a dalších důležitých aktualizací. Nebudete dostávat spam.",
+        "pl": "Szanujemy Twoją prywatność i użyjemy Twojego e-maila tylko do wysłania spersonalizowanego programu Unimeal i innych ważnych aktualizacji. Nie będziesz otrzymywać spamu.",
+        "pt": "Respeitamos sua privacidade e usaremos seu e-mail apenas para enviar seu programa personalizado da Unimeal e outras atualizações importantes. Você não receberá spam."
+    },
+    "We recommend consulting your physician before starting any weight loss program.": {
+        "cs": "Doporučujeme konzultaci s lékařem před zahájením jakéhokoli programu hubnutí.",
+        "pl": "Zalecamy konsultację z lekarzem przed rozpoczęciem jakiegokolwiek programu odchudzania.",
+        "pt": "Recomendamos consultar seu médico antes de iniciar qualquer programa de perda de peso."
+    },//Guia 25
+      "What can you expect?": {
+    "cs": "Co můžete očekávat?",
+    "pl": "Czego możesz się spodziewać?",
+    "pt": "O que você pode esperar?"
+  },
+  "Week 1": {
+    "cs": "Týden 1",
+    "pl": "Tydzień 1",
+    "pt": "Semana 1"
+  },
+  "Balanced blood sugar, steady energy.": {
+    "cs": "Vyvážená hladina cukru v krvi, stálá energie.",
+    "pl": "Zrównoważony poziom cukru we krwi, stała energia.",
+    "pt": "Açúcar no sangue equilibrado, energia constante."
+  },
+  "Week 2": {
+    "cs": "Týden 2",
+    "pl": "Tydzień 2",
+    "pt": "Semana 2"
+  },
+  "Increased energy from balanced nutrition.": {
+    "cs": "Více energie z vyvážené výživy.",
+    "pl": "Więcej energii dzięki zrównoważonej diecie.",
+    "pt": "Mais energia a partir de uma nutrição equilibrada."
+  },
+  "Week 3": {
+    "cs": "Týden 3",
+    "pl": "Tydzień 3",
+    "pt": "Semana 3"
+  },
+  "Better sleep quality due to key nutrients.": {
+    "cs": "Lepší kvalita spánku díky klíčovým živinám.",
+    "pl": "Lepsza jakość snu dzięki kluczowym składnikom odżywczym.",
+    "pt": "Melhor qualidade do sono devido a nutrientes essenciais."
+  },
+  "Week 4": {
+    "cs": "Týden 4",
+    "pl": "Tydzień 4",
+    "pt": "Semana 4"
+  },
+  "Hormonal balance, improved mood.": {
+    "cs": "Hormonální rovnováha, lepší nálada.",
+    "pl": "Równowaga hormonalna, poprawa nastroju.",
+    "pt": "Equilíbrio hormonal, humor melhorado."
+  },
+  "Week 6": {
+    "cs": "Týden 6",
+    "pl": "Tydzień 6",
+    "pt": "Semana 6"
+  },
+  "Healthier digestion, less bloating.": {
+    "cs": "Zdravější trávení, méně nadýmání.",
+    "pl": "Zdrowsze trawienie, mniej wzdęć.",
+    "pt": "Digestão mais saudável, menos inchaço."
+  },
+  "Week 8": {
+    "cs": "Týden 8",
+    "pl": "Tydzień 8",
+    "pt": "Semana 8"
+  }, 
+  "Long-term benefits, reduced health risks.": {
+    "cs": "Dlouhodobé přínosy, snížená zdravotní rizika.",
+    "pl": "Długoterminowe korzyści, zmniejszone ryzyko zdrowotne.",
+    "pt": "Benefícios a longo prazo, riscos de saúde reduzidos."
+  },
+
+  //Guia 26
+    "There are two blessings which many people waste: health and free time": {
+    "cs": "Existují dvě požehnání, která mnoho lidí promrhá: zdraví a volný čas",
+    "pl": "Istnieją dwa błogosławieństwa, które wielu ludzi marnuje: zdrowie i wolny czas",
+    "pt": "Existem duas bênçãos que muitas pessoas desperdiçam: saúde e tempo livre"
+  },
+  "Your current BMI is:": {
+    "cs": "Vaše aktuální BMI je:",
+    "pl": "Twoje aktualne BMI to:",
+    "pt": "Seu IMC atual é:"
+  },
+  "Fitness level": {
+    "cs": "Úroveň kondice",
+    "pl": "Poziom sprawności",
+    "pt": "Nível de condicionamento"
+  },
+  "Sleep level": {
+    "cs": "Úroveň spánku",
+    "pl": "Poziom snu",
+    "pt": "Nível de sono"
+  },
+  "Water intake level": {
+    "cs": "Úroveň příjmu vody",
+    "pl": "Poziom spożycia wody",
+    "pt": "Nível de ingestão de água"
+  },
+  "Your personal Intermittent Fasting plan is ready!": {
+    "cs": "Váš osobní plán přerušovaného půstu je připraven!",
+    "pl": "Twój osobisty plan postu przerywanego jest gotowy!",
+    "pt": "Seu plano pessoal de jejum intermitente está pronto!"
+  },
+  "Click the button 'Get My Results' and choose your plan": {
+    "cs": "Klikněte na tlačítko 'Získat výsledky' a vyberte svůj plán",
+    "pl": "Kliknij przycisk 'Pobierz moje wyniki' i wybierz swój plan",
+    "pt": "Clique no botão 'Obter meus resultados' e escolha seu plano"
+  },
+  "1-MONTH PLAN": {
+    "cs": "PLÁN NA 1 MĚSÍC",
+    "pl": "PLAN NA 1 MIESIĄC",
+    "pt": "PLANO DE 1 MÊS"
+  },
+  "3-MONTH PLAN": {
+    "cs": "PLÁN NA 3 MĚSÍCE",
+    "pl": "PLAN NA 3 MIESIĄCE",
+    "pt": "PLANO DE 3 MESES"
+  },
+  "6-MONTH PLAN": {
+    "cs": "PLÁN NA 6 MĚSÍCŮ",
+    "pl": "PLAN NA 6 MIESIĘCY",
+    "pt": "PLANO DE 6 MESES"
+  },
+  "Most Popular": {
+    "cs": "Nejpopulárnější",
+    "pl": "Najbardziej popularny",
+    "pt": "Mais Popular"
+  },
+  "The best plan to achieve your goal": {
+    "cs": "Nejlepší plán k dosažení vašeho cíle",
+    "pl": "Najlepszy plan, aby osiągnąć swój cel",
+    "pt": "O melhor plano para alcançar seu objetivo"
+  },
+  "Get My Results": {
+    "cs": "Získat mé výsledky",
+    "pl": "Pobierz moje wyniki",
+    "pt": "Obter meus resultados"
+  },
+  "Success stories from our users": {
+    "cs": "Úspěšné příběhy našich uživatelů",
+    "pl": "Historie sukcesów naszych użytkowników",
+    "pt": "Histórias de sucesso dos nossos usuários"
+  },
+  "Our users meet their goals": {
+    "cs": "Naši uživatelé dosahují svých cílů",
+    "pl": "Nasi użytkownicy osiągają swoje cele",
+    "pt": "Nossos usuários alcançam seus objetivos"
+  },
+  "Results are not typical. Individual results may vary.": {
+    "cs": "Výsledky nejsou typické. Individuální výsledky se mohou lišit.",
+    "pl": "Wyniki nie są typowe. Wyniki indywidualne mogą się różnić.",
+    "pt": "Os resultados não são típicos. Resultados individuais podem variar."
+  },
+  "Money-Back Guarantee": {
+    "cs": "Záruka vrácení peněz",
+    "pl": "Gwarancja zwrotu pieniędzy",
+    "pt": "Garantia de Devolução do Dinheiro"
+  },
+  "In case you don’t see results, you can get a full refund within 30 days after purchase": {
+    "cs": "Pokud neuvidíte výsledky, můžete získat plnou náhradu do 30 dnů od nákupu",
+    "pl": "Jeśli nie zobaczysz wyników, możesz otrzymać pełny zwrot w ciągu 30 dni od zakupu",
+    "pt": "Caso você não veja resultados, pode solicitar reembolso total em até 30 dias após a compra"
+  }
+};
+
+            //Age 20s
+        const imageTranslations = { 
+            "https://cdn.rpages.com.br/2540s2/2dd1a535-240c-4b61-94d5-71858fe94867.webp": {
+                "cs": "https://cdn.rpages.com.br/2542/bdea8ba6-c6eb-4934-9fc5-8f2b2587194c.webp",
+            },//Age 30s
+            "https://cdn.rpages.com.br/2542/ff464b5e-4e65-4a06-9409-117f6c564918.webp": {
+                "cs": "https://cdn.rpages.com.br/2542/059a8cf3-1eba-4da0-b69b-c65c79dbadf4.webp",
+            },//Age 40s
+          "https://cdn.rpages.com.br/2542/7f5e1f29-3d75-4539-9064-9eee0a4639e8.webp": {
+                "cs": "https://cdn.rpages.com.br/2542/a73d6bbe-0cbd-423f-9442-7b3c98586d98.webp",
+            },//Age 50+
+          "https://cdn.rpages.com.br/2542/c1ba3842-5dfd-48cb-8ae5-02779ba9d4c3.webp": {
+                "cs": "https://cdn.rpages.com.br/2542/aac814de-8d8d-4ccf-952e-c6ea6afcbff2.webp",
+            },//Good Hands
+            "https://cdn.rpages.com.br/2542/28374ffa-36cd-410f-a7d0-e61644ca0f86.webp": {
+                "cs": "https://cdn.rpages.com.br/2542/b7c70ea0-91bc-409b-9ae9-bcd2bd820c61.webp",
+            },//Sleep Female
+            "https://cdn.rpages.com.br/2542/2d8e1098-88e4-49fa-8c52-1dd8ce5987ad.webp": {
+                "cs": "https://cdn.rpages.com.br/2542/b7c70ea0-91bc-409b-9ae9-bcd2bd820c61.webp",
+            },//Sleep Male
+            "https://cdn.rpages.com.br/2542/34a2f0d4-a253-491a-87bd-964a9126911b.webp": {
+                "cs": "https://cdn.rpages.com.br/2542/b7c70ea0-91bc-409b-9ae9-bcd2bd820c61.webp",
+            },//Body type slim male
+            "https://cdn.rpages.com.br/2542/500e0210-487b-4dff-a1ba-57c743f9befb.webp": {
+                "cs": "https://cdn.rpages.com.br/2542/19950ee2-62e0-4a40-be7a-8fd25534b925.webp",
+            },//Body type medium male
+            "https://cdn.rpages.com.br/2542/37e20ead-50ca-4963-b602-6c6263d8626a.webp": {
+                "cs": "https://cdn.rpages.com.br/2542/0f799894-eba2-4ac0-95f1-0b86eb2ca86e.webp",
+            },//Body type stocky male
+            "https://cdn.rpages.com.br/2542/f7521972-9a15-4370-bb32-b56162788841.webp": {
+                "cs": "https://cdn.rpages.com.br/2542/cf73fbe1-d372-4bdf-9cf5-81f016007292.webp",
+            },//Body type slim female - falta
+            "https://cdn.rpages.com.br/2542/cdc9fa04-a61c-4882-9f98-c61200779696.webp": {
+                "cs": "https://cdn.rpages.com.br/2542/b7c70ea0-91bc-409b-9ae9-bcd2bd820c61.webp",
+            },//Body type mid-size female - falta
+            "https://cdn.rpages.com.br/2542/318ff9e6-9f70-4bef-94ef-7e867bd91f4a.webp": {
+                "cs": "https://cdn.rpages.com.br/2542/b7c70ea0-91bc-409b-9ae9-bcd2bd820c61.webp",
+            },//Body type plump female - falta
+            "https://cdn.rpages.com.br/2542/f09c79ae-7c22-475b-8b2a-f2fcc305676e.webp": {
+                "cs": "https://cdn.rpages.com.br/2542/b7c70ea0-91bc-409b-9ae9-bcd2bd820c61.webp",
+            },//Body target Drop 1-2 sizes male - falta
+            "https://cdn.rpages.com.br/2542/92c1c882-763c-4661-8c29-a75af5a9c43e.webp": {
+                "cs": "https://cdn.rpages.com.br/2542/19950ee2-62e0-4a40-be7a-8fd25534b925.webp",
+            },//Body target Athletic male - falta
+            "https://cdn.rpages.com.br/2542/7eb2788a-8064-4aad-8a96-d2f01fdea102.webp": {
+                "cs": "https://cdn.rpages.com.br/2542/0f799894-eba2-4ac0-95f1-0b86eb2ca86e.webp",
+            },//Body target muscular male - falta
+            "https://cdn.rpages.com.br/2542/319adf0b-3d19-4f8d-be91-3c6e8359653f.webp": {
+                "cs": "https://cdn.rpages.com.br/2542/cf73fbe1-d372-4bdf-9cf5-81f016007292.webp",
+            },//Body target thin female - falta
+            "https://cdn.rpages.com.br/2542/1b98ad88-cc22-4346-833c-4061d78bef8b.webp": {
+                "cs": "https://cdn.rpages.com.br/2542/b7c70ea0-91bc-409b-9ae9-bcd2bd820c61.webp",
+            },//Body target curvy female - falta
+            "https://cdn.rpages.com.br/2542/81c0b7a0-b357-4e82-9286-34eadad1dd09.webp": {
+                "cs": "https://cdn.rpages.com.br/2542/b7c70ea0-91bc-409b-9ae9-bcd2bd820c61.webp",
+            },//Body target toned female - falta
+            "https://cdn.rpages.com.br/2542/fd1b7afa-0bbb-4ee3-83a0-0c7b60d6570a.webp": {
+                "cs": "https://cdn.rpages.com.br/2542/b7c70ea0-91bc-409b-9ae9-bcd2bd820c61.webp",
+            },//Info Fasting period - falta
+            "https://cdn.rpages.com.br/2542/dbfdc9ac-4f8f-4711-bfea-cb838ce62ba0.webp": {
+                "cs": "https://cdn.rpages.com.br/2542/b7c70ea0-91bc-409b-9ae9-bcd2bd820c61.webp",
+            },//Work schedule female - falta
+            "https://cdn.rpages.com.br/2542/517a420f-a479-43e1-868d-f2945f456410.webp": {
+                "cs": "https://cdn.rpages.com.br/2542/b7c70ea0-91bc-409b-9ae9-bcd2bd820c61.webp",
+            },//Work schedule male - falta
+            "https://cdn.rpages.com.br/2542/062fdf82-a867-4600-8951-1b15182287c0.webp": {
+                "cs": "https://cdn.rpages.com.br/2542/b7c70ea0-91bc-409b-9ae9-bcd2bd820c61.webp",
+            },//Info Statistics - falta
+            "https://cdn.rpages.com.br/2542/6973d677-dda8-4ed2-b40e-02250991cecf.webp": {
+                "cs": "https://cdn.rpages.com.br/2542/b7c70ea0-91bc-409b-9ae9-bcd2bd820c61.webp",
+            },//Expectations - falta
+            "https://cdn.rpages.com.br/2542/6973d677-dda8-4ed2-b40e-02250991cecf.webp": {
+                "cs": "https://cdn.rpages.com.br/2542/b7c70ea0-91bc-409b-9ae9-bcd2bd820c61.webp",
+            },
+            //PV - Depoimento 1 Mulher jovem- falta
+            "https://cdn.rpages.com.br/2542/bfb95ea4-ca8c-44a3-8f03-3d436619e095.webp": {
+                "cs": "https://cdn.rpages.com.br/2542/b7c70ea0-91bc-409b-9ae9-bcd2bd820c61.webp",
+            },
+            //PV - Depoimento 2 Homem 40s- falta
+            "https://cdn.rpages.com.br/2542/5f0ea620-a745-4d8d-838c-666f190d4fbe.webp": {
+                "cs": "https://cdn.rpages.com.br/2542/b7c70ea0-91bc-409b-9ae9-bcd2bd820c61.webp",
+            },
+            //PV - Depoimento 3 Mulher 40s- falta
+            "https://cdn.rpages.com.br/2542/f475578e-9914-4c98-9c54-dbcd955c5ecd.webp": {
+                "cs": "https://cdn.rpages.com.br/2542/b7c70ea0-91bc-409b-9ae9-bcd2bd820c61.webp",
+            },
+            //PV - Antes e depois female - falta
+            "https://cdn.rpages.com.br/2542/bb1e28a6-61c3-4c33-8852-2b6a2b8a6754.webp": {
+                "cs": "https://cdn.rpages.com.br/2542/b7c70ea0-91bc-409b-9ae9-bcd2bd820c61.webp",
+            },
+             //PV - Antes e depois male - falta
+            "https://cdn.rpages.com.br/2542/cc22799f-5339-4539-bbef-dc857a5a9f91.webp": {
+                "cs": "https://cdn.rpages.com.br/2542/b7c70ea0-91bc-409b-9ae9-bcd2bd820c61.webp",
+            },
+            //PV -Depois male - falta
+            "https://cdn.rpages.com.br/2542/8ac57446-7d53-47da-9688-983d3e94e5f2.webp": {
+                "cs": "https://cdn.rpages.com.br/2542/b7c70ea0-91bc-409b-9ae9-bcd2bd820c61.webp",
+            },
+             //PV - Antes male - falta
+            "https://cdn.rpages.com.br/2542/1dbc66d6-5b32-4f8e-986b-0594c9d77e5a.webp": {
+                "cs": "https://cdn.rpages.com.br/2542/b7c70ea0-91bc-409b-9ae9-bcd2bd820c61.webp",
+            },
+            //PV - Antes female - falta
+            "https://cdn.rpages.com.br/2542/aed6c1ec-4231-44b1-980a-da0bee30a168.webp": {
+                "cs": "https://cdn.rpages.com.br/2542/b7c70ea0-91bc-409b-9ae9-bcd2bd820c61.webp",
+            },
+             //PV - Depois female - falta
+            "https://cdn.rpages.com.br/2542/53ddcfa2-1388-40a1-a699-b91083ef1406.webp": {
+                "cs": "https://cdn.rpages.com.br/2542/b7c70ea0-91bc-409b-9ae9-bcd2bd820c61.webp",
+            }
+        };
+
+        /**
+         * Obtém o idioma da URL, com 'en' como padrão.
+         * @returns {string} O código do idioma.
+         */
+        function getLocaleFromURL() {
+            const params = new URLSearchParams(window.location.search);
+            return params.get('lang') || 'en';
+        }
+
+        /**
+         * Traduz o innerHTML de elementos específicos.
+         * @param {string} selector - Seletor CSS para os elementos a serem traduzidos.
+         * @param {string} locale - O idioma para o qual traduzir.
+         */
+        function translateElementInnerHTML(selector, locale) {
+            const elements = document.querySelectorAll(selector);
+            elements.forEach(element => {
+                let originalText = element.innerHTML; // Pega o conteúdo HTML interno
+                let translatedText = originalText;
+
+                for (const [originalPhrase, langs] of Object.entries(translations)) {
+                    const translatedPhrase = langs[locale];
+                    if (translatedPhrase) {
+                        const pattern = originalPhrase.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+                        const regex = new RegExp(pattern, 'g');
+                        translatedText = translatedText.replace(regex, translatedPhrase);
+                    }
+                }
+                if (translatedText !== originalText) {
+                    element.innerHTML = translatedText; // Seta o novo conteúdo HTML
+                }
+            });
+        }
+
+      /**
+         * Traduz APENAS o atributo 'src' de tags <img> que estão dentro de divs com a classe 'image-builder-element'.
+         * @param {string} locale - O idioma para o qual traduzir.
+         */
+        function translateImagesInBuilderElement(locale) {
+            // Seletor ajustado: encontra todas as <img> que são descendentes de '.image-builder-element'
+            const imgs = document.querySelectorAll('.image-builder-element img'); 
+            imgs.forEach(img => {
+                const originalSrc = img.getAttribute('src');
+                const localeMap = imageTranslations[originalSrc];
+                if (localeMap) {
+                    if (localeMap.hasOwnProperty(locale)) {
+                        const newSrc = localeMap[locale];
+                        if (newSrc) {
+                            img.setAttribute('src', newSrc);
+                        }
+                    }
+                }
+            });
+        }
+
+        /**
+         * Aplica todas as traduções aos elementos apropriados.
+         */
+        function applyTranslation() {
+            const locale = getLocaleFromURL();
+            
+            // Chame a função para traduzir o texto
+            // Adicione a classe 'translate-text' a todos os elementos HTML que contêm APENAS texto que precisa ser traduzido.
+            // Ex: <h1 class="translate-text">...</h1>, <p class="translate-text">...</p>, <a class="translate-text">...</a>
+            translateElementInnerHTML('.translate-txt', locale); 
+            
+            // Chame a função para traduzir as imagens
+            // Adicione a classe 'translate-img' a todos os elementos <img> que precisam ser traduzidos.
+            // Ex: <img class="translate-img" src="..." />
+            translateImagesInBuilderElement(locale);
+        }
+
+        // A função applyTranslation será chamada uma vez que o DOM esteja completamente carregado.
+        applyTranslation();
+    });
+    </script>
