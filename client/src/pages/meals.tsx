@@ -444,15 +444,6 @@ function Meals() {
         mealName={mealToLog ? (mealToLog.name[currentLanguage] || mealToLog.name["en-NG"]) : ""}
       />
 
-      {/* Upgrade Popup */}
-      <UpgradePopup
-        isOpen={showUpgradePopup}
-        onClose={() => setShowUpgradePopup(false)}
-        onUpgrade={() => {
-          setShowUpgradePopup(false);
-          window.location.reload();
-        }}
-      />
     </div>
   );
 }

@@ -243,20 +243,7 @@ export default function Challenges() {
         </TabsContent>
       </Tabs>
 
-      {showUpgradePopup && (
-        <UpgradePopup
-          open={showUpgradePopup}
-          onClose={() => setShowUpgradePopup(false)}
-          message={safeTranslate('upgradeMessage') || 'Seu acesso expirou. Atualize seu plano para continuar.'}
-          actionText={safeTranslate('upgradeAction') || 'Atualizar plano'}
-          onAction={() => {
-            setShowUpgradePopup(false);
-            // Abrir modal de ativação ou navegação para upgrade
-          }}
-        />
-      )}
-
-      <PlanActivationDialog />
+      {/* Plan system removed - no upgrade popups needed */}
     </div>
   );
 }

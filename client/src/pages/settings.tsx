@@ -15,8 +15,6 @@ import { CSVImport } from '../components/CSVImport';
 import { exportAllDataAsCSV } from '../utils/csvExport';
 import { resetProgressData } from '../utils/progressCalculations';
 import { clearUserData } from '../utils/storage';
-import { getCurrentPlan, getRemainingDays, loadPlanData, deactivatePlan, isAccessExpired } from '../utils/planManager';
-import { PlanActivationDialog } from '../components/PlanActivation';
 import { Badge } from '../components/ui/badge';
 
 export default function Settings() {
@@ -32,10 +30,7 @@ export default function Settings() {
     goal: ''
   });
   const [isSaving, setIsSaving] = useState(false);
-  const [currentPlan, setCurrentPlan] = useState(getCurrentPlan());
-  const [remainingDays, setRemainingDays] = useState(getRemainingDays());
-  const [planData, setPlanData] = useState(loadPlanData());
-  const [timeLeft, setTimeLeft] = useState('');
+  // Plan system removed - no longer needed
 
   useEffect(() => {
     const updatePlanInfo = () => {
