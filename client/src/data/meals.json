@@ -14,14 +14,47 @@
     "countries": ["Nigeria", "Ghana"],
     "image": "https://images.unsplash.com/photo-1606491956689-2a97f6e4d0cb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
     "ingredients": {
-      "en-US": ["1/2 cup fermented maize (pap)", "1 cup hot water", "1/2 cup skimmed milk", "1/2 sliced banana", "1/4 cup diced pawpaw"],
-      "fr-FR": ["1/2 tasse de maïs fermenté (pap)", "1 tasse d'eau chaude", "1/2 tasse de lait écrémé", "1/2 banane tranchée", "1/4 tasse de papaye en dés"],
-      "es-ES": ["1/2 taza de maíz fermentado (pap)", "1 taza de agua caliente", "1/2 taza de leche desnatada", "1/2 plátano en rodajas", "1/4 taza de papaya en cubos"]
+      "en-US": [
+        "1/2 cup fermented maize (pap)",
+        "1 cup hot water",
+        "1/2 cup skimmed milk",
+        "1/2 sliced banana",
+        "1/4 cup diced pawpaw"
+      ],
+      "fr-FR": [
+        "1/2 tasse de maïs fermenté (pap)",
+        "1 tasse d'eau chaude",
+        "1/2 tasse de lait écrémé",
+        "1/2 banane tranchée",
+        "1/4 tasse de papaye en dés"
+      ],
+      "es-ES": [
+        "1/2 taza de maíz fermentado (pap)",
+        "1 taza de agua caliente",
+        "1/2 taza de leche desnatada",
+        "1/2 plátano en rodajas",
+        "1/4 taza de papaya en cubos"
+      ]
     },
     "instructions": {
-      "en-US": ["Cook pap in hot water until thick", "Add skimmed milk", "Top with banana and pawpaw", "Serve warm"],
-      "fr-FR": ["Faites cuire le pap dans l'eau chaude jusqu'à épaississement", "Ajoutez le lait écrémé", "Garnissez de banane et papaye", "Servez chaud"],
-      "es-ES": ["Cocine el pap en agua caliente hasta espesar", "Agregue la leche desnatada", "Cubra con plátano y papaya", "Sirva caliente"]
+      "en-US": [
+        "Cook pap in hot water until thick",
+        "Add skimmed milk",
+        "Top with banana and pawpaw",
+        "Serve warm"
+      ],
+      "fr-FR": [
+        "Faites cuire le pap dans l'eau chaude jusqu'à épaississement",
+        "Ajoutez le lait écrémé",
+        "Garnissez de banane et papaye",
+        "Servez chaud"
+      ],
+      "es-ES": [
+        "Cocine el pap en agua caliente hasta espesar",
+        "Agregue la leche desnatada",
+        "Cubra con plátano y papaya",
+        "Sirva caliente"
+      ]
     }
   },
   {
@@ -39,14 +72,47 @@
     "countries": ["Nigeria", "Benin"],
     "image": "https://images.unsplash.com/photo-1617196038587-cc72bb6a2e0f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
     "ingredients": {
-      "en-US": ["1 cup peeled beans", "1 red bell pepper", "1/2 onion", "1 tbsp oil", "2 boiled eggs", "seasonings"],
-      "fr-FR": ["1 tasse de haricots épluchés", "1 poivron rouge", "1/2 oignon", "1 càs d'huile", "2 œufs durs", "assaisonnements"],
-      "es-ES": ["1 taza de frijoles pelados", "1 pimiento rojo", "1/2 cebolla", "1 cda de aceite", "2 huevos hervidos", "condimentos"]
+      "en-US": [
+        "1 cup peeled beans",
+        "1 red bell pepper",
+        "1/2 onion",
+        "1 tbsp oil",
+        "2 boiled eggs",
+        "seasonings"
+      ],
+      "fr-FR": [
+        "1 tasse de haricots épluchés",
+        "1 poivron rouge",
+        "1/2 oignon",
+        "1 càs d'huile",
+        "2 œufs durs",
+        "assaisonnements"
+      ],
+      "es-ES": [
+        "1 taza de frijoles pelados",
+        "1 pimiento rojo",
+        "1/2 cebolla",
+        "1 cda de aceite",
+        "2 huevos hervidos",
+        "condimentos"
+      ]
     },
     "instructions": {
-      "en-US": ["Blend beans with pepper, onion, oil and seasonings", "Steam mixture in ramekins for 45 minutes", "Serve with boiled eggs"],
-      "fr-FR": ["Mixez les haricots avec poivron, oignon, huile et assaisonnements", "Faites cuire à la vapeur 45 minutes", "Servez avec œufs durs"],
-      "es-ES": ["Mezcle frijoles con pimiento, cebolla, aceite y condimentos", "Cocine al vapor 45 minutos", "Sirva con huevos hervidos"]
+      "en-US": [
+        "Blend beans with pepper, onion, oil and seasonings",
+        "Steam mixture in ramekins for 45 minutes",
+        "Serve with boiled eggs"
+      ],
+      "fr-FR": [
+        "Mixez les haricots avec poivron, oignon, huile et assaisonnements",
+        "Faites cuire à la vapeur 45 minutes",
+        "Servez avec œufs durs"
+      ],
+      "es-ES": [
+        "Mezcle frijoles con pimiento, cebolla, aceite y condimentos",
+        "Cocine al vapor 45 minutos",
+        "Sirva con huevos hervidos"
+      ]
     }
   },
   {
@@ -64,14 +130,50 @@
     "countries": ["Nigeria", "Ghana", "Cameroon"],
     "image": "https://images.unsplash.com/photo-1617196038587-cc72bb6a2e0e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
     "ingredients": {
-      "en-US": ["2 cups diced yam", "2 cups water", "1 tomato", "1/2 onion", "spinach", "1 tsp palm oil"],
-      "fr-FR": ["2 tasses d'igname en dés", "2 tasses d'eau", "1 tomate", "1/2 oignon", "épinards", "1 c.à.c. d'huile de palme"],
-      "es-ES": ["2 tazas de ñame en cubos", "2 tazas de agua", "1 tomate", "1/2 cebolla", "espinacas", "1 cdt de aceite de palma"]
+      "en-US": [
+        "2 cups diced yam",
+        "2 cups water",
+        "1 tomato",
+        "1/2 onion",
+        "spinach",
+        "1 tsp palm oil"
+      ],
+      "fr-FR": [
+        "2 tasses d'igname en dés",
+        "2 tasses d'eau",
+        "1 tomate",
+        "1/2 oignon",
+        "épinards",
+        "1 c.à.c. d'huile de palme"
+      ],
+      "es-ES": [
+        "2 tazas de ñame en cubos",
+        "2 tazas de agua",
+        "1 tomate",
+        "1/2 cebolla",
+        "espinacas",
+        "1 cdt de aceite de palma"
+      ]
     },
     "instructions": {
-      "en-US": ["Cook yam with water until tender", "Add tomato, onion and spinach", "Add palm oil if desired", "Serve warm"],
-      "fr-FR": ["Faites cuire l'igname avec eau jusqu'à tendreté", "Ajoutez tomate, oignon et épinards", "Ajoutez huile de palme si désiré", "Servez chaud"],
-      "es-ES": ["Cocine ñame con agua hasta que esté tierno", "Agregue tomate, cebolla y espinacas", "Añada aceite de palma si desea", "Sirva caliente"]
+      "en-US": [
+        "Cook yam with water until tender",
+        "Add tomato, onion and spinach",
+        "Add palm oil if desired",
+        "Serve warm"
+      ],
+      "fr-FR": [
+        "Faites cuire l'igname avec eau jusqu'à tendreté",
+        "Ajoutez tomate, oignon et épinards",
+        "Ajoutez huile de palme si désiré",
+        "Servez chaud"
+      ],
+      "es-ES": [
+        "Cocine ñame con agua hasta que esté tierno",
+        "Agregue tomate, cebolla y espinacas",
+        "Añada aceite de palma si desea",
+        "Sirva caliente"
+      ]
     }
   },
   {
@@ -89,14 +191,59 @@
     "countries": ["Nigeria", "Ghana", "Senegal", "Gambia"],
     "image": "https://images.unsplash.com/photo-1596797038530-2c107229654b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
     "ingredients": {
-      "en-US": ["2 cups rice", "500g chicken pieces", "3 tomatoes", "1 onion", "2 tbsp tomato paste", "bay leaves", "thyme", "stock cubes"],
-      "fr-FR": ["2 tasses de riz", "500g de morceaux de poulet", "3 tomates", "1 oignon", "2 càs de pâte de tomate", "feuilles de laurier", "thym", "cubes de bouillon"],
-      "es-ES": ["2 tazas de arroz", "500g de trozos de pollo", "3 tomates", "1 cebolla", "2 cdas de pasta de tomate", "hojas de laurel", "tomillo", "cubos de caldo"]
+      "en-US": [
+        "2 cups rice",
+        "500g chicken pieces",
+        "3 tomatoes",
+        "1 onion",
+        "2 tbsp tomato paste",
+        "bay leaves",
+        "thyme",
+        "stock cubes"
+      ],
+      "fr-FR": [
+        "2 tasses de riz",
+        "500g de morceaux de poulet",
+        "3 tomates",
+        "1 oignon",
+        "2 càs de pâte de tomate",
+        "feuilles de laurier",
+        "thym",
+        "cubes de bouillon"
+      ],
+      "es-ES": [
+        "2 tazas de arroz",
+        "500g de trozos de pollo",
+        "3 tomates",
+        "1 cebolla",
+        "2 cdas de pasta de tomate",
+        "hojas de laurel",
+        "tomillo",
+        "cubos de caldo"
+      ]
     },
     "instructions": {
-      "en-US": ["Season and cook chicken until golden", "Blend tomatoes and onions", "Cook tomato blend with paste", "Add rice and stock", "Simmer until rice is tender"],
-      "fr-FR": ["Assaisonnez et faites cuire le poulet jusqu'à dorure", "Mixez tomates et oignons", "Faites cuire le mélange avec pâte", "Ajoutez riz et bouillon", "Mijotez jusqu'à tendreté du riz"],
-      "es-ES": ["Sazone y cocine el pollo hasta dorar", "Licúe tomates y cebollas", "Cocine la mezcla con pasta", "Agregue arroz y caldo", "Cocine a fuego lento hasta que el arroz esté tierno"]
+      "en-US": [
+        "Season and cook chicken until golden",
+        "Blend tomatoes and onions",
+        "Cook tomato blend with paste",
+        "Add rice and stock",
+        "Simmer until rice is tender"
+      ],
+      "fr-FR": [
+        "Assaisonnez et faites cuire le poulet jusqu'à dorure",
+        "Mixez tomates et oignons",
+        "Faites cuire le mélange avec pâte",
+        "Ajoutez riz et bouillon",
+        "Mijotez jusqu'à tendreté du riz"
+      ],
+      "es-ES": [
+        "Sazone y cocine el pollo hasta dorar",
+        "Licúe tomates y cebollas",
+        "Cocine la mezcla con pasta",
+        "Agregue arroz y caldo",
+        "Cocine a fuego lento hasta que el arroz esté tierno"
+      ]
     }
   },
   {
@@ -111,17 +258,62 @@
     "carbs": 58,
     "fats": 6,
     "category": "lunch",
-    "countries": ["Morocco", "Algeria", "Tunisia"],
+    "countries": ["Morocco", "Algeria"],
     "image": "https://images.unsplash.com/photo-1565895405229-71bec9b73dde?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
     "ingredients": {
-      "en-US": ["1 cup couscous", "1 cup vegetable broth", "1 zucchini", "1 carrot", "1/2 red pepper", "chickpeas", "olive oil", "herbs"],
-      "fr-FR": ["1 tasse de couscous", "1 tasse de bouillon de légumes", "1 courgette", "1 carotte", "1/2 poivron rouge", "pois chiches", "huile d'olive", "herbes"],
-      "es-ES": ["1 taza de cuscús", "1 taza de caldo de verduras", "1 calabacín", "1 zanahoria", "1/2 pimiento rojo", "garbanzos", "aceite de oliva", "hierbas"]
+      "en-US": [
+        "1 cup couscous",
+        "1 cup vegetable broth",
+        "1 zucchini",
+        "1 carrot",
+        "1/2 red pepper",
+        "chickpeas",
+        "olive oil",
+        "herbs"
+      ],
+      "fr-FR": [
+        "1 tasse de couscous",
+        "1 tasse de bouillon de légumes",
+        "1 courgette",
+        "1 carotte",
+        "1/2 poivron rouge",
+        "pois chiches",
+        "huile d'olive",
+        "herbes"
+      ],
+      "es-ES": [
+        "1 taza de cuscús",
+        "1 taza de caldo de verduras",
+        "1 calabacín",
+        "1 zanahoria",
+        "1/2 pimiento rojo",
+        "garbanzos",
+        "aceite de oliva",
+        "hierbas"
+      ]
     },
     "instructions": {
-      "en-US": ["Steam couscous with broth", "Sauté vegetables until tender", "Mix couscous with vegetables", "Add chickpeas and herbs", "Serve warm"],
-      "fr-FR": ["Faites cuire le couscous avec bouillon", "Faites sauter les légumes", "Mélangez couscous et légumes", "Ajoutez pois chiches et herbes", "Servez chaud"],
-      "es-ES": ["Cocine el cuscús con caldo", "Saltee las verduras hasta que estén tiernas", "Mezcle cuscús con verduras", "Agregue garbanzos y hierbas", "Sirva caliente"]
+      "en-US": [
+        "Steam couscous with broth",
+        "Sauté vegetables until tender",
+        "Mix couscous with vegetables",
+        "Add chickpeas and herbs",
+        "Serve warm"
+      ],
+      "fr-FR": [
+        "Faites cuire le couscous avec bouillon",
+        "Faites sauter les légumes",
+        "Mélangez couscous et légumes",
+        "Ajoutez pois chiches et herbes",
+        "Servez chaud"
+      ],
+      "es-ES": [
+        "Cocine el cuscús con caldo",
+        "Saltee las verduras hasta que estén tiernas",
+        "Mezcle cuscús con verduras",
+        "Agregue garbanzos y hierbas",
+        "Sirva caliente"
+      ]
     }
   },
   {
@@ -139,14 +331,59 @@
     "countries": ["Spain"],
     "image": "https://images.unsplash.com/photo-1534080564583-6be75777b70a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
     "ingredients": {
-      "en-US": ["2 cups bomba rice", "4 cups vegetable stock", "1 red pepper", "green beans", "lima beans", "tomato", "saffron", "olive oil"],
-      "fr-FR": ["2 tasses de riz bomba", "4 tasses de bouillon de légumes", "1 poivron rouge", "haricots verts", "fèves de lima", "tomate", "safran", "huile d'olive"],
-      "es-ES": ["2 tazas de arroz bomba", "4 tazas de caldo de verduras", "1 pimiento rojo", "judías verdes", "garrofón", "tomate", "azafrán", "aceite de oliva"]
+      "en-US": [
+        "2 cups bomba rice",
+        "4 cups vegetable stock",
+        "1 red pepper",
+        "green beans",
+        "lima beans",
+        "tomato",
+        "saffron",
+        "olive oil"
+      ],
+      "fr-FR": [
+        "2 tasses de riz bomba",
+        "4 tasses de bouillon de légumes",
+        "1 poivron rouge",
+        "haricots verts",
+        "fèves de lima",
+        "tomate",
+        "safran",
+        "huile d'olive"
+      ],
+      "es-ES": [
+        "2 tazas de arroz bomba",
+        "4 tazas de caldo de verduras",
+        "1 pimiento rojo",
+        "judías verdes",
+        "garrofón",
+        "tomate",
+        "azafrán",
+        "aceite de oliva"
+      ]
     },
     "instructions": {
-      "en-US": ["Heat oil in paella pan", "Add vegetables and sauté", "Add rice and stock with saffron", "Cook without stirring for 18-20 minutes", "Let rest before serving"],
-      "fr-FR": ["Chauffez huile dans poêle à paella", "Ajoutez légumes et faites sauter", "Ajoutez riz et bouillon avec safran", "Cuisez sans remuer 18-20 minutes", "Laissez reposer avant de servir"],
-      "es-ES": ["Caliente aceite en paellera", "Agregue verduras y sofría", "Añada arroz y caldo con azafrán", "Cocine sin remover 18-20 minutos", "Deje reposar antes de servir"]
+      "en-US": [
+        "Heat oil in paella pan",
+        "Add vegetables and sauté",
+        "Add rice and stock with saffron",
+        "Cook without stirring for 18-20 minutes",
+        "Let rest before serving"
+      ],
+      "fr-FR": [
+        "Chauffez huile dans poêle à paella",
+        "Ajoutez légumes et faites sauter",
+        "Ajoutez riz et bouillon avec safran",
+        "Cuisez sans remuer 18-20 minutes",
+        "Laissez reposer avant de servir"
+      ],
+      "es-ES": [
+        "Caliente aceite en paellera",
+        "Agregue verduras y sofría",
+        "Añada arroz y caldo con azafrán",
+        "Cocine sin remover 18-20 minutos",
+        "Deje reposar antes de servir"
+      ]
     }
   },
   {
@@ -164,14 +401,59 @@
     "countries": ["France"],
     "image": "https://images.unsplash.com/photo-1572441710795-1f347b9dbc1e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
     "ingredients": {
-      "en-US": ["1 eggplant", "2 zucchini", "2 tomatoes", "1 red pepper", "1 onion", "3 garlic cloves", "herbes de Provence", "olive oil"],
-      "fr-FR": ["1 aubergine", "2 courgettes", "2 tomates", "1 poivron rouge", "1 oignon", "3 gousses d'ail", "herbes de Provence", "huile d'olive"],
-      "es-ES": ["1 berenjena", "2 calabacines", "2 tomates", "1 pimiento rojo", "1 cebolla", "3 dientes de ajo", "hierbas provenzales", "aceite de oliva"]
+      "en-US": [
+        "1 eggplant",
+        "2 zucchini",
+        "2 tomatoes",
+        "1 red pepper",
+        "1 onion",
+        "3 garlic cloves",
+        "herbes de Provence",
+        "olive oil"
+      ],
+      "fr-FR": [
+        "1 aubergine",
+        "2 courgettes",
+        "2 tomates",
+        "1 poivron rouge",
+        "1 oignon",
+        "3 gousses d'ail",
+        "herbes de Provence",
+        "huile d'olive"
+      ],
+      "es-ES": [
+        "1 berenjena",
+        "2 calabacines",
+        "2 tomates",
+        "1 pimiento rojo",
+        "1 cebolla",
+        "3 dientes de ajo",
+        "hierbas provenzales",
+        "aceite de oliva"
+      ]
     },
     "instructions": {
-      "en-US": ["Cut all vegetables into cubes", "Sauté onion and garlic", "Add vegetables layer by layer", "Season with herbs", "Simmer for 45 minutes"],
-      "fr-FR": ["Coupez tous les légumes en cubes", "Faites sauter oignon et ail", "Ajoutez légumes couche par couche", "Assaisonnez avec herbes", "Mijotez 45 minutes"],
-      "es-ES": ["Corte todas las verduras en cubos", "Sofría cebolla y ajo", "Agregue verduras capa por capa", "Sazone con hierbas", "Cocine a fuego lento 45 minutos"]
+      "en-US": [
+        "Cut all vegetables into cubes",
+        "Sauté onion and garlic",
+        "Add vegetables layer by layer",
+        "Season with herbs",
+        "Simmer for 45 minutes"
+      ],
+      "fr-FR": [
+        "Coupez tous les légumes en cubes",
+        "Faites sauter oignon et ail",
+        "Ajoutez légumes couche par couche",
+        "Assaisonnez avec herbes",
+        "Mijotez 45 minutes"
+      ],
+      "es-ES": [
+        "Corte todas las verduras en cubos",
+        "Sofría cebolla y ajo",
+        "Agregue verduras capa por capa",
+        "Sazone con hierbas",
+        "Cocine a fuego lento 45 minutos"
+      ]
     }
   }
 ]
