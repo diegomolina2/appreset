@@ -25,6 +25,8 @@ import {
   Globe,
   Lock,
   ChefHat,
+  Heart,
+  Star,
 } from "lucide-react";
 import { Input } from "../components/ui/input";
 import {
@@ -67,14 +69,41 @@ function Meals() {
   const [searchTerm, setSearchTerm] = useState("");
   const [categoryFilter, setCategoryFilter] = useState("all");
   const [countryFilter, setCountryFilter] = useState("all");
+  const [showFavoritesOnly, setShowFavoritesOnly] = useState(false);
   const [selectedMeal, setSelectedMeal] = useState<Meal | null>(null);
   const [mealToLog, setMealToLog] = useState<Meal | null>(null);
   const [showLogDialog, setShowLogDialog] = useState(false);
+
+  // Get favorite meals from user data
+  const favoriteMeals = state.userData.favoriteMeals || [];
 
   // Extract unique countries from all meals
   const availableCountries = Array.from(
     new Set(meals.flatMap((meal) => meal.countries)),
   ).sort();
+
+  // Toggle favorite meal
+  const toggleFavorite = (mealId: string) => {
+    const currentFavorites = state.userData.favoriteMeals || [];
+    const isFavorite = currentFavorites.includes(mealId);
+    
+    const updatedFavorites = isFavorite
+      ? currentFavorites.filter(id => id !== mealId)
+      : [...currentFavorites, mealId];
+
+    dispatch({
+      type: "SET_USER_DATA",
+      payload: {
+        ...state.userData,
+        favoriteMeals: updatedFavorites,
+      },
+    });
+  };
+
+  // Check if meal is favorite
+  const isFavorite = (mealId: string) => {
+    return favoriteMeals.includes(mealId);
+  };
 
   const logMeal = (meal: Meal, date: string) => {
     const mealLog = {
@@ -164,8 +193,9 @@ function Meals() {
       categoryFilter === "all" || meal.category === categoryFilter;
     const matchesCountry =
       countryFilter === "all" || meal.countries.includes(countryFilter);
+    const matchesFavorites = !showFavoritesOnly || isFavorite(meal.id);
 
-    return matchesSearch && matchesCategory && matchesCountry;
+    return matchesSearch && matchesCategory && matchesCountry && matchesFavorites;
   });
 
   return (
@@ -237,11 +267,22 @@ function Meals() {
                     </SelectItem>
                     {availableCountries.map((country) => (
                       <SelectItem key={country} value={country}>
-                        {country}
+                        {t(`meals.countries.${country}`) || country}
                       </SelectItem>
                     ))}
                   </SelectContent>
                 </Select>
+
+                {/* Favorites Toggle */}
+                <Button
+                  variant={showFavoritesOnly ? "default" : "outline"}
+                  size="sm"
+                  onClick={() => setShowFavoritesOnly(!showFavoritesOnly)}
+                  className="flex items-center gap-2"
+                >
+                  <Heart className={`w-4 h-4 ${showFavoritesOnly ? "fill-current" : ""}`} />
+                  {t("meals.favoritesFilter") || "Só Favoritos"}
+                </Button>
               </div>
             </div>
 
@@ -308,6 +349,18 @@ function Meals() {
                             )}
                           </div>
                         </div>
+                        
+                        {/* Favorite Button */}
+                        <Button
+                          variant="ghost"
+                          size="sm"
+                          onClick={() => toggleFavorite(meal.id)}
+                          className="shrink-0"
+                        >
+                          <Heart 
+                            className={`w-5 h-5 ${isFavorite(meal.id) ? "fill-red-500 text-red-500" : "text-muted-foreground"}`} 
+                          />
+                        </Button>
                       </div>
                     </CardHeader>
 
@@ -348,16 +401,16 @@ function Meals() {
                       </div>
 
                       {/* Action Buttons */}
-                      <div className="flex gap-2">
+                      <div className="flex gap-2 justify-center">
                         <Dialog>
                           <DialogTrigger asChild>
                             <Button
                               variant="outline"
-                              className="flex-1 text-sm flex items-center justify-center"
+                              className="flex-1 text-xs px-3 py-2 flex items-center justify-center min-w-0"
                               onClick={() => setSelectedMeal(meal)}
                             >
-                              <Eye className="w-4 h-4 mr-2" />
-                              <span className="text-sm">{t("meals.view")}</span>
+                              <Eye className="w-4 h-4 mr-1 shrink-0" />
+                              <span className="text-xs truncate">{t("meals.view")}</span>
                             </Button>
                           </DialogTrigger>
                           <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto">
@@ -471,11 +524,11 @@ function Meals() {
                         </Dialog>
 
                         <Button
-                          className="flex-1 text-sm flex items-center justify-center"
+                          className="flex-1 text-xs px-3 py-2 flex items-center justify-center min-w-0"
                           onClick={() => handleLogMealClick(meal)}
                         >
-                          <Plus className="w-4 h-4 mr-2" />
-                          <span className="text-sm">{t("meals.logMeal")}</span>
+                          <Plus className="w-4 h-4 mr-1 shrink-0" />
+                          <span className="text-xs truncate">{t("meals.logMeal")}</span>
                         </Button>
                       </div>
                     </CardContent>
