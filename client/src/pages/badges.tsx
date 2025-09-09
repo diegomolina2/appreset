@@ -153,7 +153,7 @@ export default function Badges() {
             <Trophy className="w-8 h-8 mr-2" />
             <div className="text-3xl font-bold">{unlockedBadges.length}</div>
           </div>
-          <div className="text-green-100 font-medium">Conquistadas</div>
+          <div className="text-green-100 font-medium">{t('badges.unlocked')}</div>
         </CardContent>
       </Card>
       
@@ -163,7 +163,7 @@ export default function Badges() {
             <Lock className="w-8 h-8 mr-2" />
             <div className="text-3xl font-bold">{lockedBadges.length}</div>
           </div>
-          <div className="text-gray-100 font-medium">Bloqueadas</div>
+          <div className="text-gray-100 font-medium">{t('badges.locked')}</div>
         </CardContent>
       </Card>
       
@@ -190,12 +190,12 @@ export default function Badges() {
                 {t('badges.title')}
               </h1>
               <p className="text-gray-600 dark:text-gray-400 text-sm">
-                Celebre suas conquistas na jornada de bem-estar
+                {t('badges.title')} - Suas conquistas
               </p>
             </div>
             <div className="text-right">
               <div className="text-2xl font-bold text-primary">{Math.round((unlockedBadges.length / allBadges.length) * 100)}%</div>
-              <div className="text-xs text-gray-500">Progresso</div>
+              <div className="text-xs text-gray-500">{t('progress.title')}</div>
             </div>
           </div>
 
@@ -204,7 +204,7 @@ export default function Badges() {
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
             <Input
               type="text"
-              placeholder="Buscar badges..."
+              placeholder={`${t('common.search') || 'Buscar'} badges...`}
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
               className="pl-10 rounded-2xl"
@@ -220,15 +220,15 @@ export default function Badges() {
           <TabsList className="grid w-full grid-cols-3 mb-6">
             <TabsTrigger value="all" className="flex items-center space-x-2">
               <Award className="w-4 h-4" />
-              <span>Todas ({allBadges.length})</span>
+              <span>{t('meals.all')} ({allBadges.length})</span>
             </TabsTrigger>
             <TabsTrigger value="unlocked" className="flex items-center space-x-2">
               <Trophy className="w-4 h-4" />
-              <span>Conquistadas ({unlockedBadges.length})</span>
+              <span>{t('badges.unlocked')} ({unlockedBadges.length})</span>
             </TabsTrigger>
             <TabsTrigger value="locked" className="flex items-center space-x-2">
               <Lock className="w-4 h-4" />
-              <span>Bloqueadas ({lockedBadges.length})</span>
+              <span>{t('badges.locked')} ({lockedBadges.length})</span>
             </TabsTrigger>
           </TabsList>
 
@@ -247,10 +247,10 @@ export default function Badges() {
                 >
                   {category !== 'all' && getCategoryIcon(category)}
                   <span>
-                    {category === 'all' ? 'Todas' : 
+                    {category === 'all' ? t('meals.all') : 
                      category === 'milestone' ? 'Marcos' :
                      category === 'consistency' ? 'Consistência' :
-                     category === 'challenge' ? 'Desafios' :
+                     category === 'challenge' ? t('challenges.title') :
                      category === 'activity' ? 'Atividades' :
                      category === 'nutrition' ? 'Nutrição' : category}
                   </span>
@@ -311,7 +311,7 @@ export default function Badges() {
                   Nenhuma badge conquistada ainda
                 </p>
                 <p className="text-gray-500 dark:text-gray-500 text-sm">
-                  Complete atividades e desafios para conquistar sua primeira badge!
+                  Complete atividades e {t('challenges.title')} para conquistar sua primeira badge!
                 </p>
               </Card>
             )}

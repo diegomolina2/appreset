@@ -252,5 +252,10 @@
     "upgradeRequired": "Mise à Niveau Requise",
     "upgradeMessage": "Pour accéder à ce contenu, passez à un plan supérieur.",
     "features": "Fonctionnalités Incluses:"
+  },
+  "faq": {
+    "title": "Questions Fréquemment Posées",
+    "subtitle": "Trouvez des réponses aux questions courantes sur l'application",
+    "frequentQuestions": "Questions Courantes"
   }
 }
