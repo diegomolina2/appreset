@@ -147,7 +147,19 @@ function Meals() {
 
     const mealNameLower = mealName.toLowerCase();
 
-    const matchesSearch = mealNameLower.includes(searchTermLower);
+    // Check if search term matches meal name
+    const matchesName = mealNameLower.includes(searchTermLower);
+    
+    // Check if search term matches any ingredient
+    let matchesIngredients = false;
+    if (meal.ingredients && searchTerm.trim()) {
+      const ingredients = meal.ingredients[currentLanguage] || meal.ingredients["en-US"] || [];
+      matchesIngredients = ingredients.some((ingredient: string) => 
+        ingredient.toLowerCase().includes(searchTermLower)
+      );
+    }
+
+    const matchesSearch = matchesName || matchesIngredients;
     const matchesCategory =
       categoryFilter === "all" || meal.category === categoryFilter;
     const matchesCountry =
@@ -176,7 +188,7 @@ function Meals() {
                 <Search className="w-5 h-5 text-gray-500 absolute left-3 top-1/2 transform -translate-y-1/2" />
                 <Input
                   type="search"
-                  placeholder={t("meals.search")}
+                  placeholder={t("meals.search") || "Buscar por nome ou ingrediente..."}
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
                   className="pl-10"
