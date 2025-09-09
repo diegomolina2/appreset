@@ -24,6 +24,7 @@ import {
   Target,
   Globe,
   Lock,
+  ChefHat,
 } from "lucide-react";
 import { Input } from "../components/ui/input";
 import {
@@ -407,12 +408,32 @@ function Meals() {
                                 </div>
                               </div>
 
+                              {/* Ingredients */}
+                              {meal.ingredients && (
+                                <div className="space-y-3">
+                                  <h4 className="font-semibold text-lg flex items-center gap-2">
+                                    <ChefHat className="w-5 h-5" />
+                                    {t("meals.ingredients") || "Ingredientes"}
+                                  </h4>
+                                  <div className="p-4 bg-green-50 dark:bg-green-900/20 rounded-lg">
+                                    <ul className="space-y-2">
+                                      {(meal.ingredients[currentLanguage] || meal.ingredients["en-US"] || []).map((ingredient: string, index: number) => (
+                                        <li key={index} className="text-sm flex items-start gap-2">
+                                          <div className="w-2 h-2 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
+                                          <span className="leading-relaxed">{ingredient}</span>
+                                        </li>
+                                      ))}
+                                    </ul>
+                                  </div>
+                                </div>
+                              )}
+
                               {/* Preparation Instructions */}
                               {meal.instructions && (
                                 <div className="space-y-3">
                                   <h4 className="font-semibold text-lg flex items-center gap-2">
                                     <Clock className="w-5 h-5" />
-                                    {t("meals.preparation")}
+                                    {t("meals.preparation") || "Preparo"}
                                   </h4>
                                   <div className="p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
                                     <p className="text-sm leading-relaxed">
