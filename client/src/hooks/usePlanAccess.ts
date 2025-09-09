@@ -1,37 +1,21 @@
 import { useState, useEffect } from "react";
-import {
-  isAccessExpired,
-  getCurrentPlan,
-  getRemainingDays,
-  Plan,
-} from "../utils/planManager";
 
-// agora retornamos uma função que aceita os planos do curso
+// Simplified hook that always grants access
 export const usePlanAccess = () => {
-  const [isValid, setIsValid] = useState(!isAccessExpired());
-  const [currentPlan, setCurrentPlan] = useState<Plan | null>(getCurrentPlan());
-  const [remainingDays, setRemainingDays] = useState(getRemainingDays());
+  const [isValid, setIsValid] = useState(true);
+  const [currentPlan, setCurrentPlan] = useState(null);
+  const [remainingDays, setRemainingDays] = useState(-1);
 
   useEffect(() => {
-    const checkAccess = () => {
-      const expired = isAccessExpired();
-      setIsValid(!expired);
-      setCurrentPlan(getCurrentPlan());
-      setRemainingDays(getRemainingDays());
-    };
-
-    checkAccess();
-    const interval = setInterval(checkAccess, 60000); // check every minute
-
-    return () => clearInterval(interval);
+    // No need to check access - always valid
+    setIsValid(true);
+    setCurrentPlan(null);
+    setRemainingDays(-1);
   }, []);
 
-  const hasAccess = (requiredPlans: number[]): boolean => {
-    if (!isValid) return false;
-    if (!requiredPlans || requiredPlans.length === 0) return true;
-
-    // se o plano atual está entre os planos exigidos
-    return requiredPlans.includes(currentPlan?.id || 0);
+  // Always return true - no access restrictions
+  const hasAccess = (requiredPlans?: number[]): boolean => {
+    return true;
   };
 
   return {
@@ -39,9 +23,7 @@ export const usePlanAccess = () => {
     currentPlan,
     remainingDays,
     refreshAccess: () => {
-      setIsValid(!isAccessExpired());
-      setCurrentPlan(getCurrentPlan());
-      setRemainingDays(getRemainingDays());
+      // No-op - always has access
     },
   };
 };
