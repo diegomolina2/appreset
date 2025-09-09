@@ -248,7 +248,7 @@ function Meals() {
             {/* Results Count */}
             <div className="text-sm text-muted-foreground">
               {filteredMeals.length}{" "}
-              {filteredMeals.length === 1 ? "meal" : "meals"} found
+              {filteredMeals.length === 1 ? "refeição" : "refeições"} encontradas
             </div>
 
             {/* Meals Grid */}
@@ -488,9 +488,9 @@ function Meals() {
             {filteredMeals.length === 0 && (
               <div className="text-center py-12">
                 <Utensils className="w-16 h-16 mx-auto text-muted-foreground mb-4" />
-                <h3 className="text-lg font-semibold mb-2">No meals found</h3>
+                <h3 className="text-lg font-semibold mb-2">Nenhuma refeição encontrada</h3>
                 <p className="text-muted-foreground">
-                  Try adjusting your search terms or filters
+                  Tente ajustar seus termos de busca ou filtros
                 </p>
               </div>
             )}
