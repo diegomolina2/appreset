@@ -84,22 +84,17 @@ export default function Challenges() {
   );
 
   const AvailableChallengeCard = ({ challenge }: { challenge: any }) => {
-    const hasAccess = hasAccessToContent(challenge);
-    const isLocked = !hasAccess;
-
     return (
-      <Card className={`overflow-hidden transition-all duration-300 hover:shadow-xl ${isLocked ? 'opacity-75' : 'hover:scale-[1.02]'}`}>
-        <div className={`h-2 ${isLocked ? 'bg-gray-300' : 'bg-gradient-to-r from-blue-400 to-purple-500'}`} />
+      <Card className="overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-[1.02]">
+        <div className="h-2 bg-gradient-to-r from-blue-400 to-purple-500" />
 
         <CardHeader className="pb-4">
           <div className="flex items-start justify-between">
             <div className="flex-1">
               <div className="flex items-center gap-3 mb-2">
                 <CardTitle className="text-xl font-bold text-gray-800 dark:text-gray-100">
-                  {/* Use safeTranslate caso o nome seja objeto multilíngue */}
                   {typeof challenge.name === 'string' ? challenge.name : safeTranslate(challenge.name)}
                 </CardTitle>
-                {isLocked && <Lock className="w-5 h-5 text-gray-500" />}
               </div>
 
               <div className="flex items-center gap-4 text-sm text-gray-600 dark:text-gray-400">
@@ -114,12 +109,8 @@ export default function Challenges() {
               </div>
             </div>
 
-            <div
-              className={`w-16 h-16 rounded-2xl flex items-center justify-center ${
-                isLocked ? 'bg-gray-100 dark:bg-gray-700' : 'bg-gradient-to-br from-blue-500 to-purple-600'
-              }`}
-            >
-              {isLocked ? <Lock className="w-8 h-8 text-gray-500" /> : <Target className="w-8 h-8 text-white" />}
+            <div className="w-16 h-16 rounded-2xl flex items-center justify-center bg-gradient-to-br from-blue-500 to-purple-600">
+              <Target className="w-8 h-8 text-white" />
             </div>
           </div>
         </CardHeader>
@@ -130,7 +121,6 @@ export default function Challenges() {
           </p>
 
           <div className="space-y-3 mb-6">
-            {/* Exemplo: dailyTasks pode ser array de objetos multilíngues */}
             {challenge.dailyTasks && challenge.dailyTasks.slice(0, 3).map((task: any, idx: number) => (
               <div key={idx} className="flex items-center gap-3 p-3 bg-gray-50 dark:bg-gray-800 rounded-lg">
                 <div className="w-2 h-2 bg-blue-500 rounded-full" />
@@ -144,8 +134,6 @@ export default function Challenges() {
           <Button
             className="w-full"
             onClick={() => handleStartChallenge(challenge.id)}
-            disabled={isLocked}
-            variant={isLocked ? 'outline' : 'default'}
           >
             {safeTranslate('startChallengeButton') || 'Começar desafio'}
           </Button>
