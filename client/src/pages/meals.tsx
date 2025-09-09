@@ -353,11 +353,11 @@ function Meals() {
                           <DialogTrigger asChild>
                             <Button
                               variant="outline"
-                              className="flex-1"
+                              className="flex-1 text-sm flex items-center justify-center"
                               onClick={() => setSelectedMeal(meal)}
                             >
                               <Eye className="w-4 h-4 mr-2" />
-                              {t("meals.view")}
+                              <span className="text-sm">{t("meals.view")}</span>
                             </Button>
                           </DialogTrigger>
                           <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto">
@@ -471,11 +471,11 @@ function Meals() {
                         </Dialog>
 
                         <Button
-                          className="flex-1"
+                          className="flex-1 text-sm flex items-center justify-center"
                           onClick={() => handleLogMealClick(meal)}
                         >
                           <Plus className="w-4 h-4 mr-2" />
-                          {t("meals.logMeal")}
+                          <span className="text-sm">{t("meals.logMeal")}</span>
                         </Button>
                       </div>
                     </CardContent>
