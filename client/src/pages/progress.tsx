@@ -441,10 +441,10 @@ export default function Progress() {
               />
               <div>
                 <h1 className="text-2xl font-poppins font-bold text-gray-800 dark:text-gray-100">
-                  NaijaReset Progress
+                  {t('progress.title')}
                 </h1>
                 <p className="text-gray-600 dark:text-gray-400 text-sm">
-                  Track your wellness journey with detailed metrics
+                  Acompanhe sua jornada de bem-estar com métricas detalhadas
                 </p>
               </div>
             </div>
