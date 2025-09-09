@@ -8,9 +8,7 @@ import {
 } from "../components/ui/card";
 import { Button } from "../components/ui/button";
 import { Progress } from "../components/ui/progress";
-import { Lock, Play, Clock } from "lucide-react";
-import { usePlanAccess } from "../hooks/usePlanAccess";
-import { UpgradePopup } from "../components/UpgradePopup";
+import { Play, Clock } from "lucide-react";
 import coursesData from "../data/courses.json";
 import { Course } from "../types";
 import { useTranslation } from "../hooks/useTranslation";
@@ -19,8 +17,7 @@ const courses = coursesData as Course[];
 
 export default function Courses() {
   const { state } = useApp();
-  const { hasAccess: checkAccess } = usePlanAccess();
-  const [showUpgrade, setShowUpgrade] = React.useState(false);
+  // All courses are now accessible
   const { t, currentLanguage } = useTranslation();
 
   const getCourseProgress = (courseId: string) => {
@@ -44,11 +41,7 @@ export default function Courses() {
   };
 
   const handleCourseClick = (course: Course) => {
-    if (!checkAccess(course.accessPlans)) {
-      setShowUpgrade(true);
-      return;
-    }
-    // Navegar para a página do curso
+    // All courses are accessible now
     window.location.hash = `#/course/${course.id}`;
   };
 
@@ -63,7 +56,7 @@ export default function Courses() {
 
       <div className="grid gap-4">
         {courses.map((course) => {
-          const hasAccessToCourse = checkAccess(course.accessPlans);
+          const hasAccessToCourse = true; // All courses accessible
           const progress = getCourseProgress(course.id);
 
           return (
@@ -74,19 +67,11 @@ export default function Courses() {
                   alt={course.title}
                   className="w-full h-48 object-cover"
                 />
-                {!hasAccessToCourse && (
-                  <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
-                    <Lock className="w-8 h-8 text-white" />
-                  </div>
-                )}
               </div>
 
               <CardHeader>
                 <CardTitle className="flex items-center justify-between">
                   {course.title[currentLanguage] || course.title['en-NG']}
-                  {!hasAccessToCourse && (
-                    <Lock className="w-5 h-5 text-muted-foreground" />
-                  )}
                 </CardTitle>
                 <p className="text-sm text-muted-foreground">
                   {course.description[currentLanguage] || course.description['en-NG']}
@@ -98,7 +83,7 @@ export default function Courses() {
               </CardHeader>
 
               <CardContent>
-                {hasAccessToCourse && progress > 0 && (
+                {progress > 0 && (
                   <div className="space-y-2 mb-4">
                     <div className="flex justify-between text-sm">
                       <span>{t('courses.progress')}</span>
@@ -111,14 +96,8 @@ export default function Courses() {
                 <Button
                   onClick={() => handleCourseClick(course)}
                   className="w-full"
-                  variant={hasAccessToCourse ? "default" : "outline"}
                 >
-                  {!hasAccessToCourse ? (
-                    <>
-                      <Lock className="w-4 h-4 mr-2" />
-                      {t('courses.upgrade')}
-                    </>
-                  ) : progress > 0 ? (
+                  {progress > 0 ? (
                     <>
                       <Play className="w-4 h-4 mr-2" />
                       {t('courses.continueCourse')}
@@ -136,14 +115,6 @@ export default function Courses() {
         })}
       </div>
 
-      <UpgradePopup
-        isOpen={showUpgrade}
-        onClose={() => setShowUpgrade(false)}
-        onUpgrade={() => {
-          setShowUpgrade(false);
-          // Aqui você pode adicionar lógica adicional após o upgrade se necessário
-        }}
-      />
     </div>
   );
 }

@@ -15,7 +15,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "../components/ui/dialog";
-import { Utensils, Search, Filter, Eye, Plus, Clock, Target, Lock, Crown } from "lucide-react";
+import { Utensils, Search, Filter, Eye, Plus, Clock, Target } from "lucide-react";
 import { Input } from "../components/ui/input";
 import {
   Select,
@@ -27,8 +27,6 @@ import {
 import { useTranslation } from "../hooks/useTranslation";
 import { useApp } from "../contexts/AppContext";
 import { MealLogDialog } from "../components/MealLogDialog";
-import { usePlanAccess } from "../hooks/usePlanAccess";
-import { UpgradePopup } from "../components/UpgradePopup";
 import mealsData from "../data/meals.json";
 
 interface Meal {
@@ -45,7 +43,7 @@ interface Meal {
   preparation?: {
     [key: string]: string;
   };
-  accessPlans: number[];
+  accessPlans?: number[];
 }
 
 const meals = mealsData as Meal[];
@@ -53,13 +51,11 @@ const meals = mealsData as Meal[];
 function Meals() {
   const { t, currentLanguage } = useTranslation();
   const { state, dispatch } = useApp();
-  const { hasAccess } = usePlanAccess();
   const [searchTerm, setSearchTerm] = useState("");
   const [categoryFilter, setCategoryFilter] = useState("all");
   const [selectedMeal, setSelectedMeal] = useState<Meal | null>(null);
   const [mealToLog, setMealToLog] = useState<Meal | null>(null);
   const [showLogDialog, setShowLogDialog] = useState(false);
-  const [showUpgradePopup, setShowUpgradePopup] = useState(false);
 
   const logMeal = (meal: Meal, date: string) => {
     const mealLog = {

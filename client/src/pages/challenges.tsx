@@ -4,21 +4,17 @@ import { Button } from '../components/ui/button';
 import { Badge } from '../components/ui/badge';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '../components/ui/tabs';
 import { Progress } from '../components/ui/progress';
-import { Play, CheckCircle, Calendar, Target, Award, Lock, Trophy, Sparkles } from 'lucide-react';
+import { Play, CheckCircle, Calendar, Target, Award, Trophy, Sparkles } from 'lucide-react';
 import { useTranslation } from '../hooks/useTranslation';
 import { useApp } from '../contexts/AppContext';
 import { ChallengeCard } from '../components/ChallengeCard';
 import challengesData from '../data/challenges.json';
-import { hasAccessToChallenge, getCurrentPlan, isAccessExpired, hasAccessToContent } from '../utils/planManager';
-import { UpgradePopup } from '../components/UpgradePopup';
-import { PlanActivationDialog } from '../components/PlanActivation';
 
 export default function Challenges() {
   const { t } = useTranslation();
   const { state, startChallenge, restartChallenge } = useApp();
   const [selectedTab, setSelectedTab] = useState('available');
-  const [showUpgradePopup, setShowUpgradePopup] = useState(false);
-  const [accessExpired, setAccessExpired] = useState(false);
+  // All challenges are now accessible
 
   // Função auxiliar para garantir que a tradução retorne uma string, e não objeto
   // Caso receba objeto, pega a primeira string válida ou converte para JSON string para evitar erro React
@@ -35,39 +31,17 @@ export default function Challenges() {
     return '';
   };
 
-  useEffect(() => {
-    const checkAccess = () => {
-      const expired = isAccessExpired();
-      setAccessExpired(expired);
-      if (expired) {
-        setShowUpgradePopup(true);
-      }
-    };
-
-    checkAccess();
-    const interval = setInterval(checkAccess, 60000);
-    return () => clearInterval(interval);
-  }, []);
+  // All challenges are accessible - no need to check access
 
   const { userData } = state;
   const activeChallenges = Object.values(userData.challenges).filter(c => c.isActive);
   const completedChallenges = Object.values(userData.challenges).filter(c => c.completedDays.length === c.days);
   const availableChallenges = challengesData.filter(c => !userData.challenges[c.id] || !userData.challenges[c.id].isActive);
 
-  const currentPlan = getCurrentPlan();
+  // No plan restrictions needed
 
   const handleStartChallenge = (challengeId: string) => {
-    if (accessExpired) {
-      setShowUpgradePopup(true);
-      return;
-    }
-
-    const challenge = challengesData.find(c => c.id === challengeId);
-    if (challenge && !hasAccessToContent(challenge)) {
-      setShowUpgradePopup(true);
-      return;
-    }
-
+    // All challenges are accessible
     startChallenge(challengeId);
   };
 

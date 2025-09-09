@@ -14,18 +14,12 @@ import { useTranslation } from "../hooks/useTranslation";
 import { useApp } from "../contexts/AppContext";
 import { ExerciseCard } from "../components/ExerciseCard";
 import exercisesData from "../data/exercises.json";
-import {
-  hasAccessToContent,
-  getCurrentPlan,
-  PLANS,
-} from "../utils/planManager";
 
 export default function Exercises() {
   const { t } = useTranslation();
   const { state } = useApp();
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("all");
-  const [selectedPlan, setSelectedPlan] = useState("all");
 
   const { userData } = state;
   const favoriteExercises = exercisesData.filter((exercise) =>
@@ -33,32 +27,17 @@ export default function Exercises() {
   );
 
   const filteredExercises = exercisesData.filter((exercise) => {
-    const exerciseName = typeof exercise.name === 'string' ? exercise.name : (exercise.name[state.language] || exercise.name['en-NG']);
-    const exerciseDescription = typeof exercise.description === 'string' ? exercise.description : (exercise.description[state.language] || exercise.description['en-NG']);
+    const exerciseName = typeof exercise.name === 'string' ? exercise.name : (exercise.name['en-NG'] || Object.values(exercise.name)[0]);
+    const exerciseDescription = typeof exercise.description === 'string' ? exercise.description : (exercise.description['en-NG'] || Object.values(exercise.description)[0]);
     
     const matchesSearch =
       exerciseName.toLowerCase().includes(searchTerm.toLowerCase()) ||
       exerciseDescription?.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesCategory =
       selectedCategory === "all" || exercise.category === selectedCategory;
-    const matchesPlan =
-      selectedPlan === "all" ||
-      (exercise.accessPlans &&
-        exercise.accessPlans.some((planId) => {
-          const plan = getCurrentPlan();
-          return selectedPlan === "accessible"
-            ? plan && exercise.accessPlans.includes(plan.id)
-            : selectedPlan === "kickstart"
-              ? exercise.accessPlans.includes(1)
-              : selectedPlan === "momentum"
-                ? exercise.accessPlans.includes(2)
-                : selectedPlan === "thrive"
-                  ? exercise.accessPlans.includes(3)
-                  : selectedPlan === "total"
-                    ? exercise.accessPlans.includes(4)
-                    : true;
-        }));
-    return matchesSearch && matchesCategory && matchesPlan;
+    // All exercises are now accessible
+    const matchesPlan = true;
+    return matchesSearch && matchesCategory;
   });
 
   const categories = ["all", "Light", "Moderate", "Advanced"];
@@ -69,30 +48,7 @@ export default function Exercises() {
     Advanced: exercisesData.filter((e) => e.category === "Advanced").length,
   };
 
-  const plans = [
-    "all",
-    "accessible",
-    "kickstart",
-    "momentum",
-    "thrive",
-    "total",
-  ];
-  const planCounts = {
-    all: exercisesData.length,
-    accessible: exercisesData.filter((e) => hasAccessToContent(e)).length,
-    kickstart: exercisesData.filter(
-      (e) => e.accessPlans && e.accessPlans.includes(1),
-    ).length,
-    momentum: exercisesData.filter(
-      (e) => e.accessPlans && e.accessPlans.includes(2),
-    ).length,
-    thrive: exercisesData.filter(
-      (e) => e.accessPlans && e.accessPlans.includes(3),
-    ).length,
-    total: exercisesData.filter(
-      (e) => e.accessPlans && e.accessPlans.includes(4),
-    ).length,
-  };
+  // All exercises are accessible now
 
   const ExerciseStats = () => (
     <div className="grid grid-cols-4 gap-2 mb-6">
@@ -149,7 +105,7 @@ export default function Exercises() {
     });
 
     const exercise = exercisesData.find((e) => e.id === exerciseId);
-    const exerciseName = typeof exercise?.name === 'string' ? exercise.name : (exercise?.name?.[state.language] || exercise?.name?.['en-NG']);
+    const exerciseName = typeof exercise?.name === 'string' ? exercise.name : (exercise?.name?.['en-NG'] || Object.values(exercise?.name || {})[0]);
     
     alert(
       `Started ${exerciseName}! Keep up the good work!`,
@@ -170,11 +126,6 @@ export default function Exercises() {
                 Home-friendly exercises for every fitness level
               </p>
             </div>
-            {getCurrentPlan() && (
-              <Badge className="bg-blue-100 text-blue-800 dark:bg-blue-800 dark:text-blue-100">
-                {getCurrentPlan()?.name}
-              </Badge>
-            )}
           </div>
         </div>
       </header>
@@ -225,35 +176,6 @@ export default function Exercises() {
               ))}
             </div>
 
-            {/* Plan Filter */}
-            <div className="flex space-x-2 mb-6 overflow-x-auto">
-              {plans.map((plan) => (
-                <Button
-                  key={plan}
-                  variant={selectedPlan === plan ? "default" : "outline"}
-                  size="sm"
-                  onClick={() => setSelectedPlan(plan)}
-                  className="whitespace-nowrap"
-                >
-                  {plan === "all"
-                    ? "Todos os Planos"
-                    : plan === "accessible"
-                      ? "Acessíveis"
-                      : plan === "kickstart"
-                        ? "Kickstart"
-                        : plan === "momentum"
-                          ? "Momentum"
-                          : plan === "thrive"
-                            ? "Thrive"
-                            : plan === "total"
-                              ? "Total"
-                              : plan}
-                  <Badge variant="secondary" className="ml-2">
-                    {planCounts[plan as keyof typeof planCounts]}
-                  </Badge>
-                </Button>
-              ))}
-            </div>
 
             {filteredExercises.length > 0 ? (
               <div className="grid gap-4">
