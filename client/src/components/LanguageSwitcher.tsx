@@ -6,11 +6,9 @@ export function LanguageSwitcher() {
   const { currentLanguage, changeLanguage } = useTranslation();
 
   const languages = [
-    { code: 'en-NG', flag: '🇳🇬', name: 'English (Nigeria)' },
-    { code: 'en-ZA', flag: '🇿🇦', name: 'English (South Africa)' },
-    { code: 'en-KE', flag: '🇰🇪', name: 'English (Kenya)' },
-    { code: 'en-GH', flag: '🇬🇭', name: 'English (Ghana)' },
-    { code: 'fr-CI', flag: '🇨🇮', name: 'Français (Côte d\'Ivoire)' }
+    { code: 'en-US', flag: '🇺🇸', name: 'English (US)' },
+    { code: 'fr-FR', flag: '🇫🇷', name: 'Français (France)' },
+    { code: 'es-ES', flag: '🇪🇸', name: 'Español (España)' }
   ];
 
   const handleLanguageChange = (langCode: string) => {
@@ -24,7 +22,7 @@ export function LanguageSwitcher() {
   return (
     <div className="space-y-2">
       <div className="text-sm text-gray-600 dark:text-gray-400 mb-3">
-        Current: {languages.find(l => l.code === currentLanguage)?.name || 'English (Nigeria)'}
+        Current: {languages.find(l => l.code === currentLanguage)?.name || 'English (US)'}
       </div>
       
       <div className="grid gap-2">

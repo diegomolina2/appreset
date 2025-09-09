@@ -9,11 +9,11 @@ interface TranslationData {
 
 const translations: Record<string, TranslationData> = {};
 
-type SupportedLanguage = "en-NG" | "en-ZA" | "en-KE" | "en-GH" | "fr-CI";
+type SupportedLanguage = "en-US" | "fr-FR" | "es-ES";
 
 export function useTranslation() {
   const [currentLanguage, setCurrentLanguage] =
-    useState<SupportedLanguage>("en-NG");
+    useState<SupportedLanguage>("en-US");
   const [isLoading, setIsLoading] = useState(true);
 
   const getLocalizedText = (value: string | Record<string, string>) => {
@@ -25,11 +25,9 @@ export function useTranslation() {
     const loadTranslations = async () => {
       try {
         const languages: SupportedLanguage[] = [
-          "en-NG",
-          "en-ZA",
-          "en-KE",
-          "en-GH",
-          "fr-CI",
+          "en-US",
+          "fr-FR",
+          "es-ES",
         ];
 
         for (const lang of languages) {
@@ -55,7 +53,7 @@ export function useTranslation() {
     ) as SupportedLanguage;
     if (
       savedLanguage &&
-      ["en-NG", "en-ZA", "en-KE", "en-GH", "fr-CI"].includes(savedLanguage)
+      ["en-US", "fr-FR", "es-ES"].includes(savedLanguage)
     ) {
       setCurrentLanguage(savedLanguage);
     }
@@ -80,9 +78,9 @@ export function useTranslation() {
       if (value && typeof value === "object" && k in value) {
         value = value[k];
       } else {
-        // Fallback to en-NG
-        if (currentLanguage !== "en-NG" && translations["en-NG"]) {
-          let fallbackValue = translations["en-NG"];
+        // Fallback to en-US
+        if (currentLanguage !== "en-US" && translations["en-US"]) {
+          let fallbackValue = translations["en-US"];
           for (const fallbackK of keys) {
             if (
               fallbackValue &&
