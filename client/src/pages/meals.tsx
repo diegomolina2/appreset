@@ -15,7 +15,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "../components/ui/dialog";
-import { Utensils, Search, Filter, Eye, Plus, Clock, Target, Globe } from "lucide-react";
+import { Utensils, Search, Filter, Eye, Plus, Clock, Target, Globe, Lock } from "lucide-react";
 import { Input } from "../components/ui/input";
 import {
   Select,
