@@ -15,7 +15,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "../components/ui/dialog";
-import { Utensils, Search, Filter, Eye, Plus, Clock, Target } from "lucide-react";
+import { Utensils, Search, Filter, Eye, Plus, Clock, Target, Globe } from "lucide-react";
 import { Input } from "../components/ui/input";
 import {
   Select,
@@ -111,12 +111,6 @@ function Meals() {
     }
   };
 
-  // Get the next available plan name
-  const getNextPlanName = (meal: Meal) => {
-    const planNames = ["Free", "Momentum", "Premium", "Pro"];
-    const minPlan = Math.min(...meal.accessPlans);
-    return planNames[minPlan - 1] || "Premium";
-  };
 
   const getCategoryVariant = (category: string) => {
     switch (category) {
@@ -241,27 +235,33 @@ function Meals() {
                         <div className="flex-1">
                           <div className="flex items-center gap-2">
                             <CardTitle className="text-lg line-clamp-2">
-                              {meal.name[currentLanguage] || meal.name["en-NG"]}
+                              {meal.name[currentLanguage] || meal.name["en-US"]}
                             </CardTitle>
-                            {isLocked && <Lock className="w-4 h-4 text-gray-500" />}
                           </div>
                           <Badge variant={getCategoryVariant(meal.category)} className="shrink-0 mt-1">
                             {t(`meals.categories.${meal.category}`)}
                           </Badge>
                           
-                          {/* Show unlock message if locked */}
-                          {isLocked && (
-                            <Badge variant="secondary" className="text-xs bg-orange-100 text-orange-800 mt-2">
-                              {t("meals.unlockedFrom", { plan: t(`meals.plans.${getNextPlanName(meal)}`) })}
-                            </Badge>
-                          )}
+                          {/* Show countries */}
+                          <div className="flex flex-wrap gap-1 mt-2">
+                            {meal.countries.slice(0, 2).map((country) => (
+                              <Badge key={country} variant="outline" className="text-xs">
+                                <Globe className="w-3 h-3 mr-1" />
+                                {country}
+                              </Badge>
+                            ))}
+                            {meal.countries.length > 2 && (
+                              <Badge variant="outline" className="text-xs">
+                                +{meal.countries.length - 2} more
+                              </Badge>
+                            )}
+                          </div>
                         </div>
                       </div>
                     </CardHeader>
 
                     <CardContent className="space-y-4">
                       {/* Macronutrients Display - Show locks if locked */}
-                      {isLocked ? (
                         <div className="grid grid-cols-4 gap-2 text-center">
                           <div className="bg-gray-50 dark:bg-gray-800 p-2 rounded">
                             <Lock className="w-4 h-4 mx-auto text-gray-400 mb-1" />
@@ -308,25 +308,15 @@ function Meals() {
                           </div>
                           <div className="bg-purple-50 dark:bg-purple-900/20 p-2 rounded">
                             <div className="text-lg font-semibold text-purple-600">
-                              {meal.fat}g
+                              {meal.fats}g
                             </div>
                             <div className="text-xs text-muted-foreground">
                               {t("meals.fats")}
                             </div>
                           </div>
                         </div>
-                      )}
 
                       {/* Action Buttons */}
-                      {isLocked ? (
-                        <Button
-                          onClick={() => setShowUpgradePopup(true)}
-                          className="w-full bg-orange-500 hover:bg-orange-600 text-white"
-                        >
-                          <Crown className="w-4 h-4 mr-2" />
-                          {t("meals.upgradeRequired")}
-                        </Button>
-                      ) : (
                         <div className="flex gap-2">
                           <Dialog>
                             <DialogTrigger asChild>
@@ -342,7 +332,7 @@ function Meals() {
                             <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto">
                               <DialogHeader>
                                 <DialogTitle className="text-xl">
-                                  {meal.name[currentLanguage] || meal.name["en-NG"]}
+                                  {meal.name[currentLanguage] || meal.name["en-US"]}
                                 </DialogTitle>
                               </DialogHeader>
 
@@ -350,7 +340,7 @@ function Meals() {
                                 {meal.image && (
                                   <img
                                     src={meal.image}
-                                    alt={meal.name[currentLanguage] || meal.name["en-NG"]}
+                                    alt={meal.name[currentLanguage] || meal.name["en-US"]}
                                     className="w-full h-64 object-cover rounded-lg"
                                   />
                                 )}
@@ -387,7 +377,7 @@ function Meals() {
                                   <div className="text-center">
                                     <div className="w-6 h-6 mx-auto mb-1 bg-purple-500 rounded"></div>
                                     <div className="font-semibold text-lg text-purple-600">
-                                      {meal.fat}g
+                                      {meal.fats}g
                                     </div>
                                     <div className="text-xs text-muted-foreground">
                                       {t("meals.fats")}
@@ -396,7 +386,7 @@ function Meals() {
                                 </div>
 
                                 {/* Preparation Instructions */}
-                                {meal.preparation && (
+                                {meal.instructions && (
                                   <div className="space-y-3">
                                     <h4 className="font-semibold text-lg flex items-center gap-2">
                                       <Clock className="w-5 h-5" />
@@ -404,8 +394,8 @@ function Meals() {
                                     </h4>
                                     <div className="p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
                                       <p className="text-sm leading-relaxed">
-                                        {meal.preparation[currentLanguage] ||
-                                          meal.preparation["en-NG"]}
+                                        {meal.instructions[currentLanguage] ||
+                                          meal.instructions && meal.instructions["en-US"]}
                                       </p>
                                     </div>
                                   </div>
@@ -426,7 +416,6 @@ function Meals() {
                             {t("meals.logMeal")}
                           </Button>
                         </div>
-                      )}
                     </CardContent>
                   </Card>
                 );
@@ -452,7 +441,7 @@ function Meals() {
         isOpen={showLogDialog}
         onClose={() => setShowLogDialog(false)}
         onConfirm={handleConfirmLog}
-        mealName={mealToLog ? (mealToLog.name[currentLanguage] || mealToLog.name["en-NG"]) : ""}
+        mealName={mealToLog ? (mealToLog.name[currentLanguage] || mealToLog.name["en-US"]) : ""}
       />
 
     </div>
