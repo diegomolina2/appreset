@@ -55,14 +55,71 @@ export default function Dashboard() {
     (c) => c.isActive,
   );
 
-  // Get suggested meals (random selection)
-  const suggestedMeals = mealsData.slice(0, 2);
+  // Get dynamic suggested meals based on time of day and favorites
+  const getTimeBasedMeals = () => {
+    const hour = new Date().getHours();
+    const favoriteMeals = userData.favoriteMeals || [];
+    
+    let categoryFilter;
+    if (hour < 10) categoryFilter = 'breakfast';
+    else if (hour < 15) categoryFilter = 'lunch';
+    else if (hour < 20) categoryFilter = 'dinner';
+    else categoryFilter = 'snack';
+    
+    // First try to get favorite meals in the right category
+    let filteredMeals = mealsData.filter(meal => 
+      meal.category === categoryFilter && favoriteMeals.includes(meal.id)
+    );
+    
+    // If no favorites, get all meals in category
+    if (filteredMeals.length === 0) {
+      filteredMeals = mealsData.filter(meal => meal.category === categoryFilter);
+    }
+    
+    // Shuffle and get 2
+    const shuffled = filteredMeals.sort(() => 0.5 - Math.random());
+    return shuffled.slice(0, 2);
+  };
+  
+  const suggestedMeals = getTimeBasedMeals();
 
-  // Get quick exercise (random selection)
-  const quickExercise = exercisesData[0];
+  // Get exercise based on recent activity and difficulty progression
+  const getSmartExercise = () => {
+    const recentExercises = userData.exerciseLogs || [];
+    const lastWeekExercises = recentExercises.filter(log => {
+      const logDate = new Date(log.date);
+      const weekAgo = new Date();
+      weekAgo.setDate(weekAgo.getDate() - 7);
+      return logDate > weekAgo;
+    });
+    
+    // Get difficulty progression
+    const difficulties = ['Light', 'Moderate', 'Advanced'];
+    const userDifficulties = lastWeekExercises.map(log => 
+      exercisesData.find(ex => ex.id === log.exerciseId)?.difficulty
+    ).filter(Boolean);
+    
+    let targetDifficulty = 'Light'; // Default
+    if (userDifficulties.includes('Advanced')) targetDifficulty = 'Advanced';
+    else if (userDifficulties.includes('Moderate')) targetDifficulty = 'Moderate';
+    
+    // Get exercises not done recently in the target difficulty
+    const recentExerciseIds = lastWeekExercises.map(log => log.exerciseId);
+    const availableExercises = exercisesData.filter(ex => 
+      ex.difficulty === targetDifficulty && !recentExerciseIds.includes(ex.id)
+    );
+    
+    return availableExercises.length > 0 
+      ? availableExercises[Math.floor(Math.random() * availableExercises.length)]
+      : exercisesData[Math.floor(Math.random() * exercisesData.length)];
+  };
+  
+  const quickExercise = getSmartExercise();
 
-  // Get recent badges
+  // Get recent achievements and progress
   const recentBadges = unlockedBadges.slice(-3);
+  const recentMealLogs = (userData.mealLogs || []).slice(-5);
+  const weeklyCalories = recentMealLogs.reduce((sum, meal) => sum + (meal.calories || 0), 0);
 
   // Get motivational quote
   const dailyQuote = getRandomQuote();
@@ -95,10 +152,13 @@ export default function Dashboard() {
               />
               <div>
                 <h1 className="text-2xl font-poppins font-bold text-gray-800 dark:text-gray-100">
-                  My Reset
+                  NaijaReset
                 </h1>
                 <p className="text-gray-600 dark:text-gray-400 text-sm">
                   {getGreeting()}
+                </p>
+                <p className="text-xs text-muted-foreground">
+                  {activeChallenges.length} desafio{activeChallenges.length !== 1 ? 's' : ''} ativo{activeChallenges.length !== 1 ? 's' : ''}
                 </p>
               </div>
             </div>
@@ -229,14 +289,14 @@ export default function Dashboard() {
               <div className="flex items-center justify-between">
                 <div>
                   <p className="text-sm text-gray-600 dark:text-gray-400">
-                    {t("dashboard.stats.badges")}
+                    Calorias (semana)
                   </p>
                   <p className="text-2xl font-bold text-gray-800 dark:text-gray-100">
-                    {unlockedBadges.length}
+                    {weeklyCalories || 0}
                   </p>
                 </div>
-                <div className="w-10 h-10 bg-purple-100 dark:bg-purple-900 rounded-full flex items-center justify-center">
-                  <Award className="w-6 h-6 text-purple-600 dark:text-purple-400" />
+                <div className="w-10 h-10 bg-green-100 dark:bg-green-900 rounded-full flex items-center justify-center">
+                  <Zap className="w-6 h-6 text-green-600 dark:text-green-400" />
                 </div>
               </div>
             </CardContent>
@@ -288,7 +348,13 @@ export default function Dashboard() {
       <div className="px-4 py-6">
         <div className="flex items-center justify-between mb-4">
           <h2 className="text-xl font-poppins font-bold text-gray-800 dark:text-gray-100">
-            {t("dashboard.todayMealSuggestions")}
+            {(() => {
+              const hour = new Date().getHours();
+              if (hour < 10) return "☀️ Sugestões para o Café";
+              if (hour < 15) return "🍽️ Sugestões para o Almoço";
+              if (hour < 20) return "🌙 Sugestões para o Jantar";
+              return "🍪 Sugestões de Lanches";
+            })()}
           </h2>
           <Button
             variant="ghost"
