@@ -1,2234 +1,2141 @@
 [
   {
-    "id": "pap-fruits",
+    "id": "pap-fruits"
     "name": {
-      "en-NG": "Pap (Akamu/Ogi) with Skimmed Milk and Fresh Fruits",
-      "fr-CI": "Pap (Akamu/Ogi) avec Lait Écrémé et Fruits Frais",
-      "en-GH": "Pap (Akamu/Ogi) with Skimmed Milk and Fresh Fruits",
-      "en-KE": "Pap (Akamu/Ogi) with Skimmed Milk and Fresh Fruits",
+      "en-NG": "Pap (Akamu/Ogi) with Skimmed Milk and Fresh Fruits"
+      "fr-CI": "Pap (Akamu/Ogi) avec Lait Écrémé et Fruits Frais"
+      "en-GH": "Pap (Akamu/Ogi) with Skimmed Milk and Fresh Fruits"
+      "en-KE": "Pap (Akamu/Ogi) with Skimmed Milk and Fresh Fruits"
       "en-ZA": "Pap (Akamu/Ogi) with Skimmed Milk and Fresh Fruits"
-    },
-    "calories": 310,
-    "protein": 12,
-    "carbs": 60,
-    "fat": 4,
-    "category": "breakfast",
-    "image": "https://images.unsplash.com/photo-1606491956689-2a97f6e4d0cb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    }
+    "calories": 310
+    "protein": 12
+    "carbs": 60
+    "fat": 4
+    "category": "breakfast"
+    "image": "https://images.unsplash.com/photo-1606491956689-2a97f6e4d0cb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     "preparation": {
-      "en-NG": "Cook 1/2 cup pap (fermented maize) in 1 cup hot water until thick. Add 1/2 cup skimmed milk and top with 1/2 sliced banana and 1/4 cup diced pawpaw. Serve warm.",
-      "fr-CI": "Faites cuire 1/2 tasse de pap (maïs fermenté) dans 1 tasse d'eau chaude jusqu'à épaississement. Ajoutez 1/2 tasse de lait écrémé et garnissez de 1/2 banane tranchée et 1/4 tasse de papaye en dés. Servez chaud.",
-      "en-GH": "Cook pap in hot water until thick. Add skimmed milk and top with banana and pawpaw. Serve warm.",
-      "en-KE": "Cook pap in hot water until thick. Add skimmed milk and top with banana and pawpaw. Serve warm.",
+      "en-NG": "Cook 1/2 cup pap (fermented maize) in 1 cup hot water until thick. Add 1/2 cup skimmed milk and top with 1/2 sliced banana and 1/4 cup diced pawpaw. Serve warm."
+      "fr-CI": "Faites cuire 1/2 tasse de pap (maïs fermenté) dans 1 tasse d'eau chaude jusqu'à épaississement. Ajoutez 1/2 tasse de lait écrémé et garnissez de 1/2 banane tranchée et 1/4 tasse de papaye en dés. Servez chaud."
+      "en-GH": "Cook pap in hot water until thick. Add skimmed milk and top with banana and pawpaw. Serve warm."
+      "en-KE": "Cook pap in hot water until thick. Add skimmed milk and top with banana and pawpaw. Serve warm."
       "en-ZA": "Cook pap in hot water until thick. Add skimmed milk and top with banana and pawpaw. Serve warm."
-    },
-    "accessPlans": [1, 2, 3, 4]
-  },
+    }
+  }
   {
-    "id": "moi-moi-eggs",
+    "id": "moi-moi-eggs"
     "name": {
-      "en-NG": "Moi Moi (Steamed Bean Pudding) with Boiled Eggs",
-      "fr-CI": "Moi Moi (Pouding de Haricots Vapeur) avec Œufs Durs",
-      "en-GH": "Moi Moi (Steamed Bean Pudding) with Boiled Eggs",
-      "en-KE": "Moi Moi (Steamed Bean Pudding) with Boiled Eggs",
+      "en-NG": "Moi Moi (Steamed Bean Pudding) with Boiled Eggs"
+      "fr-CI": "Moi Moi (Pouding de Haricots Vapeur) avec Œufs Durs"
+      "en-GH": "Moi Moi (Steamed Bean Pudding) with Boiled Eggs"
+      "en-KE": "Moi Moi (Steamed Bean Pudding) with Boiled Eggs"
       "en-ZA": "Moi Moi (Steamed Bean Pudding) with Boiled Eggs"
-    },
-    "calories": 420,
-    "protein": 25,
-    "carbs": 45,
-    "fat": 12,
-    "category": "breakfast",
-    "image": "https://images.unsplash.com/photo-1617196038587-cc72bb6a2e0f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    }
+    "calories": 420
+    "protein": 25
+    "carbs": 45
+    "fat": 12
+    "category": "breakfast"
+    "image": "https://images.unsplash.com/photo-1617196038587-cc72bb6a2e0f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     "preparation": {
-      "en-NG": "Blend 1 cup peeled beans, 1 red bell pepper, 1/2 onion, 1 tbsp oil, and seasonings. Steam mixture in ramekins for 45 minutes. Serve with 2 boiled eggs.",
-      "fr-CI": "Mixez 1 tasse de haricots épluchés, 1 poivron rouge, 1/2 oignon, 1 càs d’huile et assaisonnements. Faites cuire à la vapeur 45 minutes. Servez avec 2 œufs durs.",
-      "en-GH": "Blend beans with pepper, onion, oil, and seasoning. Steam for 45 minutes. Serve with boiled eggs.",
-      "en-KE": "Blend beans with pepper, onion, oil, and seasoning. Steam for 45 minutes. Serve with boiled eggs.",
+      "en-NG": "Blend 1 cup peeled beans, 1 red bell pepper, 1/2 onion, 1 tbsp oil, and seasonings. Steam mixture in ramekins for 45 minutes. Serve with 2 boiled eggs."
+      "fr-CI": "Mixez 1 tasse de haricots épluchés, 1 poivron rouge, 1/2 oignon, 1 càs d’huile et assaisonnements. Faites cuire à la vapeur 45 minutes. Servez avec 2 œufs durs."
+      "en-GH": "Blend beans with pepper, onion, oil, and seasoning. Steam for 45 minutes. Serve with boiled eggs."
+      "en-KE": "Blend beans with pepper, onion, oil, and seasoning. Steam for 45 minutes. Serve with boiled eggs."
       "en-ZA": "Blend beans with pepper, onion, oil, and seasoning. Steam for 45 minutes. Serve with boiled eggs."
-    },
-    "accessPlans": [1, 2, 3, 4]
-  },
+    }
+  }
   {
-    "id": "yam-porridge",
+    "id": "yam-porridge"
     "name": {
-      "en-NG": "Light Yam Porridge with Vegetables",
-      "fr-CI": "Bouillie Légère d’Igname avec Légumes",
-      "en-GH": "Light Yam Porridge with Vegetables",
-      "en-KE": "Light Yam Porridge with Vegetables",
+      "en-NG": "Light Yam Porridge with Vegetables"
+      "fr-CI": "Bouillie Légère d’Igname avec Légumes"
+      "en-GH": "Light Yam Porridge with Vegetables"
+      "en-KE": "Light Yam Porridge with Vegetables"
       "en-ZA": "Light Yam Porridge with Vegetables"
-    },
-    "calories": 350,
-    "protein": 9,
-    "carbs": 72,
-    "fat": 5,
-    "category": "breakfast",
-    "image": "https://images.unsplash.com/photo-1617196038587-cc72bb6a2e0e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    }
+    "calories": 350
+    "protein": 9
+    "carbs": 72
+    "fat": 5
+    "category": "breakfast"
+    "image": "https://images.unsplash.com/photo-1617196038587-cc72bb6a2e0e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     "preparation": {
-      "en-NG": "Cook 2 cups diced yam with 2 cups water, 1 tomato, 1/2 onion, and spinach until yam is tender. Add 1 tsp palm oil (optional). Serve warm.",
-      "fr-CI": "Faites cuire 2 tasses d’igname en dés avec 2 tasses d’eau, 1 tomate, 1/2 oignon et épinards jusqu’à tendreté. Ajoutez 1 c. à c. d’huile de palme (optionnel). Servez chaud.",
-      "en-GH": "Cook yam with tomato, onion, and spinach until tender. Add palm oil if desired. Serve warm.",
-      "en-KE": "Cook yam with tomato, onion, and spinach until tender. Add palm oil if desired. Serve warm.",
+      "en-NG": "Cook 2 cups diced yam with 2 cups water, 1 tomato, 1/2 onion, and spinach until yam is tender. Add 1 tsp palm oil (optional). Serve warm."
+      "fr-CI": "Faites cuire 2 tasses d’igname en dés avec 2 tasses d’eau, 1 tomate, 1/2 oignon et épinards jusqu’à tendreté. Ajoutez 1 c. à c. d’huile de palme (optionnel). Servez chaud."
+      "en-GH": "Cook yam with tomato, onion, and spinach until tender. Add palm oil if desired. Serve warm."
+      "en-KE": "Cook yam with tomato, onion, and spinach until tender. Add palm oil if desired. Serve warm."
       "en-ZA": "Cook yam with tomato, onion, and spinach until tender. Add palm oil if desired. Serve warm."
-    },
-    "accessPlans": [1, 2, 3, 4]
-  },
+    }
+  }
   {
-    "id": "grilled-plantain-peanut",
+    "id": "grilled-plantain-peanut"
     "name": {
-      "en-NG": "Grilled Plantain with Peanut Butter",
-      "fr-CI": "Banane Plantain Grillée avec Beurre d’Arachide",
-      "en-GH": "Grilled Plantain with Peanut Butter",
-      "en-KE": "Grilled Plantain with Peanut Butter",
+      "en-NG": "Grilled Plantain with Peanut Butter"
+      "fr-CI": "Banane Plantain Grillée avec Beurre d’Arachide"
+      "en-GH": "Grilled Plantain with Peanut Butter"
+      "en-KE": "Grilled Plantain with Peanut Butter"
       "en-ZA": "Grilled Plantain with Peanut Butter"
-    },
-    "calories": 290,
-    "protein": 8,
-    "carbs": 55,
-    "fat": 6,
-    "category": "breakfast",
-    "image": "https://images.unsplash.com/photo-1599249839865-4b3ba4e7a508?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    }
+    "calories": 290
+    "protein": 8
+    "carbs": 55
+    "fat": 6
+    "category": "breakfast"
+    "image": "https://images.unsplash.com/photo-1599249839865-4b3ba4e7a508?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     "preparation": {
-      "en-NG": "Grill 1 medium ripe plantain for 8–10 minutes. Slice and spread 1 tbsp natural peanut butter. Serve warm.",
-      "fr-CI": "Grillez 1 plantain mûr pendant 8–10 minutes. Coupez et tartinez 1 càs de beurre d’arachide naturel. Servez chaud.",
-      "en-GH": "Grill plantain, slice, and spread peanut butter. Serve warm.",
-      "en-KE": "Grill plantain, slice, and spread peanut butter. Serve warm.",
+      "en-NG": "Grill 1 medium ripe plantain for 8–10 minutes. Slice and spread 1 tbsp natural peanut butter. Serve warm."
+      "fr-CI": "Grillez 1 plantain mûr pendant 8–10 minutes. Coupez et tartinez 1 càs de beurre d’arachide naturel. Servez chaud."
+      "en-GH": "Grill plantain, slice, and spread peanut butter. Serve warm."
+      "en-KE": "Grill plantain, slice, and spread peanut butter. Serve warm."
       "en-ZA": "Grill plantain, slice, and spread peanut butter. Serve warm."
-    },
-    "accessPlans": [1, 2, 3, 4]
-  },
+    }
+  }
   {
-    "id": "ofada-rice-veg",
+    "id": "ofada-rice-veg"
     "name": {
-      "en-NG": "Ofada Rice with Light Vegetable Sauce",
-      "fr-CI": "Riz Ofada avec Sauce Légère aux Légumes",
-      "en-GH": "Ofada Rice with Light Vegetable Sauce",
-      "en-KE": "Ofada Rice with Light Vegetable Sauce",
+      "en-NG": "Ofada Rice with Light Vegetable Sauce"
+      "fr-CI": "Riz Ofada avec Sauce Légère aux Légumes"
+      "en-GH": "Ofada Rice with Light Vegetable Sauce"
+      "en-KE": "Ofada Rice with Light Vegetable Sauce"
       "en-ZA": "Ofada Rice with Light Vegetable Sauce"
-    },
-    "calories": 330,
-    "protein": 10,
-    "carbs": 65,
-    "fat": 5,
-    "category": "breakfast",
-    "image": "https://images.unsplash.com/photo-1608497908771-308a7ff28075?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    }
+    "calories": 330
+    "protein": 10
+    "carbs": 65
+    "fat": 5
+    "category": "breakfast"
+    "image": "https://images.unsplash.com/photo-1608497908771-308a7ff28075?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     "preparation": {
-      "en-NG": "Cook 1 cup ofada rice in 2 cups water until tender. Prepare sauce with 1 tomato, 1/2 onion, 1 tsp oil, and spinach. Serve together.",
-      "fr-CI": "Faites cuire 1 tasse de riz ofada dans 2 tasses d’eau jusqu’à tendreté. Préparez une sauce avec 1 tomate, 1/2 oignon, 1 c. à c. d’huile et épinards. Servez ensemble.",
-      "en-GH": "Cook rice and serve with light vegetable sauce.",
-      "en-KE": "Cook rice and serve with light vegetable sauce.",
+      "en-NG": "Cook 1 cup ofada rice in 2 cups water until tender. Prepare sauce with 1 tomato, 1/2 onion, 1 tsp oil, and spinach. Serve together."
+      "fr-CI": "Faites cuire 1 tasse de riz ofada dans 2 tasses d’eau jusqu’à tendreté. Préparez une sauce avec 1 tomate, 1/2 oignon, 1 c. à c. d’huile et épinards. Servez ensemble."
+      "en-GH": "Cook rice and serve with light vegetable sauce."
+      "en-KE": "Cook rice and serve with light vegetable sauce."
       "en-ZA": "Cook rice and serve with light vegetable sauce."
-    },
-    "accessPlans": [1, 2, 3, 4]
-  },
+    }
+  }
   {
-    "id": "pineapple-mango-ginger-smoothie",
+    "id": "pineapple-mango-ginger-smoothie"
     "name": {
-      "en-NG": "Pineapple, Mango & Ginger Smoothie",
-      "fr-CI": "Smoothie Ananas, Mangue & Gingembre",
-      "en-GH": "Pineapple, Mango & Ginger Smoothie",
-      "en-KE": "Pineapple, Mango & Ginger Smoothie",
+      "en-NG": "Pineapple, Mango & Ginger Smoothie"
+      "fr-CI": "Smoothie Ananas, Mangue & Gingembre"
+      "en-GH": "Pineapple, Mango & Ginger Smoothie"
+      "en-KE": "Pineapple, Mango & Ginger Smoothie"
       "en-ZA": "Pineapple, Mango & Ginger Smoothie"
-    },
-    "calories": 220,
-    "protein": 3,
-    "carbs": 52,
-    "fat": 1,
-    "category": "breakfast",
-    "image": "https://images.unsplash.com/photo-1587734562641-6ee4d6e5b2f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    }
+    "calories": 220
+    "protein": 3
+    "carbs": 52
+    "fat": 1
+    "category": "breakfast"
+    "image": "https://images.unsplash.com/photo-1587734562641-6ee4d6e5b2f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     "preparation": {
-      "en-NG": "Blend 1 cup pineapple, 1/2 cup mango, 1 tsp ginger, and 1/2 cup cold water. Serve chilled.",
-      "fr-CI": "Mixez 1 tasse d’ananas, 1/2 tasse de mangue, 1 c. à c. de gingembre et 1/2 tasse d’eau froide. Servez frais.",
-      "en-GH": "Blend pineapple, mango, ginger, and water. Serve chilled.",
-      "en-KE": "Blend pineapple, mango, ginger, and water. Serve chilled.",
+      "en-NG": "Blend 1 cup pineapple, 1/2 cup mango, 1 tsp ginger, and 1/2 cup cold water. Serve chilled."
+      "fr-CI": "Mixez 1 tasse d’ananas, 1/2 tasse de mangue, 1 c. à c. de gingembre et 1/2 tasse d’eau froide. Servez frais."
+      "en-GH": "Blend pineapple, mango, ginger, and water. Serve chilled."
+      "en-KE": "Blend pineapple, mango, ginger, and water. Serve chilled."
       "en-ZA": "Blend pineapple, mango, ginger, and water. Serve chilled."
-    },
-    "accessPlans": [1, 2, 3, 4]
-  },
+    }
+  }
   {
-    "id": "bean-pancake",
+    "id": "bean-pancake"
     "name": {
-      "en-NG": "Baked Bean Pancakes (Akara Alternative)",
-      "fr-CI": "Crêpes de Haricots Cuites au Four (Alternative à l’Akara)",
-      "en-GH": "Baked Bean Pancakes (Akara Alternative)",
-      "en-KE": "Baked Bean Pancakes (Akara Alternative)",
+      "en-NG": "Baked Bean Pancakes (Akara Alternative)"
+      "fr-CI": "Crêpes de Haricots Cuites au Four (Alternative à l’Akara)"
+      "en-GH": "Baked Bean Pancakes (Akara Alternative)"
+      "en-KE": "Baked Bean Pancakes (Akara Alternative)"
       "en-ZA": "Baked Bean Pancakes (Akara Alternative)"
-    },
-    "calories": 280,
-    "protein": 14,
-    "carbs": 35,
-    "fat": 8,
-    "category": "breakfast",
-    "image": "https://images.unsplash.com/photo-1598188306155-1d4b2fc90d1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    }
+    "calories": 280
+    "protein": 14
+    "carbs": 35
+    "fat": 8
+    "category": "breakfast"
+    "image": "https://images.unsplash.com/photo-1598188306155-1d4b2fc90d1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     "preparation": {
-      "en-NG": "Blend 1 cup peeled beans, 1/2 onion, and spices. Pour batter into muffin tins. Bake at 180°C for 25 minutes until golden.",
-      "fr-CI": "Mixez 1 tasse de haricots épluchés, 1/2 oignon et épices. Versez dans des moules à muffins. Cuisez au four 180°C pendant 25 minutes jusqu’à doré.",
-      "en-GH": "Blend beans with onion and spices. Bake batter in muffin tins until golden.",
-      "en-KE": "Blend beans with onion and spices. Bake batter in muffin tins until golden.",
+      "en-NG": "Blend 1 cup peeled beans, 1/2 onion, and spices. Pour batter into muffin tins. Bake at 180°C for 25 minutes until golden."
+      "fr-CI": "Mixez 1 tasse de haricots épluchés, 1/2 oignon et épices. Versez dans des moules à muffins. Cuisez au four 180°C pendant 25 minutes jusqu’à doré."
+      "en-GH": "Blend beans with onion and spices. Bake batter in muffin tins until golden."
+      "en-KE": "Blend beans with onion and spices. Bake batter in muffin tins until golden."
       "en-ZA": "Blend beans with onion and spices. Bake batter in muffin tins until golden."
-    },
-    "accessPlans": [1, 2, 3, 4]
-  },
+    }
+  }
   {
-    "id": "egg-ugu-sandwich",
+    "id": "egg-ugu-sandwich"
     "name": {
-      "en-NG": "Whole Wheat Egg Sandwich with Ugu Spinach",
-      "fr-CI": "Sandwich de Blé Complet aux Œufs et Épinards Ugu",
-      "en-GH": "Whole Wheat Egg Sandwich with Ugu Spinach",
-      "en-KE": "Whole Wheat Egg Sandwich with Ugu Spinach",
+      "en-NG": "Whole Wheat Egg Sandwich with Ugu Spinach"
+      "fr-CI": "Sandwich de Blé Complet aux Œufs et Épinards Ugu"
+      "en-GH": "Whole Wheat Egg Sandwich with Ugu Spinach"
+      "en-KE": "Whole Wheat Egg Sandwich with Ugu Spinach"
       "en-ZA": "Whole Wheat Egg Sandwich with Ugu Spinach"
-    },
-    "calories": 330,
-    "protein": 18,
-    "carbs": 42,
-    "fat": 10,
-    "category": "breakfast",
-    "image": "https://images.unsplash.com/photo-1584270354949-1a0dbd6aafc1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    }
+    "calories": 330
+    "protein": 18
+    "carbs": 42
+    "fat": 10
+    "category": "breakfast"
+    "image": "https://images.unsplash.com/photo-1584270354949-1a0dbd6aafc1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     "preparation": {
-      "en-NG": "Scramble 2 eggs with ugu spinach. Place between 2 slices whole wheat bread. Serve warm.",
-      "fr-CI": "Brouillez 2 œufs avec des épinards ugu. Placez entre 2 tranches de pain complet. Servez chaud.",
-      "en-GH": "Scramble eggs with ugu spinach. Place between whole wheat bread slices. Serve warm.",
-      "en-KE": "Scramble eggs with ugu spinach. Place between whole wheat bread slices. Serve warm.",
+      "en-NG": "Scramble 2 eggs with ugu spinach. Place between 2 slices whole wheat bread. Serve warm."
+      "fr-CI": "Brouillez 2 œufs avec des épinards ugu. Placez entre 2 tranches de pain complet. Servez chaud."
+      "en-GH": "Scramble eggs with ugu spinach. Place between whole wheat bread slices. Serve warm."
+      "en-KE": "Scramble eggs with ugu spinach. Place between whole wheat bread slices. Serve warm."
       "en-ZA": "Scramble eggs with ugu spinach. Place between whole wheat bread slices. Serve warm."
-    },
-    "accessPlans": [1, 2, 3, 4]
-  },
+    }
+  }
   {
-    "id": "millet-pap-coconut",
+    "id": "millet-pap-coconut"
     "name": {
-      "en-NG": "Millet Pap (Kunu) with Light Coconut Milk",
-      "fr-CI": "Bouillie de Millet (Kunu) avec Lait de Coco Léger",
-      "en-GH": "Millet Pap (Kunu) with Light Coconut Milk",
-      "en-KE": "Millet Pap (Kunu) with Light Coconut Milk",
+      "en-NG": "Millet Pap (Kunu) with Light Coconut Milk"
+      "fr-CI": "Bouillie de Millet (Kunu) avec Lait de Coco Léger"
+      "en-GH": "Millet Pap (Kunu) with Light Coconut Milk"
+      "en-KE": "Millet Pap (Kunu) with Light Coconut Milk"
       "en-ZA": "Millet Pap (Kunu) with Light Coconut Milk"
-    },
-    "calories": 300,
-    "protein": 6,
-    "carbs": 58,
-    "fat": 7,
-    "category": "breakfast",
-    "image": "https://images.unsplash.com/photo-1587734678534-cd7a4d0e16c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    }
+    "calories": 300
+    "protein": 6
+    "carbs": 58
+    "fat": 7
+    "category": "breakfast"
+    "image": "https://images.unsplash.com/photo-1587734678534-cd7a4d0e16c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     "preparation": {
-      "en-NG": "Cook 1/2 cup millet flour in 1 cup water until thick. Stir in 1/4 cup light coconut milk. Serve warm.",
-      "fr-CI": "Faites cuire 1/2 tasse de farine de millet dans 1 tasse d’eau jusqu’à épaississement. Ajoutez 1/4 tasse de lait de coco léger. Servez chaud.",
-      "en-GH": "Cook millet pap and stir in light coconut milk. Serve warm.",
-      "en-KE": "Cook millet pap and stir in light coconut milk. Serve warm.",
+      "en-NG": "Cook 1/2 cup millet flour in 1 cup water until thick. Stir in 1/4 cup light coconut milk. Serve warm."
+      "fr-CI": "Faites cuire 1/2 tasse de farine de millet dans 1 tasse d’eau jusqu’à épaississement. Ajoutez 1/4 tasse de lait de coco léger. Servez chaud."
+      "en-GH": "Cook millet pap and stir in light coconut milk. Serve warm."
+      "en-KE": "Cook millet pap and stir in light coconut milk. Serve warm."
       "en-ZA": "Cook millet pap and stir in light coconut milk. Serve warm."
-    },
-    "accessPlans": [1, 2, 3, 4]
-  },
+    }
+  }
   {
-    "id": "fruit-salad-egusi",
+    "id": "fruit-salad-egusi"
     "name": {
-      "en-NG": "Tropical Fruit Salad with Toasted Egusi Seeds",
-      "fr-CI": "Salade de Fruits Tropicaux avec Graines d’Egusi Grillées",
-      "en-GH": "Tropical Fruit Salad with Toasted Egusi Seeds",
-      "en-KE": "Tropical Fruit Salad with Toasted Egusi Seeds",
+      "en-NG": "Tropical Fruit Salad with Toasted Egusi Seeds"
+      "fr-CI": "Salade de Fruits Tropicaux avec Graines d’Egusi Grillées"
+      "en-GH": "Tropical Fruit Salad with Toasted Egusi Seeds"
+      "en-KE": "Tropical Fruit Salad with Toasted Egusi Seeds"
       "en-ZA": "Tropical Fruit Salad with Toasted Egusi Seeds"
-    },
-    "calories": 260,
-    "protein": 7,
-    "carbs": 45,
-    "fat": 8,
-    "category": "breakfast",
-    "image": "https://images.unsplash.com/photo-1570197788417-0e823f8e6af8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    }
+    "calories": 260
+    "protein": 7
+    "carbs": 45
+    "fat": 8
+    "category": "breakfast"
+    "image": "https://images.unsplash.com/photo-1570197788417-0e823f8e6af8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     "preparation": {
-      "en-NG": "Mix 1/2 cup pineapple, 1/2 cup pawpaw, 1/2 banana, and 1/4 cup mango. Top with 2 tbsp toasted egusi seeds. Serve chilled.",
-      "fr-CI": "Mélangez 1/2 tasse d’ananas, 1/2 tasse de papaye, 1/2 banane et 1/4 tasse de mangue. Garnissez de 2 càs de graines d’Egusi grillées. Servez frais.",
-      "en-GH": "Combine pineapple, pawpaw, banana, and mango. Sprinkle with toasted egusi seeds.",
-      "en-KE": "Combine pineapple, pawpaw, banana, and mango. Sprinkle with toasted egusi seeds.",
+      "en-NG": "Mix 1/2 cup pineapple, 1/2 cup pawpaw, 1/2 banana, and 1/4 cup mango. Top with 2 tbsp toasted egusi seeds. Serve chilled."
+      "fr-CI": "Mélangez 1/2 tasse d’ananas, 1/2 tasse de papaye, 1/2 banane et 1/4 tasse de mangue. Garnissez de 2 càs de graines d’Egusi grillées. Servez frais."
+      "en-GH": "Combine pineapple, pawpaw, banana, and mango. Sprinkle with toasted egusi seeds."
+      "en-KE": "Combine pineapple, pawpaw, banana, and mango. Sprinkle with toasted egusi seeds."
       "en-ZA": "Combine pineapple, pawpaw, banana, and mango. Sprinkle with toasted egusi seeds."
-    },
-    "accessPlans": [1, 2, 3, 4]
-  },
+    }
+  }
   {
-    "id": "yam-boiled-tomato",
+    "id": "yam-boiled-tomato"
     "name": {
-      "en-NG": "Boiled Yam with Fresh Tomato Sauce",
-      "fr-CI": "Igname Bouillie avec Sauce Tomate Fraîche",
-      "en-GH": "Boiled Yam with Fresh Tomato Sauce",
-      "en-KE": "Boiled Yam with Fresh Tomato Sauce",
+      "en-NG": "Boiled Yam with Fresh Tomato Sauce"
+      "fr-CI": "Igname Bouillie avec Sauce Tomate Fraîche"
+      "en-GH": "Boiled Yam with Fresh Tomato Sauce"
+      "en-KE": "Boiled Yam with Fresh Tomato Sauce"
       "en-ZA": "Boiled Yam with Fresh Tomato Sauce"
-    },
-    "calories": 340,
-    "protein": 7,
-    "carbs": 70,
-    "fat": 3,
-    "category": "breakfast",
-    "image": "https://images.unsplash.com/photo-1625941378875-0ecbd76d5d45?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    }
+    "calories": 340
+    "protein": 7
+    "carbs": 70
+    "fat": 3
+    "category": "breakfast"
+    "image": "https://images.unsplash.com/photo-1625941378875-0ecbd76d5d45?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     "preparation": {
-      "en-NG": "Boil 2 cups yam cubes in salted water until tender. Prepare sauce with 2 tomatoes, 1/2 onion, 1 tsp oil. Serve hot.",
-      "fr-CI": "Faites bouillir 2 tasses d’igname en cubes dans de l’eau salée. Préparez une sauce avec 2 tomates, 1/2 oignon, 1 c. à c. d’huile. Servez chaud.",
-      "en-GH": "Boil yam and serve with fresh tomato sauce.",
-      "en-KE": "Boil yam and serve with fresh tomato sauce.",
+      "en-NG": "Boil 2 cups yam cubes in salted water until tender. Prepare sauce with 2 tomatoes, 1/2 onion, 1 tsp oil. Serve hot."
+      "fr-CI": "Faites bouillir 2 tasses d’igname en cubes dans de l’eau salée. Préparez une sauce avec 2 tomates, 1/2 oignon, 1 c. à c. d’huile. Servez chaud."
+      "en-GH": "Boil yam and serve with fresh tomato sauce."
+      "en-KE": "Boil yam and serve with fresh tomato sauce."
       "en-ZA": "Boil yam and serve with fresh tomato sauce."
-    },
-    "accessPlans": [1, 2, 3, 4]
-  },
+    }
+  }
   {
-    "id": "banana-baked",
+    "id": "banana-baked"
     "name": {
-      "en-NG": "Oven-Baked Banana with Cinnamon and Honey",
-      "fr-CI": "Banane au Four avec Cannelle et Miel",
-      "en-GH": "Oven-Baked Banana with Cinnamon and Honey",
-      "en-KE": "Oven-Baked Banana with Cinnamon and Honey",
+      "en-NG": "Oven-Baked Banana with Cinnamon and Honey"
+      "fr-CI": "Banane au Four avec Cannelle et Miel"
+      "en-GH": "Oven-Baked Banana with Cinnamon and Honey"
+      "en-KE": "Oven-Baked Banana with Cinnamon and Honey"
       "en-ZA": "Oven-Baked Banana with Cinnamon and Honey"
-    },
-    "calories": 210,
-    "protein": 2,
-    "carbs": 50,
-    "fat": 1,
-    "category": "breakfast",
-    "image": "https://images.unsplash.com/photo-1626076593691-39c2e675e4c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    }
+    "calories": 210
+    "protein": 2
+    "carbs": 50
+    "fat": 1
+    "category": "breakfast"
+    "image": "https://images.unsplash.com/photo-1626076593691-39c2e675e4c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     "preparation": {
-      "en-NG": "Slice 2 bananas. Sprinkle with 1/2 tsp cinnamon and drizzle 1 tsp honey. Bake at 180°C for 12 minutes. Serve warm.",
-      "fr-CI": "Coupez 2 bananes. Saupoudrez de 1/2 c. à c. de cannelle et arrosez de 1 c. à c. de miel. Cuisez au four 180°C pendant 12 minutes. Servez chaud.",
-      "en-GH": "Slice bananas, sprinkle cinnamon, drizzle honey, and bake.",
-      "en-KE": "Slice bananas, sprinkle cinnamon, drizzle honey, and bake.",
+      "en-NG": "Slice 2 bananas. Sprinkle with 1/2 tsp cinnamon and drizzle 1 tsp honey. Bake at 180°C for 12 minutes. Serve warm."
+      "fr-CI": "Coupez 2 bananes. Saupoudrez de 1/2 c. à c. de cannelle et arrosez de 1 c. à c. de miel. Cuisez au four 180°C pendant 12 minutes. Servez chaud."
+      "en-GH": "Slice bananas, sprinkle cinnamon, drizzle honey, and bake."
+      "en-KE": "Slice bananas, sprinkle cinnamon, drizzle honey, and bake."
       "en-ZA": "Slice bananas, sprinkle cinnamon, drizzle honey, and bake."
-    },
-    "accessPlans": [1, 2, 3, 4]
-  },
+    }
+  }
   {
-    "id": "oats-mango",
+    "id": "oats-mango"
     "name": {
-      "en-NG": "Oats Porridge with African Mango",
-      "fr-CI": "Bouillie d’Avoine avec Mangue Africaine",
-      "en-GH": "Oats Porridge with African Mango",
-      "en-KE": "Oats Porridge with African Mango",
+      "en-NG": "Oats Porridge with African Mango"
+      "fr-CI": "Bouillie d’Avoine avec Mangue Africaine"
+      "en-GH": "Oats Porridge with African Mango"
+      "en-KE": "Oats Porridge with African Mango"
       "en-ZA": "Oats Porridge with African Mango"
-    },
-    "calories": 280,
-    "protein": 9,
-    "carbs": 52,
-    "fat": 6,
-    "category": "breakfast",
-    "image": "https://images.unsplash.com/photo-1630948327768-9b85ce3d9a5c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    }
+    "calories": 280
+    "protein": 9
+    "carbs": 52
+    "fat": 6
+    "category": "breakfast"
+    "image": "https://images.unsplash.com/photo-1630948327768-9b85ce3d9a5c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     "preparation": {
-      "en-NG": "Cook 1/2 cup oats in 1 cup water. Add 1/4 cup diced African mango. Top with 1 tsp chopped cashew. Serve hot.",
-      "fr-CI": "Faites cuire 1/2 tasse d’avoine dans 1 tasse d’eau. Ajoutez 1/4 tasse de mangue africaine en dés. Garnissez de 1 c. à c. de noix de cajou hachées. Servez chaud.",
-      "en-GH": "Cook oats, add African mango, top with cashew.",
-      "en-KE": "Cook oats, add African mango, top with cashew.",
+      "en-NG": "Cook 1/2 cup oats in 1 cup water. Add 1/4 cup diced African mango. Top with 1 tsp chopped cashew. Serve hot."
+      "fr-CI": "Faites cuire 1/2 tasse d’avoine dans 1 tasse d’eau. Ajoutez 1/4 tasse de mangue africaine en dés. Garnissez de 1 c. à c. de noix de cajou hachées. Servez chaud."
+      "en-GH": "Cook oats, add African mango, top with cashew."
+      "en-KE": "Cook oats, add African mango, top with cashew."
       "en-ZA": "Cook oats, add African mango, top with cashew."
-    },
-    "accessPlans": [1, 2, 3, 4]
-  },
+    }
+  }
   {
-    "id": "egusi-light",
+    "id": "egusi-light"
     "name": {
-      "en-NG": "Light Egusi Soup with Eba Balls",
-      "fr-CI": "Soupe d’Egusi Légère avec Boulettes d’Eba",
-      "en-GH": "Light Egusi Soup with Eba Balls",
-      "en-KE": "Light Egusi Soup with Eba Balls",
+      "en-NG": "Light Egusi Soup with Eba Balls"
+      "fr-CI": "Soupe d’Egusi Légère avec Boulettes d’Eba"
+      "en-GH": "Light Egusi Soup with Eba Balls"
+      "en-KE": "Light Egusi Soup with Eba Balls"
       "en-ZA": "Light Egusi Soup with Eba Balls"
-    },
-    "calories": 400,
-    "protein": 15,
-    "carbs": 50,
-    "fat": 14,
-    "category": "breakfast",
-    "image": "https://images.unsplash.com/photo-1642479447339-ec69fef3c9a6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    }
+    "calories": 400
+    "protein": 15
+    "carbs": 50
+    "fat": 14
+    "category": "breakfast"
+    "image": "https://images.unsplash.com/photo-1642479447339-ec69fef3c9a6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     "preparation": {
-      "en-NG": "Cook 2 tbsp ground egusi with 1 tomato, 1/2 onion, 1 tsp oil, and spinach. Serve with 1/2 cup small eba balls (cassava flour).",
-      "fr-CI": "Faites cuire 2 càs d’Egusi moulu avec 1 tomate, 1/2 oignon, 1 c. à c. d’huile et épinards. Servez avec 1/2 tasse de petites boules d’eba (farine de manioc).",
-      "en-GH": "Cook egusi with tomato, onion, spinach. Serve with eba balls.",
-      "en-KE": "Cook egusi with tomato, onion, spinach. Serve with eba balls.",
+      "en-NG": "Cook 2 tbsp ground egusi with 1 tomato, 1/2 onion, 1 tsp oil, and spinach. Serve with 1/2 cup small eba balls (cassava flour)."
+      "fr-CI": "Faites cuire 2 càs d’Egusi moulu avec 1 tomate, 1/2 oignon, 1 c. à c. d’huile et épinards. Servez avec 1/2 tasse de petites boules d’eba (farine de manioc)."
+      "en-GH": "Cook egusi with tomato, onion, spinach. Serve with eba balls."
+      "en-KE": "Cook egusi with tomato, onion, spinach. Serve with eba balls."
       "en-ZA": "Cook egusi with tomato, onion, spinach. Serve with eba balls."
-    },
-    "accessPlans": [1, 2, 3, 4]
-  },
+    }
+  }
   {
-    "id": "amala-sweetpotato",
+    "id": "amala-sweetpotato"
     "name": {
-      "en-NG": "Sweet Potato Amala with Vegetable Sauce",
-      "fr-CI": "Amala de Patate Douce avec Sauce de Légumes",
-      "en-GH": "Sweet Potato Amala with Vegetable Sauce",
-      "en-KE": "Sweet Potato Amala with Vegetable Sauce",
+      "en-NG": "Sweet Potato Amala with Vegetable Sauce"
+      "fr-CI": "Amala de Patate Douce avec Sauce de Légumes"
+      "en-GH": "Sweet Potato Amala with Vegetable Sauce"
+      "en-KE": "Sweet Potato Amala with Vegetable Sauce"
       "en-ZA": "Sweet Potato Amala with Vegetable Sauce"
-    },
-    "calories": 370,
-    "protein": 7,
-    "carbs": 75,
-    "fat": 5,
-    "category": "breakfast",
-    "image": "https://images.unsplash.com/photo-1659535972624-30f6fc5f174f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    }
+    "calories": 370
+    "protein": 7
+    "carbs": 75
+    "fat": 5
+    "category": "breakfast"
+    "image": "https://images.unsplash.com/photo-1659535972624-30f6fc5f174f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     "preparation": {
-      "en-NG": "Mix 1/2 cup sweet potato flour with hot water to make amala. Serve with sauce made from 1 tomato, 1/2 onion, and spinach.",
-      "fr-CI": "Mélangez 1/2 tasse de farine de patate douce avec de l’eau chaude pour faire l’amala. Servez avec une sauce faite de 1 tomate, 1/2 oignon et épinards.",
-      "en-GH": "Prepare amala with sweet potato flour. Serve with light vegetable sauce.",
-      "en-KE": "Prepare amala with sweet potato flour. Serve with light vegetable sauce.",
+      "en-NG": "Mix 1/2 cup sweet potato flour with hot water to make amala. Serve with sauce made from 1 tomato, 1/2 onion, and spinach."
+      "fr-CI": "Mélangez 1/2 tasse de farine de patate douce avec de l’eau chaude pour faire l’amala. Servez avec une sauce faite de 1 tomate, 1/2 oignon et épinards."
+      "en-GH": "Prepare amala with sweet potato flour. Serve with light vegetable sauce."
+      "en-KE": "Prepare amala with sweet potato flour. Serve with light vegetable sauce."
       "en-ZA": "Prepare amala with sweet potato flour. Serve with light vegetable sauce."
-    },
-    "accessPlans": [1, 2, 3, 4]
-  },
+    }
+  }
   {
-    "id": "nigerian-avocado-toast",
+    "id": "nigerian-avocado-toast"
     "name": {
-      "en-NG": "Nigerian Whole Wheat Bread with Avocado",
-      "fr-CI": "Pain Nigérian Complet avec Avocat",
-      "en-GH": "Nigerian Whole Wheat Bread with Avocado",
-      "en-KE": "Nigerian Whole Wheat Bread with Avocado",
+      "en-NG": "Nigerian Whole Wheat Bread with Avocado"
+      "fr-CI": "Pain Nigérian Complet avec Avocat"
+      "en-GH": "Nigerian Whole Wheat Bread with Avocado"
+      "en-KE": "Nigerian Whole Wheat Bread with Avocado"
       "en-ZA": "Nigerian Whole Wheat Bread with Avocado"
-    },
-    "calories": 280,
-    "protein": 9,
-    "carbs": 40,
-    "fat": 11,
-    "category": "breakfast",
-    "image": "https://images.unsplash.com/photo-1617196038587-cc72bb6a2e0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    }
+    "calories": 280
+    "protein": 9
+    "carbs": 40
+    "fat": 11
+    "category": "breakfast"
+    "image": "https://images.unsplash.com/photo-1617196038587-cc72bb6a2e0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     "preparation": {
-      "en-NG": "Toast 2 slices whole wheat Nigerian bread. Mash 1/2 avocado with lemon and spread on bread. Serve fresh.",
-      "fr-CI": "Faites griller 2 tranches de pain nigérian complet. Écrasez 1/2 avocat avec du citron et tartinez sur le pain. Servez frais.",
-      "en-GH": "Toast bread, mash avocado, spread on bread.",
-      "en-KE": "Toast bread, mash avocado, spread on bread.",
+      "en-NG": "Toast 2 slices whole wheat Nigerian bread. Mash 1/2 avocado with lemon and spread on bread. Serve fresh."
+      "fr-CI": "Faites griller 2 tranches de pain nigérian complet. Écrasez 1/2 avocat avec du citron et tartinez sur le pain. Servez frais."
+      "en-GH": "Toast bread, mash avocado, spread on bread."
+      "en-KE": "Toast bread, mash avocado, spread on bread."
       "en-ZA": "Toast bread, mash avocado, spread on bread."
-    },
-    "accessPlans": [1, 2, 3, 4]
-  },
+    }
+  }
   {
-    "id": "masa-flatbread",
+    "id": "masa-flatbread"
     "name": {
-      "en-NG": "Masa (Rice Flatbread) with Light Tomato Dip",
-      "fr-CI": "Masa (Galette de Riz) avec Sauce Tomate Légère",
-      "en-GH": "Masa (Rice Flatbread) with Light Tomato Dip",
-      "en-KE": "Masa (Rice Flatbread) with Light Tomato Dip",
+      "en-NG": "Masa (Rice Flatbread) with Light Tomato Dip"
+      "fr-CI": "Masa (Galette de Riz) avec Sauce Tomate Légère"
+      "en-GH": "Masa (Rice Flatbread) with Light Tomato Dip"
+      "en-KE": "Masa (Rice Flatbread) with Light Tomato Dip"
       "en-ZA": "Masa (Rice Flatbread) with Light Tomato Dip"
-    },
-    "calories": 310,
-    "protein": 8,
-    "carbs": 60,
-    "fat": 6,
-    "category": "breakfast",
-    "image": "https://images.unsplash.com/photo-1604587508010-d7fa2a343b4f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    }
+    "calories": 310
+    "protein": 8
+    "carbs": 60
+    "fat": 6
+    "category": "breakfast"
+    "image": "https://images.unsplash.com/photo-1604587508010-d7fa2a343b4f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     "preparation": {
-      "en-NG": "Blend 1 cup soaked rice with 1/4 onion. Cook batter in greased pan until golden. Serve with tomato dip (1 tomato, 1/4 onion, seasoning).",
-      "fr-CI": "Mixez 1 tasse de riz trempé avec 1/4 oignon. Faites cuire la pâte dans une poêle graissée jusqu’à doré. Servez avec sauce tomate (1 tomate, 1/4 oignon, assaisonnement).",
-      "en-GH": "Blend rice, cook flatbread, and serve with tomato dip.",
-      "en-KE": "Blend rice, cook flatbread, and serve with tomato dip.",
+      "en-NG": "Blend 1 cup soaked rice with 1/4 onion. Cook batter in greased pan until golden. Serve with tomato dip (1 tomato, 1/4 onion, seasoning)."
+      "fr-CI": "Mixez 1 tasse de riz trempé avec 1/4 oignon. Faites cuire la pâte dans une poêle graissée jusqu’à doré. Servez avec sauce tomate (1 tomate, 1/4 oignon, assaisonnement)."
+      "en-GH": "Blend rice, cook flatbread, and serve with tomato dip."
+      "en-KE": "Blend rice, cook flatbread, and serve with tomato dip."
       "en-ZA": "Blend rice, cook flatbread, and serve with tomato dip."
-    },
-    "accessPlans": [1, 2, 3, 4]
-  },
+    }
+  }
   {
-    "id": "quinoa-egusi",
+    "id": "quinoa-egusi"
     "name": {
-      "en-NG": "Quinoa with Light Egusi Sauce",
-      "fr-CI": "Quinoa avec Sauce Egusi Légère",
-      "en-GH": "Quinoa with Light Egusi Sauce",
-      "en-KE": "Quinoa with Light Egusi Sauce",
+      "en-NG": "Quinoa with Light Egusi Sauce"
+      "fr-CI": "Quinoa avec Sauce Egusi Légère"
+      "en-GH": "Quinoa with Light Egusi Sauce"
+      "en-KE": "Quinoa with Light Egusi Sauce"
       "en-ZA": "Quinoa with Light Egusi Sauce"
-    },
-    "calories": 350,
-    "protein": 12,
-    "carbs": 55,
-    "fat": 9,
-    "category": "breakfast",
-    "image": "https://images.unsplash.com/photo-1598188306155-1d4b2fc90d1c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    }
+    "calories": 350
+    "protein": 12
+    "carbs": 55
+    "fat": 9
+    "category": "breakfast"
+    "image": "https://images.unsplash.com/photo-1598188306155-1d4b2fc90d1c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     "preparation": {
-      "en-NG": "Cook 1/2 cup quinoa in 1 cup water. Prepare light egusi sauce with 1 tbsp ground egusi, tomato, onion, and spinach. Serve together.",
-      "fr-CI": "Faites cuire 1/2 tasse de quinoa dans 1 tasse d’eau. Préparez une sauce légère d’Egusi avec 1 càs d’Egusi moulu, tomate, oignon et épinards. Servez ensemble.",
-      "en-GH": "Cook quinoa and serve with light egusi sauce.",
-      "en-KE": "Cook quinoa and serve with light egusi sauce.",
+      "en-NG": "Cook 1/2 cup quinoa in 1 cup water. Prepare light egusi sauce with 1 tbsp ground egusi, tomato, onion, and spinach. Serve together."
+      "fr-CI": "Faites cuire 1/2 tasse de quinoa dans 1 tasse d’eau. Préparez une sauce légère d’Egusi avec 1 càs d’Egusi moulu, tomate, oignon et épinards. Servez ensemble."
+      "en-GH": "Cook quinoa and serve with light egusi sauce."
+      "en-KE": "Cook quinoa and serve with light egusi sauce."
       "en-ZA": "Cook quinoa and serve with light egusi sauce."
-    },
-    "accessPlans": [1, 2, 3, 4]
-  },
+    }
+  }
   {
-    "id": "beans-corn-porridge",
+    "id": "beans-corn-porridge"
     "name": {
-      "en-NG": "Beans and Corn Porridge (Adalu)",
-      "fr-CI": "Bouillie de Haricots et Maïs (Adalu)",
-      "en-GH": "Beans and Corn Porridge (Adalu)",
-      "en-KE": "Beans and Corn Porridge (Adalu)",
+      "en-NG": "Beans and Corn Porridge (Adalu)"
+      "fr-CI": "Bouillie de Haricots et Maïs (Adalu)"
+      "en-GH": "Beans and Corn Porridge (Adalu)"
+      "en-KE": "Beans and Corn Porridge (Adalu)"
       "en-ZA": "Beans and Corn Porridge (Adalu)"
-    },
-    "calories": 360,
-    "protein": 16,
-    "carbs": 65,
-    "fat": 6,
-    "category": "breakfast",
-    "image": "https://images.unsplash.com/photo-1639744094296-35406c574ea8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    }
+    "calories": 360
+    "protein": 16
+    "carbs": 65
+    "fat": 6
+    "category": "breakfast"
+    "image": "https://images.unsplash.com/photo-1639744094296-35406c574ea8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     "preparation": {
-      "en-NG": "Cook 1 cup beans until soft. Add 1/2 cup fresh corn, 1 tomato, 1/2 onion, and a pinch of salt. Simmer 10 mins. Serve hot.",
-      "fr-CI": "Faites cuire 1 tasse de haricots jusqu’à tendres. Ajoutez 1/2 tasse de maïs frais, 1 tomate, 1/2 oignon et une pincée de sel. Laissez mijoter 10 min. Servez chaud.",
-      "en-GH": "Cook beans, add corn, tomato, onion, and simmer.",
-      "en-KE": "Cook beans, add corn, tomato, onion, and simmer.",
+      "en-NG": "Cook 1 cup beans until soft. Add 1/2 cup fresh corn, 1 tomato, 1/2 onion, and a pinch of salt. Simmer 10 mins. Serve hot."
+      "fr-CI": "Faites cuire 1 tasse de haricots jusqu’à tendres. Ajoutez 1/2 tasse de maïs frais, 1 tomate, 1/2 oignon et une pincée de sel. Laissez mijoter 10 min. Servez chaud."
+      "en-GH": "Cook beans, add corn, tomato, onion, and simmer."
+      "en-KE": "Cook beans, add corn, tomato, onion, and simmer."
       "en-ZA": "Cook beans, add corn, tomato, onion, and simmer."
-    },
-    "accessPlans": [1, 2, 3, 4]
-  },
+    }
+  }
   {
-    "id": "pap-groundnut",
+    "id": "pap-groundnut"
     "name": {
-      "en-NG": "Pap with Groundnut and Milk",
-      "fr-CI": "Bouillie (Pap) avec Arachides et Lait",
-      "en-GH": "Pap with Groundnut and Milk",
-      "en-KE": "Pap with Groundnut and Milk",
+      "en-NG": "Pap with Groundnut and Milk"
+      "fr-CI": "Bouillie (Pap) avec Arachides et Lait"
+      "en-GH": "Pap with Groundnut and Milk"
+      "en-KE": "Pap with Groundnut and Milk"
       "en-ZA": "Pap with Groundnut and Milk"
-    },
-    "calories": 300,
-    "protein": 10,
-    "carbs": 50,
-    "fat": 9,
-    "category": "breakfast",
-    "image": "https://images.unsplash.com/photo-1625941486615-ccf422ec6b4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    }
+    "calories": 300
+    "protein": 10
+    "carbs": 50
+    "fat": 9
+    "category": "breakfast"
+    "image": "https://images.unsplash.com/photo-1625941486615-ccf422ec6b4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     "preparation": {
-      "en-NG": "Prepare 1 cup pap (ogi) with hot water. Add 1 tbsp groundnut paste and 1/4 cup low-fat milk. Stir and serve warm.",
-      "fr-CI": "Préparez 1 tasse de bouillie (ogi) avec de l’eau chaude. Ajoutez 1 càs de pâte d’arachide et 1/4 tasse de lait écrémé. Remuez et servez chaud.",
-      "en-GH": "Make pap, mix with groundnut paste and milk.",
-      "en-KE": "Make pap, mix with groundnut paste and milk.",
+      "en-NG": "Prepare 1 cup pap (ogi) with hot water. Add 1 tbsp groundnut paste and 1/4 cup low-fat milk. Stir and serve warm."
+      "fr-CI": "Préparez 1 tasse de bouillie (ogi) avec de l’eau chaude. Ajoutez 1 càs de pâte d’arachide et 1/4 tasse de lait écrémé. Remuez et servez chaud."
+      "en-GH": "Make pap, mix with groundnut paste and milk."
+      "en-KE": "Make pap, mix with groundnut paste and milk."
       "en-ZA": "Make pap, mix with groundnut paste and milk."
-    },
-    "accessPlans": [1, 2, 3, 4]
-  },
+    }
+  }
   {
-    "id": "moinmoin-sardine",
+    "id": "moinmoin-sardine"
     "name": {
-      "en-NG": "Moi Moi with Sardine Filling",
-      "fr-CI": "Moi Moi Farci à la Sardine",
-      "en-GH": "Moi Moi with Sardine Filling",
-      "en-KE": "Moi Moi with Sardine Filling",
+      "en-NG": "Moi Moi with Sardine Filling"
+      "fr-CI": "Moi Moi Farci à la Sardine"
+      "en-GH": "Moi Moi with Sardine Filling"
+      "en-KE": "Moi Moi with Sardine Filling"
       "en-ZA": "Moi Moi with Sardine Filling"
-    },
-    "calories": 330,
-    "protein": 21,
-    "carbs": 38,
-    "fat": 9,
-    "category": "breakfast",
-    "image": "https://images.unsplash.com/photo-1594136662381-4b72a0cd6d3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    }
+    "calories": 330
+    "protein": 21
+    "carbs": 38
+    "fat": 9
+    "category": "breakfast"
+    "image": "https://images.unsplash.com/photo-1594136662381-4b72a0cd6d3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     "preparation": {
-      "en-NG": "Blend 1 cup peeled beans with pepper, onion, and seasoning. Add 1 tbsp mashed sardine. Steam in ramekin for 40 mins. Serve warm.",
-      "fr-CI": "Mixez 1 tasse de haricots épluchés avec du piment, oignon et assaisonnement. Ajoutez 1 càs de sardine écrasée. Cuisez à la vapeur 40 min. Servez chaud.",
-      "en-GH": "Blend beans, add sardine, steam until cooked.",
-      "en-KE": "Blend beans, add sardine, steam until cooked.",
+      "en-NG": "Blend 1 cup peeled beans with pepper, onion, and seasoning. Add 1 tbsp mashed sardine. Steam in ramekin for 40 mins. Serve warm."
+      "fr-CI": "Mixez 1 tasse de haricots épluchés avec du piment, oignon et assaisonnement. Ajoutez 1 càs de sardine écrasée. Cuisez à la vapeur 40 min. Servez chaud."
+      "en-GH": "Blend beans, add sardine, steam until cooked."
+      "en-KE": "Blend beans, add sardine, steam until cooked."
       "en-ZA": "Blend beans, add sardine, steam until cooked."
-    },
-    "accessPlans": [1, 2, 3, 4]
-  },
+    }
+  }
   {
-    "id": "sweetpotato-porridge",
+    "id": "sweetpotato-porridge"
     "name": {
-      "en-NG": "Sweet Potato Porridge with Ugu",
-      "fr-CI": "Bouillie de Patate Douce avec Ugu",
-      "en-GH": "Sweet Potato Porridge with Ugu",
-      "en-KE": "Sweet Potato Porridge with Ugu",
+      "en-NG": "Sweet Potato Porridge with Ugu"
+      "fr-CI": "Bouillie de Patate Douce avec Ugu"
+      "en-GH": "Sweet Potato Porridge with Ugu"
+      "en-KE": "Sweet Potato Porridge with Ugu"
       "en-ZA": "Sweet Potato Porridge with Ugu"
-    },
-    "calories": 340,
-    "protein": 8,
-    "carbs": 72,
-    "fat": 4,
-    "category": "breakfast",
-    "image": "https://images.unsplash.com/photo-1627308595181-3e05f3a2c50b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    }
+    "calories": 340
+    "protein": 8
+    "carbs": 72
+    "fat": 4
+    "category": "breakfast"
+    "image": "https://images.unsplash.com/photo-1627308595181-3e05f3a2c50b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     "preparation": {
-      "en-NG": "Cook 2 cups diced sweet potato with onion, tomato, and seasoning. Add chopped ugu leaves at the end. Serve hot.",
-      "fr-CI": "Faites cuire 2 tasses de patate douce en dés avec oignon, tomate et assaisonnement. Ajoutez les feuilles d’ugu hachées en fin de cuisson. Servez chaud.",
-      "en-GH": "Cook sweet potato with veggies, add ugu leaves.",
-      "en-KE": "Cook sweet potato with veggies, add ugu leaves.",
+      "en-NG": "Cook 2 cups diced sweet potato with onion, tomato, and seasoning. Add chopped ugu leaves at the end. Serve hot."
+      "fr-CI": "Faites cuire 2 tasses de patate douce en dés avec oignon, tomate et assaisonnement. Ajoutez les feuilles d’ugu hachées en fin de cuisson. Servez chaud."
+      "en-GH": "Cook sweet potato with veggies, add ugu leaves."
+      "en-KE": "Cook sweet potato with veggies, add ugu leaves."
       "en-ZA": "Cook sweet potato with veggies, add ugu leaves."
-    },
-    "accessPlans": [1, 2, 3, 4]
-  },
+    }
+  }
   {
-    "id": "akamu-tigernut",
+    "id": "akamu-tigernut"
     "name": {
-      "en-NG": "Akamu with Tigernut Milk",
-      "fr-CI": "Akamu avec Lait de Souchet",
-      "en-GH": "Akamu with Tigernut Milk",
-      "en-KE": "Akamu with Tigernut Milk",
+      "en-NG": "Akamu with Tigernut Milk"
+      "fr-CI": "Akamu avec Lait de Souchet"
+      "en-GH": "Akamu with Tigernut Milk"
+      "en-KE": "Akamu with Tigernut Milk"
       "en-ZA": "Akamu with Tigernut Milk"
-    },
-    "calories": 270,
-    "protein": 5,
-    "carbs": 55,
-    "fat": 5,
-    "category": "breakfast",
-    "image": "https://images.unsplash.com/photo-1632174115951-4a58e32e41ff?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    }
+    "calories": 270
+    "protein": 5
+    "carbs": 55
+    "fat": 5
+    "category": "breakfast"
+    "image": "https://images.unsplash.com/photo-1632174115951-4a58e32e41ff?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     "preparation": {
-      "en-NG": "Prepare 1 cup akamu with hot water. Add 1/2 cup tigernut milk. Sweeten with honey if desired.",
-      "fr-CI": "Préparez 1 tasse d’akamu avec de l’eau chaude. Ajoutez 1/2 tasse de lait de souchet. Sucrez avec du miel si désiré.",
-      "en-GH": "Make akamu and add tigernut milk.",
-      "en-KE": "Make akamu and add tigernut milk.",
+      "en-NG": "Prepare 1 cup akamu with hot water. Add 1/2 cup tigernut milk. Sweeten with honey if desired."
+      "fr-CI": "Préparez 1 tasse d’akamu avec de l’eau chaude. Ajoutez 1/2 tasse de lait de souchet. Sucrez avec du miel si désiré."
+      "en-GH": "Make akamu and add tigernut milk."
+      "en-KE": "Make akamu and add tigernut milk."
       "en-ZA": "Make akamu and add tigernut milk."
-    },
-    "accessPlans": [1, 2, 3, 4]
-  },
+    }
+  }
   {
-    "id": "millet-pap-dates",
+    "id": "millet-pap-dates"
     "name": {
-      "en-NG": "Millet Pap with Dates",
-      "fr-CI": "Bouillie de Mil avec Dattes",
-      "en-GH": "Millet Pap with Dates",
-      "en-KE": "Millet Pap with Dates",
+      "en-NG": "Millet Pap with Dates"
+      "fr-CI": "Bouillie de Mil avec Dattes"
+      "en-GH": "Millet Pap with Dates"
+      "en-KE": "Millet Pap with Dates"
       "en-ZA": "Millet Pap with Dates"
-    },
-    "calories": 290,
-    "protein": 7,
-    "carbs": 58,
-    "fat": 4,
-    "category": "breakfast",
-    "image": "https://images.unsplash.com/photo-1617195737369-64f5a85b4525?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    }
+    "calories": 290
+    "protein": 7
+    "carbs": 58
+    "fat": 4
+    "category": "breakfast"
+    "image": "https://images.unsplash.com/photo-1617195737369-64f5a85b4525?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     "preparation": {
-      "en-NG": "Cook 1/2 cup millet flour with 1 cup water. Add 2 chopped dates for sweetness. Serve warm.",
-      "fr-CI": "Faites cuire 1/2 tasse de farine de mil avec 1 tasse d’eau. Ajoutez 2 dattes hachées pour sucrer. Servez chaud.",
-      "en-GH": "Cook millet pap and add chopped dates.",
-      "en-KE": "Cook millet pap and add chopped dates.",
+      "en-NG": "Cook 1/2 cup millet flour with 1 cup water. Add 2 chopped dates for sweetness. Serve warm."
+      "fr-CI": "Faites cuire 1/2 tasse de farine de mil avec 1 tasse d’eau. Ajoutez 2 dattes hachées pour sucrer. Servez chaud."
+      "en-GH": "Cook millet pap and add chopped dates."
+      "en-KE": "Cook millet pap and add chopped dates."
       "en-ZA": "Cook millet pap and add chopped dates."
-    },
-    "accessPlans": [1, 2, 3, 4]
-  },
+    }
+  }
   {
-    "id": "brown-rice-papaya",
+    "id": "brown-rice-papaya"
     "name": {
-      "en-NG": "Brown Rice Porridge with Papaya",
-      "fr-CI": "Bouillie de Riz Brun avec Papaye",
-      "en-GH": "Brown Rice Porridge with Papaya",
-      "en-KE": "Brown Rice Porridge with Papaya",
+      "en-NG": "Brown Rice Porridge with Papaya"
+      "fr-CI": "Bouillie de Riz Brun avec Papaye"
+      "en-GH": "Brown Rice Porridge with Papaya"
+      "en-KE": "Brown Rice Porridge with Papaya"
       "en-ZA": "Brown Rice Porridge with Papaya"
-    },
-    "calories": 310,
-    "protein": 6,
-    "carbs": 65,
-    "fat": 3,
-    "category": "breakfast",
-    "image": "https://images.unsplash.com/photo-1617195738747-41d6124ee198?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    }
+    "calories": 310
+    "protein": 6
+    "carbs": 65
+    "fat": 3
+    "category": "breakfast"
+    "image": "https://images.unsplash.com/photo-1617195738747-41d6124ee198?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     "preparation": {
-      "en-NG": "Cook 1/2 cup brown rice in water until soft. Add 1/4 cup diced papaya and 1 tsp honey. Serve warm.",
-      "fr-CI": "Faites cuire 1/2 tasse de riz brun dans l’eau jusqu’à tendre. Ajoutez 1/4 tasse de papaye en dés et 1 c. à c. de miel. Servez chaud.",
-      "en-GH": "Cook brown rice, add papaya and honey.",
-      "en-KE": "Cook brown rice, add papaya and honey.",
+      "en-NG": "Cook 1/2 cup brown rice in water until soft. Add 1/4 cup diced papaya and 1 tsp honey. Serve warm."
+      "fr-CI": "Faites cuire 1/2 tasse de riz brun dans l’eau jusqu’à tendre. Ajoutez 1/4 tasse de papaye en dés et 1 c. à c. de miel. Servez chaud."
+      "en-GH": "Cook brown rice, add papaya and honey."
+      "en-KE": "Cook brown rice, add papaya and honey."
       "en-ZA": "Cook brown rice, add papaya and honey."
-    },
-    "accessPlans": [1, 2, 3, 4]
-  },
+    }
+  }
   {
-    "id": "eggplant-stew-yam",
+    "id": "eggplant-stew-yam"
     "name": {
-      "en-NG": "Eggplant Stew with Boiled Yam",
-      "fr-CI": "Ragoût d’Aubergine avec Igname Bouillie",
-      "en-GH": "Eggplant Stew with Boiled Yam",
-      "en-KE": "Eggplant Stew with Boiled Yam",
+      "en-NG": "Eggplant Stew with Boiled Yam"
+      "fr-CI": "Ragoût d’Aubergine avec Igname Bouillie"
+      "en-GH": "Eggplant Stew with Boiled Yam"
+      "en-KE": "Eggplant Stew with Boiled Yam"
       "en-ZA": "Eggplant Stew with Boiled Yam"
-    },
-    "calories": 320,
-    "protein": 8,
-    "carbs": 65,
-    "fat": 5,
-    "category": "breakfast",
-    "image": "https://images.unsplash.com/photo-1639744306599-607f2f1f0cf7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    }
+    "calories": 320
+    "protein": 8
+    "carbs": 65
+    "fat": 5
+    "category": "breakfast"
+    "image": "https://images.unsplash.com/photo-1639744306599-607f2f1f0cf7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     "preparation": {
-      "en-NG": "Cook 2 cups yam cubes. Prepare stew with 1 cup diced eggplant, tomato, onion, and 1 tsp oil. Serve together.",
-      "fr-CI": "Faites cuire 2 tasses d’igname en cubes. Préparez un ragoût avec 1 tasse d’aubergine en dés, tomate, oignon et 1 c. à c. d’huile. Servez ensemble.",
-      "en-GH": "Cook yam and serve with eggplant stew.",
-      "en-KE": "Cook yam and serve with eggplant stew.",
+      "en-NG": "Cook 2 cups yam cubes. Prepare stew with 1 cup diced eggplant, tomato, onion, and 1 tsp oil. Serve together."
+      "fr-CI": "Faites cuire 2 tasses d’igname en cubes. Préparez un ragoût avec 1 tasse d’aubergine en dés, tomate, oignon et 1 c. à c. d’huile. Servez ensemble."
+      "en-GH": "Cook yam and serve with eggplant stew."
+      "en-KE": "Cook yam and serve with eggplant stew."
       "en-ZA": "Cook yam and serve with eggplant stew."
-    },
-    "accessPlans": [1, 2, 3, 4]
-  },
+    }
+  }
   {
-    "id": "avocado-suya-toast",
+    "id": "avocado-suya-toast"
     "name": {
-      "en-NG": "Avocado Toast with Suya Spice",
-      "fr-CI": "Toast à l’Avocat avec Épices Suya",
-      "en-GH": "Avocado Toast with Suya Spice",
-      "en-KE": "Avocado Toast with Suya Spice",
+      "en-NG": "Avocado Toast with Suya Spice"
+      "fr-CI": "Toast à l’Avocat avec Épices Suya"
+      "en-GH": "Avocado Toast with Suya Spice"
+      "en-KE": "Avocado Toast with Suya Spice"
       "en-ZA": "Avocado Toast with Suya Spice"
-    },
-    "calories": 290,
-    "protein": 7,
-    "carbs": 38,
-    "fat": 13,
-    "category": "breakfast",
-    "image": "https://images.unsplash.com/photo-1617196038752-458bc1d08dcb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    }
+    "calories": 290
+    "protein": 7
+    "carbs": 38
+    "fat": 13
+    "category": "breakfast"
+    "image": "https://images.unsplash.com/photo-1617196038752-458bc1d08dcb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     "preparation": {
-      "en-NG": "Toast 2 slices bread. Mash 1/2 avocado, sprinkle 1 tsp suya spice, and spread on bread. Serve fresh.",
-      "fr-CI": "Faites griller 2 tranches de pain. Écrasez 1/2 avocat, saupoudrez 1 c. à c. d’épices suya et tartinez sur le pain. Servez frais.",
-      "en-GH": "Toast bread, add avocado with suya spice.",
-      "en-KE": "Toast bread, add avocado with suya spice.",
+      "en-NG": "Toast 2 slices bread. Mash 1/2 avocado, sprinkle 1 tsp suya spice, and spread on bread. Serve fresh."
+      "fr-CI": "Faites griller 2 tranches de pain. Écrasez 1/2 avocat, saupoudrez 1 c. à c. d’épices suya et tartinez sur le pain. Servez frais."
+      "en-GH": "Toast bread, add avocado with suya spice."
+      "en-KE": "Toast bread, add avocado with suya spice."
       "en-ZA": "Toast bread, add avocado with suya spice."
-    },
-    "accessPlans": [1, 2, 3, 4]
-  },
+    }
+  }
   {
-    "id": "tofu-vegetable-stirfry",
+    "id": "tofu-vegetable-stirfry"
     "name": {
-      "en-NG": "Tofu Stir-Fry with Vegetables",
-      "fr-CI": "Sauté de Tofu avec Légumes",
-      "en-GH": "Tofu Stir-Fry with Vegetables",
-      "en-KE": "Tofu Stir-Fry with Vegetables",
+      "en-NG": "Tofu Stir-Fry with Vegetables"
+      "fr-CI": "Sauté de Tofu avec Légumes"
+      "en-GH": "Tofu Stir-Fry with Vegetables"
+      "en-KE": "Tofu Stir-Fry with Vegetables"
       "en-ZA": "Tofu Stir-Fry with Vegetables"
-    },
-    "calories": 280,
-    "protein": 18,
-    "carbs": 20,
-    "fat": 14,
-    "category": "breakfast",
-    "image": "https://images.unsplash.com/photo-1625941486615-ccf422ec6b4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    }
+    "calories": 280
+    "protein": 18
+    "carbs": 20
+    "fat": 14
+    "category": "breakfast"
+    "image": "https://images.unsplash.com/photo-1625941486615-ccf422ec6b4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     "preparation": {
-      "en-NG": "Cube 150g tofu. Stir-fry with 1 cup mixed vegetables (carrot, green beans, bell pepper) and 1 tsp olive oil. Season with pinch of salt and serve warm.",
-      "fr-CI": "Coupez 150g de tofu en dés. Faites sauter avec 1 tasse de légumes mélangés (carotte, haricots verts, poivron) et 1 c. à c. d’huile d’olive. Assaisonnez et servez chaud.",
-      "en-GH": "Cube tofu, stir-fry with vegetables, season and serve.",
-      "en-KE": "Cube tofu, stir-fry with vegetables, season and serve.",
+      "en-NG": "Cube 150g tofu. Stir-fry with 1 cup mixed vegetables (carrot, green beans, bell pepper) and 1 tsp olive oil. Season with pinch of salt and serve warm."
+      "fr-CI": "Coupez 150g de tofu en dés. Faites sauter avec 1 tasse de légumes mélangés (carotte, haricots verts, poivron) et 1 c. à c. d’huile d’olive. Assaisonnez et servez chaud."
+      "en-GH": "Cube tofu, stir-fry with vegetables, season and serve."
+      "en-KE": "Cube tofu, stir-fry with vegetables, season and serve."
       "en-ZA": "Cube tofu, stir-fry with vegetables, season and serve."
-    },
-    "accessPlans": [1, 2, 3, 4]
-  },
+    }
+  }
   {
-    "id": "sweetpotato-toast",
+    "id": "sweetpotato-toast"
     "name": {
-      "en-NG": "Sweet Potato Toast with Egg",
-      "fr-CI": "Toast de Patate Douce avec Œuf",
-      "en-GH": "Sweet Potato Toast with Egg",
-      "en-KE": "Sweet Potato Toast with Egg",
+      "en-NG": "Sweet Potato Toast with Egg"
+      "fr-CI": "Toast de Patate Douce avec Œuf"
+      "en-GH": "Sweet Potato Toast with Egg"
+      "en-KE": "Sweet Potato Toast with Egg"
       "en-ZA": "Sweet Potato Toast with Egg"
-    },
-    "calories": 310,
-    "protein": 12,
-    "carbs": 45,
-    "fat": 9,
-    "category": "breakfast",
-    "image": "https://images.unsplash.com/photo-1627308595181-3e05f3a2c50b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    }
+    "calories": 310
+    "protein": 12
+    "carbs": 45
+    "fat": 9
+    "category": "breakfast"
+    "image": "https://images.unsplash.com/photo-1627308595181-3e05f3a2c50b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     "preparation": {
-      "en-NG": "Slice 1 medium sweet potato into thin slices. Bake until tender. Top with 1 boiled egg, sliced, and season with pepper.",
-      "fr-CI": "Tranchez 1 patate douce moyenne. Faites cuire au four jusqu’à tendre. Garnissez avec 1 œuf bouilli tranché et assaisonnez.",
-      "en-GH": "Bake sweet potato slices, top with egg.",
-      "en-KE": "Bake sweet potato slices, top with egg.",
+      "en-NG": "Slice 1 medium sweet potato into thin slices. Bake until tender. Top with 1 boiled egg, sliced, and season with pepper."
+      "fr-CI": "Tranchez 1 patate douce moyenne. Faites cuire au four jusqu’à tendre. Garnissez avec 1 œuf bouilli tranché et assaisonnez."
+      "en-GH": "Bake sweet potato slices, top with egg."
+      "en-KE": "Bake sweet potato slices, top with egg."
       "en-ZA": "Bake sweet potato slices, top with egg."
-    },
-    "accessPlans": [1, 2, 3, 4]
-  },
+    }
+  }
   {
-    "id": "cornmeal-porridge",
+    "id": "cornmeal-porridge"
     "name": {
-      "en-NG": "Cornmeal Porridge with Coconut Milk",
-      "fr-CI": "Bouillie de Semoule de Maïs au Lait de Coco",
-      "en-GH": "Cornmeal Porridge with Coconut Milk",
-      "en-KE": "Cornmeal Porridge with Coconut Milk",
+      "en-NG": "Cornmeal Porridge with Coconut Milk"
+      "fr-CI": "Bouillie de Semoule de Maïs au Lait de Coco"
+      "en-GH": "Cornmeal Porridge with Coconut Milk"
+      "en-KE": "Cornmeal Porridge with Coconut Milk"
       "en-ZA": "Cornmeal Porridge with Coconut Milk"
-    },
-    "calories": 295,
-    "protein": 6,
-    "carbs": 60,
-    "fat": 7,
-    "category": "breakfast",
-    "image": "https://images.unsplash.com/photo-1617195737369-64f5a85b4525?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    }
+    "calories": 295
+    "protein": 6
+    "carbs": 60
+    "fat": 7
+    "category": "breakfast"
+    "image": "https://images.unsplash.com/photo-1617195737369-64f5a85b4525?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     "preparation": {
-      "en-NG": "Cook 1/2 cup cornmeal in 2 cups water until thick. Stir in 1/2 cup coconut milk and sweeten with 1 tsp honey.",
-      "fr-CI": "Faites cuire 1/2 tasse de semoule de maïs dans 2 tasses d’eau. Ajoutez 1/2 tasse de lait de coco et 1 c. à c. de miel.",
-      "en-GH": "Cook cornmeal, add coconut milk and honey.",
-      "en-KE": "Cook cornmeal, add coconut milk and honey.",
+      "en-NG": "Cook 1/2 cup cornmeal in 2 cups water until thick. Stir in 1/2 cup coconut milk and sweeten with 1 tsp honey."
+      "fr-CI": "Faites cuire 1/2 tasse de semoule de maïs dans 2 tasses d’eau. Ajoutez 1/2 tasse de lait de coco et 1 c. à c. de miel."
+      "en-GH": "Cook cornmeal, add coconut milk and honey."
+      "en-KE": "Cook cornmeal, add coconut milk and honey."
       "en-ZA": "Cook cornmeal, add coconut milk and honey."
-    },
-    "accessPlans": [1, 2, 3, 4]
-  },
+    }
+  }
   {
-    "id": "vegetable-frittata",
+    "id": "vegetable-frittata"
     "name": {
-      "en-NG": "Nigerian Vegetable Frittata",
-      "fr-CI": "Frittata Nigériane aux Légumes",
-      "en-GH": "Nigerian Vegetable Frittata",
-      "en-KE": "Nigerian Vegetable Frittata",
+      "en-NG": "Nigerian Vegetable Frittata"
+      "fr-CI": "Frittata Nigériane aux Légumes"
+      "en-GH": "Nigerian Vegetable Frittata"
+      "en-KE": "Nigerian Vegetable Frittata"
       "en-ZA": "Nigerian Vegetable Frittata"
-    },
-    "calories": 350,
-    "protein": 19,
-    "carbs": 10,
-    "fat": 25,
-    "category": "breakfast",
-    "image": "https://images.unsplash.com/photo-1594136662381-4b72a0cd6d3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    }
+    "calories": 350
+    "protein": 19
+    "carbs": 10
+    "fat": 25
+    "category": "breakfast"
+    "image": "https://images.unsplash.com/photo-1594136662381-4b72a0cd6d3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     "preparation": {
-      "en-NG": "Beat 3 eggs with 1/2 cup diced vegetables (tomato, bell pepper, spinach). Cook in skillet with 1 tsp olive oil until firm.",
-      "fr-CI": "Battez 3 œufs avec 1/2 tasse de légumes en dés. Faites cuire dans une poêle avec 1 c. à c. d’huile d’olive jusqu’à ferme.",
-      "en-GH": "Beat eggs with vegetables, cook in skillet.",
-      "en-KE": "Beat eggs with vegetables, cook in skillet.",
+      "en-NG": "Beat 3 eggs with 1/2 cup diced vegetables (tomato, bell pepper, spinach). Cook in skillet with 1 tsp olive oil until firm."
+      "fr-CI": "Battez 3 œufs avec 1/2 tasse de légumes en dés. Faites cuire dans une poêle avec 1 c. à c. d’huile d’olive jusqu’à ferme."
+      "en-GH": "Beat eggs with vegetables, cook in skillet."
+      "en-KE": "Beat eggs with vegetables, cook in skillet."
       "en-ZA": "Beat eggs with vegetables, cook in skillet."
-    },
-    "accessPlans": [1, 2, 3, 4]
-  },
+    }
+  }
   {
-    "id": "bean-flour-pancake",
+    "id": "bean-flour-pancake"
     "name": {
-      "en-NG": "Bean Flour Pancakes",
-      "fr-CI": "Crêpes à la Farine de Haricots",
-      "en-GH": "Bean Flour Pancakes",
-      "en-KE": "Bean Flour Pancakes",
+      "en-NG": "Bean Flour Pancakes"
+      "fr-CI": "Crêpes à la Farine de Haricots"
+      "en-GH": "Bean Flour Pancakes"
+      "en-KE": "Bean Flour Pancakes"
       "en-ZA": "Bean Flour Pancakes"
-    },
-    "calories": 310,
-    "protein": 15,
-    "carbs": 45,
-    "fat": 8,
-    "category": "breakfast",
-    "image": "https://images.unsplash.com/photo-1617196038752-458bc1d08dcb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    }
+    "calories": 310
+    "protein": 15
+    "carbs": 45
+    "fat": 8
+    "category": "breakfast"
+    "image": "https://images.unsplash.com/photo-1617196038752-458bc1d08dcb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     "preparation": {
-      "en-NG": "Mix 1 cup bean flour with 1 egg, 1/4 cup water, and seasonings. Fry small pancakes with 1 tsp oil until golden.",
-      "fr-CI": "Mélangez 1 tasse de farine de haricots avec 1 œuf, 1/4 tasse d’eau et assaisonnements. Faites frire en petites crêpes avec 1 c. à c. d’huile.",
-      "en-GH": "Mix bean flour with egg and fry small pancakes.",
-      "en-KE": "Mix bean flour with egg and fry small pancakes.",
+      "en-NG": "Mix 1 cup bean flour with 1 egg, 1/4 cup water, and seasonings. Fry small pancakes with 1 tsp oil until golden."
+      "fr-CI": "Mélangez 1 tasse de farine de haricots avec 1 œuf, 1/4 tasse d’eau et assaisonnements. Faites frire en petites crêpes avec 1 c. à c. d’huile."
+      "en-GH": "Mix bean flour with egg and fry small pancakes."
+      "en-KE": "Mix bean flour with egg and fry small pancakes."
       "en-ZA": "Mix bean flour with egg and fry small pancakes."
-    },
-    "accessPlans": [1, 2, 3, 4]
-  },
+    }
+  }
   {
-    "id": "yam-veggie-hash",
+    "id": "yam-veggie-hash"
     "name": {
-      "en-NG": "Yam and Vegetable Hash",
-      "fr-CI": "Poêlée d’Igname et Légumes",
-      "en-GH": "Yam and Vegetable Hash",
-      "en-KE": "Yam and Vegetable Hash",
+      "en-NG": "Yam and Vegetable Hash"
+      "fr-CI": "Poêlée d’Igname et Légumes"
+      "en-GH": "Yam and Vegetable Hash"
+      "en-KE": "Yam and Vegetable Hash"
       "en-ZA": "Yam and Vegetable Hash"
-    },
-    "calories": 330,
-    "protein": 9,
-    "carbs": 68,
-    "fat": 6,
-    "category": "breakfast",
-    "image": "https://images.unsplash.com/photo-1639744306599-607f2f1f0cf7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    }
+    "calories": 330
+    "protein": 9
+    "carbs": 68
+    "fat": 6
+    "category": "breakfast"
+    "image": "https://images.unsplash.com/photo-1639744306599-607f2f1f0cf7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     "preparation": {
-      "en-NG": "Dice 1 cup yam and boil until soft. Fry lightly with 1/2 cup chopped vegetables (tomato, spinach, onion) using 1 tsp oil.",
-      "fr-CI": "Coupez 1 tasse d’igname et faites bouillir. Faites revenir avec 1/2 tasse de légumes hachés en utilisant 1 c. à c. d’huile.",
-      "en-GH": "Boil yam, fry with vegetables.",
-      "en-KE": "Boil yam, fry with vegetables.",
+      "en-NG": "Dice 1 cup yam and boil until soft. Fry lightly with 1/2 cup chopped vegetables (tomato, spinach, onion) using 1 tsp oil."
+      "fr-CI": "Coupez 1 tasse d’igname et faites bouillir. Faites revenir avec 1/2 tasse de légumes hachés en utilisant 1 c. à c. d’huile."
+      "en-GH": "Boil yam, fry with vegetables."
+      "en-KE": "Boil yam, fry with vegetables."
       "en-ZA": "Boil yam, fry with vegetables."
-    },
-    "accessPlans": [1, 2, 3, 4]
-  },
+    }
+  }
   {
-    "id": "banana-oat-muffin",
+    "id": "banana-oat-muffin"
     "name": {
-      "en-NG": "Banana Oat Muffins",
-      "fr-CI": "Muffins Banane et Avoine",
-      "en-GH": "Banana Oat Muffins",
-      "en-KE": "Banana Oat Muffins",
+      "en-NG": "Banana Oat Muffins"
+      "fr-CI": "Muffins Banane et Avoine"
+      "en-GH": "Banana Oat Muffins"
+      "en-KE": "Banana Oat Muffins"
       "en-ZA": "Banana Oat Muffins"
-    },
-    "calories": 260,
-    "protein": 7,
-    "carbs": 48,
-    "fat": 5,
-    "category": "breakfast",
-    "image": "https://images.unsplash.com/photo-1632174115951-4a58e32e41ff?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    }
+    "calories": 260
+    "protein": 7
+    "carbs": 48
+    "fat": 5
+    "category": "breakfast"
+    "image": "https://images.unsplash.com/photo-1632174115951-4a58e32e41ff?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     "preparation": {
-      "en-NG": "Mix 1 mashed banana with 1/2 cup oats, 1 egg, and 1 tsp honey. Bake in muffin tins at 180°C for 20 mins.",
-      "fr-CI": "Mélangez 1 banane écrasée avec 1/2 tasse d’avoine, 1 œuf et 1 c. à c. de miel. Faites cuire à 180°C pendant 20 min.",
-      "en-GH": "Mix banana, oats, egg, bake as muffins.",
-      "en-KE": "Mix banana, oats, egg, bake as muffins.",
+      "en-NG": "Mix 1 mashed banana with 1/2 cup oats, 1 egg, and 1 tsp honey. Bake in muffin tins at 180°C for 20 mins."
+      "fr-CI": "Mélangez 1 banane écrasée avec 1/2 tasse d’avoine, 1 œuf et 1 c. à c. de miel. Faites cuire à 180°C pendant 20 min."
+      "en-GH": "Mix banana, oats, egg, bake as muffins."
+      "en-KE": "Mix banana, oats, egg, bake as muffins."
       "en-ZA": "Mix banana, oats, egg, bake as muffins."
-    },
-    "accessPlans": [1, 2, 3, 4]
-  },
+    }
+  }
   {
-    "id": "plantain-chia-pudding",
+    "id": "plantain-chia-pudding"
     "name": {
-      "en-NG": "Plantain Chia Pudding",
-      "fr-CI": "Pudding de Chia à la Banane Plantain",
-      "en-GH": "Plantain Chia Pudding",
-      "en-KE": "Plantain Chia Pudding",
+      "en-NG": "Plantain Chia Pudding"
+      "fr-CI": "Pudding de Chia à la Banane Plantain"
+      "en-GH": "Plantain Chia Pudding"
+      "en-KE": "Plantain Chia Pudding"
       "en-ZA": "Plantain Chia Pudding"
-    },
-    "calories": 280,
-    "protein": 6,
-    "carbs": 55,
-    "fat": 7,
-    "category": "breakfast",
-    "image": "https://images.unsplash.com/photo-1617195738747-41d6124ee198?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    }
+    "calories": 280
+    "protein": 6
+    "carbs": 55
+    "fat": 7
+    "category": "breakfast"
+    "image": "https://images.unsplash.com/photo-1617195738747-41d6124ee198?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     "preparation": {
-      "en-NG": "Blend 1 ripe plantain with 1/4 cup chia seeds and 1 cup milk. Chill 4 hours until thick. Serve cold.",
-      "fr-CI": "Mixez 1 plantain mûr avec 1/4 tasse de graines de chia et 1 tasse de lait. Réfrigérez 4h. Servez froid.",
-      "en-GH": "Blend plantain, chia seeds, milk, chill.",
-      "en-KE": "Blend plantain, chia seeds, milk, chill.",
+      "en-NG": "Blend 1 ripe plantain with 1/4 cup chia seeds and 1 cup milk. Chill 4 hours until thick. Serve cold."
+      "fr-CI": "Mixez 1 plantain mûr avec 1/4 tasse de graines de chia et 1 tasse de lait. Réfrigérez 4h. Servez froid."
+      "en-GH": "Blend plantain, chia seeds, milk, chill."
+      "en-KE": "Blend plantain, chia seeds, milk, chill."
       "en-ZA": "Blend plantain, chia seeds, milk, chill."
-    },
-    "accessPlans": [1, 2, 3, 4]
-  },
+    }
+  }
   {
-    "id": "fish-pepper-soup",
+    "id": "fish-pepper-soup"
     "name": {
-      "en-NG": "Light Fish Pepper Soup",
-      "fr-CI": "Soupe Légère de Poisson Pimentée",
-      "en-GH": "Light Fish Pepper Soup",
-      "en-KE": "Light Fish Pepper Soup",
+      "en-NG": "Light Fish Pepper Soup"
+      "fr-CI": "Soupe Légère de Poisson Pimentée"
+      "en-GH": "Light Fish Pepper Soup"
+      "en-KE": "Light Fish Pepper Soup"
       "en-ZA": "Light Fish Pepper Soup"
-    },
-    "calories": 230,
-    "protein": 22,
-    "carbs": 5,
-    "fat": 12,
-    "category": "breakfast",
-    "image": "https://images.unsplash.com/photo-1617196038752-458bc1d08dcb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    }
+    "calories": 230
+    "protein": 22
+    "carbs": 5
+    "fat": 12
+    "category": "breakfast"
+    "image": "https://images.unsplash.com/photo-1617196038752-458bc1d08dcb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     "preparation": {
-      "en-NG": "Simmer 200g fresh fish with pepper, onion, garlic, ginger, and light spices in 3 cups water for 20 mins. Serve hot.",
-      "fr-CI": "Faites mijoter 200g de poisson frais avec piment, oignon, ail, gingembre et épices dans 3 tasses d’eau pendant 20 min. Servez chaud.",
-      "en-GH": "Simmer fish with pepper and spices in water.",
-      "en-KE": "Simmer fish with pepper and spices in water.",
+      "en-NG": "Simmer 200g fresh fish with pepper, onion, garlic, ginger, and light spices in 3 cups water for 20 mins. Serve hot."
+      "fr-CI": "Faites mijoter 200g de poisson frais avec piment, oignon, ail, gingembre et épices dans 3 tasses d’eau pendant 20 min. Servez chaud."
+      "en-GH": "Simmer fish with pepper and spices in water."
+      "en-KE": "Simmer fish with pepper and spices in water."
       "en-ZA": "Simmer fish with pepper and spices in water."
-    },
-    "accessPlans": [1, 2, 3, 4]
-  },
+    }
+  }
   {
-    "id": "avocado-toast-ugu",
+    "id": "avocado-toast-ugu"
     "name": {
-      "en-NG": "Avocado Toast with Ugu Leaves",
-      "fr-CI": "Toast à l’Avocat avec Feuilles d’Ugu",
-      "en-GH": "Avocado Toast with Ugu Leaves",
-      "en-KE": "Avocado Toast with Ugu Leaves",
+      "en-NG": "Avocado Toast with Ugu Leaves"
+      "fr-CI": "Toast à l’Avocat avec Feuilles d’Ugu"
+      "en-GH": "Avocado Toast with Ugu Leaves"
+      "en-KE": "Avocado Toast with Ugu Leaves"
       "en-ZA": "Avocado Toast with Ugu Leaves"
-    },
-    "calories": 320,
-    "protein": 9,
-    "carbs": 38,
-    "fat": 16,
-    "category": "breakfast",
-    "image": "https://images.unsplash.com/photo-1603048297172-c92544798ccd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    }
+    "calories": 320
+    "protein": 9
+    "carbs": 38
+    "fat": 16
+    "category": "breakfast"
+    "image": "https://images.unsplash.com/photo-1603048297172-c92544798ccd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     "preparation": {
-      "en-NG": "Toast 2 slices whole grain bread. Mash 1/2 avocado and spread on toast. Top with 1/4 cup chopped ugu leaves and sprinkle black pepper.",
-      "fr-CI": "Grillez 2 tranches de pain complet. Écrasez 1/2 avocat et étalez sur le pain. Ajoutez 1/4 tasse de feuilles d’ugu hachées et poivrez.",
-      "en-GH": "Toast bread, spread avocado, top with ugu leaves.",
-      "en-KE": "Toast bread, spread avocado, top with ugu leaves.",
+      "en-NG": "Toast 2 slices whole grain bread. Mash 1/2 avocado and spread on toast. Top with 1/4 cup chopped ugu leaves and sprinkle black pepper."
+      "fr-CI": "Grillez 2 tranches de pain complet. Écrasez 1/2 avocat et étalez sur le pain. Ajoutez 1/4 tasse de feuilles d’ugu hachées et poivrez."
+      "en-GH": "Toast bread, spread avocado, top with ugu leaves."
+      "en-KE": "Toast bread, spread avocado, top with ugu leaves."
       "en-ZA": "Toast bread, spread avocado, top with ugu leaves."
-    },
-    "accessPlans": [1, 2, 3, 4]
-  },
+    }
+  }
   {
-    "id": "oatmeal-tigernut",
+    "id": "oatmeal-tigernut"
     "name": {
-      "en-NG": "Oatmeal with Tigernut Milk",
-      "fr-CI": "Gruau à Lait de Noix Tigrées",
-      "en-GH": "Oatmeal with Tigernut Milk",
-      "en-KE": "Oatmeal with Tigernut Milk",
+      "en-NG": "Oatmeal with Tigernut Milk"
+      "fr-CI": "Gruau à Lait de Noix Tigrées"
+      "en-GH": "Oatmeal with Tigernut Milk"
+      "en-KE": "Oatmeal with Tigernut Milk"
       "en-ZA": "Oatmeal with Tigernut Milk"
-    },
-    "calories": 290,
-    "protein": 8,
-    "carbs": 52,
-    "fat": 7,
-    "category": "breakfast",
-    "image": "https://images.unsplash.com/photo-1590080875831-bc5dc2b1b1c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    }
+    "calories": 290
+    "protein": 8
+    "carbs": 52
+    "fat": 7
+    "category": "breakfast"
+    "image": "https://images.unsplash.com/photo-1590080875831-bc5dc2b1b1c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     "preparation": {
-      "en-NG": "Cook 1/2 cup oats in 1 cup tigernut milk for 5 mins. Sweeten with 1 tsp honey and top with sliced banana.",
-      "fr-CI": "Faites cuire 1/2 tasse d’avoine dans 1 tasse de lait de noix tigrées pendant 5 min. Ajoutez 1 c. à c. de miel et des tranches de banane.",
-      "en-GH": "Cook oats in tigernut milk, add honey and banana.",
-      "en-KE": "Cook oats in tigernut milk, add honey and banana.",
+      "en-NG": "Cook 1/2 cup oats in 1 cup tigernut milk for 5 mins. Sweeten with 1 tsp honey and top with sliced banana."
+      "fr-CI": "Faites cuire 1/2 tasse d’avoine dans 1 tasse de lait de noix tigrées pendant 5 min. Ajoutez 1 c. à c. de miel et des tranches de banane."
+      "en-GH": "Cook oats in tigernut milk, add honey and banana."
+      "en-KE": "Cook oats in tigernut milk, add honey and banana."
       "en-ZA": "Cook oats in tigernut milk, add honey and banana."
-    },
-    "accessPlans": [1, 2, 3, 4]
-  },
+    }
+  }
   {
-    "id": "spiced-millet-porridge",
+    "id": "spiced-millet-porridge"
     "name": {
-      "en-NG": "Spiced Millet Porridge",
-      "fr-CI": "Bouillie de Mil Épicée",
-      "en-GH": "Spiced Millet Porridge",
-      "en-KE": "Spiced Millet Porridge",
+      "en-NG": "Spiced Millet Porridge"
+      "fr-CI": "Bouillie de Mil Épicée"
+      "en-GH": "Spiced Millet Porridge"
+      "en-KE": "Spiced Millet Porridge"
       "en-ZA": "Spiced Millet Porridge"
-    },
-    "calories": 300,
-    "protein": 7,
-    "carbs": 58,
-    "fat": 6,
-    "category": "breakfast",
-    "image": "https://images.unsplash.com/photo-1587731596440-e2f1a0d5e442?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    }
+    "calories": 300
+    "protein": 7
+    "carbs": 58
+    "fat": 6
+    "category": "breakfast"
+    "image": "https://images.unsplash.com/photo-1587731596440-e2f1a0d5e442?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     "preparation": {
-      "en-NG": "Boil 1/2 cup millet in 2 cups water until soft. Add 1/2 tsp cinnamon, 1/4 tsp ginger powder, and 1 tsp honey. Stir well.",
-      "fr-CI": "Faites cuire 1/2 tasse de mil dans 2 tasses d’eau. Ajoutez 1/2 c. à c. de cannelle, 1/4 c. à c. de gingembre en poudre et 1 c. à c. de miel.",
-      "en-GH": "Cook millet, add spices and honey.",
-      "en-KE": "Cook millet, add spices and honey.",
+      "en-NG": "Boil 1/2 cup millet in 2 cups water until soft. Add 1/2 tsp cinnamon, 1/4 tsp ginger powder, and 1 tsp honey. Stir well."
+      "fr-CI": "Faites cuire 1/2 tasse de mil dans 2 tasses d’eau. Ajoutez 1/2 c. à c. de cannelle, 1/4 c. à c. de gingembre en poudre et 1 c. à c. de miel."
+      "en-GH": "Cook millet, add spices and honey."
+      "en-KE": "Cook millet, add spices and honey."
       "en-ZA": "Cook millet, add spices and honey."
-    },
-    "accessPlans": [1, 2, 3, 4]
-  },
+    }
+  }
   {
-    "id": "eggplant-stew-toast",
+    "id": "eggplant-stew-toast"
     "name": {
-      "en-NG": "Eggplant Stew with Toast",
-      "fr-CI": "Ragoût d’Aubergine avec Toast",
-      "en-GH": "Eggplant Stew with Toast",
-      "en-KE": "Eggplant Stew with Toast",
+      "en-NG": "Eggplant Stew with Toast"
+      "fr-CI": "Ragoût d’Aubergine avec Toast"
+      "en-GH": "Eggplant Stew with Toast"
+      "en-KE": "Eggplant Stew with Toast"
       "en-ZA": "Eggplant Stew with Toast"
-    },
-    "calories": 310,
-    "protein": 10,
-    "carbs": 42,
-    "fat": 12,
-    "category": "breakfast",
-    "image": "https://images.unsplash.com/photo-1603048637371-b2c73b0f7c23?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    }
+    "calories": 310
+    "protein": 10
+    "carbs": 42
+    "fat": 12
+    "category": "breakfast"
+    "image": "https://images.unsplash.com/photo-1603048637371-b2c73b0f7c23?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     "preparation": {
-      "en-NG": "Cook 1 cup chopped eggplant with tomato, onion, and garlic in 1 tsp oil until tender. Serve with 2 slices whole grain toast.",
-      "fr-CI": "Faites cuire 1 tasse d’aubergine avec tomate, oignon et ail dans 1 c. à c. d’huile. Servez avec 2 tranches de pain complet grillé.",
-      "en-GH": "Cook eggplant stew, serve with toast.",
-      "en-KE": "Cook eggplant stew, serve with toast.",
+      "en-NG": "Cook 1 cup chopped eggplant with tomato, onion, and garlic in 1 tsp oil until tender. Serve with 2 slices whole grain toast."
+      "fr-CI": "Faites cuire 1 tasse d’aubergine avec tomate, oignon et ail dans 1 c. à c. d’huile. Servez avec 2 tranches de pain complet grillé."
+      "en-GH": "Cook eggplant stew, serve with toast."
+      "en-KE": "Cook eggplant stew, serve with toast."
       "en-ZA": "Cook eggplant stew, serve with toast."
-    },
-    "accessPlans": [1, 2, 3, 4]
-  },
+    }
+  }
   {
-    "id": "okra-soup-light",
+    "id": "okra-soup-light"
     "name": {
-      "en-NG": "Light Okra Soup with Fish",
-      "fr-CI": "Soupe Légère de Gombo avec Poisson",
-      "en-GH": "Light Okra Soup with Fish",
-      "en-KE": "Light Okra Soup with Fish",
+      "en-NG": "Light Okra Soup with Fish"
+      "fr-CI": "Soupe Légère de Gombo avec Poisson"
+      "en-GH": "Light Okra Soup with Fish"
+      "en-KE": "Light Okra Soup with Fish"
       "en-ZA": "Light Okra Soup with Fish"
-    },
-    "calories": 240,
-    "protein": 20,
-    "carbs": 9,
-    "fat": 13,
-    "category": "breakfast",
-    "image": "https://images.unsplash.com/photo-1599029534989-184983f3646d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    }
+    "calories": 240
+    "protein": 20
+    "carbs": 9
+    "fat": 13
+    "category": "breakfast"
+    "image": "https://images.unsplash.com/photo-1599029534989-184983f3646d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     "preparation": {
-      "en-NG": "Simmer 200g fish with 1 cup sliced okra, onion, and pepper in 2 cups water for 15 mins. Serve hot.",
-      "fr-CI": "Faites mijoter 200g de poisson avec 1 tasse de gombo, oignon et piment dans 2 tasses d’eau pendant 15 min. Servez chaud.",
-      "en-GH": "Simmer fish with okra and spices.",
-      "en-KE": "Simmer fish with okra and spices.",
+      "en-NG": "Simmer 200g fish with 1 cup sliced okra, onion, and pepper in 2 cups water for 15 mins. Serve hot."
+      "fr-CI": "Faites mijoter 200g de poisson avec 1 tasse de gombo, oignon et piment dans 2 tasses d’eau pendant 15 min. Servez chaud."
+      "en-GH": "Simmer fish with okra and spices."
+      "en-KE": "Simmer fish with okra and spices."
       "en-ZA": "Simmer fish with okra and spices."
-    },
-    "accessPlans": [1, 2, 3, 4]
-  },
+    }
+  }
   {
-    "id": "chia-coconut-parfait",
+    "id": "chia-coconut-parfait"
     "name": {
-      "en-NG": "Chia Coconut Parfait",
-      "fr-CI": "Parfait Coco-Chia",
-      "en-GH": "Chia Coconut Parfait",
-      "en-KE": "Chia Coconut Parfait",
+      "en-NG": "Chia Coconut Parfait"
+      "fr-CI": "Parfait Coco-Chia"
+      "en-GH": "Chia Coconut Parfait"
+      "en-KE": "Chia Coconut Parfait"
       "en-ZA": "Chia Coconut Parfait"
-    },
-    "calories": 270,
-    "protein": 7,
-    "carbs": 34,
-    "fat": 12,
-    "category": "breakfast",
-    "image": "https://images.unsplash.com/photo-1617196027613-44af0c5f3d67?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    }
+    "calories": 270
+    "protein": 7
+    "carbs": 34
+    "fat": 12
+    "category": "breakfast"
+    "image": "https://images.unsplash.com/photo-1617196027613-44af0c5f3d67?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     "preparation": {
-      "en-NG": "Mix 1/4 cup chia seeds with 1 cup coconut milk. Chill overnight. Layer with diced pineapple and mango before serving.",
-      "fr-CI": "Mélangez 1/4 tasse de graines de chia avec 1 tasse de lait de coco. Réfrigérez toute la nuit. Ajoutez ananas et mangue en dés.",
-      "en-GH": "Mix chia with coconut milk, chill, add fruit.",
-      "en-KE": "Mix chia with coconut milk, chill, add fruit.",
+      "en-NG": "Mix 1/4 cup chia seeds with 1 cup coconut milk. Chill overnight. Layer with diced pineapple and mango before serving."
+      "fr-CI": "Mélangez 1/4 tasse de graines de chia avec 1 tasse de lait de coco. Réfrigérez toute la nuit. Ajoutez ananas et mangue en dés."
+      "en-GH": "Mix chia with coconut milk, chill, add fruit."
+      "en-KE": "Mix chia with coconut milk, chill, add fruit."
       "en-ZA": "Mix chia with coconut milk, chill, add fruit."
-    },
-    "accessPlans": [1, 2, 3, 4]
-  },
+    }
+  }
   {
-    "id": "moi-moi-egg",
+    "id": "moi-moi-egg"
     "name": {
-      "en-NG": "Moi Moi with Egg Filling",
-      "fr-CI": "Moi Moi Farci à l’Œuf",
-      "en-GH": "Moi Moi with Egg Filling",
-      "en-KE": "Moi Moi with Egg Filling",
+      "en-NG": "Moi Moi with Egg Filling"
+      "fr-CI": "Moi Moi Farci à l’Œuf"
+      "en-GH": "Moi Moi with Egg Filling"
+      "en-KE": "Moi Moi with Egg Filling"
       "en-ZA": "Moi Moi with Egg Filling"
-    },
-    "calories": 330,
-    "protein": 22,
-    "carbs": 28,
-    "fat": 14,
-    "category": "breakfast",
-    "image": "https://images.unsplash.com/photo-1603048598819-7acdfa1bba93?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    }
+    "calories": 330
+    "protein": 22
+    "carbs": 28
+    "fat": 14
+    "category": "breakfast"
+    "image": "https://images.unsplash.com/photo-1603048598819-7acdfa1bba93?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     "preparation": {
-      "en-NG": "Blend 1 cup peeled beans with pepper, onion, and 1 tbsp oil. Pour into ramekin, add 1 boiled egg, steam for 40 mins.",
-      "fr-CI": "Mixez 1 tasse de haricots épluchés avec piment, oignon et 1 c. à s. d’huile. Versez dans un moule, ajoutez 1 œuf bouilli et cuisez à la vapeur 40 min.",
-      "en-GH": "Blend beans, add egg, steam until set.",
-      "en-KE": "Blend beans, add egg, steam until set.",
+      "en-NG": "Blend 1 cup peeled beans with pepper, onion, and 1 tbsp oil. Pour into ramekin, add 1 boiled egg, steam for 40 mins."
+      "fr-CI": "Mixez 1 tasse de haricots épluchés avec piment, oignon et 1 c. à s. d’huile. Versez dans un moule, ajoutez 1 œuf bouilli et cuisez à la vapeur 40 min."
+      "en-GH": "Blend beans, add egg, steam until set."
+      "en-KE": "Blend beans, add egg, steam until set."
       "en-ZA": "Blend beans, add egg, steam until set."
-    },
-    "accessPlans": [1, 2, 3, 4]
-  },
+    }
+  }
   {
-    "id": "fruit-salad-peanuts",
+    "id": "fruit-salad-peanuts"
     "name": {
-      "en-NG": "Tropical Fruit Salad with Peanuts",
-      "fr-CI": "Salade de Fruits Tropicaux aux Arachides",
-      "en-GH": "Tropical Fruit Salad with Peanuts",
-      "en-KE": "Tropical Fruit Salad with Peanuts",
+      "en-NG": "Tropical Fruit Salad with Peanuts"
+      "fr-CI": "Salade de Fruits Tropicaux aux Arachides"
+      "en-GH": "Tropical Fruit Salad with Peanuts"
+      "en-KE": "Tropical Fruit Salad with Peanuts"
       "en-ZA": "Tropical Fruit Salad with Peanuts"
-    },
-    "calories": 250,
-    "protein": 6,
-    "carbs": 42,
-    "fat": 9,
-    "category": "breakfast",
-    "image": "https://images.unsplash.com/photo-1590080876192-9a1f7a955a20?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    }
+    "calories": 250
+    "protein": 6
+    "carbs": 42
+    "fat": 9
+    "category": "breakfast"
+    "image": "https://images.unsplash.com/photo-1590080876192-9a1f7a955a20?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     "preparation": {
-      "en-NG": "Mix diced pineapple, mango, banana, and papaya (2 cups total). Sprinkle 2 tbsp roasted peanuts on top before serving.",
-      "fr-CI": "Mélangez ananas, mangue, banane et papaye (2 tasses). Ajoutez 2 c. à s. d’arachides grillées sur le dessus.",
-      "en-GH": "Mix tropical fruits, add peanuts.",
-      "en-KE": "Mix tropical fruits, add peanuts.",
+      "en-NG": "Mix diced pineapple, mango, banana, and papaya (2 cups total). Sprinkle 2 tbsp roasted peanuts on top before serving."
+      "fr-CI": "Mélangez ananas, mangue, banane et papaye (2 tasses). Ajoutez 2 c. à s. d’arachides grillées sur le dessus."
+      "en-GH": "Mix tropical fruits, add peanuts."
+      "en-KE": "Mix tropical fruits, add peanuts."
       "en-ZA": "Mix tropical fruits, add peanuts."
-    },
-    "accessPlans": [1, 2, 3, 4]
-  },
+    }
+  }
   {
-    "id": "smoked-fish-toast",
+    "id": "smoked-fish-toast"
     "name": {
-      "en-NG": "Smoked Fish Spread on Toast",
-      "fr-CI": "Tartine au Poisson Fumé",
-      "en-GH": "Smoked Fish Spread on Toast",
-      "en-KE": "Smoked Fish Spread on Toast",
+      "en-NG": "Smoked Fish Spread on Toast"
+      "fr-CI": "Tartine au Poisson Fumé"
+      "en-GH": "Smoked Fish Spread on Toast"
+      "en-KE": "Smoked Fish Spread on Toast"
       "en-ZA": "Smoked Fish Spread on Toast"
-    },
-    "calories": 280,
-    "protein": 18,
-    "carbs": 30,
-    "fat": 9,
-    "category": "breakfast",
-    "image": "https://images.unsplash.com/photo-1612197514505-8f6e9d902d31?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    }
+    "calories": 280
+    "protein": 18
+    "carbs": 30
+    "fat": 9
+    "category": "breakfast"
+    "image": "https://images.unsplash.com/photo-1612197514505-8f6e9d902d31?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     "preparation": {
-      "en-NG": "Mash 100g smoked fish with 1 tsp olive oil and onion. Spread on 2 slices of toasted bread.",
-      "fr-CI": "Écrasez 100g de poisson fumé avec 1 c. à c. d’huile d’olive et oignon. Étalez sur 2 tranches de pain grillé.",
-      "en-GH": "Mash smoked fish, spread on toast.",
-      "en-KE": "Mash smoked fish, spread on toast.",
+      "en-NG": "Mash 100g smoked fish with 1 tsp olive oil and onion. Spread on 2 slices of toasted bread."
+      "fr-CI": "Écrasez 100g de poisson fumé avec 1 c. à c. d’huile d’olive et oignon. Étalez sur 2 tranches de pain grillé."
+      "en-GH": "Mash smoked fish, spread on toast."
+      "en-KE": "Mash smoked fish, spread on toast."
       "en-ZA": "Mash smoked fish, spread on toast."
-    },
-    "accessPlans": [1, 2, 3, 4]
-  },
+    }
+  }
   {
-    "id": "yam-avocado-bowl",
+    "id": "yam-avocado-bowl"
     "name": {
-      "en-NG": "Yam and Avocado Bowl",
-      "fr-CI": "Bol d’Igname et Avocat",
-      "en-GH": "Yam and Avocado Bowl",
-      "en-KE": "Yam and Avocado Bowl",
+      "en-NG": "Yam and Avocado Bowl"
+      "fr-CI": "Bol d’Igname et Avocat"
+      "en-GH": "Yam and Avocado Bowl"
+      "en-KE": "Yam and Avocado Bowl"
       "en-ZA": "Yam and Avocado Bowl"
-    },
-    "calories": 340,
-    "protein": 7,
-    "carbs": 62,
-    "fat": 12,
-    "category": "breakfast",
-    "image": "https://images.unsplash.com/photo-1618477461855-7c47a5f3b6c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    }
+    "calories": 340
+    "protein": 7
+    "carbs": 62
+    "fat": 12
+    "category": "breakfast"
+    "image": "https://images.unsplash.com/photo-1618477461855-7c47a5f3b6c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     "preparation": {
-      "en-NG": "Boil 1 cup diced yam until tender. Mash with 1/2 avocado and season with lemon juice and black pepper.",
-      "fr-CI": "Faites bouillir 1 tasse d’igname en dés. Écrasez avec 1/2 avocat et assaisonnez avec jus de citron et poivre.",
-      "en-GH": "Boil yam, mash with avocado, season.",
-      "en-KE": "Boil yam, mash with avocado, season.",
+      "en-NG": "Boil 1 cup diced yam until tender. Mash with 1/2 avocado and season with lemon juice and black pepper."
+      "fr-CI": "Faites bouillir 1 tasse d’igname en dés. Écrasez avec 1/2 avocat et assaisonnez avec jus de citron et poivre."
+      "en-GH": "Boil yam, mash with avocado, season."
+      "en-KE": "Boil yam, mash with avocado, season."
       "en-ZA": "Boil yam, mash with avocado, season."
-    },
-    "accessPlans": [1, 2, 3, 4]
-  },
+    }
+  }
   {
-    "id": "plantain-omelette",
+    "id": "plantain-omelette"
     "name": {
-      "en-NG": "Plantain Omelette",
-      "fr-CI": "Omelette à la Banane Plantain",
-      "en-GH": "Plantain Omelette",
-      "en-KE": "Plantain Omelette",
+      "en-NG": "Plantain Omelette"
+      "fr-CI": "Omelette à la Banane Plantain"
+      "en-GH": "Plantain Omelette"
+      "en-KE": "Plantain Omelette"
       "en-ZA": "Plantain Omelette"
-    },
-    "calories": 310,
-    "protein": 14,
-    "carbs": 28,
-    "fat": 16,
-    "category": "breakfast",
-    "image": "https://images.unsplash.com/photo-1625941487344-ecf9a55da60a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    }
+    "calories": 310
+    "protein": 14
+    "carbs": 28
+    "fat": 16
+    "category": "breakfast"
+    "image": "https://images.unsplash.com/photo-1625941487344-ecf9a55da60a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     "preparation": {
-      "en-NG": "Slice 1/2 ripe plantain and sauté in 1 tsp oil. Beat 2 eggs, pour over plantain, cook until firm.",
-      "fr-CI": "Tranchez 1/2 plantain mûr et faites sauter dans 1 c. à c. d’huile. Battez 2 œufs, versez et cuisez jusqu’à ferme.",
-      "en-GH": "Sauté plantain, add eggs, cook omelette.",
-      "en-KE": "Sauté plantain, add eggs, cook omelette.",
+      "en-NG": "Slice 1/2 ripe plantain and sauté in 1 tsp oil. Beat 2 eggs, pour over plantain, cook until firm."
+      "fr-CI": "Tranchez 1/2 plantain mûr et faites sauter dans 1 c. à c. d’huile. Battez 2 œufs, versez et cuisez jusqu’à ferme."
+      "en-GH": "Sauté plantain, add eggs, cook omelette."
+      "en-KE": "Sauté plantain, add eggs, cook omelette."
       "en-ZA": "Sauté plantain, add eggs, cook omelette."
-    },
-    "accessPlans": [1, 2, 3, 4]
-  },
+    }
+  }
   {
-    "id": "tigernut-smoothie",
+    "id": "tigernut-smoothie"
     "name": {
-      "en-NG": "Tigernut Smoothie",
-      "fr-CI": "Smoothie de Noix Tigrées",
-      "en-GH": "Tigernut Smoothie",
-      "en-KE": "Tigernut Smoothie",
+      "en-NG": "Tigernut Smoothie"
+      "fr-CI": "Smoothie de Noix Tigrées"
+      "en-GH": "Tigernut Smoothie"
+      "en-KE": "Tigernut Smoothie"
       "en-ZA": "Tigernut Smoothie"
-    },
-    "calories": 280,
-    "protein": 6,
-    "carbs": 44,
-    "fat": 10,
-    "category": "breakfast",
-    "image": "https://images.unsplash.com/photo-1625941486819-16d2b8897e5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    }
+    "calories": 280
+    "protein": 6
+    "carbs": 44
+    "fat": 10
+    "category": "breakfast"
+    "image": "https://images.unsplash.com/photo-1625941486819-16d2b8897e5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     "preparation": {
-      "en-NG": "Blend 1/2 cup soaked tigernuts with 1 banana, 1 cup water, and 1 tsp honey until smooth.",
-      "fr-CI": "Mixez 1/2 tasse de noix tigrées trempées avec 1 banane, 1 tasse d’eau et 1 c. à c. de miel.",
-      "en-GH": "Blend tigernuts, banana, water, honey.",
-      "en-KE": "Blend tigernuts, banana, water, honey.",
+      "en-NG": "Blend 1/2 cup soaked tigernuts with 1 banana, 1 cup water, and 1 tsp honey until smooth."
+      "fr-CI": "Mixez 1/2 tasse de noix tigrées trempées avec 1 banane, 1 tasse d’eau et 1 c. à c. de miel."
+      "en-GH": "Blend tigernuts, banana, water, honey."
+      "en-KE": "Blend tigernuts, banana, water, honey."
       "en-ZA": "Blend tigernuts, banana, water, honey."
-    },
-    "accessPlans": [1, 2, 3, 4]
-  },
+    }
+  }
   {
-    "id": "cabbage-egg-stirfry",
+    "id": "cabbage-egg-stirfry"
     "name": {
-      "en-NG": "Cabbage and Egg Stir-Fry",
-      "fr-CI": "Sauté de Chou et Œufs",
-      "en-GH": "Cabbage and Egg Stir-Fry",
-      "en-KE": "Cabbage and Egg Stir-Fry",
+      "en-NG": "Cabbage and Egg Stir-Fry"
+      "fr-CI": "Sauté de Chou et Œufs"
+      "en-GH": "Cabbage and Egg Stir-Fry"
+      "en-KE": "Cabbage and Egg Stir-Fry"
       "en-ZA": "Cabbage and Egg Stir-Fry"
-    },
-    "calories": 260,
-    "protein": 12,
-    "carbs": 14,
-    "fat": 18,
-    "category": "breakfast",
-    "image": "https://images.unsplash.com/photo-1603048622756-cafebc4ef0c7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    }
+    "calories": 260
+    "protein": 12
+    "carbs": 14
+    "fat": 18
+    "category": "breakfast"
+    "image": "https://images.unsplash.com/photo-1603048622756-cafebc4ef0c7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     "preparation": {
-      "en-NG": "Sauté 1 cup shredded cabbage in 1 tsp oil. Add 2 beaten eggs and cook until scrambled together.",
-      "fr-CI": "Faites sauter 1 tasse de chou dans 1 c. à c. d’huile. Ajoutez 2 œufs battus et brouillez.",
-      "en-GH": "Sauté cabbage, add eggs, scramble.",
-      "en-KE": "Sauté cabbage, add eggs, scramble.",
+      "en-NG": "Sauté 1 cup shredded cabbage in 1 tsp oil. Add 2 beaten eggs and cook until scrambled together."
+      "fr-CI": "Faites sauter 1 tasse de chou dans 1 c. à c. d’huile. Ajoutez 2 œufs battus et brouillez."
+      "en-GH": "Sauté cabbage, add eggs, scramble."
+      "en-KE": "Sauté cabbage, add eggs, scramble."
       "en-ZA": "Sauté cabbage, add eggs, scramble."
-    },
-    "accessPlans": [1, 2, 3, 4]
-  },
+    }
+  }
   {
-    "id": "pawpaw-parfait",
+    "id": "pawpaw-parfait"
     "name": {
-      "en-NG": "Pawpaw Yogurt Parfait",
-      "fr-CI": "Parfait de Papaye et Yaourt",
-      "en-GH": "Pawpaw Yogurt Parfait",
-      "en-KE": "Pawpaw Yogurt Parfait",
+      "en-NG": "Pawpaw Yogurt Parfait"
+      "fr-CI": "Parfait de Papaye et Yaourt"
+      "en-GH": "Pawpaw Yogurt Parfait"
+      "en-KE": "Pawpaw Yogurt Parfait"
       "en-ZA": "Pawpaw Yogurt Parfait"
-    },
-    "calories": 270,
-    "protein": 9,
-    "carbs": 42,
-    "fat": 7,
-    "category": "breakfast",
-    "image": "https://images.unsplash.com/photo-1599029534728-890a96c23a5d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    }
+    "calories": 270
+    "protein": 9
+    "carbs": 42
+    "fat": 7
+    "category": "breakfast"
+    "image": "https://images.unsplash.com/photo-1599029534728-890a96c23a5d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     "preparation": {
-      "en-NG": "Layer 1/2 cup diced pawpaw with 1/2 cup plain yogurt and 1/4 cup granola in a glass.",
-      "fr-CI": "Alternez 1/2 tasse de papaye en dés avec 1/2 tasse de yaourt nature et 1/4 tasse de granola.",
-      "en-GH": "Layer pawpaw, yogurt, granola.",
-      "en-KE": "Layer pawpaw, yogurt, granola.",
+      "en-NG": "Layer 1/2 cup diced pawpaw with 1/2 cup plain yogurt and 1/4 cup granola in a glass."
+      "fr-CI": "Alternez 1/2 tasse de papaye en dés avec 1/2 tasse de yaourt nature et 1/4 tasse de granola."
+      "en-GH": "Layer pawpaw, yogurt, granola."
+      "en-KE": "Layer pawpaw, yogurt, granola."
       "en-ZA": "Layer pawpaw, yogurt, granola."
-    },
-    "accessPlans": [1, 2, 3, 4]
-  },
+    }
+  }
   {
-    "id": "moringa-smoothie",
+    "id": "moringa-smoothie"
     "name": {
-      "en-NG": "Moringa Green Smoothie",
-      "fr-CI": "Smoothie Vert au Moringa",
-      "en-GH": "Moringa Green Smoothie",
-      "en-KE": "Moringa Green Smoothie",
+      "en-NG": "Moringa Green Smoothie"
+      "fr-CI": "Smoothie Vert au Moringa"
+      "en-GH": "Moringa Green Smoothie"
+      "en-KE": "Moringa Green Smoothie"
       "en-ZA": "Moringa Green Smoothie"
-    },
-    "calories": 230,
-    "protein": 8,
-    "carbs": 36,
-    "fat": 5,
-    "category": "breakfast",
-    "image": "https://images.unsplash.com/photo-1612266703455-b9b472151797?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    }
+    "calories": 230
+    "protein": 8
+    "carbs": 36
+    "fat": 5
+    "category": "breakfast"
+    "image": "https://images.unsplash.com/photo-1612266703455-b9b472151797?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     "preparation": {
-      "en-NG": "Blend 1 banana, 1 tsp moringa powder, 1/2 cup spinach, and 1 cup water until smooth.",
-      "fr-CI": "Mixez 1 banane, 1 c. à c. de poudre de moringa, 1/2 tasse d’épinards et 1 tasse d’eau.",
-      "en-GH": "Blend banana, moringa, spinach, water.",
-      "en-KE": "Blend banana, moringa, spinach, water.",
+      "en-NG": "Blend 1 banana, 1 tsp moringa powder, 1/2 cup spinach, and 1 cup water until smooth."
+      "fr-CI": "Mixez 1 banane, 1 c. à c. de poudre de moringa, 1/2 tasse d’épinards et 1 tasse d’eau."
+      "en-GH": "Blend banana, moringa, spinach, water."
+      "en-KE": "Blend banana, moringa, spinach, water."
       "en-ZA": "Blend banana, moringa, spinach, water."
-    },
-    "accessPlans": [1, 2, 3, 4]
-  },
+    }
+  }
   {
-    "id": "yam-pancakes",
+    "id": "yam-pancakes"
     "name": {
-      "en-NG": "Yam Pancakes",
-      "fr-CI": "Crêpes d’Igname",
-      "en-GH": "Yam Pancakes",
-      "en-KE": "Yam Pancakes",
+      "en-NG": "Yam Pancakes"
+      "fr-CI": "Crêpes d’Igname"
+      "en-GH": "Yam Pancakes"
+      "en-KE": "Yam Pancakes"
       "en-ZA": "Yam Pancakes"
-    },
-    "calories": 300,
-    "protein": 8,
-    "carbs": 55,
-    "fat": 8,
-    "category": "breakfast",
-    "image": "https://images.unsplash.com/photo-1617195738747-7e0d1ee1ef4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    }
+    "calories": 300
+    "protein": 8
+    "carbs": 55
+    "fat": 8
+    "category": "breakfast"
+    "image": "https://images.unsplash.com/photo-1617195738747-7e0d1ee1ef4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     "preparation": {
-      "en-NG": "Grate 1 cup yam, mix with 1 egg and 2 tbsp flour. Fry small pancakes in 1 tsp oil until golden.",
-      "fr-CI": "Râpez 1 tasse d’igname, mélangez avec 1 œuf et 2 c. à s. de farine. Faites cuire en petites crêpes avec 1 c. à c. d’huile.",
-      "en-GH": "Mix yam with egg, fry pancakes.",
-      "en-KE": "Mix yam with egg, fry pancakes.",
+      "en-NG": "Grate 1 cup yam, mix with 1 egg and 2 tbsp flour. Fry small pancakes in 1 tsp oil until golden."
+      "fr-CI": "Râpez 1 tasse d’igname, mélangez avec 1 œuf et 2 c. à s. de farine. Faites cuire en petites crêpes avec 1 c. à c. d’huile."
+      "en-GH": "Mix yam with egg, fry pancakes."
+      "en-KE": "Mix yam with egg, fry pancakes."
       "en-ZA": "Mix yam with egg, fry pancakes."
-    },
-    "accessPlans": [1, 2, 3, 4]
-  },
+    }
+  }
   {
-    "id": "groundnut-pap",
+    "id": "groundnut-pap"
     "name": {
-      "en-NG": "Groundnut Pap",
-      "fr-CI": "Bouillie d’Arachides",
-      "en-GH": "Groundnut Pap",
-      "en-KE": "Groundnut Pap",
+      "en-NG": "Groundnut Pap"
+      "fr-CI": "Bouillie d’Arachides"
+      "en-GH": "Groundnut Pap"
+      "en-KE": "Groundnut Pap"
       "en-ZA": "Groundnut Pap"
-    },
-    "calories": 310,
-    "protein": 12,
-    "carbs": 42,
-    "fat": 14,
-    "category": "breakfast",
-    "image": "https://images.unsplash.com/photo-1617196038752-458bc1d08dcb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    }
+    "calories": 310
+    "protein": 12
+    "carbs": 42
+    "fat": 14
+    "category": "breakfast"
+    "image": "https://images.unsplash.com/photo-1617196038752-458bc1d08dcb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     "preparation": {
-      "en-NG": "Cook 1/2 cup fermented maize pap. Stir in 2 tbsp groundnut paste and 1 tsp honey.",
-      "fr-CI": "Faites cuire 1/2 tasse de bouillie de maïs fermenté. Ajoutez 2 c. à s. de pâte d’arachide et 1 c. à c. de miel.",
-      "en-GH": "Cook pap, stir in peanut paste and honey.",
-      "en-KE": "Cook pap, stir in peanut paste and honey.",
+      "en-NG": "Cook 1/2 cup fermented maize pap. Stir in 2 tbsp groundnut paste and 1 tsp honey."
+      "fr-CI": "Faites cuire 1/2 tasse de bouillie de maïs fermenté. Ajoutez 2 c. à s. de pâte d’arachide et 1 c. à c. de miel."
+      "en-GH": "Cook pap, stir in peanut paste and honey."
+      "en-KE": "Cook pap, stir in peanut paste and honey."
       "en-ZA": "Cook pap, stir in peanut paste and honey."
-    },
-    "accessPlans": [1, 2, 3, 4]
-  },
+    }
+  }
   {
-    "id": "egg-avocado-wrap",
+    "id": "egg-avocado-wrap"
     "name": {
-      "en-NG": "Egg and Avocado Wrap",
-      "fr-CI": "Wrap Œuf et Avocat",
-      "en-GH": "Egg and Avocado Wrap",
-      "en-KE": "Egg and Avocado Wrap",
+      "en-NG": "Egg and Avocado Wrap"
+      "fr-CI": "Wrap Œuf et Avocat"
+      "en-GH": "Egg and Avocado Wrap"
+      "en-KE": "Egg and Avocado Wrap"
       "en-ZA": "Egg and Avocado Wrap"
-    },
-    "calories": 350,
-    "protein": 16,
-    "carbs": 30,
-    "fat": 18,
-    "category": "breakfast",
-    "image": "https://images.unsplash.com/photo-1589308078056-157f65d2a7a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    }
+    "calories": 350
+    "protein": 16
+    "carbs": 30
+    "fat": 18
+    "category": "breakfast"
+    "image": "https://images.unsplash.com/photo-1589308078056-157f65d2a7a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     "preparation": {
-      "en-NG": "Fill 1 whole wheat tortilla with 2 scrambled eggs and 1/2 sliced avocado. Roll and serve warm.",
-      "fr-CI": "Garnissez 1 tortilla de blé complet avec 2 œufs brouillés et 1/2 avocat tranché. Roulez et servez chaud.",
-      "en-GH": "Fill tortilla with eggs and avocado.",
-      "en-KE": "Fill tortilla with eggs and avocado.",
+      "en-NG": "Fill 1 whole wheat tortilla with 2 scrambled eggs and 1/2 sliced avocado. Roll and serve warm."
+      "fr-CI": "Garnissez 1 tortilla de blé complet avec 2 œufs brouillés et 1/2 avocat tranché. Roulez et servez chaud."
+      "en-GH": "Fill tortilla with eggs and avocado."
+      "en-KE": "Fill tortilla with eggs and avocado."
       "en-ZA": "Fill tortilla with eggs and avocado."
-    },
-    "accessPlans": [1, 2, 3, 4]
-  },
+    }
+  }
   {
-    "id": "sweet-potato-hash",
+    "id": "sweet-potato-hash"
     "name": {
-      "en-NG": "Sweet Potato Hash with Eggs",
-      "fr-CI": "Hash de Patates Douces avec Œufs",
-      "en-GH": "Sweet Potato Hash with Eggs",
-      "en-KE": "Sweet Potato Hash with Eggs",
+      "en-NG": "Sweet Potato Hash with Eggs"
+      "fr-CI": "Hash de Patates Douces avec Œufs"
+      "en-GH": "Sweet Potato Hash with Eggs"
+      "en-KE": "Sweet Potato Hash with Eggs"
       "en-ZA": "Sweet Potato Hash with Eggs"
-    },
-    "calories": 360,
-    "protein": 14,
-    "carbs": 50,
-    "fat": 12,
-    "category": "breakfast",
-    "image": "https://images.unsplash.com/photo-1603046891744-082dbea5e2ee?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    }
+    "calories": 360
+    "protein": 14
+    "carbs": 50
+    "fat": 12
+    "category": "breakfast"
+    "image": "https://images.unsplash.com/photo-1603046891744-082dbea5e2ee?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     "preparation": {
-      "en-NG": "Dice 1 cup sweet potatoes and sauté in 1 tsp oil until tender. Add 2 eggs and cook until desired firmness.",
-      "fr-CI": "Coupez 1 tasse de patates douces en dés, faites sauter avec 1 c. à c. d’huile. Ajoutez 2 œufs et cuisez selon la texture voulue.",
-      "en-GH": "Cook diced sweet potatoes, add eggs, finish together.",
-      "en-KE": "Cook diced sweet potatoes, add eggs, finish together.",
+      "en-NG": "Dice 1 cup sweet potatoes and sauté in 1 tsp oil until tender. Add 2 eggs and cook until desired firmness."
+      "fr-CI": "Coupez 1 tasse de patates douces en dés, faites sauter avec 1 c. à c. d’huile. Ajoutez 2 œufs et cuisez selon la texture voulue."
+      "en-GH": "Cook diced sweet potatoes, add eggs, finish together."
+      "en-KE": "Cook diced sweet potatoes, add eggs, finish together."
       "en-ZA": "Cook diced sweet potatoes, add eggs, finish together."
-    },
-    "accessPlans": [1, 2, 3, 4]
-  },
+    }
+  }
   {
-    "id": "coconut-pap",
+    "id": "coconut-pap"
     "name": {
-      "en-NG": "Coconut Pap",
-      "fr-CI": "Bouillie de Coco",
-      "en-GH": "Coconut Pap",
-      "en-KE": "Coconut Pap",
+      "en-NG": "Coconut Pap"
+      "fr-CI": "Bouillie de Coco"
+      "en-GH": "Coconut Pap"
+      "en-KE": "Coconut Pap"
       "en-ZA": "Coconut Pap"
-    },
-    "calories": 290,
-    "protein": 6,
-    "carbs": 46,
-    "fat": 11,
-    "category": "breakfast",
-    "image": "https://images.unsplash.com/photo-1625941487321-75c3a0a1c1cd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    }
+    "calories": 290
+    "protein": 6
+    "carbs": 46
+    "fat": 11
+    "category": "breakfast"
+    "image": "https://images.unsplash.com/photo-1625941487321-75c3a0a1c1cd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     "preparation": {
-      "en-NG": "Cook 1/2 cup maize pap with water. Stir in 1/4 cup coconut milk and 1 tsp honey.",
-      "fr-CI": "Faites cuire 1/2 tasse de bouillie de maïs. Ajoutez 1/4 tasse de lait de coco et 1 c. à c. de miel.",
-      "en-GH": "Cook pap, stir in coconut milk and honey.",
-      "en-KE": "Cook pap, stir in coconut milk and honey.",
+      "en-NG": "Cook 1/2 cup maize pap with water. Stir in 1/4 cup coconut milk and 1 tsp honey."
+      "fr-CI": "Faites cuire 1/2 tasse de bouillie de maïs. Ajoutez 1/4 tasse de lait de coco et 1 c. à c. de miel."
+      "en-GH": "Cook pap, stir in coconut milk and honey."
+      "en-KE": "Cook pap, stir in coconut milk and honey."
       "en-ZA": "Cook pap, stir in coconut milk and honey."
-    },
-    "accessPlans": [1, 2, 3, 4]
-  },
+    }
+  }
   {
-    "id": "okra-egg-scramble",
+    "id": "okra-egg-scramble"
     "name": {
-      "en-NG": "Okra Egg Scramble",
-      "fr-CI": "Œufs Brouillés au Gombo",
-      "en-GH": "Okra Egg Scramble",
-      "en-KE": "Okra Egg Scramble",
+      "en-NG": "Okra Egg Scramble"
+      "fr-CI": "Œufs Brouillés au Gombo"
+      "en-GH": "Okra Egg Scramble"
+      "en-KE": "Okra Egg Scramble"
       "en-ZA": "Okra Egg Scramble"
-    },
-    "calories": 240,
-    "protein": 12,
-    "carbs": 10,
-    "fat": 16,
-    "category": "breakfast",
-    "image": "https://images.unsplash.com/photo-1604908177522-f762c720e6d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    }
+    "calories": 240
+    "protein": 12
+    "carbs": 10
+    "fat": 16
+    "category": "breakfast"
+    "image": "https://images.unsplash.com/photo-1604908177522-f762c720e6d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     "preparation": {
-      "en-NG": "Slice 1/2 cup okra and sauté in 1 tsp oil. Add 2 beaten eggs and scramble until cooked.",
-      "fr-CI": "Tranchez 1/2 tasse de gombo et faites sauter dans 1 c. à c. d’huile. Ajoutez 2 œufs battus et brouillez.",
-      "en-GH": "Sauté okra, add eggs, scramble.",
-      "en-KE": "Sauté okra, add eggs, scramble.",
+      "en-NG": "Slice 1/2 cup okra and sauté in 1 tsp oil. Add 2 beaten eggs and scramble until cooked."
+      "fr-CI": "Tranchez 1/2 tasse de gombo et faites sauter dans 1 c. à c. d’huile. Ajoutez 2 œufs battus et brouillez."
+      "en-GH": "Sauté okra, add eggs, scramble."
+      "en-KE": "Sauté okra, add eggs, scramble."
       "en-ZA": "Sauté okra, add eggs, scramble."
-    },
-    "accessPlans": [1, 2, 3, 4]
-  },
+    }
+  }
   {
-    "id": "banana-pap",
+    "id": "banana-pap"
     "name": {
-      "en-NG": "Banana Pap",
-      "fr-CI": "Bouillie à la Banane",
-      "en-GH": "Banana Pap",
-      "en-KE": "Banana Pap",
+      "en-NG": "Banana Pap"
+      "fr-CI": "Bouillie à la Banane"
+      "en-GH": "Banana Pap"
+      "en-KE": "Banana Pap"
       "en-ZA": "Banana Pap"
-    },
-    "calories": 275,
-    "protein": 6,
-    "carbs": 52,
-    "fat": 6,
-    "category": "breakfast",
-    "image": "https://images.unsplash.com/photo-1617196015149-38e2a5f0ad4a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    }
+    "calories": 275
+    "protein": 6
+    "carbs": 52
+    "fat": 6
+    "category": "breakfast"
+    "image": "https://images.unsplash.com/photo-1617196015149-38e2a5f0ad4a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     "preparation": {
-      "en-NG": "Cook 1/2 cup pap. Mash 1 ripe banana and stir into pap with 1 tsp honey.",
-      "fr-CI": "Faites cuire 1/2 tasse de bouillie. Écrasez 1 banane mûre et ajoutez avec 1 c. à c. de miel.",
-      "en-GH": "Cook pap, mash banana, stir together.",
-      "en-KE": "Cook pap, mash banana, stir together.",
+      "en-NG": "Cook 1/2 cup pap. Mash 1 ripe banana and stir into pap with 1 tsp honey."
+      "fr-CI": "Faites cuire 1/2 tasse de bouillie. Écrasez 1 banane mûre et ajoutez avec 1 c. à c. de miel."
+      "en-GH": "Cook pap, mash banana, stir together."
+      "en-KE": "Cook pap, mash banana, stir together."
       "en-ZA": "Cook pap, mash banana, stir together."
-    },
-    "accessPlans": [1, 2, 3, 4]
-  },
+    }
+  }
   {
-    "id": "fish-toast",
+    "id": "fish-toast"
     "name": {
-      "en-NG": "Fish Toast",
-      "fr-CI": "Toast au Poisson",
-      "en-GH": "Fish Toast",
-      "en-KE": "Fish Toast",
+      "en-NG": "Fish Toast"
+      "fr-CI": "Toast au Poisson"
+      "en-GH": "Fish Toast"
+      "en-KE": "Fish Toast"
       "en-ZA": "Fish Toast"
-    },
-    "calories": 320,
-    "protein": 18,
-    "carbs": 28,
-    "fat": 14,
-    "category": "breakfast",
-    "image": "https://images.unsplash.com/photo-1625941487403-9df62a36b8c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    }
+    "calories": 320
+    "protein": 18
+    "carbs": 28
+    "fat": 14
+    "category": "breakfast"
+    "image": "https://images.unsplash.com/photo-1625941487403-9df62a36b8c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     "preparation": {
-      "en-NG": "Spread 1/4 cup mashed sardines on 2 slices whole wheat toast. Sprinkle with parsley.",
-      "fr-CI": "Étalez 1/4 tasse de sardines écrasées sur 2 tranches de pain complet. Parsemez de persil.",
-      "en-GH": "Spread sardines on toast, garnish with parsley.",
-      "en-KE": "Spread sardines on toast, garnish with parsley.",
+      "en-NG": "Spread 1/4 cup mashed sardines on 2 slices whole wheat toast. Sprinkle with parsley."
+      "fr-CI": "Étalez 1/4 tasse de sardines écrasées sur 2 tranches de pain complet. Parsemez de persil."
+      "en-GH": "Spread sardines on toast, garnish with parsley."
+      "en-KE": "Spread sardines on toast, garnish with parsley."
       "en-ZA": "Spread sardines on toast, garnish with parsley."
-    },
-    "accessPlans": [1, 2, 3, 4]
-  },
+    }
+  }
   {
-    "id": "avocado-millet-porridge",
+    "id": "avocado-millet-porridge"
     "name": {
-      "en-NG": "Avocado Millet Porridge",
-      "fr-CI": "Bouillie de Mil à l’Avocat",
-      "en-GH": "Avocado Millet Porridge",
-      "en-KE": "Avocado Millet Porridge",
+      "en-NG": "Avocado Millet Porridge"
+      "fr-CI": "Bouillie de Mil à l’Avocat"
+      "en-GH": "Avocado Millet Porridge"
+      "en-KE": "Avocado Millet Porridge"
       "en-ZA": "Avocado Millet Porridge"
-    },
-    "calories": 330,
-    "protein": 9,
-    "carbs": 54,
-    "fat": 10,
-    "category": "breakfast",
-    "image": "https://images.unsplash.com/photo-1615937675317-fc7f3a2e9c06?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    }
+    "calories": 330
+    "protein": 9
+    "carbs": 54
+    "fat": 10
+    "category": "breakfast"
+    "image": "https://images.unsplash.com/photo-1615937675317-fc7f3a2e9c06?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     "preparation": {
-      "en-NG": "Cook 1/2 cup millet in 1 cup water. Stir in 1/2 avocado mashed with salt and pepper.",
-      "fr-CI": "Faites cuire 1/2 tasse de mil dans 1 tasse d’eau. Ajoutez 1/2 avocat écrasé avec sel et poivre.",
-      "en-GH": "Cook millet, stir in mashed avocado.",
-      "en-KE": "Cook millet, stir in mashed avocado.",
+      "en-NG": "Cook 1/2 cup millet in 1 cup water. Stir in 1/2 avocado mashed with salt and pepper."
+      "fr-CI": "Faites cuire 1/2 tasse de mil dans 1 tasse d’eau. Ajoutez 1/2 avocat écrasé avec sel et poivre."
+      "en-GH": "Cook millet, stir in mashed avocado."
+      "en-KE": "Cook millet, stir in mashed avocado."
       "en-ZA": "Cook millet, stir in mashed avocado."
-    },
-    "accessPlans": [1, 2, 3, 4]
-  },
+    }
+  }
   {
-    "id": "papaya-smoothie",
+    "id": "papaya-smoothie"
     "name": {
-      "en-NG": "Papaya Smoothie",
-      "fr-CI": "Smoothie de Papaye",
-      "en-GH": "Papaya Smoothie",
-      "en-KE": "Papaya Smoothie",
+      "en-NG": "Papaya Smoothie"
+      "fr-CI": "Smoothie de Papaye"
+      "en-GH": "Papaya Smoothie"
+      "en-KE": "Papaya Smoothie"
       "en-ZA": "Papaya Smoothie"
-    },
-    "calories": 250,
-    "protein": 5,
-    "carbs": 48,
-    "fat": 4,
-    "category": "breakfast",
-    "image": "https://images.unsplash.com/photo-1589308078056-157f65d2a7a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    }
+    "calories": 250
+    "protein": 5
+    "carbs": 48
+    "fat": 4
+    "category": "breakfast"
+    "image": "https://images.unsplash.com/photo-1589308078056-157f65d2a7a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     "preparation": {
-      "en-NG": "Blend 1 cup papaya chunks with 1/2 cup yogurt and 1 tsp honey until smooth.",
-      "fr-CI": "Mixez 1 tasse de papaye en morceaux avec 1/2 tasse de yaourt et 1 c. à c. de miel.",
-      "en-GH": "Blend papaya, yogurt, honey.",
-      "en-KE": "Blend papaya, yogurt, honey.",
+      "en-NG": "Blend 1 cup papaya chunks with 1/2 cup yogurt and 1 tsp honey until smooth."
+      "fr-CI": "Mixez 1 tasse de papaye en morceaux avec 1/2 tasse de yaourt et 1 c. à c. de miel."
+      "en-GH": "Blend papaya, yogurt, honey."
+      "en-KE": "Blend papaya, yogurt, honey."
       "en-ZA": "Blend papaya, yogurt, honey."
-    },
-    "accessPlans": [1, 2, 3, 4]
-  },
+    }
+  }
   {
-    "id": "sorghum-porridge",
+    "id": "sorghum-porridge"
     "name": {
-      "en-NG": "Sorghum Porridge",
-      "fr-CI": "Bouillie de Sorgho",
-      "en-GH": "Sorghum Porridge",
-      "en-KE": "Sorghum Porridge",
+      "en-NG": "Sorghum Porridge"
+      "fr-CI": "Bouillie de Sorgho"
+      "en-GH": "Sorghum Porridge"
+      "en-KE": "Sorghum Porridge"
       "en-ZA": "Sorghum Porridge"
-    },
-    "calories": 280,
-    "protein": 7,
-    "carbs": 55,
-    "fat": 3,
-    "category": "breakfast",
-    "image": "https://images.unsplash.com/photo-1599029534728-890a96c23a5d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    }
+    "calories": 280
+    "protein": 7
+    "carbs": 55
+    "fat": 3
+    "category": "breakfast"
+    "image": "https://images.unsplash.com/photo-1599029534728-890a96c23a5d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     "preparation": {
-      "en-NG": "Cook 1/2 cup sorghum flour with 1 cup water until thick. Sweeten with 1 tsp honey.",
-      "fr-CI": "Faites cuire 1/2 tasse de farine de sorgho avec 1 tasse d’eau. Sucrez avec 1 c. à c. de miel.",
-      "en-GH": "Cook sorghum porridge, sweeten lightly.",
-      "en-KE": "Cook sorghum porridge, sweeten lightly.",
+      "en-NG": "Cook 1/2 cup sorghum flour with 1 cup water until thick. Sweeten with 1 tsp honey."
+      "fr-CI": "Faites cuire 1/2 tasse de farine de sorgho avec 1 tasse d’eau. Sucrez avec 1 c. à c. de miel."
+      "en-GH": "Cook sorghum porridge, sweeten lightly."
+      "en-KE": "Cook sorghum porridge, sweeten lightly."
       "en-ZA": "Cook sorghum porridge, sweeten lightly."
-    },
-    "accessPlans": [1, 2, 3, 4]
-  },
+    }
+  }
   {
-    "id": "veggie-toast",
+    "id": "veggie-toast"
     "name": {
-      "en-NG": "Veggie Toast",
-      "fr-CI": "Toast aux Légumes",
-      "en-GH": "Veggie Toast",
-      "en-KE": "Veggie Toast",
+      "en-NG": "Veggie Toast"
+      "fr-CI": "Toast aux Légumes"
+      "en-GH": "Veggie Toast"
+      "en-KE": "Veggie Toast"
       "en-ZA": "Veggie Toast"
-    },
-    "calories": 310,
-    "protein": 10,
-    "carbs": 40,
-    "fat": 12,
-    "category": "breakfast",
-    "image": "https://images.unsplash.com/photo-1625941487398-8dfc4ab2a43b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    }
+    "calories": 310
+    "protein": 10
+    "carbs": 40
+    "fat": 12
+    "category": "breakfast"
+    "image": "https://images.unsplash.com/photo-1625941487398-8dfc4ab2a43b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     "preparation": {
-      "en-NG": "Top 2 slices whole wheat toast with 1/2 cup sautéed bell peppers and onions, plus 1 tbsp cheese.",
-      "fr-CI": "Garnissez 2 tranches de pain complet avec 1/2 tasse de poivrons et oignons sautés, plus 1 c. à s. de fromage.",
-      "en-GH": "Toast topped with sautéed vegetables and cheese.",
-      "en-KE": "Toast topped with sautéed vegetables and cheese.",
+      "en-NG": "Top 2 slices whole wheat toast with 1/2 cup sautéed bell peppers and onions, plus 1 tbsp cheese."
+      "fr-CI": "Garnissez 2 tranches de pain complet avec 1/2 tasse de poivrons et oignons sautés, plus 1 c. à s. de fromage."
+      "en-GH": "Toast topped with sautéed vegetables and cheese."
+      "en-KE": "Toast topped with sautéed vegetables and cheese."
       "en-ZA": "Toast topped with sautéed vegetables and cheese."
-    },
-    "accessPlans": [1, 2, 3, 4]
-  },
+    }
+  }
   {
-    "id": "spicy-tigernut-oatmeal",
+    "id": "spicy-tigernut-oatmeal"
     "name": {
-      "en-NG": "Spicy Tigernut Oatmeal",
-      "fr-CI": "Gruau aux Noix Tigrées Épicé",
-      "en-GH": "Spicy Tigernut Oatmeal",
-      "en-KE": "Spicy Tigernut Oatmeal",
+      "en-NG": "Spicy Tigernut Oatmeal"
+      "fr-CI": "Gruau aux Noix Tigrées Épicé"
+      "en-GH": "Spicy Tigernut Oatmeal"
+      "en-KE": "Spicy Tigernut Oatmeal"
       "en-ZA": "Spicy Tigernut Oatmeal"
-    },
-    "calories": 300,
-    "protein": 8,
-    "carbs": 50,
-    "fat": 10,
-    "category": "breakfast",
-    "image": "https://images.unsplash.com/photo-1603048297172-c92544798ccd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    }
+    "calories": 300
+    "protein": 8
+    "carbs": 50
+    "fat": 10
+    "category": "breakfast"
+    "image": "https://images.unsplash.com/photo-1603048297172-c92544798ccd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     "preparation": {
-      "en-NG": "Cook 1/2 cup oats in 1 cup tigernut milk. Stir in 1/4 tsp cayenne, 1 tsp honey, and top with banana slices.",
-      "fr-CI": "Faites cuire 1/2 tasse d’avoine dans 1 tasse de lait de noix tigrées. Ajoutez 1/4 c. à c. de piment, 1 c. à c. de miel et des tranches de banane.",
-      "en-GH": "Cook oats with tigernut milk, add spice and banana.",
-      "en-KE": "Cook oats with tigernut milk, add spice and banana.",
+      "en-NG": "Cook 1/2 cup oats in 1 cup tigernut milk. Stir in 1/4 tsp cayenne, 1 tsp honey, and top with banana slices."
+      "fr-CI": "Faites cuire 1/2 tasse d’avoine dans 1 tasse de lait de noix tigrées. Ajoutez 1/4 c. à c. de piment, 1 c. à c. de miel et des tranches de banane."
+      "en-GH": "Cook oats with tigernut milk, add spice and banana."
+      "en-KE": "Cook oats with tigernut milk, add spice and banana."
       "en-ZA": "Cook oats with tigernut milk, add spice and banana."
-    },
-    "accessPlans": [1, 2, 3, 4]
-  },
+    }
+  }
   {
-    "id": "moi-moi-veg",
+    "id": "moi-moi-veg"
     "name": {
-      "en-NG": "Vegetable Moi Moi",
-      "fr-CI": "Moi Moi aux Légumes",
-      "en-GH": "Vegetable Moi Moi",
-      "en-KE": "Vegetable Moi Moi",
+      "en-NG": "Vegetable Moi Moi"
+      "fr-CI": "Moi Moi aux Légumes"
+      "en-GH": "Vegetable Moi Moi"
+      "en-KE": "Vegetable Moi Moi"
       "en-ZA": "Vegetable Moi Moi"
-    },
-    "calories": 320,
-    "protein": 14,
-    "carbs": 30,
-    "fat": 16,
-    "category": "breakfast",
-    "image": "https://images.unsplash.com/photo-1603048598819-7acdfa1bba93?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    }
+    "calories": 320
+    "protein": 14
+    "carbs": 30
+    "fat": 16
+    "category": "breakfast"
+    "image": "https://images.unsplash.com/photo-1603048598819-7acdfa1bba93?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     "preparation": {
-      "en-NG": "Blend 1 cup peeled beans with 1/4 cup diced carrots, 1/4 cup bell pepper, 1 tbsp oil. Steam in ramekin 40 mins.",
-      "fr-CI": "Mixez 1 tasse de haricots épluchés avec 1/4 tasse de carottes, 1/4 tasse de poivron et 1 c. à s. d’huile. Cuisez à la vapeur 40 min.",
-      "en-GH": "Blend beans and vegetables, steam until set.",
-      "en-KE": "Blend beans and vegetables, steam until set.",
+      "en-NG": "Blend 1 cup peeled beans with 1/4 cup diced carrots, 1/4 cup bell pepper, 1 tbsp oil. Steam in ramekin 40 mins."
+      "fr-CI": "Mixez 1 tasse de haricots épluchés avec 1/4 tasse de carottes, 1/4 tasse de poivron et 1 c. à s. d’huile. Cuisez à la vapeur 40 min."
+      "en-GH": "Blend beans and vegetables, steam until set."
+      "en-KE": "Blend beans and vegetables, steam until set."
       "en-ZA": "Blend beans and vegetables, steam until set."
-    },
-    "accessPlans": [1, 2, 3, 4]
-  },
+    }
+  }
   {
-    "id": "sweet-potato-pancakes",
+    "id": "sweet-potato-pancakes"
     "name": {
-      "en-NG": "Sweet Potato Pancakes",
-      "fr-CI": "Crêpes de Patates Douces",
-      "en-GH": "Sweet Potato Pancakes",
-      "en-KE": "Sweet Potato Pancakes",
+      "en-NG": "Sweet Potato Pancakes"
+      "fr-CI": "Crêpes de Patates Douces"
+      "en-GH": "Sweet Potato Pancakes"
+      "en-KE": "Sweet Potato Pancakes"
       "en-ZA": "Sweet Potato Pancakes"
-    },
-    "calories": 340,
-    "protein": 8,
-    "carbs": 56,
-    "fat": 10,
-    "category": "breakfast",
-    "image": "https://images.unsplash.com/photo-1617195738747-7e0d1ee1ef4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    }
+    "calories": 340
+    "protein": 8
+    "carbs": 56
+    "fat": 10
+    "category": "breakfast"
+    "image": "https://images.unsplash.com/photo-1617195738747-7e0d1ee1ef4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     "preparation": {
-      "en-NG": "Grate 1 cup sweet potato, mix with 1 egg and 2 tbsp flour. Fry in 1 tsp oil until golden brown.",
-      "fr-CI": "Râpez 1 tasse de patates douces, mélangez avec 1 œuf et 2 c. à s. de farine. Faites frire avec 1 c. à c. d’huile.",
-      "en-GH": "Mix grated sweet potato with egg and flour, fry pancakes.",
-      "en-KE": "Mix grated sweet potato with egg and flour, fry pancakes.",
+      "en-NG": "Grate 1 cup sweet potato, mix with 1 egg and 2 tbsp flour. Fry in 1 tsp oil until golden brown."
+      "fr-CI": "Râpez 1 tasse de patates douces, mélangez avec 1 œuf et 2 c. à s. de farine. Faites frire avec 1 c. à c. d’huile."
+      "en-GH": "Mix grated sweet potato with egg and flour, fry pancakes."
+      "en-KE": "Mix grated sweet potato with egg and flour, fry pancakes."
       "en-ZA": "Mix grated sweet potato with egg and flour, fry pancakes."
-    },
-    "accessPlans": [1, 2, 3, 4]
-  },
+    }
+  }
   {
-    "id": "pawpaw-oatmeal",
+    "id": "pawpaw-oatmeal"
     "name": {
-      "en-NG": "Pawpaw Oatmeal",
-      "fr-CI": "Gruau à la Papaye",
-      "en-GH": "Pawpaw Oatmeal",
-      "en-KE": "Pawpaw Oatmeal",
+      "en-NG": "Pawpaw Oatmeal"
+      "fr-CI": "Gruau à la Papaye"
+      "en-GH": "Pawpaw Oatmeal"
+      "en-KE": "Pawpaw Oatmeal"
       "en-ZA": "Pawpaw Oatmeal"
-    },
-    "calories": 300,
-    "protein": 7,
-    "carbs": 52,
-    "fat": 9,
-    "category": "breakfast",
-    "image": "https://images.unsplash.com/photo-1590080875831-bc5dc2b1b1c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    }
+    "calories": 300
+    "protein": 7
+    "carbs": 52
+    "fat": 9
+    "category": "breakfast"
+    "image": "https://images.unsplash.com/photo-1590080875831-bc5dc2b1b1c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     "preparation": {
-      "en-NG": "Cook 1/2 cup oats in water, stir in 1/2 cup diced pawpaw and 1 tsp honey. Serve warm.",
-      "fr-CI": "Faites cuire 1/2 tasse d’avoine dans l’eau, ajoutez 1/2 tasse de papaye en dés et 1 c. à c. de miel.",
-      "en-GH": "Cook oats, stir in pawpaw and honey.",
-      "en-KE": "Cook oats, stir in pawpaw and honey.",
+      "en-NG": "Cook 1/2 cup oats in water, stir in 1/2 cup diced pawpaw and 1 tsp honey. Serve warm."
+      "fr-CI": "Faites cuire 1/2 tasse d’avoine dans l’eau, ajoutez 1/2 tasse de papaye en dés et 1 c. à c. de miel."
+      "en-GH": "Cook oats, stir in pawpaw and honey."
+      "en-KE": "Cook oats, stir in pawpaw and honey."
       "en-ZA": "Cook oats, stir in pawpaw and honey."
-    },
-    "accessPlans": [1, 2, 3, 4]
-  },
+    }
+  }
   {
-    "id": "moringa-pap",
+    "id": "moringa-pap"
     "name": {
-      "en-NG": "Moringa Pap",
-      "fr-CI": "Bouillie au Moringa",
-      "en-GH": "Moringa Pap",
-      "en-KE": "Moringa Pap",
+      "en-NG": "Moringa Pap"
+      "fr-CI": "Bouillie au Moringa"
+      "en-GH": "Moringa Pap"
+      "en-KE": "Moringa Pap"
       "en-ZA": "Moringa Pap"
-    },
-    "calories": 280,
-    "protein": 8,
-    "carbs": 50,
-    "fat": 7,
-    "category": "breakfast",
-    "image": "https://images.unsplash.com/photo-1612266703455-b9b472151797?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    }
+    "calories": 280
+    "protein": 8
+    "carbs": 50
+    "fat": 7
+    "category": "breakfast"
+    "image": "https://images.unsplash.com/photo-1612266703455-b9b472151797?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     "preparation": {
-      "en-NG": "Cook 1/2 cup maize pap with 1 cup water. Stir in 1 tsp moringa powder and 1 tsp honey.",
-      "fr-CI": "Faites cuire 1/2 tasse de bouillie de maïs avec 1 tasse d’eau. Ajoutez 1 c. à c. de poudre de moringa et 1 c. à c. de miel.",
-      "en-GH": "Cook pap, add moringa powder and honey.",
-      "en-KE": "Cook pap, add moringa powder and honey.",
+      "en-NG": "Cook 1/2 cup maize pap with 1 cup water. Stir in 1 tsp moringa powder and 1 tsp honey."
+      "fr-CI": "Faites cuire 1/2 tasse de bouillie de maïs avec 1 tasse d’eau. Ajoutez 1 c. à c. de poudre de moringa et 1 c. à c. de miel."
+      "en-GH": "Cook pap, add moringa powder and honey."
+      "en-KE": "Cook pap, add moringa powder and honey."
       "en-ZA": "Cook pap, add moringa powder and honey."
-    },
-    "accessPlans": [1, 2, 3, 4]
-  },
+    }
+  }
   {
-    "id": "eggplant-toast",
+    "id": "eggplant-toast"
     "name": {
-      "en-NG": "Eggplant Toast",
-      "fr-CI": "Toast à l’Aubergine",
-      "en-GH": "Eggplant Toast",
-      "en-KE": "Eggplant Toast",
+      "en-NG": "Eggplant Toast"
+      "fr-CI": "Toast à l’Aubergine"
+      "en-GH": "Eggplant Toast"
+      "en-KE": "Eggplant Toast"
       "en-ZA": "Eggplant Toast"
-    },
-    "calories": 310,
-    "protein": 9,
-    "carbs": 38,
-    "fat": 14,
-    "category": "breakfast",
-    "image": "https://images.unsplash.com/photo-1603048637371-b2c73b0f7c23?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    }
+    "calories": 310
+    "protein": 9
+    "carbs": 38
+    "fat": 14
+    "category": "breakfast"
+    "image": "https://images.unsplash.com/photo-1603048637371-b2c73b0f7c23?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     "preparation": {
-      "en-NG": "Sauté 1 cup diced eggplant in 1 tsp oil. Serve on 2 slices whole wheat toast with a pinch of black pepper.",
-      "fr-CI": "Faites sauter 1 tasse d’aubergine en dés avec 1 c. à c. d’huile. Servez sur 2 tranches de pain complet avec du poivre.",
-      "en-GH": "Sauté eggplant, serve on toast.",
-      "en-KE": "Sauté eggplant, serve on toast.",
+      "en-NG": "Sauté 1 cup diced eggplant in 1 tsp oil. Serve on 2 slices whole wheat toast with a pinch of black pepper."
+      "fr-CI": "Faites sauter 1 tasse d’aubergine en dés avec 1 c. à c. d’huile. Servez sur 2 tranches de pain complet avec du poivre."
+      "en-GH": "Sauté eggplant, serve on toast."
+      "en-KE": "Sauté eggplant, serve on toast."
       "en-ZA": "Sauté eggplant, serve on toast."
-    },
-    "accessPlans": [1, 2, 3, 4]
-  },
+    }
+  }
   {
-    "id": "groundnut-oatmeal",
+    "id": "groundnut-oatmeal"
     "name": {
-      "en-NG": "Groundnut Oatmeal",
-      "fr-CI": "Gruau aux Arachides",
-      "en-GH": "Groundnut Oatmeal",
-      "en-KE": "Groundnut Oatmeal",
+      "en-NG": "Groundnut Oatmeal"
+      "fr-CI": "Gruau aux Arachides"
+      "en-GH": "Groundnut Oatmeal"
+      "en-KE": "Groundnut Oatmeal"
       "en-ZA": "Groundnut Oatmeal"
-    },
-    "calories": 330,
-    "protein": 10,
-    "carbs": 46,
-    "fat": 14,
-    "category": "breakfast",
-    "image": "https://images.unsplash.com/photo-1617196027613-7b6f8e5b1c1c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    }
+    "calories": 330
+    "protein": 10
+    "carbs": 46
+    "fat": 14
+    "category": "breakfast"
+    "image": "https://images.unsplash.com/photo-1617196027613-7b6f8e5b1c1c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     "preparation": {
-      "en-NG": "Cook 1/2 cup oats in 1 cup water. Stir in 2 tbsp groundnut paste and 1 tsp honey. Serve warm.",
-      "fr-CI": "Faites cuire 1/2 tasse d’avoine dans 1 tasse d’eau. Ajoutez 2 c. à s. de pâte d’arachide et 1 c. à c. de miel. Servez chaud.",
-      "en-GH": "Cook oats, stir in groundnut paste and honey, serve warm.",
-      "en-KE": "Cook oats, stir in groundnut paste and honey, serve warm.",
+      "en-NG": "Cook 1/2 cup oats in 1 cup water. Stir in 2 tbsp groundnut paste and 1 tsp honey. Serve warm."
+      "fr-CI": "Faites cuire 1/2 tasse d’avoine dans 1 tasse d’eau. Ajoutez 2 c. à s. de pâte d’arachide et 1 c. à c. de miel. Servez chaud."
+      "en-GH": "Cook oats, stir in groundnut paste and honey, serve warm."
+      "en-KE": "Cook oats, stir in groundnut paste and honey, serve warm."
       "en-ZA": "Cook oats, stir in groundnut paste and honey, serve warm."
-    },
-    "accessPlans": [1, 2, 3, 4]
-  },
+    }
+  }
   {
-    "id": "avocado-mango-smoothie",
+    "id": "avocado-mango-smoothie"
     "name": {
-      "en-NG": "Avocado Mango Smoothie",
-      "fr-CI": "Smoothie Avocat Mangue",
-      "en-GH": "Avocado Mango Smoothie",
-      "en-KE": "Avocado Mango Smoothie",
+      "en-NG": "Avocado Mango Smoothie"
+      "fr-CI": "Smoothie Avocat Mangue"
+      "en-GH": "Avocado Mango Smoothie"
+      "en-KE": "Avocado Mango Smoothie"
       "en-ZA": "Avocado Mango Smoothie"
-    },
-    "calories": 280,
-    "protein": 6,
-    "carbs": 50,
-    "fat": 9,
-    "category": "breakfast",
-    "image": "https://images.unsplash.com/photo-1617196042756-1c2d8a5b8c0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    }
+    "calories": 280
+    "protein": 6
+    "carbs": 50
+    "fat": 9
+    "category": "breakfast"
+    "image": "https://images.unsplash.com/photo-1617196042756-1c2d8a5b8c0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     "preparation": {
-      "en-NG": "Blend 1/2 avocado, 1/2 cup diced mango, 1/2 cup yogurt, and 1 tsp honey until smooth.",
-      "fr-CI": "Mixez 1/2 avocat, 1/2 tasse de mangue en dés, 1/2 tasse de yaourt et 1 c. à c. de miel.",
-      "en-GH": "Blend avocado, mango, yogurt, honey until smooth.",
-      "en-KE": "Blend avocado, mango, yogurt, honey until smooth.",
+      "en-NG": "Blend 1/2 avocado, 1/2 cup diced mango, 1/2 cup yogurt, and 1 tsp honey until smooth."
+      "fr-CI": "Mixez 1/2 avocat, 1/2 tasse de mangue en dés, 1/2 tasse de yaourt et 1 c. à c. de miel."
+      "en-GH": "Blend avocado, mango, yogurt, honey until smooth."
+      "en-KE": "Blend avocado, mango, yogurt, honey until smooth."
       "en-ZA": "Blend avocado, mango, yogurt, honey until smooth."
-    },
-    "accessPlans": [1, 2, 3, 4]
-  },
+    }
+  }
   {
-    "id": "boiled-egg-plantain",
+    "id": "boiled-egg-plantain"
     "name": {
-      "en-NG": "Boiled Egg with Plantain",
-      "fr-CI": "Œuf Dur avec Plantain",
-      "en-GH": "Boiled Egg with Plantain",
-      "en-KE": "Boiled Egg with Plantain",
+      "en-NG": "Boiled Egg with Plantain"
+      "fr-CI": "Œuf Dur avec Plantain"
+      "en-GH": "Boiled Egg with Plantain"
+      "en-KE": "Boiled Egg with Plantain"
       "en-ZA": "Boiled Egg with Plantain"
-    },
-    "calories": 320,
-    "protein": 13,
-    "carbs": 35,
-    "fat": 15,
-    "category": "breakfast",
-    "image": "https://images.unsplash.com/photo-1617196052747-7d2f1c8e9f4c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    }
+    "calories": 320
+    "protein": 13
+    "carbs": 35
+    "fat": 15
+    "category": "breakfast"
+    "image": "https://images.unsplash.com/photo-1617196052747-7d2f1c8e9f4c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     "preparation": {
-      "en-NG": "Boil 1 ripe plantain and 2 eggs. Peel and slice plantain, serve with sliced boiled eggs and a pinch of salt.",
-      "fr-CI": "Faites bouillir 1 plantain mûr et 2 œufs. Épluchez et tranchez le plantain, servez avec les œufs durs tranchés et une pincée de sel.",
-      "en-GH": "Boil plantain and eggs, serve sliced with salt.",
-      "en-KE": "Boil plantain and eggs, serve sliced with salt.",
+      "en-NG": "Boil 1 ripe plantain and 2 eggs. Peel and slice plantain, serve with sliced boiled eggs and a pinch of salt."
+      "fr-CI": "Faites bouillir 1 plantain mûr et 2 œufs. Épluchez et tranchez le plantain, servez avec les œufs durs tranchés et une pincée de sel."
+      "en-GH": "Boil plantain and eggs, serve sliced with salt."
+      "en-KE": "Boil plantain and eggs, serve sliced with salt."
       "en-ZA": "Boil plantain and eggs, serve sliced with salt."
-    },
-    "accessPlans": [1, 2, 3, 4]
-  },
+    }
+  }
   {
-    "id": "spinach-egg-wrap",
+    "id": "spinach-egg-wrap"
     "name": {
-      "en-NG": "Spinach and Egg Wrap",
-      "fr-CI": "Wrap Épinards et Œuf",
-      "en-GH": "Spinach and Egg Wrap",
-      "en-KE": "Spinach and Egg Wrap",
+      "en-NG": "Spinach and Egg Wrap"
+      "fr-CI": "Wrap Épinards et Œuf"
+      "en-GH": "Spinach and Egg Wrap"
+      "en-KE": "Spinach and Egg Wrap"
       "en-ZA": "Spinach and Egg Wrap"
-    },
-    "calories": 340,
-    "protein": 15,
-    "carbs": 28,
-    "fat": 16,
-    "category": "breakfast",
-    "image": "https://images.unsplash.com/photo-1617196062748-6d3c8b9f8c9b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    }
+    "calories": 340
+    "protein": 15
+    "carbs": 28
+    "fat": 16
+    "category": "breakfast"
+    "image": "https://images.unsplash.com/photo-1617196062748-6d3c8b9f8c9b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     "preparation": {
-      "en-NG": "Sauté 1/2 cup spinach in 1 tsp oil. Scramble 2 eggs and wrap with spinach in a whole wheat tortilla.",
-      "fr-CI": "Faites sauter 1/2 tasse d’épinards dans 1 c. à c. d’huile. Brouillez 2 œufs et enveloppez avec les épinards dans une tortilla de blé complet.",
-      "en-GH": "Sauté spinach, scramble eggs, wrap in tortilla.",
-      "en-KE": "Sauté spinach, scramble eggs, wrap in tortilla.",
+      "en-NG": "Sauté 1/2 cup spinach in 1 tsp oil. Scramble 2 eggs and wrap with spinach in a whole wheat tortilla."
+      "fr-CI": "Faites sauter 1/2 tasse d’épinards dans 1 c. à c. d’huile. Brouillez 2 œufs et enveloppez avec les épinards dans une tortilla de blé complet."
+      "en-GH": "Sauté spinach, scramble eggs, wrap in tortilla."
+      "en-KE": "Sauté spinach, scramble eggs, wrap in tortilla."
       "en-ZA": "Sauté spinach, scramble eggs, wrap in tortilla."
-    },
-    "accessPlans": [1, 2, 3, 4]
-  },
+    }
+  }
   {
-    "id": "mango-millet-porridge",
+    "id": "mango-millet-porridge"
     "name": {
-      "en-NG": "Mango Millet Porridge",
-      "fr-CI": "Bouillie de Mil à la Mangue",
-      "en-GH": "Mango Millet Porridge",
-      "en-KE": "Mango Millet Porridge",
+      "en-NG": "Mango Millet Porridge"
+      "fr-CI": "Bouillie de Mil à la Mangue"
+      "en-GH": "Mango Millet Porridge"
+      "en-KE": "Mango Millet Porridge"
       "en-ZA": "Mango Millet Porridge"
-    },
-    "calories": 300,
-    "protein": 8,
-    "carbs": 55,
-    "fat": 7,
-    "category": "breakfast",
-    "image": "https://images.unsplash.com/photo-1617196072749-2c3d8b7e9c9d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    }
+    "calories": 300
+    "protein": 8
+    "carbs": 55
+    "fat": 7
+    "category": "breakfast"
+    "image": "https://images.unsplash.com/photo-1617196072749-2c3d8b7e9c9d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     "preparation": {
-      "en-NG": "Cook 1/2 cup millet with 1 cup water. Stir in 1/2 cup diced mango and 1 tsp honey.",
-      "fr-CI": "Faites cuire 1/2 tasse de mil avec 1 tasse d’eau. Ajoutez 1/2 tasse de mangue en dés et 1 c. à c. de miel.",
-      "en-GH": "Cook millet, stir in mango and honey.",
-      "en-KE": "Cook millet, stir in mango and honey.",
+      "en-NG": "Cook 1/2 cup millet with 1 cup water. Stir in 1/2 cup diced mango and 1 tsp honey."
+      "fr-CI": "Faites cuire 1/2 tasse de mil avec 1 tasse d’eau. Ajoutez 1/2 tasse de mangue en dés et 1 c. à c. de miel."
+      "en-GH": "Cook millet, stir in mango and honey."
+      "en-KE": "Cook millet, stir in mango and honey."
       "en-ZA": "Cook millet, stir in mango and honey."
-    },
-    "accessPlans": [1, 2, 3, 4]
-  },
+    }
+  }
   {
-    "id": "tomato-eggs-toast",
+    "id": "tomato-eggs-toast"
     "name": {
-      "en-NG": "Tomato and Eggs on Toast",
-      "fr-CI": "Tomates et Œufs sur Toast",
-      "en-GH": "Tomato and Eggs on Toast",
-      "en-KE": "Tomato and Eggs on Toast",
+      "en-NG": "Tomato and Eggs on Toast"
+      "fr-CI": "Tomates et Œufs sur Toast"
+      "en-GH": "Tomato and Eggs on Toast"
+      "en-KE": "Tomato and Eggs on Toast"
       "en-ZA": "Tomato and Eggs on Toast"
-    },
-    "calories": 330,
-    "protein": 14,
-    "carbs": 32,
-    "fat": 16,
-    "category": "breakfast",
-    "image": "https://images.unsplash.com/photo-1617196082750-3c4d8b7e9c9e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    }
+    "calories": 330
+    "protein": 14
+    "carbs": 32
+    "fat": 16
+    "category": "breakfast"
+    "image": "https://images.unsplash.com/photo-1617196082750-3c4d8b7e9c9e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     "preparation": {
-      "en-NG": "Toast 2 slices whole wheat bread. Sauté 1/2 cup diced tomatoes and scramble 2 eggs. Serve on toast.",
-      "fr-CI": "Toastez 2 tranches de pain complet. Faites sauter 1/2 tasse de tomates en dés et brouillez 2 œufs. Servez sur le toast.",
-      "en-GH": "Toast bread, sauté tomatoes, scramble eggs, serve together.",
-      "en-KE": "Toast bread, sauté tomatoes, scramble eggs, serve together.",
+      "en-NG": "Toast 2 slices whole wheat bread. Sauté 1/2 cup diced tomatoes and scramble 2 eggs. Serve on toast."
+      "fr-CI": "Toastez 2 tranches de pain complet. Faites sauter 1/2 tasse de tomates en dés et brouillez 2 œufs. Servez sur le toast."
+      "en-GH": "Toast bread, sauté tomatoes, scramble eggs, serve together."
+      "en-KE": "Toast bread, sauté tomatoes, scramble eggs, serve together."
       "en-ZA": "Toast bread, sauté tomatoes, scramble eggs, serve together."
-    },
-    "accessPlans": [1, 2, 3, 4]
-  },
+    }
+  }
   {
-    "id": "peanut-butter-banana-toast",
+    "id": "peanut-butter-banana-toast"
     "name": {
-      "en-NG": "Peanut Butter Banana Toast",
-      "fr-CI": "Toast Beurre de Cacahuète et Banane",
-      "en-GH": "Peanut Butter Banana Toast",
-      "en-KE": "Peanut Butter Banana Toast",
+      "en-NG": "Peanut Butter Banana Toast"
+      "fr-CI": "Toast Beurre de Cacahuète et Banane"
+      "en-GH": "Peanut Butter Banana Toast"
+      "en-KE": "Peanut Butter Banana Toast"
       "en-ZA": "Peanut Butter Banana Toast"
-    },
-    "calories": 340,
-    "protein": 10,
-    "carbs": 42,
-    "fat": 14,
-    "category": "breakfast",
-    "image": "https://images.unsplash.com/photo-1617196092749-5c4d8b8f9c9f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    }
+    "calories": 340
+    "protein": 10
+    "carbs": 42
+    "fat": 14
+    "category": "breakfast"
+    "image": "https://images.unsplash.com/photo-1617196092749-5c4d8b8f9c9f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     "preparation": {
-      "en-NG": "Toast 2 slices whole wheat bread. Spread 2 tbsp peanut butter and top with 1 sliced banana.",
-      "fr-CI": "Toastez 2 tranches de pain complet. Étalez 2 c. à s. de beurre de cacahuète et ajoutez 1 banane tranchée.",
-      "en-GH": "Toast bread, spread peanut butter, top with banana slices.",
-      "en-KE": "Toast bread, spread peanut butter, top with banana slices.",
+      "en-NG": "Toast 2 slices whole wheat bread. Spread 2 tbsp peanut butter and top with 1 sliced banana."
+      "fr-CI": "Toastez 2 tranches de pain complet. Étalez 2 c. à s. de beurre de cacahuète et ajoutez 1 banane tranchée."
+      "en-GH": "Toast bread, spread peanut butter, top with banana slices."
+      "en-KE": "Toast bread, spread peanut butter, top with banana slices."
       "en-ZA": "Toast bread, spread peanut butter, top with banana slices."
-    },
-    "accessPlans": [1, 2, 3, 4]
-  },
+    }
+  }
   {
-    "id": "okra-and-tomato-eggs",
+    "id": "okra-and-tomato-eggs"
     "name": {
-      "en-NG": "Okra and Tomato Scrambled Eggs",
-      "fr-CI": "Œufs Brouillés au Gombo et Tomate",
-      "en-GH": "Okra and Tomato Scrambled Eggs",
-      "en-KE": "Okra and Tomato Scrambled Eggs",
+      "en-NG": "Okra and Tomato Scrambled Eggs"
+      "fr-CI": "Œufs Brouillés au Gombo et Tomate"
+      "en-GH": "Okra and Tomato Scrambled Eggs"
+      "en-KE": "Okra and Tomato Scrambled Eggs"
       "en-ZA": "Okra and Tomato Scrambled Eggs"
-    },
-    "calories": 280,
-    "protein": 12,
-    "carbs": 12,
-    "fat": 18,
-    "category": "breakfast",
-    "image": "https://images.unsplash.com/photo-1617196102750-4c5d8b8f9c9e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    }
+    "calories": 280
+    "protein": 12
+    "carbs": 12
+    "fat": 18
+    "category": "breakfast"
+    "image": "https://images.unsplash.com/photo-1617196102750-4c5d8b8f9c9e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     "preparation": {
-      "en-NG": "Sauté 1/2 cup sliced okra and 1/2 cup diced tomatoes in 1 tsp oil. Add 2 beaten eggs and scramble until cooked.",
-      "fr-CI": "Faites sauter 1/2 tasse de gombo tranché et 1/2 tasse de tomates en dés dans 1 c. à c. d’huile. Ajoutez 2 œufs battus et brouillez.",
-      "en-GH": "Sauté okra and tomatoes, scramble eggs, serve hot.",
-      "en-KE": "Sauté okra and tomatoes, scramble eggs, serve hot.",
+      "en-NG": "Sauté 1/2 cup sliced okra and 1/2 cup diced tomatoes in 1 tsp oil. Add 2 beaten eggs and scramble until cooked."
+      "fr-CI": "Faites sauter 1/2 tasse de gombo tranché et 1/2 tasse de tomates en dés dans 1 c. à c. d’huile. Ajoutez 2 œufs battus et brouillez."
+      "en-GH": "Sauté okra and tomatoes, scramble eggs, serve hot."
+      "en-KE": "Sauté okra and tomatoes, scramble eggs, serve hot."
       "en-ZA": "Sauté okra and tomatoes, scramble eggs, serve hot."
-    },
-    "accessPlans": [1, 2, 3, 4]
-  },
+    }
+  }
   {
-    "id": "mango-yogurt-parfait",
+    "id": "mango-yogurt-parfait"
     "name": {
-      "en-NG": "Mango Yogurt Parfait",
-      "fr-CI": "Parfait au Yaourt et Mangue",
-      "en-GH": "Mango Yogurt Parfait",
-      "en-KE": "Mango Yogurt Parfait",
+      "en-NG": "Mango Yogurt Parfait"
+      "fr-CI": "Parfait au Yaourt et Mangue"
+      "en-GH": "Mango Yogurt Parfait"
+      "en-KE": "Mango Yogurt Parfait"
       "en-ZA": "Mango Yogurt Parfait"
-    },
-    "calories": 290,
-    "protein": 8,
-    "carbs": 46,
-    "fat": 10,
-    "category": "breakfast",
-    "image": "https://images.unsplash.com/photo-1617196112751-5c6d8b9f9d9f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    }
+    "calories": 290
+    "protein": 8
+    "carbs": 46
+    "fat": 10
+    "category": "breakfast"
+    "image": "https://images.unsplash.com/photo-1617196112751-5c6d8b9f9d9f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     "preparation": {
-      "en-NG": "Layer 1/2 cup yogurt with 1/2 cup diced mango and 2 tbsp granola in a glass. Chill for 5 minutes before serving.",
-      "fr-CI": "Alternez 1/2 tasse de yaourt avec 1/2 tasse de mangue en dés et 2 c. à s. de granola dans un verre. Réfrigérez 5 minutes avant de servir.",
-      "en-GH": "Layer yogurt, mango, granola, serve chilled.",
-      "en-KE": "Layer yogurt, mango, granola, serve chilled.",
+      "en-NG": "Layer 1/2 cup yogurt with 1/2 cup diced mango and 2 tbsp granola in a glass. Chill for 5 minutes before serving."
+      "fr-CI": "Alternez 1/2 tasse de yaourt avec 1/2 tasse de mangue en dés et 2 c. à s. de granola dans un verre. Réfrigérez 5 minutes avant de servir."
+      "en-GH": "Layer yogurt, mango, granola, serve chilled."
+      "en-KE": "Layer yogurt, mango, granola, serve chilled."
       "en-ZA": "Layer yogurt, mango, granola, serve chilled."
-    },
-    "accessPlans": [1, 2, 3, 4]
-  },
+    }
+  }
   {
-    "id": "plantain-and-pepper-scramble",
+    "id": "plantain-and-pepper-scramble"
     "name": {
-      "en-NG": "Plantain and Pepper Scrambled Eggs",
-      "fr-CI": "Œufs Brouillés avec Plantain et Poivron",
-      "en-GH": "Plantain and Pepper Scrambled Eggs",
-      "en-KE": "Plantain and Pepper Scrambled Eggs",
+      "en-NG": "Plantain and Pepper Scrambled Eggs"
+      "fr-CI": "Œufs Brouillés avec Plantain et Poivron"
+      "en-GH": "Plantain and Pepper Scrambled Eggs"
+      "en-KE": "Plantain and Pepper Scrambled Eggs"
       "en-ZA": "Plantain and Pepper Scrambled Eggs"
-    },
-    "calories": 330,
-    "protein": 14,
-    "carbs": 36,
-    "fat": 16,
-    "category": "breakfast",
-    "image": "https://images.unsplash.com/photo-1617196122752-6c7d8b9f9e9f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    }
+    "calories": 330
+    "protein": 14
+    "carbs": 36
+    "fat": 16
+    "category": "breakfast"
+    "image": "https://images.unsplash.com/photo-1617196122752-6c7d8b9f9e9f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     "preparation": {
-      "en-NG": "Fry 1/2 cup diced plantain and 1/4 cup diced bell pepper in 1 tsp oil. Add 2 beaten eggs and scramble until cooked.",
-      "fr-CI": "Faites frire 1/2 tasse de plantain en dés et 1/4 tasse de poivron en dés dans 1 c. à c. d’huile. Ajoutez 2 œufs battus et brouillez.",
-      "en-GH": "Fry plantain and peppers, scramble eggs, serve warm.",
-      "en-KE": "Fry plantain and peppers, scramble eggs, serve warm.",
+      "en-NG": "Fry 1/2 cup diced plantain and 1/4 cup diced bell pepper in 1 tsp oil. Add 2 beaten eggs and scramble until cooked."
+      "fr-CI": "Faites frire 1/2 tasse de plantain en dés et 1/4 tasse de poivron en dés dans 1 c. à c. d’huile. Ajoutez 2 œufs battus et brouillez."
+      "en-GH": "Fry plantain and peppers, scramble eggs, serve warm."
+      "en-KE": "Fry plantain and peppers, scramble eggs, serve warm."
       "en-ZA": "Fry plantain and peppers, scramble eggs, serve warm."
-    },
-    "accessPlans": [1, 2, 3, 4]
-  },
+    }
+  }
   {
-    "id": "avocado-egg-toast",
+    "id": "avocado-egg-toast"
     "name": {
-      "en-NG": "Avocado Egg Toast",
-      "fr-CI": "Toast à l’Avocat et Œuf",
-      "en-GH": "Avocado Egg Toast",
-      "en-KE": "Avocado Egg Toast",
+      "en-NG": "Avocado Egg Toast"
+      "fr-CI": "Toast à l’Avocat et Œuf"
+      "en-GH": "Avocado Egg Toast"
+      "en-KE": "Avocado Egg Toast"
       "en-ZA": "Avocado Egg Toast"
-    },
-    "calories": 350,
-    "protein": 15,
-    "carbs": 30,
-    "fat": 18,
-    "category": "breakfast",
-    "image": "https://images.unsplash.com/photo-1617196132753-7c8d8b9f9f9f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    }
+    "calories": 350
+    "protein": 15
+    "carbs": 30
+    "fat": 18
+    "category": "breakfast"
+    "image": "https://images.unsplash.com/photo-1617196132753-7c8d8b9f9f9f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     "preparation": {
-      "en-NG": "Toast 2 slices whole wheat bread. Mash 1/2 avocado and spread on toast. Top with 2 fried eggs and sprinkle with black pepper.",
-      "fr-CI": "Toastez 2 tranches de pain complet. Écrasez 1/2 avocat et étalez sur le toast. Ajoutez 2 œufs frits et saupoudrez de poivre.",
-      "en-GH": "Toast bread, spread avocado, top with fried eggs, season.",
-      "en-KE": "Toast bread, spread avocado, top with fried eggs, season.",
+      "en-NG": "Toast 2 slices whole wheat bread. Mash 1/2 avocado and spread on toast. Top with 2 fried eggs and sprinkle with black pepper."
+      "fr-CI": "Toastez 2 tranches de pain complet. Écrasez 1/2 avocat et étalez sur le toast. Ajoutez 2 œufs frits et saupoudrez de poivre."
+      "en-GH": "Toast bread, spread avocado, top with fried eggs, season."
+      "en-KE": "Toast bread, spread avocado, top with fried eggs, season."
       "en-ZA": "Toast bread, spread avocado, top with fried eggs, season."
-    },
-    "accessPlans": [1, 2, 3, 4]
-  },
+    }
+  }
   {
-    "id": "mango-chia-pudding",
+    "id": "mango-chia-pudding"
     "name": {
-      "en-NG": "Mango Chia Pudding",
-      "fr-CI": "Pudding de Chia à la Mangue",
-      "en-GH": "Mango Chia Pudding",
-      "en-KE": "Mango Chia Pudding",
+      "en-NG": "Mango Chia Pudding"
+      "fr-CI": "Pudding de Chia à la Mangue"
+      "en-GH": "Mango Chia Pudding"
+      "en-KE": "Mango Chia Pudding"
       "en-ZA": "Mango Chia Pudding"
-    },
-    "calories": 280,
-    "protein": 7,
-    "carbs": 44,
-    "fat": 10,
-    "category": "breakfast",
-    "image": "https://images.unsplash.com/photo-1617196142754-8c9d8b9f9f9f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    }
+    "calories": 280
+    "protein": 7
+    "carbs": 44
+    "fat": 10
+    "category": "breakfast"
+    "image": "https://images.unsplash.com/photo-1617196142754-8c9d8b9f9f9f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     "preparation": {
-      "en-NG": "Mix 3 tbsp chia seeds with 1/2 cup almond milk. Refrigerate 4 hrs. Top with 1/2 cup diced mango before serving.",
-      "fr-CI": "Mélangez 3 c. à s. de graines de chia avec 1/2 tasse de lait d’amande. Réfrigérez 4 h. Ajoutez 1/2 tasse de mangue en dés avant de servir.",
-      "en-GH": "Mix chia seeds with almond milk, refrigerate, top with mango.",
-      "en-KE": "Mix chia seeds with almond milk, refrigerate, top with mango.",
+      "en-NG": "Mix 3 tbsp chia seeds with 1/2 cup almond milk. Refrigerate 4 hrs. Top with 1/2 cup diced mango before serving."
+      "fr-CI": "Mélangez 3 c. à s. de graines de chia avec 1/2 tasse de lait d’amande. Réfrigérez 4 h. Ajoutez 1/2 tasse de mangue en dés avant de servir."
+      "en-GH": "Mix chia seeds with almond milk, refrigerate, top with mango."
+      "en-KE": "Mix chia seeds with almond milk, refrigerate, top with mango."
       "en-ZA": "Mix chia seeds with almond milk, refrigerate, top with mango."
-    },
-    "accessPlans": [1, 2, 3, 4]
-  },
+    }
+  }
   {
-    "id": "papaya-avocado-smoothie",
+    "id": "papaya-avocado-smoothie"
     "name": {
-      "en-NG": "Papaya Avocado Smoothie",
-      "fr-CI": "Smoothie Papaye Avocat",
-      "en-GH": "Papaya Avocado Smoothie",
-      "en-KE": "Papaya Avocado Smoothie",
+      "en-NG": "Papaya Avocado Smoothie"
+      "fr-CI": "Smoothie Papaye Avocat"
+      "en-GH": "Papaya Avocado Smoothie"
+      "en-KE": "Papaya Avocado Smoothie"
       "en-ZA": "Papaya Avocado Smoothie"
-    },
-    "calories": 270,
-    "protein": 6,
-    "carbs": 48,
-    "fat": 8,
-    "category": "breakfast",
-    "image": "https://images.unsplash.com/photo-1617196152755-9c9d8b9f9f9f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    }
+    "calories": 270
+    "protein": 6
+    "carbs": 48
+    "fat": 8
+    "category": "breakfast"
+    "image": "https://images.unsplash.com/photo-1617196152755-9c9d8b9f9f9f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     "preparation": {
-      "en-NG": "Blend 1/2 cup diced papaya, 1/2 avocado, 1/2 cup water, and 1 tsp honey until smooth.",
-      "fr-CI": "Mixez 1/2 tasse de papaye en dés, 1/2 avocat, 1/2 tasse d’eau et 1 c. à c. de miel.",
-      "en-GH": "Blend papaya and avocado with water and honey.",
-      "en-KE": "Blend papaya and avocado with water and honey.",
+      "en-NG": "Blend 1/2 cup diced papaya, 1/2 avocado, 1/2 cup water, and 1 tsp honey until smooth."
+      "fr-CI": "Mixez 1/2 tasse de papaye en dés, 1/2 avocat, 1/2 tasse d’eau et 1 c. à c. de miel."
+      "en-GH": "Blend papaya and avocado with water and honey."
+      "en-KE": "Blend papaya and avocado with water and honey."
       "en-ZA": "Blend papaya and avocado with water and honey."
-    },
-    "accessPlans": [1, 2, 3, 4]
-  },
+    }
+  }
   {
-    "id": "sweet-potato-eggs",
+    "id": "sweet-potato-eggs"
     "name": {
-      "en-NG": "Sweet Potato and Egg Scramble",
-      "fr-CI": "Œufs Brouillés aux Patates Douces",
-      "en-GH": "Sweet Potato and Egg Scramble",
-      "en-KE": "Sweet Potato and Egg Scramble",
+      "en-NG": "Sweet Potato and Egg Scramble"
+      "fr-CI": "Œufs Brouillés aux Patates Douces"
+      "en-GH": "Sweet Potato and Egg Scramble"
+      "en-KE": "Sweet Potato and Egg Scramble"
       "en-ZA": "Sweet Potato and Egg Scramble"
-    },
-    "calories": 350,
-    "protein": 14,
-    "carbs": 38,
-    "fat": 18,
-    "category": "breakfast",
-    "image": "https://images.unsplash.com/photo-1617196162756-1c9d8b9f9f9f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    }
+    "calories": 350
+    "protein": 14
+    "carbs": 38
+    "fat": 18
+    "category": "breakfast"
+    "image": "https://images.unsplash.com/photo-1617196162756-1c9d8b9f9f9f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     "preparation": {
-      "en-NG": "Dice 1/2 cup sweet potato, sauté in 1 tsp oil until tender. Add 2 beaten eggs and scramble together.",
-      "fr-CI": "Coupez 1/2 tasse de patates douces en dés, faites sauter avec 1 c. à c. d’huile. Ajoutez 2 œufs battus et brouillez.",
-      "en-GH": "Sauté sweet potato, scramble with eggs, serve warm.",
-      "en-KE": "Sauté sweet potato, scramble with eggs, serve warm.",
+      "en-NG": "Dice 1/2 cup sweet potato, sauté in 1 tsp oil until tender. Add 2 beaten eggs and scramble together."
+      "fr-CI": "Coupez 1/2 tasse de patates douces en dés, faites sauter avec 1 c. à c. d’huile. Ajoutez 2 œufs battus et brouillez."
+      "en-GH": "Sauté sweet potato, scramble with eggs, serve warm."
+      "en-KE": "Sauté sweet potato, scramble with eggs, serve warm."
       "en-ZA": "Sauté sweet potato, scramble with eggs, serve warm."
-    },
-    "accessPlans": [1, 2, 3, 4]
-  },
+    }
+  }
   {
-    "id": "chia-banana-pudding",
+    "id": "chia-banana-pudding"
     "name": {
-      "en-NG": "Chia Banana Pudding",
-      "fr-CI": "Pudding aux Graines de Chia et Banane",
-      "en-GH": "Chia Banana Pudding",
-      "en-KE": "Chia Banana Pudding",
+      "en-NG": "Chia Banana Pudding"
+      "fr-CI": "Pudding aux Graines de Chia et Banane"
+      "en-GH": "Chia Banana Pudding"
+      "en-KE": "Chia Banana Pudding"
       "en-ZA": "Chia Banana Pudding"
-    },
-    "calories": 280,
-    "protein": 7,
-    "carbs": 46,
-    "fat": 10,
-    "category": "breakfast",
-    "image": "https://images.unsplash.com/photo-1617196182757-2c9d8b9f9f9f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    }
+    "calories": 280
+    "protein": 7
+    "carbs": 46
+    "fat": 10
+    "category": "breakfast"
+    "image": "https://images.unsplash.com/photo-1617196182757-2c9d8b9f9f9f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     "preparation": {
-      "en-NG": "Mix 3 tbsp chia seeds with 1/2 cup almond milk. Refrigerate 4 hrs. Top with 1 sliced banana before serving.",
-      "fr-CI": "Mélangez 3 c. à s. de graines de chia avec 1/2 tasse de lait d’amande. Réfrigérez 4 h. Ajoutez 1 banane tranchée avant de servir.",
-      "en-GH": "Mix chia seeds with almond milk, refrigerate, top with banana.",
-      "en-KE": "Mix chia seeds with almond milk, refrigerate, top with banana.",
+      "en-NG": "Mix 3 tbsp chia seeds with 1/2 cup almond milk. Refrigerate 4 hrs. Top with 1 sliced banana before serving."
+      "fr-CI": "Mélangez 3 c. à s. de graines de chia avec 1/2 tasse de lait d’amande. Réfrigérez 4 h. Ajoutez 1 banane tranchée avant de servir."
+      "en-GH": "Mix chia seeds with almond milk, refrigerate, top with banana."
+      "en-KE": "Mix chia seeds with almond milk, refrigerate, top with banana."
       "en-ZA": "Mix chia seeds with almond milk, refrigerate, top with banana."
-    },
-    "accessPlans": [1, 2, 3, 4]
-  },
+    }
+  }
   {
-    "id": "avocado-mango-toast",
+    "id": "avocado-mango-toast"
     "name": {
-      "en-NG": "Avocado Mango Toast",
-      "fr-CI": "Toast Avocat et Mangue",
-      "en-GH": "Avocado Mango Toast",
-      "en-KE": "Avocado Mango Toast",
+      "en-NG": "Avocado Mango Toast"
+      "fr-CI": "Toast Avocat et Mangue"
+      "en-GH": "Avocado Mango Toast"
+      "en-KE": "Avocado Mango Toast"
       "en-ZA": "Avocado Mango Toast"
-    },
-    "calories": 340,
-    "protein": 10,
-    "carbs": 38,
-    "fat": 16,
-    "category": "breakfast",
-    "image": "https://images.unsplash.com/photo-1617196192758-3c9d8b9f9f9f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    }
+    "calories": 340
+    "protein": 10
+    "carbs": 38
+    "fat": 16
+    "category": "breakfast"
+    "image": "https://images.unsplash.com/photo-1617196192758-3c9d8b9f9f9f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     "preparation": {
-      "en-NG": "Toast 2 slices whole wheat bread. Mash 1/2 avocado and spread on toast. Top with 1/2 cup diced mango.",
-      "fr-CI": "Toastez 2 tranches de pain complet. Écrasez 1/2 avocat et étalez sur le toast. Ajoutez 1/2 tasse de mangue en dés.",
-      "en-GH": "Toast bread, spread avocado, top with mango.",
-      "en-KE": "Toast bread, spread avocado, top with mango.",
+      "en-NG": "Toast 2 slices whole wheat bread. Mash 1/2 avocado and spread on toast. Top with 1/2 cup diced mango."
+      "fr-CI": "Toastez 2 tranches de pain complet. Écrasez 1/2 avocat et étalez sur le toast. Ajoutez 1/2 tasse de mangue en dés."
+      "en-GH": "Toast bread, spread avocado, top with mango."
+      "en-KE": "Toast bread, spread avocado, top with mango."
       "en-ZA": "Toast bread, spread avocado, top with mango."
-    },
-    "accessPlans": [1, 2, 3, 4]
-  },
+    }
+  }
   {
-    "id": "sweet-potato-pancake-wrap",
+    "id": "sweet-potato-pancake-wrap"
     "name": {
-      "en-NG": "Sweet Potato Pancake Wrap",
-      "fr-CI": "Wrap Crêpe de Patate Douce",
-      "en-GH": "Sweet Potato Pancake Wrap",
-      "en-KE": "Sweet Potato Pancake Wrap",
+      "en-NG": "Sweet Potato Pancake Wrap"
+      "fr-CI": "Wrap Crêpe de Patate Douce"
+      "en-GH": "Sweet Potato Pancake Wrap"
+      "en-KE": "Sweet Potato Pancake Wrap"
       "en-ZA": "Sweet Potato Pancake Wrap"
-    },
-    "calories": 350,
-    "protein": 12,
-    "carbs": 48,
-    "fat": 14,
-    "category": "breakfast",
-    "image": "https://images.unsplash.com/photo-1617196202759-4c9d8b9f9f9f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    }
+    "calories": 350
+    "protein": 12
+    "carbs": 48
+    "fat": 14
+    "category": "breakfast"
+    "image": "https://images.unsplash.com/photo-1617196202759-4c9d8b9f9f9f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     "preparation": {
-      "en-NG": "Prepare 1 small sweet potato pancake. Fill with 1 scrambled egg and sautéed spinach. Roll and serve.",
-      "fr-CI": "Préparez 1 petite crêpe de patate douce. Garnissez avec 1 œuf brouillé et des épinards sautés. Roulez et servez.",
-      "en-GH": "Prepare pancake, fill with scrambled egg and spinach, roll, serve.",
-      "en-KE": "Prepare pancake, fill with scrambled egg and spinach, roll, serve.",
+      "en-NG": "Prepare 1 small sweet potato pancake. Fill with 1 scrambled egg and sautéed spinach. Roll and serve."
+      "fr-CI": "Préparez 1 petite crêpe de patate douce. Garnissez avec 1 œuf brouillé et des épinards sautés. Roulez et servez."
+      "en-GH": "Prepare pancake, fill with scrambled egg and spinach, roll, serve."
+      "en-KE": "Prepare pancake, fill with scrambled egg and spinach, roll, serve."
       "en-ZA": "Prepare pancake, fill with scrambled egg and spinach, roll, serve."
-    },
-    "accessPlans": [1, 2, 3, 4]
-  },
+    }
+  }
   {
-    "id": "pawpaw-mango-smoothie",
+    "id": "pawpaw-mango-smoothie"
     "name": {
-      "en-NG": "Pawpaw Mango Smoothie",
-      "fr-CI": "Smoothie Papaye Mangue",
-      "en-GH": "Pawpaw Mango Smoothie",
-      "en-KE": "Pawpaw Mango Smoothie",
+      "en-NG": "Pawpaw Mango Smoothie"
+      "fr-CI": "Smoothie Papaye Mangue"
+      "en-GH": "Pawpaw Mango Smoothie"
+      "en-KE": "Pawpaw Mango Smoothie"
       "en-ZA": "Pawpaw Mango Smoothie"
-    },
-    "calories": 280,
-    "protein": 6,
-    "carbs": 50,
-    "fat": 8,
-    "category": "breakfast",
-    "image": "https://images.unsplash.com/photo-1617196222760-5c9d8b9f9f9f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    }
+    "calories": 280
+    "protein": 6
+    "carbs": 50
+    "fat": 8
+    "category": "breakfast"
+    "image": "https://images.unsplash.com/photo-1617196222760-5c9d8b9f9f9f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     "preparation": {
-      "en-NG": "Blend 1/2 cup diced pawpaw, 1/2 cup diced mango, 1/2 cup water, 1 tsp honey until smooth.",
-      "fr-CI": "Mixez 1/2 tasse de papaye en dés, 1/2 tasse de mangue en dés, 1/2 tasse d’eau, 1 c. à c. de miel.",
-      "en-GH": "Blend pawpaw, mango, water and honey until smooth.",
-      "en-KE": "Blend pawpaw, mango, water and honey until smooth.",
+      "en-NG": "Blend 1/2 cup diced pawpaw, 1/2 cup diced mango, 1/2 cup water, 1 tsp honey until smooth."
+      "fr-CI": "Mixez 1/2 tasse de papaye en dés, 1/2 tasse de mangue en dés, 1/2 tasse d’eau, 1 c. à c. de miel."
+      "en-GH": "Blend pawpaw, mango, water and honey until smooth."
+      "en-KE": "Blend pawpaw, mango, water and honey until smooth."
       "en-ZA": "Blend pawpaw, mango, water and honey until smooth."
-    },
-    "accessPlans": [1, 2, 3, 4]
-  },
+    }
+  }
   {
-    "id": "groundnut-smoothie-bowl",
+    "id": "groundnut-smoothie-bowl"
     "name": {
-      "en-NG": "Groundnut Smoothie Bowl",
-      "fr-CI": "Bol de Smoothie aux Arachides",
-      "en-GH": "Groundnut Smoothie Bowl",
-      "en-KE": "Groundnut Smoothie Bowl",
+      "en-NG": "Groundnut Smoothie Bowl"
+      "fr-CI": "Bol de Smoothie aux Arachides"
+      "en-GH": "Groundnut Smoothie Bowl"
+      "en-KE": "Groundnut Smoothie Bowl"
       "en-ZA": "Groundnut Smoothie Bowl"
-    },
-    "calories": 320,
-    "protein": 10,
-    "carbs": 44,
-    "fat": 14,
-    "category": "breakfast",
-    "image": "https://images.unsplash.com/photo-1617196242761-6c9d8b9f9f9f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    }
+    "calories": 320
+    "protein": 10
+    "carbs": 44
+    "fat": 14
+    "category": "breakfast"
+    "image": "https://images.unsplash.com/photo-1617196242761-6c9d8b9f9f9f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     "preparation": {
-      "en-NG": "Blend 1/2 cup yogurt with 2 tbsp groundnut paste. Pour into a bowl and top with 1/4 cup granola and sliced banana.",
-      "fr-CI": "Mixez 1/2 tasse de yaourt avec 2 c. à s. de pâte d’arachide. Versez dans un bol et ajoutez 1/4 tasse de granola et des tranches de banane.",
-      "en-GH": "Blend yogurt with groundnut paste, top with granola and banana slices.",
-      "en-KE": "Blend yogurt with groundnut paste, top with granola and banana slices.",
+      "en-NG": "Blend 1/2 cup yogurt with 2 tbsp groundnut paste. Pour into a bowl and top with 1/4 cup granola and sliced banana."
+      "fr-CI": "Mixez 1/2 tasse de yaourt avec 2 c. à s. de pâte d’arachide. Versez dans un bol et ajoutez 1/4 tasse de granola et des tranches de banane."
+      "en-GH": "Blend yogurt with groundnut paste, top with granola and banana slices."
+      "en-KE": "Blend yogurt with groundnut paste, top with granola and banana slices."
       "en-ZA": "Blend yogurt with groundnut paste, top with granola and banana slices."
-    },
-    "accessPlans": [1, 2, 3, 4]
-  },
+    }
+  }
   {
-    "id": "spinach-mushroom-omelette",
+    "id": "spinach-mushroom-omelette"
     "name": {
-      "en-NG": "Spinach Mushroom Omelette",
-      "fr-CI": "Omelette Épinards et Champignons",
-      "en-GH": "Spinach Mushroom Omelette",
-      "en-KE": "Spinach Mushroom Omelette",
+      "en-NG": "Spinach Mushroom Omelette"
+      "fr-CI": "Omelette Épinards et Champignons"
+      "en-GH": "Spinach Mushroom Omelette"
+      "en-KE": "Spinach Mushroom Omelette"
       "en-ZA": "Spinach Mushroom Omelette"
-    },
-    "calories": 300,
-    "protein": 14,
-    "carbs": 10,
-    "fat": 22,
-    "category": "breakfast",
-    "image": "https://images.unsplash.com/photo-1617196262762-7c9d8b9f9f9f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    }
+    "calories": 300
+    "protein": 14
+    "carbs": 10
+    "fat": 22
+    "category": "breakfast"
+    "image": "https://images.unsplash.com/photo-1617196262762-7c9d8b9f9f9f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     "preparation": {
-      "en-NG": "Sauté 1/2 cup spinach and 1/4 cup sliced mushrooms in 1 tsp oil. Add 2 beaten eggs and cook as omelette.",
-      "fr-CI": "Faites sauter 1/2 tasse d’épinards et 1/4 tasse de champignons tranchés dans 1 c. à c. d’huile. Ajoutez 2 œufs battus et faites cuire en omelette.",
-      "en-GH": "Sauté spinach and mushrooms, add eggs, cook omelette.",
-      "en-KE": "Sauté spinach and mushrooms, add eggs, cook omelette.",
+      "en-NG": "Sauté 1/2 cup spinach and 1/4 cup sliced mushrooms in 1 tsp oil. Add 2 beaten eggs and cook as omelette."
+      "fr-CI": "Faites sauter 1/2 tasse d’épinards et 1/4 tasse de champignons tranchés dans 1 c. à c. d’huile. Ajoutez 2 œufs battus et faites cuire en omelette."
+      "en-GH": "Sauté spinach and mushrooms, add eggs, cook omelette."
+      "en-KE": "Sauté spinach and mushrooms, add eggs, cook omelette."
       "en-ZA": "Sauté spinach and mushrooms, add eggs, cook omelette."
-    },
-    "accessPlans": [1, 2, 3, 4]
-  },
+    }
+  }
   {
-    "id": "moringa-mango-porridge",
+    "id": "moringa-mango-porridge"
     "name": {
-      "en-NG": "Moringa Mango Porridge",
-      "fr-CI": "Bouillie au Moringa et Mangue",
-      "en-GH": "Moringa Mango Porridge",
-      "en-KE": "Moringa Mango Porridge",
+      "en-NG": "Moringa Mango Porridge"
+      "fr-CI": "Bouillie au Moringa et Mangue"
+      "en-GH": "Moringa Mango Porridge"
+      "en-KE": "Moringa Mango Porridge"
       "en-ZA": "Moringa Mango Porridge"
-    },
-    "calories": 290,
-    "protein": 8,
-    "carbs": 50,
-    "fat": 9,
-    "category": "breakfast",
-    "image": "https://images.unsplash.com/photo-1617196282763-8c9d8b9f9f9f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    }
+    "calories": 290
+    "protein": 8
+    "carbs": 50
+    "fat": 9
+    "category": "breakfast"
+    "image": "https://images.unsplash.com/photo-1617196282763-8c9d8b9f9f9f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     "preparation": {
-      "en-NG": "Cook 1/2 cup maize porridge in 1 cup water. Stir in 1 tsp moringa powder and 1/2 cup diced mango.",
-      "fr-CI": "Faites cuire 1/2 tasse de bouillie de maïs avec 1 tasse d’eau. Ajoutez 1 c. à c. de poudre de moringa et 1/2 tasse de mangue en dés.",
-      "en-GH": "Cook porridge, add moringa powder and mango, serve warm.",
-      "en-KE": "Cook porridge, add moringa powder and mango, serve warm.",
+      "en-NG": "Cook 1/2 cup maize porridge in 1 cup water. Stir in 1 tsp moringa powder and 1/2 cup diced mango."
+      "fr-CI": "Faites cuire 1/2 tasse de bouillie de maïs avec 1 tasse d’eau. Ajoutez 1 c. à c. de poudre de moringa et 1/2 tasse de mangue en dés."
+      "en-GH": "Cook porridge, add moringa powder and mango, serve warm."
+      "en-KE": "Cook porridge, add moringa powder and mango, serve warm."
       "en-ZA": "Cook porridge, add moringa powder and mango, serve warm."
-    },
-    "accessPlans": [1, 2, 3, 4]
-  },
+    }
+  }
   {
-    "id": "pawpaw-oat-bowl",
+    "id": "pawpaw-oat-bowl"
     "name": {
-      "en-NG": "Pawpaw Oat Bowl",
-      "fr-CI": "Bol d’Avoine à la Papaye",
-      "en-GH": "Pawpaw Oat Bowl",
-      "en-KE": "Pawpaw Oat Bowl",
+      "en-NG": "Pawpaw Oat Bowl"
+      "fr-CI": "Bol d’Avoine à la Papaye"
+      "en-GH": "Pawpaw Oat Bowl"
+      "en-KE": "Pawpaw Oat Bowl"
       "en-ZA": "Pawpaw Oat Bowl"
-    },
-    "calories": 300,
-    "protein": 7,
-    "carbs": 52,
-    "fat": 9,
-    "category": "breakfast",
-    "image": "https://images.unsplash.com/photo-1617196302764-9c9d8b9f9f9f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    }
+    "calories": 300
+    "protein": 7
+    "carbs": 52
+    "fat": 9
+    "category": "breakfast"
+    "image": "https://images.unsplash.com/photo-1617196302764-9c9d8b9f9f9f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     "preparation": {
-      "en-NG": "Cook 1/2 cup oats in water. Top with 1/2 cup diced pawpaw and 1 tsp honey. Serve warm.",
-      "fr-CI": "Faites cuire 1/2 tasse d’avoine dans l’eau. Ajoutez 1/2 tasse de papaye en dés et 1 c. à c. de miel. Servez chaud.",
-      "en-GH": "Cook oats, top with pawpaw and honey, serve warm.",
-      "en-KE": "Cook oats, top with pawpaw and honey, serve warm.",
+      "en-NG": "Cook 1/2 cup oats in water. Top with 1/2 cup diced pawpaw and 1 tsp honey. Serve warm."
+      "fr-CI": "Faites cuire 1/2 tasse d’avoine dans l’eau. Ajoutez 1/2 tasse de papaye en dés et 1 c. à c. de miel. Servez chaud."
+      "en-GH": "Cook oats, top with pawpaw and honey, serve warm."
+      "en-KE": "Cook oats, top with pawpaw and honey, serve warm."
       "en-ZA": "Cook oats, top with pawpaw and honey, serve warm."
-    },
-    "accessPlans": [1, 2, 3, 4]
-  },
+    }
+  }
   {
-    "id": "mango-avocado-pap",
+    "id": "mango-avocado-pap"
     "name": {
-      "en-NG": "Mango Avocado Pap",
-      "fr-CI": "Bouillie Mangue Avocat",
-      "en-GH": "Mango Avocado Pap",
-      "en-KE": "Mango Avocado Pap",
+      "en-NG": "Mango Avocado Pap"
+      "fr-CI": "Bouillie Mangue Avocat"
+      "en-GH": "Mango Avocado Pap"
+      "en-KE": "Mango Avocado Pap"
       "en-ZA": "Mango Avocado Pap"
-    },
-    "calories": 280,
-    "protein": 8,
-    "carbs": 48,
-    "fat": 8,
-    "category": "breakfast",
-    "image": "https://images.unsplash.com/photo-1617196322765-1c9d8b9f9f9f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    }
+    "calories": 280
+    "protein": 8
+    "carbs": 48
+    "fat": 8
+    "category": "breakfast"
+    "image": "https://images.unsplash.com/photo-1617196322765-1c9d8b9f9f9f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     "preparation": {
-      "en-NG": "Cook 1/2 cup maize pap with 1 cup water. Stir in 1/2 cup diced mango and 1/2 avocado, mash lightly.",
-      "fr-CI": "Faites cuire 1/2 tasse de bouillie de maïs avec 1 tasse d’eau. Ajoutez 1/2 tasse de mangue en dés et 1/2 avocat, écrasez légèrement.",
-      "en-GH": "Cook pap, stir in mango and avocado, serve warm.",
-      "en-KE": "Cook pap, stir in mango and avocado, serve warm.",
+      "en-NG": "Cook 1/2 cup maize pap with 1 cup water. Stir in 1/2 cup diced mango and 1/2 avocado, mash lightly."
+      "fr-CI": "Faites cuire 1/2 tasse de bouillie de maïs avec 1 tasse d’eau. Ajoutez 1/2 tasse de mangue en dés et 1/2 avocat, écrasez légèrement."
+      "en-GH": "Cook pap, stir in mango and avocado, serve warm."
+      "en-KE": "Cook pap, stir in mango and avocado, serve warm."
       "en-ZA": "Cook pap, stir in mango and avocado, serve warm."
-    },
-    "accessPlans": [1, 2, 3, 4]
-  },
+    }
+  }
   {
-    "id": "groundnut-banana-smoothie",
+    "id": "groundnut-banana-smoothie"
     "name": {
-      "en-NG": "Groundnut Banana Smoothie",
-      "fr-CI": "Smoothie Banane Arachide",
-      "en-GH": "Groundnut Banana Smoothie",
-      "en-KE": "Groundnut Banana Smoothie",
+      "en-NG": "Groundnut Banana Smoothie"
+      "fr-CI": "Smoothie Banane Arachide"
+      "en-GH": "Groundnut Banana Smoothie"
+      "en-KE": "Groundnut Banana Smoothie"
       "en-ZA": "Groundnut Banana Smoothie"
-    },
-    "calories": 310,
-    "protein": 9,
-    "carbs": 48,
-    "fat": 12,
-    "category": "breakfast",
-    "image": "https://images.unsplash.com/photo-1617196342766-2c9d8b9f9f9f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    }
+    "calories": 310
+    "protein": 9
+    "carbs": 48
+    "fat": 12
+    "category": "breakfast"
+    "image": "https://images.unsplash.com/photo-1617196342766-2c9d8b9f9f9f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     "preparation": {
-      "en-NG": "Blend 1 banana, 2 tbsp groundnut paste, 1/2 cup yogurt and 1/2 cup water until smooth.",
-      "fr-CI": "Mixez 1 banane, 2 c. à s. de pâte d’arachide, 1/2 tasse de yaourt et 1/2 tasse d’eau.",
-      "en-GH": "Blend banana, groundnut paste, yogurt and water until smooth.",
-      "en-KE": "Blend banana, groundnut paste, yogurt and water until smooth.",
+      "en-NG": "Blend 1 banana, 2 tbsp groundnut paste, 1/2 cup yogurt and 1/2 cup water until smooth."
+      "fr-CI": "Mixez 1 banane, 2 c. à s. de pâte d’arachide, 1/2 tasse de yaourt et 1/2 tasse d’eau."
+      "en-GH": "Blend banana, groundnut paste, yogurt and water until smooth."
+      "en-KE": "Blend banana, groundnut paste, yogurt and water until smooth."
       "en-ZA": "Blend banana, groundnut paste, yogurt and water until smooth."
-    },
-    "accessPlans": [1, 2, 3, 4]
+    }
   }
 ]

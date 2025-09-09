@@ -8,7 +8,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '.
 import { useTranslation } from '../hooks/useTranslation';
 import { useApp } from '../contexts/AppContext';
 import { LanguageSwitcher } from '../components/LanguageSwitcher';
-import { Settings as SettingsIcon, Save, User, Ruler, Weight, Calendar, Globe, Download, Upload, RefreshCw, Crown, Clock, Key, AlertTriangle } from 'lucide-react';
+import { Settings as SettingsIcon, Save, User, Ruler, Weight, Calendar, Globe, Download, Upload, RefreshCw } from 'lucide-react';
 import { DailyWeightLogger } from '../components/DailyWeightLogger';
 import { Dialog, DialogContent, DialogTrigger } from '../components/ui/dialog';
 import { CSVImport } from '../components/CSVImport';
@@ -32,34 +32,7 @@ export default function Settings() {
   const [isSaving, setIsSaving] = useState(false);
   // Plan system removed - no longer needed
 
-  useEffect(() => {
-    const updatePlanInfo = () => {
-      setCurrentPlan(getCurrentPlan());
-      setRemainingDays(getRemainingDays());
-      setPlanData(loadPlanData());
-      
-      if (planData && !isAccessExpired()) {
-        const expirationDate = new Date(planData.expirationDate);
-        const now = new Date();
-        const diff = expirationDate.getTime() - now.getTime();
-        
-        if (diff > 0) {
-          const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-          const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-          const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-          
-          setTimeLeft(`${days}d ${hours}h ${minutes}m`);
-        } else {
-          setTimeLeft('Expirado');
-        }
-      }
-    };
-
-    updatePlanInfo();
-    const interval = setInterval(updatePlanInfo, 60000); // Atualizar a cada minuto
-    
-    return () => clearInterval(interval);
-  }, [planData]);
+  // Plan system removed
 
   useEffect(() => {
     // Load existing user data from localStorage and state
@@ -139,27 +112,13 @@ export default function Settings() {
     if (confirm('Are you sure you want to reset all data? This cannot be undone.')) {
       resetProgressData();
       clearUserData();
-      deactivatePlan();
+      // Plan deactivation removed
       alert('All data has been reset successfully!');
       window.location.reload();
     }
   };
 
-  const handlePlanActivation = () => {
-    setCurrentPlan(getCurrentPlan());
-    setRemainingDays(getRemainingDays());
-    setPlanData(loadPlanData());
-  };
-
-  const handleDeactivatePlan = () => {
-    if (confirm('Tem certeza que deseja desativar seu plano atual?')) {
-      deactivatePlan();
-      setCurrentPlan(null);
-      setRemainingDays(0);
-      setPlanData(null);
-      alert('Plano desativado com sucesso!');
-    }
-  };
+  // Plan management functions removed
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 pb-20">
