@@ -37,13 +37,16 @@ interface Meal {
   calories: number;
   protein: number;
   carbs: number;
-  fat: number;
+  fats: number;
   category: string;
+  countries: string[];
   image?: string;
-  preparation?: {
-    [key: string]: string;
+  ingredients?: {
+    [key: string]: string[];
   };
-  accessPlans?: number[];
+  instructions?: {
+    [key: string]: string[];
+  };
 }
 
 const meals = mealsData as Meal[];
@@ -53,19 +56,25 @@ function Meals() {
   const { state, dispatch } = useApp();
   const [searchTerm, setSearchTerm] = useState("");
   const [categoryFilter, setCategoryFilter] = useState("all");
+  const [countryFilter, setCountryFilter] = useState("all");
   const [selectedMeal, setSelectedMeal] = useState<Meal | null>(null);
   const [mealToLog, setMealToLog] = useState<Meal | null>(null);
   const [showLogDialog, setShowLogDialog] = useState(false);
+
+  // Extract unique countries from all meals
+  const availableCountries = Array.from(
+    new Set(meals.flatMap(meal => meal.countries))
+  ).sort();
 
   const logMeal = (meal: Meal, date: string) => {
     const mealLog = {
       id: `${meal.id}-${Date.now()}`,
       mealId: meal.id,
-      mealName: meal.name[currentLanguage] || meal.name["en-NG"],
+      mealName: meal.name[currentLanguage] || meal.name["en-US"],
       calories: meal.calories,
       protein: meal.protein,
       carbs: meal.carbs,
-      fat: meal.fat,
+      fat: meal.fats,
       date: date,
       time: new Date().toLocaleTimeString(),
       timestamp: new Date().toISOString(),
@@ -84,18 +93,13 @@ function Meals() {
 
     console.log(
       "Logging meal:",
-      meal.name[currentLanguage] || meal.name["en-NG"],
+      meal.name[currentLanguage] || meal.name["en-US"],
       "for date:",
       date,
     );
   };
 
   const handleLogMealClick = (meal: Meal) => {
-    const hasAccessToMeal = hasAccess(meal.accessPlans);
-    if (!hasAccessToMeal) {
-      setShowUpgradePopup(true);
-      return;
-    }
     setMealToLog(meal);
     setShowLogDialog(true);
   };
@@ -134,7 +138,7 @@ function Meals() {
 
     const mealName =
       meal.name[currentLanguage] ||
-      meal.name["en-NG"] ||
+      meal.name["en-US"] ||
       Object.values(meal.name)[0] ||
       "";
 
@@ -143,8 +147,9 @@ function Meals() {
     const matchesSearch = mealNameLower.includes(searchTermLower);
     const matchesCategory =
       categoryFilter === "all" || meal.category === categoryFilter;
+    const matchesCountry = countryFilter === "all" || meal.countries.includes(countryFilter);
 
-    return matchesSearch && matchesCategory;
+    return matchesSearch && matchesCategory && matchesCountry;
   });
 
   return (
@@ -190,6 +195,18 @@ function Meals() {
                     <SelectItem value="snack">{t("meals.categories.snack")}</SelectItem>
                   </SelectContent>
                 </Select>
+
+                <Select value={countryFilter} onValueChange={setCountryFilter}>
+                  <SelectTrigger className="w-[200px]">
+                    <SelectValue placeholder={t("meals.countryFilter") || "Todos os Países"} />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="all">{t("meals.countries.all") || "Todos os Países"}</SelectItem>
+                    {availableCountries.map((country) => (
+                      <SelectItem key={country} value={country}>{country}</SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
               </div>
             </div>
 
@@ -201,21 +218,15 @@ function Meals() {
             {/* Meals Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {filteredMeals.map((meal) => {
-                const hasAccessToMeal = hasAccess(meal.accessPlans);
-                const isLocked = !hasAccessToMeal;
                 
                 return (
-                  <Card key={meal.id} className={`overflow-hidden hover:shadow-lg transition-shadow duration-200 ${isLocked ? "opacity-90" : ""}`}>
-                    {/* Meal Image - Show lock icon if locked */}
+                  <Card key={meal.id} className="overflow-hidden hover:shadow-lg transition-shadow duration-200">
+                    {/* Meal Image */}
                     <div className="aspect-video w-full overflow-hidden">
-                      {isLocked ? (
-                        <div className="flex items-center justify-center h-full bg-gray-200 dark:bg-gray-700">
-                          <Lock className="w-16 h-16 text-gray-400" />
-                        </div>
-                      ) : meal.image ? (
+                      {meal.image ? (
                         <img
                           src={meal.image}
-                          alt={meal.name[currentLanguage] || meal.name["en-NG"]}
+                          alt={meal.name[currentLanguage] || meal.name["en-US"]}
                           className="w-full h-full object-cover hover:scale-105 transition-transform duration-200"
                         />
                       ) : (
