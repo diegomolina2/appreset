@@ -128,10 +128,10 @@ export default function Settings() {
             <SettingsIcon className="w-8 h-8 text-primary" />
             <div>
               <h1 className="text-2xl font-poppins font-bold text-gray-800 dark:text-gray-100">
-                Settings
+                {t('settings.title')}
               </h1>
               <p className="text-gray-600 dark:text-gray-400 text-sm">
-                Update your profile information
+                {t('settings.profile')}
               </p>
             </div>
           </div>
@@ -144,7 +144,7 @@ export default function Settings() {
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
               <Globe className="w-5 h-5" />
-              Idioma / Language
+              {t('settings.language')}
             </CardTitle>
           </CardHeader>
           <CardContent>
@@ -152,73 +152,44 @@ export default function Settings() {
           </CardContent>
         </Card>
 
-        {/* App Info Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="flex items-center gap-2">
-              <Crown className="w-5 h-5" />
-              Informações do App
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="space-y-4">
-            <div className="text-center py-8">
-              <Crown className="w-12 h-12 mx-auto text-purple-400 mb-4" />
-              <h3 className="text-lg font-semibold text-gray-700 dark:text-gray-300 mb-2">
-                Acesso Completo Ativo
-              </h3>
-              <p className="text-gray-600 dark:text-gray-400 mb-6">
-                Todos os recursos estão disponíveis
-              </p>
-              <div className="p-3 bg-purple-50 dark:bg-purple-900 rounded-lg">
-                <div className="flex items-center justify-center gap-2">
-                  <Crown className="w-4 h-4 text-purple-600 dark:text-purple-400" />
-                  <span className="text-sm font-medium text-purple-800 dark:text-purple-200">
-                    Acesso Ilimitado
-                  </span>
-                </div>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
-
         <Card>
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
               <User className="w-5 h-5" />
-              Personal Information
+              {t('settings.profile')}
             </CardTitle>
           </CardHeader>
           <CardContent className="space-y-4">
             <div>
-              <Label htmlFor="name">Full Name</Label>
+              <Label htmlFor="name">{t('onboarding.fields.name')}</Label>
               <Input
                 id="name"
                 value={formData.name}
                 onChange={(e) => handleInputChange('name', e.target.value)}
-                placeholder="Enter your full name"
+                placeholder={t('onboarding.fields.namePlaceholder')}
               />
             </div>
             
             <div className="grid grid-cols-2 gap-4">
               <div>
-                <Label htmlFor="age">Age</Label>
+                <Label htmlFor="age">{t('onboarding.fields.age')}</Label>
                 <Input
                   id="age"
                   type="number"
                   value={formData.age}
                   onChange={(e) => handleInputChange('age', e.target.value)}
-                  placeholder="Age"
+                  placeholder={t('onboarding.fields.agePlaceholder')}
                 />
               </div>
               <div>
-                <Label htmlFor="sex">Sex</Label>
+                <Label htmlFor="sex">{t('onboarding.fields.gender')}</Label>
                 <Select value={formData.sex} onValueChange={(value) => handleInputChange('sex', value)}>
                   <SelectTrigger>
-                    <SelectValue placeholder="Select sex" />
+                    <SelectValue placeholder={t('onboarding.fields.gender')} />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="male">Male</SelectItem>
-                    <SelectItem value="female">Female</SelectItem>
+                    <SelectItem value="male">{t('onboarding.fields.genderOptions.male')}</SelectItem>
+                    <SelectItem value="female">{t('onboarding.fields.genderOptions.female')}</SelectItem>
                   </SelectContent>
                 </Select>
               </div>
@@ -230,30 +201,30 @@ export default function Settings() {
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
               <Ruler className="w-5 h-5" />
-              Physical Measurements
+              {t('onboarding.fields.height')} & {t('onboarding.fields.weight')}
             </CardTitle>
           </CardHeader>
           <CardContent className="space-y-4">
             <div className="grid grid-cols-2 gap-4">
               <div>
-                <Label htmlFor="weight">Target Weight (kg)</Label>
+                <Label htmlFor="weight">{t('onboarding.fields.targetWeight')}</Label>
                 <Input
                   id="weight"
                   type="number"
                   step="0.1"
                   value={formData.weight}
                   onChange={(e) => handleInputChange('weight', e.target.value)}
-                  placeholder="Target weight in kg"
+                  placeholder={t('onboarding.fields.targetWeightPlaceholder')}
                 />
               </div>
               <div>
-                <Label htmlFor="height">Height (cm)</Label>
+                <Label htmlFor="height">{t('onboarding.fields.height')}</Label>
                 <Input
                   id="height"
                   type="number"
                   value={formData.height}
                   onChange={(e) => handleInputChange('height', e.target.value)}
-                  placeholder="Height in cm"
+                  placeholder={t('onboarding.fields.heightPlaceholder')}
                 />
               </div>
             </div>
@@ -264,7 +235,7 @@ export default function Settings() {
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
               <Weight className="w-5 h-5" />
-              Daily Weight Log
+              {t('progress.weightProgress')}
             </CardTitle>
           </CardHeader>
           <CardContent className="space-y-4">
@@ -276,57 +247,46 @@ export default function Settings() {
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
               <Calendar className="w-5 h-5" />
-              Goals & Activity
+              {t('onboarding.fields.exerciseLevel')}
             </CardTitle>
           </CardHeader>
           <CardContent className="space-y-4">
             <div>
-              <Label htmlFor="activityLevel">Activity Level</Label>
+              <Label htmlFor="activityLevel">{t('onboarding.fields.exerciseLevel')}</Label>
               <Select value={formData.activityLevel} onValueChange={(value) => handleInputChange('activityLevel', value)}>
                 <SelectTrigger>
-                  <SelectValue placeholder="Select activity level" />
+                  <SelectValue placeholder={t('onboarding.fields.exerciseLevel')} />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="sedentary">Sedentary</SelectItem>
-                  <SelectItem value="moderate">Moderate</SelectItem>
-                  <SelectItem value="active">Active</SelectItem>
+                  <SelectItem value="sedentary">{t('onboarding.fields.exerciseOptions.sedentary')}</SelectItem>
+                  <SelectItem value="moderate">{t('onboarding.fields.exerciseOptions.moderate')}</SelectItem>
+                  <SelectItem value="active">{t('onboarding.fields.exerciseOptions.active')}</SelectItem>
                 </SelectContent>
               </Select>
             </div>
             
             <div>
-              <Label htmlFor="goal">Goal</Label>
+              <Label htmlFor="goal">{t('onboarding.fields.diet')}</Label>
               <Select value={formData.goal} onValueChange={(value) => handleInputChange('goal', value)}>
                 <SelectTrigger>
-                  <SelectValue placeholder="Select your goal" />
+                  <SelectValue placeholder={t('onboarding.fields.diet')} />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="lose">Lose Weight</SelectItem>
-                  <SelectItem value="maintain">Maintain Weight</SelectItem>
-                  <SelectItem value="gain">Gain Weight</SelectItem>
+                  <SelectItem value="lose">Perder Peso</SelectItem>
+                  <SelectItem value="maintain">Manter Peso</SelectItem>
+                  <SelectItem value="gain">Ganhar Peso</SelectItem>
                 </SelectContent>
               </Select>
             </div>
           </CardContent>
         </Card>
 
-        <Card>
-          <CardHeader>
-            <CardTitle className="flex items-center gap-2">
-              <Globe className="w-5 h-5" />
-              Language / Langue
-            </CardTitle>
-          </CardHeader>
-          <CardContent>
-            <LanguageSwitcher />
-          </CardContent>
-        </Card>
 
         <Card>
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
               <Save className="w-5 h-5" />
-              Data Management
+              {t('progress.exportData')}
             </CardTitle>
           </CardHeader>
           <CardContent className="space-y-4">
@@ -337,14 +297,14 @@ export default function Settings() {
                 className="w-full text-green-600 hover:text-green-700"
               >
                 <Download className="w-4 h-4 mr-2" />
-                Export Data as CSV
+                {t('progress.exportData')}
               </Button>
               
               <Dialog>
                 <DialogTrigger asChild>
                   <Button variant="outline" className="w-full">
                     <Upload className="w-4 h-4 mr-2" />
-                    Import Data from CSV
+                    Importar Dados CSV
                   </Button>
                 </DialogTrigger>
                 <DialogContent>
@@ -358,7 +318,7 @@ export default function Settings() {
                 className="w-full text-red-600 hover:text-red-700"
               >
                 <RefreshCw className="w-4 h-4 mr-2" />
-                Reset All Data
+                Resetar Dados
               </Button>
             </div>
           </CardContent>
@@ -370,7 +330,7 @@ export default function Settings() {
           className="w-full bg-primary hover:bg-primary/90"
         >
           <Save className="w-4 h-4 mr-2" />
-          {isSaving ? 'Saving...' : 'Save Settings'}
+          {isSaving ? t('common.loading') : t('common.save')}
         </Button>
       </div>
     </div>
