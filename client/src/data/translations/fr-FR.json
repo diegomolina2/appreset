@@ -130,10 +130,13 @@
     "protein": "Protéines",
     "carbs": "Glucides",
     "fats": "Lipides",
-    "addToFavorites": "Ajouter aux favoris",
-    "removeFromFavorites": "Retirer des favoris",
+    "view": "Voir la Recette",
+    "favorite": "Ajouter aux favoris",
+    "unfavorite": "Retirer des favoris",
     "logMeal": "Enregistrer le repas",
     "search": "Rechercher des repas...",
+    "countryFilter": "Filtrer par pays",
+    "favoritesFilter": "Montrer les favoris seulement",
     "unlockedFrom": "Débloqué à partir du plan {{plan}}",
     "upgradeRequired": "Mise à niveau requise",
     "plans": {
@@ -141,6 +144,21 @@
       "Momentum": "Momentum",
       "Premium": "Premium",
       "Pro": "Pro"
+    },
+    "countries": {
+      "all": "Tous les Pays",
+      "Nigeria": "Nigéria",
+      "Ghana": "Ghana",
+      "Benin": "Bénin",
+      "Togo": "Togo",
+      "Ivory Coast": "Côte d'Ivoire",
+      "Burkina Faso": "Burkina Faso",
+      "Mali": "Mali",
+      "Senegal": "Sénégal",
+      "Gambia": "Gambie",
+      "Guinea": "Guinée",
+      "Sierra Leone": "Sierra Leone",
+      "Liberia": "Liberia"
     },
     "ingredients": "Ingrédients",
     "preparation": "Instructions de préparation"
