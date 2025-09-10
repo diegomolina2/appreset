@@ -190,7 +190,7 @@ export default function Badges() {
                 {t('badges.title')}
               </h1>
               <p className="text-gray-600 dark:text-gray-400 text-sm">
-                {t('badges.title')} - Suas conquistas
+                {t('badges.subtitle')}
               </p>
             </div>
             <div className="text-right">
@@ -248,11 +248,11 @@ export default function Badges() {
                   {category !== 'all' && getCategoryIcon(category)}
                   <span>
                     {category === 'all' ? t('meals.all') : 
-                     category === 'milestone' ? 'Marcos' :
-                     category === 'consistency' ? 'Consistência' :
+                     category === 'milestone' ? t('badges.categories.milestone') :
+                     category === 'consistency' ? t('badges.categories.consistency') :
                      category === 'challenge' ? t('challenges.title') :
-                     category === 'activity' ? 'Atividades' :
-                     category === 'nutrition' ? 'Nutrição' : category}
+                     category === 'activity' ? t('badges.categories.activity') :
+                     category === 'nutrition' ? t('badges.categories.nutrition') : category}
                   </span>
                   <Badge variant="secondary" className="ml-1">
                     {category === 'all' ? allBadges.length : allBadges.filter(b => b.category === category).length}
@@ -283,10 +283,10 @@ export default function Badges() {
               <Card className="p-12 text-center border-dashed border-2 border-gray-300 dark:border-gray-600">
                 <Search className="w-16 h-16 text-gray-400 mx-auto mb-4" />
                 <p className="text-gray-600 dark:text-gray-400 text-lg mb-2">
-                  Nenhuma badge encontrada
+                  {t('badges.noBadgesFound')}
                 </p>
                 <p className="text-gray-500 dark:text-gray-500 text-sm">
-                  Tente ajustar seus filtros de busca
+                  {t('badges.adjustFilters')}
                 </p>
               </Card>
             )}
@@ -308,10 +308,10 @@ export default function Badges() {
               <Card className="p-12 text-center">
                 <Trophy className="w-16 h-16 text-gray-400 mx-auto mb-4" />
                 <p className="text-gray-600 dark:text-gray-400 text-lg mb-2">
-                  Nenhuma badge conquistada ainda
+                  {t('badges.noBadgesEarned')}
                 </p>
                 <p className="text-gray-500 dark:text-gray-500 text-sm">
-                  Complete atividades e {t('challenges.title')} para conquistar sua primeira badge!
+                  {t('badges.completeActivities')}
                 </p>
               </Card>
             )}
@@ -338,10 +338,10 @@ export default function Badges() {
               <Card className="p-12 text-center">
                 <Trophy className="w-16 h-16 text-yellow-500 mx-auto mb-4" />
                 <p className="text-gray-600 dark:text-gray-400 text-lg mb-2">
-                  Parabéns! Você conquistou todas as badges disponíveis!
+                  {t('badges.congratulations')}
                 </p>
                 <p className="text-gray-500 dark:text-gray-500 text-sm">
-                  Continue mantendo seus hábitos saudáveis
+                  {t('badges.keepUpHabits')}
                 </p>
               </Card>
             )}

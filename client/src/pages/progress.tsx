@@ -94,7 +94,7 @@ export default function Progress() {
   // Helper function to filter data by time period
   const filterDataByTime = (data: any[], filter: string) => {
     if (!Array.isArray(data)) {
-      console.warn("filterDataByTime recebeu um valor inválido:", data);
+      console.warn("filterDataByTime received an invalid value:", data);
       return [];
     }
 
@@ -444,7 +444,7 @@ export default function Progress() {
                   {t('progress.title')}
                 </h1>
                 <p className="text-gray-600 dark:text-gray-400 text-sm">
-                  Acompanhe sua jornada de bem-estar com métricas detalhadas
+                  {t('progress.subtitle')}
                 </p>
               </div>
             </div>
@@ -473,7 +473,7 @@ export default function Progress() {
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <Droplets className="w-5 h-5 text-blue-500" />
-                  Water Intake Calculator & Tracker
+                  {t('progress.waterIntakeTitle')}
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-6">
@@ -604,7 +604,7 @@ export default function Progress() {
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <Target className="w-5 h-5 text-orange-500" />
-                  Daily Calories & BMI Calculator
+                  {t('progress.caloriesTitle')}
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-6">
@@ -776,7 +776,7 @@ export default function Progress() {
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <Scale className="w-5 h-5 text-green-500" />
-                  Body Composition Analysis
+                  {t('progress.bodyCompositionTitle')}
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-6">

@@ -65,7 +65,7 @@ export default function Dashboard() {
   // Get dynamic suggested meals based on time of day and favorites
   const getTimeBasedMeals = () => {
     const hour = new Date().getHours();
-    const favoriteMeals = userData.favoriteMeals || [];
+    const favoriteMeals = userData.favorites?.meals || [];
     
     let categoryFilter;
     if (hour < 10) categoryFilter = 'breakfast';

@@ -163,10 +163,16 @@
       "Momentum": "Momentum",
       "Premium": "Premium",
       "Pro": "Pro"
-    }
+    },
+    "noMealsFound": "No meals found",
+    "adjustSearchFilters": "Try adjusting your search terms or filters"
   },
   "progress": {
     "title": "Progress",
+    "subtitle": "Track your wellness journey with detailed metrics",
+    "waterIntakeTitle": "Water Intake Calculator & Tracker",
+    "caloriesTitle": "Daily Calories & BMI Calculator",
+    "bodyCompositionTitle": "Body Composition Analysis",
     "weightProgress": "Weight Progress",
     "moodTracking": "Mood Tracking",
     "waterIntake": "Water Intake",
@@ -194,9 +200,22 @@
   },
   "badges": {
     "title": "Badges & Achievements",
+    "subtitle": "Your achievements and progress",
     "unlocked": "Unlocked",
     "locked": "Locked",
     "unlockedAt": "Unlocked on {{date}}",
+    "categories": {
+      "milestone": "Milestones",
+      "consistency": "Consistency",
+      "activity": "Activities",
+      "nutrition": "Nutrition"
+    },
+    "noBadgesFound": "No badges found",
+    "adjustFilters": "Try adjusting your search filters",
+    "noBadgesEarned": "No badges earned yet",
+    "completeActivities": "Complete activities and challenges to earn your first badge!",
+    "congratulations": "Congratulations! You have earned all available badges!",
+    "keepUpHabits": "Keep up your healthy habits",
     "badgeTypes": {
       "first_step": "First Step",
       "hydrated": "Hydrated",

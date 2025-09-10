@@ -528,9 +528,9 @@ function Meals() {
             {filteredMeals.length === 0 && (
               <div className="text-center py-12">
                 <Utensils className="w-16 h-16 mx-auto text-muted-foreground mb-4" />
-                <h3 className="text-lg font-semibold mb-2">Nenhuma refeição encontrada</h3>
+                <h3 className="text-lg font-semibold mb-2">{t('meals.noMealsFound')}</h3>
                 <p className="text-muted-foreground">
-                  Tente ajustar seus termos de busca ou filtros
+                  {t('meals.adjustSearchFilters')}
                 </p>
               </div>
             )}

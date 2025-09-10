@@ -147,11 +147,16 @@
     },
     "mealsFound": "{{count}} comidas encontradas",
     "mealCount": "{{count}} comida",
-    "mealCountPlural": "{{count}} comidas"
+    "mealCountPlural": "{{count}} comidas",
+    "noMealsFound": "No se encontraron comidas",
+    "adjustSearchFilters": "Intenta ajustar tus términos de búsqueda o filtros"
   },
   "progress": {
     "title": "Progreso",
-    "subtitle": "Seguimiento de tu progreso",
+    "subtitle": "Sigue tu viaje de bienestar con métricas detalladas",
+    "waterIntakeTitle": "Calculadora y seguimiento de ingesta de agua",
+    "caloriesTitle": "Calculadora de calorías diarias e IMC",
+    "bodyCompositionTitle": "Análisis de composición corporal",
     "weightProgress": "Progreso de peso",
     "moodTracking": "Seguimiento del estado de ánimo",
     "waterIntake": "Consumo de agua",
@@ -179,10 +184,22 @@
   },
   "badges": {
     "title": "Insignias y logros",
-    "subtitle": "Tus logros y insignias",
+    "subtitle": "Tus logros y progreso",
     "unlocked": "Desbloqueada",
     "locked": "Bloqueada",
     "unlockedAt": "Desbloqueada el {{date}}",
+    "categories": {
+      "milestone": "Hitos",
+      "consistency": "Consistencia",
+      "activity": "Actividades",
+      "nutrition": "Nutrición"
+    },
+    "noBadgesFound": "No se encontraron medallas",
+    "adjustFilters": "Intenta ajustar tus filtros de búsqueda",
+    "noBadgesEarned": "Aún no has ganado medallas",
+    "completeActivities": "¡Completa actividades y desafíos para ganar tu primera medalla!",
+    "congratulations": "¡Felicitaciones! ¡Has ganado todas las medallas disponibles!",
+    "keepUpHabits": "Mantén tus hábitos saludables",
     "badgeTypes": {
       "first_step": "Primer paso",
       "hydrated": "Hidratado",

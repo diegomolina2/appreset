@@ -163,10 +163,16 @@
       "Liberia": "Liberia"
     },
     "ingredients": "Ingrédients",
-    "preparation": "Instructions de préparation"
+    "preparation": "Instructions de préparation",
+    "noMealsFound": "Aucun repas trouvé",
+    "adjustSearchFilters": "Essayez d'ajuster vos termes de recherche ou filtres"
   },
   "progress": {
     "title": "Progression",
+    "subtitle": "Suivez votre parcours de bien-être avec des métriques détaillées",
+    "waterIntakeTitle": "Calculateur et suivi d'hydratation",
+    "caloriesTitle": "Calculateur de calories quotidiennes et IMC",
+    "bodyCompositionTitle": "Analyse de la composition corporelle",
     "weightProgress": "Progression du poids",
     "moodTracking": "Suivi de l'humeur",
     "waterIntake": "Consommation d'eau",
@@ -188,9 +194,22 @@
   },
   "badges": {
     "title": "Badges et réussites",
+    "subtitle": "Vos réalisations et progrès",
     "unlocked": "Débloqué",
     "locked": "Verrouillé",
     "unlockedAt": "Débloqué le {{date}}",
+    "categories": {
+      "milestone": "Étapes importantes",
+      "consistency": "Régularité",
+      "activity": "Activités",
+      "nutrition": "Nutrition"
+    },
+    "noBadgesFound": "Aucun badge trouvé",
+    "adjustFilters": "Essayez d'ajuster vos filtres de recherche",
+    "noBadgesEarned": "Aucun badge gagné pour le moment",
+    "completeActivities": "Complétez des activités et des défis pour gagner votre premier badge !",
+    "congratulations": "Félicitations ! Vous avez gagné tous les badges disponibles !",
+    "keepUpHabits": "Continuez vos bonnes habitudes",
     "badgeTypes": {
       "first_step": "Premier pas",
       "hydrated": "Hydraté",

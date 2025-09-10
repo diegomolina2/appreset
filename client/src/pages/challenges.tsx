@@ -16,16 +16,16 @@ export default function Challenges() {
   const [selectedTab, setSelectedTab] = useState('available');
   // All challenges are now accessible
 
-  // Função auxiliar para garantir que a tradução retorne uma string, e não objeto
-  // Caso receba objeto, pega a primeira string válida ou converte para JSON string para evitar erro React
+  // Helper function to ensure translation returns a string, not an object
+  // If object is received, get the first valid string or convert to JSON string to avoid React error
   const safeTranslate = (key: string) => {
     const result = t(key);
     if (typeof result === 'string') return result;
     if (typeof result === 'object' && result !== null) {
-      // Se for objeto, tenta pegar o valor da primeira chave (exemplo: 'en-NG')
+      // If object, try to get the first key value
       const firstKey = Object.keys(result)[0];
       if (firstKey && typeof result[firstKey] === 'string') return result[firstKey];
-      // fallback para converter objeto em string
+      // fallback to convert object to string
       return JSON.stringify(result);
     }
     return '';
@@ -135,7 +135,7 @@ export default function Challenges() {
             className="w-full"
             onClick={() => handleStartChallenge(challenge.id)}
           >
-            {safeTranslate('startChallengeButton') || 'Começar desafio'}
+            {t('challenges.startChallenge')}
           </Button>
         </CardContent>
       </Card>
@@ -161,14 +161,14 @@ export default function Challenges() {
           <Progress value={progress} className="mb-4" />
 
           <div className="flex justify-between text-sm text-gray-600 dark:text-gray-400">
-            <span>{challenge.completedDays.length} / {challenge.days} {safeTranslate('daysCompletedLabel') || 'dias completados'}</span>
+            <span>{challenge.completedDays.length} / {challenge.days} {t('challenges.daysCompleted')}</span>
             <span>{Math.round(progress)}%</span>
           </div>
         </CardHeader>
 
         <CardContent className="pt-0">
           <Button className="w-full" onClick={() => restartChallenge(challenge.id)}>
-            {safeTranslate('restartChallengeButton') || 'Reiniciar desafio'}
+            {t('challenges.restartChallenge')}
           </Button>
         </CardContent>
       </Card>
@@ -177,20 +177,20 @@ export default function Challenges() {
 
   return (
     <div className="max-w-5xl mx-auto px-6 py-12">
-      <h1 className="text-4xl font-extrabold mb-8">{safeTranslate('challengesTitle') || 'Desafios'}</h1>
+      <h1 className="text-4xl font-extrabold mb-8">{t('challenges.title')}</h1>
 
       <ChallengeStats />
 
       <Tabs value={selectedTab} onValueChange={setSelectedTab} className="mb-8">
         <TabsList>
-          <TabsTrigger value="available">{safeTranslate('tabAvailable') || 'Disponíveis'}</TabsTrigger>
-          <TabsTrigger value="active">{safeTranslate('tabActive') || 'Ativos'}</TabsTrigger>
-          <TabsTrigger value="completed">{safeTranslate('tabCompleted') || 'Concluídos'}</TabsTrigger>
+          <TabsTrigger value="available">{t('challenges.available')}</TabsTrigger>
+          <TabsTrigger value="active">{t('challenges.active')}</TabsTrigger>
+          <TabsTrigger value="completed">{t('challenges.completed')}</TabsTrigger>
         </TabsList>
 
         <TabsContent value="available" className="space-y-6">
           {availableChallenges.length === 0 && (
-            <p className="text-center text-gray-600 dark:text-gray-400">{safeTranslate('noAvailableChallenges') || 'Nenhum desafio disponível no momento.'}</p>
+            <p className="text-center text-gray-600 dark:text-gray-400">{t('challenges.noAvailable')}</p>
           )}
 
           {availableChallenges.map(challenge => (
@@ -200,7 +200,7 @@ export default function Challenges() {
 
         <TabsContent value="active" className="space-y-6">
           {activeChallenges.length === 0 && (
-            <p className="text-center text-gray-600 dark:text-gray-400">{safeTranslate('noActiveChallenges') || 'Você não possui desafios ativos.'}</p>
+            <p className="text-center text-gray-600 dark:text-gray-400">{t('challenges.noActive')}</p>
           )}
 
           {activeChallenges.map(challenge => (
