@@ -57,7 +57,7 @@ export default function Challenges() {
             <Play className="w-6 h-6 text-blue-600 dark:text-blue-400" />
           </div>
           <div className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-1">{activeChallenges.length}</div>
-          <div className="text-sm text-gray-600 dark:text-gray-400 font-medium">{safeTranslate('activeChallengesLabel') || 'Ativos'}</div>
+          <div className="text-sm text-gray-600 dark:text-gray-400 font-medium">{t('challenges.activeChallengesLabel')}</div>
         </CardContent>
       </Card>
 
@@ -67,7 +67,7 @@ export default function Challenges() {
             <Trophy className="w-6 h-6 text-green-600 dark:text-green-400" />
           </div>
           <div className="text-3xl font-bold text-green-600 dark:text-green-400 mb-1">{completedChallenges.length}</div>
-          <div className="text-sm text-gray-600 dark:text-gray-400 font-medium">{safeTranslate('completedChallengesLabel') || 'Concluídos'}</div>
+          <div className="text-sm text-gray-600 dark:text-gray-400 font-medium">{t('challenges.completedChallengesLabel')}</div>
         </CardContent>
       </Card>
 
@@ -77,7 +77,7 @@ export default function Challenges() {
             <Sparkles className="w-6 h-6 text-purple-600 dark:text-purple-400" />
           </div>
           <div className="text-3xl font-bold text-purple-600 dark:text-purple-400 mb-1">{availableChallenges.length}</div>
-          <div className="text-sm text-gray-600 dark:text-gray-400 font-medium">{safeTranslate('availableChallengesLabel') || 'Disponíveis'}</div>
+          <div className="text-sm text-gray-600 dark:text-gray-400 font-medium">{t('challenges.availableChallengesLabel')}</div>
         </CardContent>
       </Card>
     </div>
@@ -100,11 +100,11 @@ export default function Challenges() {
               <div className="flex items-center gap-4 text-sm text-gray-600 dark:text-gray-400">
                 <div className="flex items-center gap-1">
                   <Calendar className="w-4 h-4" />
-                  <span>{challenge.days} {safeTranslate('daysLabel') || 'dias'}</span>
+                  <span>{challenge.days} {t('challenges.daysLabel')}</span>
                 </div>
                 <div className="flex items-center gap-1">
                   <Target className="w-4 h-4" />
-                  <span>{safeTranslate('completeChallengeLabel') || 'Desafio Completo'}</span>
+                  <span>{t('challenges.completeChallengeLabel')}</span>
                 </div>
               </div>
             </div>

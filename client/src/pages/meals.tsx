@@ -75,7 +75,7 @@ function Meals() {
   const [showLogDialog, setShowLogDialog] = useState(false);
 
   // Get favorite meals from user data
-  const favoriteMeals = state.userData.favoriteMeals || [];
+  const favoriteMeals = state.userData.favorites?.meals || [];
 
   // Extract unique countries from all meals
   const availableCountries = Array.from(
@@ -84,18 +84,11 @@ function Meals() {
 
   // Toggle favorite meal
   const toggleFavorite = (mealId: string) => {
-    const currentFavorites = state.userData.favoriteMeals || [];
-    const isFavorite = currentFavorites.includes(mealId);
-    
-    const updatedFavorites = isFavorite
-      ? currentFavorites.filter(id => id !== mealId)
-      : [...currentFavorites, mealId];
-
     dispatch({
-      type: "SET_USER_DATA",
+      type: "TOGGLE_FAVORITE",
       payload: {
-        ...state.userData,
-        favoriteMeals: updatedFavorites,
+        type: "meals",
+        id: mealId,
       },
     });
   };
@@ -106,27 +99,22 @@ function Meals() {
   };
 
   const logMeal = (meal: Meal, date: string) => {
-    const mealLog = {
-      id: `${meal.id}-${Date.now()}`,
-      mealId: meal.id,
-      mealName: meal.name[currentLanguage] || meal.name["en-US"],
-      calories: meal.calories,
-      protein: meal.protein,
-      carbs: meal.carbs,
-      fat: meal.fats,
+    // Update daily calories for the selected date
+    const calories = state.userData.calories || [];
+    const existing = calories.find(c => c.date === date);
+    const updatedCalories = calories.filter(c => c.date !== date);
+    const newTotal = (existing?.calories || 0) + meal.calories;
+    
+    updatedCalories.push({
       date: date,
-      time: new Date().toLocaleTimeString(),
-      timestamp: new Date().toISOString(),
-    };
-
-    const existingLogs = state.userData.mealLogs || [];
-    const updatedLogs = [...existingLogs, mealLog];
+      calories: newTotal,
+    });
 
     dispatch({
       type: "SET_USER_DATA",
       payload: {
         ...state.userData,
-        mealLogs: updatedLogs,
+        calories: updatedCalories,
       },
     });
 
@@ -256,18 +244,16 @@ function Meals() {
                 <Select value={countryFilter} onValueChange={setCountryFilter}>
                   <SelectTrigger className="w-[200px]">
                     <SelectValue
-                      placeholder={
-                        t("meals.countryFilter") || "Todos os Países"
-                      }
+                      placeholder={t("meals.countryFilter")}
                     />
                   </SelectTrigger>
                   <SelectContent>
                     <SelectItem value="all">
-                      {t("meals.countries.all") || "Todos os Países"}
+                      {t("meals.countries.all")}
                     </SelectItem>
                     {availableCountries.map((country) => (
                       <SelectItem key={country} value={country}>
-                        {t(`meals.countries.${country}`) || country}
+                        {t(`meals.countries.${country}`)}
                       </SelectItem>
                     ))}
                   </SelectContent>
@@ -281,15 +267,16 @@ function Meals() {
                   className="flex items-center gap-2"
                 >
                   <Heart className={`w-4 h-4 ${showFavoritesOnly ? "fill-current" : ""}`} />
-                  {t("meals.favoritesFilter") || "Só Favoritos"}
+                  {t("meals.favoritesFilter")}
                 </Button>
               </div>
             </div>
 
             {/* Results Count */}
             <div className="text-sm text-muted-foreground">
-              {filteredMeals.length}{" "}
-              {filteredMeals.length === 1 ? "refeição" : "refeições"} encontradas
+              {filteredMeals.length === 1 
+                ? t("meals.mealCount", { count: filteredMeals.length })
+                : t("meals.mealCountPlural", { count: filteredMeals.length })} {t("meals.found")}
             </div>
 
             {/* Meals Grid */}
