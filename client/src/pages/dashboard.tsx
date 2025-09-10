@@ -7,6 +7,11 @@ import {
 } from "../components/ui/card";
 import { Button } from "../components/ui/button";
 import { Badge } from "../components/ui/badge";
+import { 
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "../components/ui/popover";
 import {
   Bell,
   Moon,
@@ -17,6 +22,7 @@ import {
   Award,
   Play,
   Download,
+  Languages,
 } from "lucide-react";
 import { useTranslation } from "../hooks/useTranslation";
 import { useApp } from "../contexts/AppContext";
@@ -25,6 +31,7 @@ import { ChallengeCard } from "../components/ChallengeCard";
 import { MealCard } from "../components/MealCard";
 import { ExerciseCard } from "../components/ExerciseCard";
 import { BadgeCard } from "../components/BadgeCard";
+import { LanguageSwitcher } from "../components/LanguageSwitcher";
 import { getCurrentStreak } from "../utils/storage";
 import challengesData from "../data/challenges.json";
 import mealsData from "../data/meals.json";
@@ -158,7 +165,9 @@ export default function Dashboard() {
                   {getGreeting()}
                 </p>
                 <p className="text-xs text-muted-foreground">
-                  {activeChallenges.length} desafio{activeChallenges.length !== 1 ? 's' : ''} ativo{activeChallenges.length !== 1 ? 's' : ''}
+                  {activeChallenges.length === 1 
+                    ? t("dashboard.activeChallengeCount", { count: activeChallenges.length })
+                    : t("dashboard.activeChallengeCountPlural", { count: activeChallenges.length })}
                 </p>
               </div>
             </div>
@@ -186,6 +195,23 @@ export default function Dashboard() {
                   <Moon className="w-6 h-6" />
                 )}
               </Button>
+
+              {/* Language Switcher */}
+              <Popover>
+                <PopoverTrigger asChild>
+                  <Button
+                    variant="ghost"
+                    size="sm"
+                    className="p-2 rounded-full"
+                    data-testid="button-language-switcher"
+                  >
+                    <Languages className="w-6 h-6" />
+                  </Button>
+                </PopoverTrigger>
+                <PopoverContent className="w-64 p-4" align="end">
+                  <LanguageSwitcher />
+                </PopoverContent>
+              </Popover>
 
               {/* Notification Bell */}
               <Button

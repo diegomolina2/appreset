@@ -60,6 +60,8 @@
       "days": "jours"
     },
     "activeChallenges": "Défis actifs",
+    "activeChallengeCount": "{{count}} défi actif",
+    "activeChallengeCountPlural": "{{count}} défis actifs",
     "todayMealSuggestions": "Suggestions de repas du jour",
     "quickExercise": "Exercice rapide",
     "weightProgress": "Progression du poids",

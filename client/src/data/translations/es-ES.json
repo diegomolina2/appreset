@@ -61,6 +61,8 @@
       "days": "días"
     },
     "activeChallenges": "Desafíos activos",
+    "activeChallengeCount": "{{count}} desafío activo",
+    "activeChallengeCountPlural": "{{count}} desafíos activos",
     "todayMealSuggestions": "Sugerencias de comida de hoy",
     "quickExercise": "Ejercicio rápido",
     "weightProgress": "Progreso de peso",
