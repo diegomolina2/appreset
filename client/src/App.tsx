@@ -14,6 +14,8 @@ import Exercises from "./pages/exercises";
 import Courses from "./pages/courses";
 import CourseDetails from "./pages/course-details";
 import Lesson from "./pages/lesson";
+
+const LessonPage = Lesson;
 import Badges from "./pages/badges";
 import Challenges from "./pages/challenges";
 import Progress from "./pages/progress";
@@ -68,7 +70,7 @@ export default function App() {
   return (
     <AppProvider>
       <QueryClientProvider client={queryClient}>
-        <ThemeProvider defaultTheme="system" storageKey="vite-ui-theme">
+        <ThemeProvider>
           <Router>
             <AppContent />
           </Router>
