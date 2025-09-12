@@ -16,6 +16,7 @@ import challengesData from "../data/challenges.json";
 
 interface AppContextType {
   state: AppState;
+  hydrated: boolean;
   dispatch: React.Dispatch<AppAction>;
   updateUserProfile: (profile: Partial<UserData["userProfile"]>) => void;
   startChallenge: (challengeId: string) => void;
@@ -74,8 +75,14 @@ const initialState: AppState = {
 
 function appReducer(state: AppState, action: AppAction): AppState {
   switch (action.type) {
-    case "SET_USER_DATA":
-      return { ...state, userData: action.payload };
+    case "SET_USER_DATA": {
+      const hasCompletedOnboarding = !!(action.payload.userProfile.name && action.payload.userProfile.name.trim());
+      return { 
+        ...state, 
+        userData: action.payload,
+        isOnboarded: hasCompletedOnboarding
+      };
+    }
 
     case "UPDATE_USER_PROFILE": {
       const updatedUserData = {
@@ -325,14 +332,11 @@ const AppContext = createContext<AppContextType | undefined>(undefined);
 
 export function AppProvider({ children }: { children: React.ReactNode }) {
   const [state, dispatch] = useReducer(appReducer, initialState);
+  const [hydrated, setHydrated] = React.useState(false);
 
   useEffect(() => {
     const userData = loadUserData();
     dispatch({ type: "SET_USER_DATA", payload: userData });
-
-    // Set onboarded status based on whether user has a name
-    const hasCompletedOnboarding = !!(userData.userProfile.name && userData.userProfile.name.trim());
-    dispatch({ type: "SET_ONBOARDED", payload: hasCompletedOnboarding });
 
     if (userData.userProfile.language) {
       dispatch({
@@ -340,6 +344,9 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
         payload: userData.userProfile.language,
       });
     }
+    
+    // Mark as hydrated after loading from localStorage
+    setHydrated(true);
   }, []);
 
   useEffect(() => {
@@ -420,6 +427,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
     <AppContext.Provider
       value={{
         state,
+        hydrated,
         dispatch,
         updateUserProfile,
         startChallenge,

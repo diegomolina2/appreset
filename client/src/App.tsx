@@ -28,22 +28,27 @@ import NotFound from "./pages/not-found";
 const queryClient = new QueryClient();
 
 function DashboardWithOnboardingCheck() {
-  const { state } = useApp();
+  const { state, hydrated } = useApp();
   const [, setLocation] = useLocation();
 
   React.useEffect(() => {
-    // Check if user has completed onboarding only for the root path
-    if (!state.isOnboarded) {
+    // Only redirect after hydration is complete and user hasn't completed onboarding
+    if (hydrated && !state.isOnboarded) {
       setLocation("/onboarding");
     }
-  }, [state.isOnboarded, setLocation]);
+  }, [hydrated, state.isOnboarded, setLocation]);
+
+  // Wait for hydration to complete
+  if (!hydrated) {
+    return null; // Loading state while hydrating from localStorage
+  }
 
   // If onboarding is complete, render the Dashboard
   if (state.isOnboarded) {
     return <Dashboard />;
   }
 
-  // While checking onboarding status, return null (will redirect)
+  // While redirecting to onboarding
   return null;
 }
 
