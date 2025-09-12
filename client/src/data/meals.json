@@ -12,14 +12,14 @@
     "fats": 4,
     "category": "breakfast",
     "countries": ["Nigeria", "Ghana"],
-    "image": "https://images.unsplash.com/photo-1606491956689-2a97f6e4d0cb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    "image": "/meals/nigeria/1.webp",
     "ingredients": {
       "en-US": [
         "1/2 cup fermented maize (pap)",
         "1 cup hot water",
         "1/2 cup skimmed milk",
         "1/2 sliced banana",
-        "1/4 cup diced pawpaw"
+        "1/4 cup diced pawpaw (papaya)"
       ],
       "fr-FR": [
         "1/2 tasse de maïs fermenté (pap)",
@@ -38,22 +38,25 @@
     },
     "instructions": {
       "en-US": [
-        "Cook pap in hot water until thick",
-        "Add skimmed milk",
-        "Top with banana and pawpaw",
-        "Serve warm"
+        "Bring the water to a boil.",
+        "Slowly whisk in the pap (fermented maize) while stirring so it does not lump, until it thickens to a porridge texture.",
+        "Stir in the skimmed milk until fully combined.",
+        "Top with banana slices and diced pawpaw (papaya).",
+        "Serve warm."
       ],
       "fr-FR": [
-        "Faites cuire le pap dans l'eau chaude jusqu'à épaississement",
-        "Ajoutez le lait écrémé",
-        "Garnissez de banane et papaye",
-        "Servez chaud"
+        "Portez l'eau à ébullition.",
+        "Versez le pap (maïs fermenté) progressivement en fouettant pour éviter les grumeaux, jusqu'à obtenir une texture de bouillie.",
+        "Incorporez le lait écrémé et mélangez jusqu'à homogénéité.",
+        "Garnissez avec des tranches de banane et des dés de papaye.",
+        "Servez chaud."
       ],
       "es-ES": [
-        "Cocine el pap en agua caliente hasta espesar",
-        "Agregue la leche desnatada",
-        "Cubra con plátano y papaya",
-        "Sirva caliente"
+        "Lleve el agua a ebullición.",
+        "Agregue el pap (maíz fermentado) poco a poco mientras bate para evitar grumos, hasta que tenga textura de papilla.",
+        "Añada la leche desnatada y mezcle bien.",
+        "Cubra con rodajas de plátano y papaya en cubos.",
+        "Sirva caliente."
       ]
     }
   },
@@ -61,398 +64,2802 @@
     "id": "moi-moi-eggs",
     "name": {
       "en-US": "Moi Moi (Steamed Bean Pudding) with Boiled Eggs",
-      "fr-FR": "Moi Moi (Pouding de Haricots Vapeur) avec Œufs Durs",
-      "es-ES": "Moi Moi (Pudín de Frijoles al Vapor) con Huevos Hervidos"
+      "fr-FR": "Moi Moi (Pudding de Haricots à la Vapeur) avec Œufs Durs",
+      "es-ES": "Moi Moi (Budín de Frijoles al Vapor) con Huevos Cocidos"
     },
-    "calories": 420,
-    "protein": 25,
-    "carbs": 45,
-    "fats": 12,
+    "calories": 250,
+    "protein": 12,
+    "carbs": 30,
+    "fats": 10,
     "category": "breakfast",
     "countries": ["Nigeria", "Benin"],
-    "image": "https://images.unsplash.com/photo-1617196038587-cc72bb6a2e0f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    "image": "/meals/nigeria/2.webp",
     "ingredients": {
       "en-US": [
-        "1 cup peeled beans",
-        "1 red bell pepper",
-        "1/2 onion",
-        "1 tbsp oil",
-        "2 boiled eggs",
-        "seasonings"
+        "1 cup peeled black-eyed beans or brown beans (soaked and skins removed)",
+        "1/2 cup blended red pepper and onion mixture",
+        "1 tablespoon vegetable oil",
+        "1/2 teaspoon salt (to taste)",
+        "2 boiled eggs"
       ],
       "fr-FR": [
-        "1 tasse de haricots épluchés",
-        "1 poivron rouge",
-        "1/2 oignon",
-        "1 càs d'huile",
-        "2 œufs durs",
-        "assaisonnements"
+        "1 tasse de haricots yeux noirs ou haricots bruns (trempés et peau enlevée)",
+        "1/2 tasse de mélange de piment rouge et oignon mixés",
+        "1 cuillère à soupe d'huile végétale",
+        "1/2 cuillère à café de sel (selon le goût)",
+        "2 œufs durs"
       ],
       "es-ES": [
-        "1 taza de frijoles pelados",
-        "1 pimiento rojo",
-        "1/2 cebolla",
-        "1 cda de aceite",
-        "2 huevos hervidos",
-        "condimentos"
+        "1 taza de frijoles ojo negro o frijoles marrones (remojados y pelados)",
+        "1/2 taza de mezcla de pimiento rojo y cebolla triturados",
+        "1 cucharada de aceite vegetal",
+        "1/2 cucharadita de sal (al gusto)",
+        "2 huevos cocidos"
       ]
     },
     "instructions": {
       "en-US": [
-        "Blend beans with pepper, onion, oil and seasonings",
-        "Steam mixture in ramekins for 45 minutes",
-        "Serve with boiled eggs"
+        "Drain the soaked beans and remove skins (rub between hands and rinse).",
+        "Blend the beans with the pepper and onion until very smooth, adding a little water if needed.",
+        "Stir in the oil and salt until the batter is smooth and thick but pourable.",
+        "Pour the batter into heatproof ramekins or moulds, filling each about three-quarters full.",
+        "Steam the ramekins in a pot with a lid for 40–45 minutes until set (a knife should come out clean).",
+        "Serve each portion with a boiled egg on the side."
       ],
       "fr-FR": [
-        "Mixez les haricots avec poivron, oignon, huile et assaisonnements",
-        "Faites cuire à la vapeur 45 minutes",
-        "Servez avec œufs durs"
+        "Égouttez les haricots trempés et retirez la peau (frottez entre les mains et rincez).",
+        "Mixez les haricots avec le piment et l'oignon jusqu'à obtenir une purée très lisse, ajoutez un peu d'eau si nécessaire.",
+        "Incorporez l'huile et le sel jusqu'à obtenir une pâte homogène, épaisse mais coulante.",
+        "Versez la préparation dans des ramequins résistants à la chaleur en les remplissant aux trois quarts.",
+        "Faites cuire à la vapeur pendant 40–45 minutes jusqu'à ce que la préparation soit prise (un couteau doit en sortir propre).",
+        "Servez chaque portion avec un œuf dur à côté."
       ],
       "es-ES": [
-        "Mezcle frijoles con pimiento, cebolla, aceite y condimentos",
-        "Cocine al vapor 45 minutos",
-        "Sirva con huevos hervidos"
+        "Escurra los frijoles remojados y quite la piel (frote entre las manos y enjuague).",
+        "Licúe los frijoles con el pimiento y la cebolla hasta obtener una mezcla muy suave, añada un poco de agua si es necesario.",
+        "Incorpore el aceite y la sal hasta que la masa quede homogénea, espesa pero vertible.",
+        "Vierta la mezcla en ramequines aptos para vapor, llenando cada uno hasta tres cuartos.",
+        "Cocine al vapor durante 40–45 minutos hasta que esté firme (un cuchillo debe salir limpio).",
+        "Sirva cada porción con un huevo cocido al lado."
       ]
     }
   },
   {
-    "id": "yam-porridge",
+    "id": "yam-porridge-veg",
     "name": {
-      "en-US": "Light Yam Porridge with Vegetables",
-      "fr-FR": "Bouillie Légère d'Igname avec Légumes",
-      "es-ES": "Papilla Ligera de Ñame con Vegetales"
+      "en-US": "Yam Porridge with Vegetables",
+      "fr-FR": "Bouillie d'Igname avec Légumes",
+      "es-ES": "Gachas de Ñame con Verduras"
+    },
+    "calories": 320,
+    "protein": 8,
+    "carbs": 50,
+    "fats": 10,
+    "category": "breakfast",
+    "countries": ["Nigeria", "Cameroon"],
+    "image": "/meals/nigeria/3.webp",
+    "ingredients": {
+      "en-US": [
+        "2 cups yam, peeled and cut into 1-inch cubes",
+        "1 cup chopped spinach (ugu or regular spinach)",
+        "1/2 cup diced tomatoes",
+        "1 tablespoon light palm oil or vegetable oil",
+        "1/2 teaspoon salt (or to taste)"
+      ],
+      "fr-FR": [
+        "2 tasses d'igname, épluchée et coupée en cubes de 2,5 cm",
+        "1 tasse d'épinards hachés (ugu ou épinards ordinaires)",
+        "1/2 tasse de tomates en dés",
+        "1 cuillère à soupe d'huile de palme légère ou d'huile végétale",
+        "1/2 cuillère à café de sel (ou selon le goût)"
+      ],
+      "es-ES": [
+        "2 tazas de ñame, pelado y cortado en cubos de 2,5 cm",
+        "1 taza de espinacas picadas (ugu o espinaca común)",
+        "1/2 taza de tomates en cubos",
+        "1 cucharada de aceite de palma ligero o aceite vegetal",
+        "1/2 cucharadita de sal (al gusto)"
+      ]
+    },
+    "instructions": {
+      "en-US": [
+        "Put the yam cubes into a pot and cover with water; bring to a boil.",
+        "Cook the yam until it is soft (about 15–20 minutes).",
+        "Add the oil, diced tomatoes and salt; stir gently so the yam breaks a little and thickens the liquid.",
+        "Add the chopped spinach and cook for another 2–3 minutes until wilted.",
+        "Taste and adjust seasoning, then serve hot."
+      ],
+      "fr-FR": [
+        "Mettez les cubes d'igname dans une casserole et couvrez d'eau ; portez à ébullition.",
+        "Faites cuire l'igname jusqu'à ce qu'elle soit tendre (environ 15–20 minutes).",
+        "Ajoutez l'huile, les tomates en dés et le sel ; remuez doucement pour que l'igname se défasse légèrement et épaississe le liquide.",
+        "Ajoutez les épinards hachés et cuisez encore 2–3 minutes jusqu'à ce qu'ils tombent.",
+        "Goûtez, rectifiez l'assaisonnement si besoin, puis servez chaud."
+      ],
+      "es-ES": [
+        "Coloque los cubos de ñame en una olla y cubra con agua; lleve a ebullición.",
+        "Cocine el ñame hasta que esté tierno (unos 15–20 minutos).",
+        "Agregue el aceite, los tomates en cubos y la sal; mezcle suavemente para que el ñame se deshaga un poco y espese el líquido.",
+        "Añada las espinacas picadas y cocine 2–3 minutos más hasta que se marchiten.",
+        "Pruebe y ajuste la sazón, luego sirva caliente."
+      ]
+    }
+  },
+  {
+    "id": "grilled-plantain-peanut",
+    "name": {
+      "en-US": "Grilled Plantain with Peanut Paste",
+      "fr-FR": "Banane Plantain Grillée avec Pâte d'Arachide",
+      "es-ES": "Plátano a la Parrilla con Pasta de Cacahuete"
+    },
+    "calories": 280,
+    "protein": 6,
+    "carbs": 45,
+    "fats": 8,
+    "category": "breakfast",
+    "countries": ["Nigeria", "Ghana"],
+    "image": "/meals/nigeria/4.webp",
+    "ingredients": {
+      "en-US": [
+        "1 ripe plantain",
+        "2 tablespoons natural peanut paste",
+        "1 teaspoon honey (optional)"
+      ],
+      "fr-FR": [
+        "1 plantain mûr",
+        "2 cuillères à soupe de pâte d'arachide naturelle",
+        "1 cuillère à café de miel (optionnel)"
+      ],
+      "es-ES": [
+        "1 plátano macho maduro",
+        "2 cucharadas de pasta de cacahuete natural",
+        "1 cucharadita de miel (opcional)"
+      ]
+    },
+    "instructions": {
+      "en-US": [
+        "Peel the plantain and slice it in half lengthwise (or into rounds if preferred).",
+        "Grill or pan-sear the slices over medium heat for 4–6 minutes per side until golden.",
+        "Spread peanut paste over each grilled slice while warm.",
+        "Drizzle honey on top if you like extra sweetness.",
+        "Serve immediately."
+      ],
+      "fr-FR": [
+        "Épluchez le plantain et coupez-le en deux dans le sens de la longueur (ou en rondelles si vous préférez).",
+        "Grillez ou poêlez les tranches à feu moyen pendant 4–6 minutes de chaque côté jusqu'à ce qu'elles soient dorées.",
+        "Étalez la pâte d'arachide sur chaque tranche chaude.",
+        "Arrosez de miel si vous désirez plus de douceur.",
+        "Servez immédiatement."
+      ],
+      "es-ES": [
+        "Pele el plátano macho y córtelo por la mitad a lo largo (o en rodajas si prefiere).",
+        "Ase a la parrilla o dore en sartén a fuego medio 4–6 minutos por lado hasta que esté dorado.",
+        "Unte la pasta de cacahuete sobre cada rebanada caliente.",
+        "Agregue miel si desea más dulzor.",
+        "Sirva de inmediato."
+      ]
+    }
+  },
+  {
+    "id": "ofada-rice-veg-sauce",
+    "name": {
+      "en-US": "Ofada Rice with Light Vegetable Sauce",
+      "fr-FR": "Riz Ofada avec Sauce Légère aux Légumes",
+      "es-ES": "Arroz Ofada con Salsa Ligera de Verduras"
+    },
+    "calories": 330,
+    "protein": 7,
+    "carbs": 55,
+    "fats": 9,
+    "category": "breakfast",
+    "countries": ["Nigeria"],
+    "image": "/meals/nigeria/5.webp",
+    "ingredients": {
+      "en-US": [
+        "1 cup Ofada rice (or a short-grain brown rice)",
+        "1/2 cup mixed vegetables (1 tomato, 1/4 onion, 1/4 bell pepper)",
+        "1 tablespoon vegetable oil",
+        "1/2 teaspoon salt"
+      ],
+      "fr-FR": [
+        "1 tasse de riz Ofada (ou riz brun type grain court)",
+        "1/2 tasse de légumes mélangés (1 tomate, 1/4 oignon, 1/4 poivron)",
+        "1 cuillère à soupe d'huile végétale",
+        "1/2 cuillère à café de sel"
+      ],
+      "es-ES": [
+        "1 taza de arroz Ofada (o arroz integral de grano corto)",
+        "1/2 taza de verduras mixtas (1 tomate, 1/4 cebolla, 1/4 pimiento)",
+        "1 cucharada de aceite vegetal",
+        "1/2 cucharadita de sal"
+      ]
+    },
+    "instructions": {
+      "en-US": [
+        "Rinse the Ofada rice and cook in 2 cups of water until tender (about 25–30 minutes).",
+        "Blend the tomato, onion and pepper to a smooth sauce or chop finely for a chunky sauce.",
+        "Heat oil in a pan, cook the sauce for 5–8 minutes and add salt to taste.",
+        "Serve the cooked rice with the vegetable sauce spooned over."
+      ],
+      "fr-FR": [
+        "Rincez le riz Ofada et faites-le cuire dans 2 tasses d'eau jusqu'à tendreté (environ 25–30 minutes).",
+        "Mixez la tomate, l'oignon et le poivron pour obtenir une sauce lisse ou hachez finement pour une sauce plus texturée.",
+        "Chauffez l'huile dans une poêle, faites cuire la sauce 5–8 minutes et ajoutez le sel selon le goût.",
+        "Servez le riz cuit avec la sauce de légumes versée dessus."
+      ],
+      "es-ES": [
+        "Enjuague el arroz Ofada y cocínelo en 2 tazas de agua hasta que esté tierno (unos 25–30 minutos).",
+        "Licúe el tomate, la cebolla y el pimiento para una salsa suave o pique finamente para una salsa con textura.",
+        "Caliente el aceite en una sartén, cocine la salsa 5–8 minutos y añada sal al gusto.",
+        "Sirva el arroz cocido con la salsa de verduras encima."
+      ]
+    }
+  },
+  {
+    "id": "pineapple-mango-ginger-smoothie",
+    "name": {
+      "en-US": "Pineapple, Mango and Ginger Smoothie",
+      "fr-FR": "Smoothie Ananas, Mangue et Gingembre",
+      "es-ES": "Batido de Piña, Mango y Jengibre"
+    },
+    "calories": 220,
+    "protein": 5,
+    "carbs": 45,
+    "fats": 4,
+    "category": "breakfast",
+    "countries": ["Nigeria", "Ghana", "Kenya"],
+    "image": "/meals/nigeria/6.webp",
+    "ingredients": {
+      "en-US": [
+        "1 cup pineapple chunks",
+        "1/2 cup mango cubes",
+        "1 teaspoon grated fresh ginger",
+        "1/2 cup water or coconut water",
+        "Ice cubes (optional)"
+      ],
+      "fr-FR": [
+        "1 tasse de morceaux d'ananas",
+        "1/2 tasse de cubes de mangue",
+        "1 cuillère à café de gingembre frais râpé",
+        "1/2 tasse d'eau ou d'eau de coco",
+        "Glaçons (optionnel)"
+      ],
+      "es-ES": [
+        "1 taza de trozos de piña",
+        "1/2 taza de cubos de mango",
+        "1 cucharadita de jengibre fresco rallado",
+        "1/2 taza de agua o agua de coco",
+        "Cubitos de hielo (opcional)"
+      ]
+    },
+    "instructions": {
+      "en-US": [
+        "Place pineapple, mango, grated ginger and water (or coconut water) into a blender.",
+        "Blend until very smooth; add ice if you want a chilled thicker smoothie.",
+        "Pour into a glass and drink immediately for best freshness."
+      ],
+      "fr-FR": [
+        "Placez l'ananas, la mangue, le gingembre râpé et l'eau (ou eau de coco) dans un mixeur.",
+        "Mixez jusqu'à obtenir une texture très lisse ; ajoutez des glaçons pour une boisson plus fraîche et épaisse.",
+        "Versez dans un verre et consommez immédiatement pour une meilleure fraîcheur."
+      ],
+      "es-ES": [
+        "Coloque la piña, el mango, el jengibre rallado y el agua (o agua de coco) en una licuadora.",
+        "Licúe hasta que esté muy suave; agregue hielo si desea un batido más frío y espeso.",
+        "Vierta en un vaso y consuma de inmediato para mayor frescura."
+      ]
+    }
+  },
+  {
+    "id": "baked-akara",
+    "name": {
+      "en-US": "Baked Bean Pancake (Akara)",
+      "fr-FR": "Galette de Haricots Cuite au Four (Akara)",
+      "es-ES": "Tortita de Frijoles Horneada (Akara)"
+    },
+    "calories": 270,
+    "protein": 10,
+    "carbs": 28,
+    "fats": 14,
+    "category": "breakfast",
+    "countries": ["Nigeria", "Benin"],
+    "image": "/meals/nigeria/7.webp",
+    "ingredients": {
+      "en-US": [
+        "1 cup peeled black-eyed beans (or other beans)",
+        "1/2 onion, roughly chopped",
+        "1 small chili or bell pepper, chopped",
+        "1 tablespoon oil (for greasing or light brushing)",
+        "Salt to taste"
+      ],
+      "fr-FR": [
+        "1 tasse de haricots yeux noirs épluchés (ou autres haricots)",
+        "1/2 oignon, grossièrement haché",
+        "1 petit piment ou poivron, haché",
+        "1 cuillère à soupe d'huile (pour graisser ou badigeonner)",
+        "Sel selon le goût"
+      ],
+      "es-ES": [
+        "1 taza de frijoles ojo negro pelados (u otros frijoles)",
+        "1/2 cebolla, picada gruesa",
+        "1 pequeño chile o pimiento, picado",
+        "1 cucharada de aceite (para engrasar o pincelar)",
+        "Sal al gusto"
+      ]
+    },
+    "instructions": {
+      "en-US": [
+        "Rinse soaked beans and remove skins by rubbing and rinsing; drain well.",
+        "Blend beans, onion and pepper to a smooth batter, adding a little water if needed.",
+        "Preheat oven to 180°C (350°F) and grease a muffin tin lightly with oil.",
+        "Spoon batter into the tin and bake 18–22 minutes until golden and set.",
+        "Allow to cool a minute, then remove and serve warm."
+      ],
+      "fr-FR": [
+        "Rincez les haricots trempés et retirez la peau en frottant et rinçant ; égouttez bien.",
+        "Mixez les haricots, l'oignon et le piment jusqu'à obtenir une pâte lisse, ajoutez un peu d'eau si nécessaire.",
+        "Préchauffez le four à 180°C et graissez légèrement un moule à muffins.",
+        "Versez la pâte dans le moule et enfournez 18–22 minutes jusqu'à ce que ce soit doré et ferme.",
+        "Laissez refroidir une minute, démoulez et servez chaud."
+      ],
+      "es-ES": [
+        "Enjuague los frijoles remojados y quite la piel frotando y enjuagando; escurra bien.",
+        "Licúe los frijoles, la cebolla y el pimiento hasta obtener una masa suave, añada un poco de agua si es necesario.",
+        "Precaliente el horno a 180°C y engrase ligeramente un molde para muffins.",
+        "Coloque la masa en el molde y hornee 18–22 minutos hasta que estén dorados y firmes.",
+        "Deje enfriar un minuto, desmolde y sirva caliente."
+      ]
+    }
+  },
+  {
+    "id": "egg-ugu-sandwich",
+    "name": {
+      "en-US": "Whole Wheat Scrambled Egg Sandwich with Nigerian Spinach (Ugu)",
+      "fr-FR": "Sandwich de Blé Complet aux Œufs Brouillés et Épinards Nigérians (Ugu)",
+      "es-ES": "Sándwich Integral de Huevo Revuelto con Espinaca Nigeriana (Ugu)"
     },
     "calories": 350,
+    "protein": 14,
+    "carbs": 35,
+    "fats": 16,
+    "category": "breakfast",
+    "countries": ["Nigeria"],
+    "image": "/meals/nigeria/8.webp",
+    "ingredients": {
+      "en-US": [
+        "2 slices whole wheat bread",
+        "2 large eggs",
+        "1/2 cup chopped ugu (Nigerian spinach) or substitute with regular spinach",
+        "1 teaspoon vegetable oil",
+        "Pinch of salt and pepper"
+      ],
+      "fr-FR": [
+        "2 tranches de pain complet",
+        "2 gros œufs",
+        "1/2 tasse d'ugu haché (épinard nigérian) ou substitut d'épinard normal",
+        "1 cuillère à café d'huile végétale",
+        "Une pincée de sel et de poivre"
+      ],
+      "es-ES": [
+        "2 rebanadas de pan integral",
+        "2 huevos grandes",
+        "1/2 taza de ugu picado (espinaca nigeriana) o sustituir por espinaca común",
+        "1 cucharadita de aceite vegetal",
+        "Pizca de sal y pimienta"
+      ]
+    },
+    "instructions": {
+      "en-US": [
+        "Beat the eggs in a bowl with a pinch of salt and pepper.",
+        "Heat the oil in a non-stick pan over medium heat.",
+        "Add the chopped ugu and sauté for 1 minute until wilted.",
+        "Pour in the beaten eggs and stir gently to scramble until just cooked (about 2–3 minutes).",
+        "Place the scrambled egg and ugu between the two slices of whole wheat bread and serve warm."
+      ],
+      "fr-FR": [
+        "Battez les œufs dans un bol avec une pincée de sel et de poivre.",
+        "Chauffez l'huile dans une poêle antiadhésive à feu moyen.",
+        "Ajoutez l'ugu haché et faites revenir 1 minute jusqu'à ce qu'il tombe.",
+        "Versez les œufs battus et remuez doucement pour brouiller jusqu'à cuisson (2–3 minutes).",
+        "Placez les œufs brouillés et l'ugu entre les deux tranches de pain complet et servez chaud."
+      ],
+      "es-ES": [
+        "Bata los huevos en un bol con una pizca de sal y pimienta.",
+        "Caliente el aceite en una sartén antiadherente a fuego medio.",
+        "Añada el ugu picado y saltee 1 minuto hasta que se ablande.",
+        "Vierta los huevos batidos y revuelva suavemente hasta que estén cocidos (2–3 minutos).",
+        "Coloque los huevos revueltos con ugu entre las rebanadas de pan integral y sirva caliente."
+      ]
+    }
+  },
+  {
+    "id": "millet-pap-coconut",
+    "name": {
+      "en-US": "Millet Pap (Kunu) with Light Coconut Milk",
+      "fr-FR": "Bouillie de Millet (Kunu) avec Lait de Coco Léger",
+      "es-ES": "Papilla de Mijo (Kunu) con Leche de Coco Ligera"
+    },
+    "calories": 200,
+    "protein": 6,
+    "carbs": 38,
+    "fats": 4,
+    "category": "breakfast",
+    "countries": ["Nigeria", "Niger"],
+    "image": "/meals/nigeria/9.webp",
+    "ingredients": {
+      "en-US": [
+        "1/2 cup millet flour",
+        "1 cup hot water",
+        "1/2 cup light coconut milk",
+        "1 tsp honey or palm sugar (optional)"
+      ],
+      "fr-FR": [
+        "1/2 tasse de farine de millet",
+        "1 tasse d'eau chaude",
+        "1/2 tasse de lait de coco léger",
+        "1 c. à café de miel ou sucre de palme (optionnel)"
+      ],
+      "es-ES": [
+        "1/2 taza de harina de mijo",
+        "1 taza de agua caliente",
+        "1/2 taza de leche de coco ligera",
+        "1 cdita de miel o azúcar de palma (opcional)"
+      ]
+    },
+    "instructions": {
+      "en-US": [
+        "Mix the millet flour with a little cold water to form a smooth paste (this prevents lumps).",
+        "Slowly pour the hot water into the paste while stirring constantly until it thickens.",
+        "Stir in the light coconut milk and sweeten with honey if desired.",
+        "Serve warm."
+      ],
+      "fr-FR": [
+        "Mélangez la farine de millet avec un peu d'eau froide pour former une pâte lisse (cela évite les grumeaux).",
+        "Versez lentement l'eau chaude dans la pâte en remuant constamment jusqu'à épaississement.",
+        "Incorporez le lait de coco léger et sucrez avec du miel si désiré.",
+        "Servez chaud."
+      ],
+      "es-ES": [
+        "Mezcle la harina de mijo con un poco de agua fría para formar una pasta suave (esto evita grumos).",
+        "Vierta lentamente el agua caliente en la pasta mientras remueve constantemente hasta que espese.",
+        "Agregue la leche de coco ligera y endulce con miel si lo desea.",
+        "Sirva caliente."
+      ]
+    }
+  },
+  {
+    "id": "fruit-salad-egusi",
+    "name": {
+      "en-US": "Tropical Fruit Salad with Roasted Pumpkin Seeds (Egusi)",
+      "fr-FR": "Salade de Fruits Tropicaux avec Graines de Courge Rôties (Egusi)",
+      "es-ES": "Ensalada de Frutas Tropicales con Semillas de Calabaza Tostadas (Egusi)"
+    },
+    "calories": 220,
+    "protein": 5,
+    "carbs": 48,
+    "fats": 2,
+    "category": "breakfast",
+    "countries": ["Nigeria", "Ghana"],
+    "image": "/meals/nigeria/10.webp",
+    "ingredients": {
+      "en-US": [
+        "1/2 cup pineapple chunks",
+        "1/2 cup mango cubes",
+        "1/2 banana, sliced",
+        "2 tablespoons roasted pumpkin seeds (egusi)"
+      ],
+      "fr-FR": [
+        "1/2 tasse d'ananas en morceaux",
+        "1/2 tasse de mangue en dés",
+        "1/2 banane tranchée",
+        "2 cuillères à soupe de graines de courge rôties (egusi)"
+      ],
+      "es-ES": [
+        "1/2 taza de piña en trozos",
+        "1/2 taza de mango en cubos",
+        "1/2 plátano en rodajas",
+        "2 cucharadas de semillas de calabaza tostadas (egusi)"
+      ]
+    },
+    "instructions": {
+      "en-US": [
+        "Cut all fruits into bite-sized pieces and place in a mixing bowl.",
+        "Toss the pineapple, mango and banana gently so they are evenly combined.",
+        "Sprinkle the roasted pumpkin seeds (egusi) over the top for crunch and extra flavor.",
+        "Serve immediately or chill for 10–15 minutes if you prefer cold."
+      ],
+      "fr-FR": [
+        "Coupez tous les fruits en morceaux de la taille d'une bouchée et mettez-les dans un saladier.",
+        "Mélangez délicatement l'ananas, la mangue et la banane pour homogénéiser.",
+        "Saupoudrez les graines de courge rôties (egusi) sur le dessus pour le croquant et la saveur.",
+        "Servez immédiatement ou réfrigérez 10–15 minutes si vous préférez frais."
+      ],
+      "es-ES": [
+        "Corte todas las frutas en trozos del tamaño de un bocado y colóquelas en un bol.",
+        "Mezcle suavemente la piña, el mango y el plátano para que queden uniformes.",
+        "Espolvoree las semillas de calabaza tostadas (egusi) por encima para dar textura y sabor.",
+        "Sirva inmediatamente o refrigere 10–15 minutos si prefiere frío."
+      ]
+    }
+  },
+  {
+    "id": "boiled-yam-tomato",
+    "name": {
+      "en-US": "Boiled Yam with Fresh Tomato Sauce",
+      "fr-FR": "Igname Bouillie avec Sauce Tomate Fraîche",
+      "es-ES": "Ñame Hervido con Salsa de Tomate Fresco"
+    },
+    "calories": 320,
+    "protein": 6,
+    "carbs": 68,
+    "fats": 4,
+    "category": "breakfast",
+    "countries": ["Nigeria", "Ghana"],
+    "image": "/meals/nigeria/11.webp",
+    "ingredients": {
+      "en-US": [
+        "2 cups yam chunks",
+        "2 medium fresh tomatoes",
+        "1/2 onion, chopped",
+        "1 tbsp vegetable oil",
+        "1/2 tsp salt"
+      ],
+      "fr-FR": [
+        "2 tasses de morceaux d'igname",
+        "2 tomates fraîches moyennes",
+        "1/2 oignon, haché",
+        "1 c. à soupe d'huile végétale",
+        "1/2 c. à café de sel"
+      ],
+      "es-ES": [
+        "2 tazas de trozos de ñame",
+        "2 tomates frescos medianos",
+        "1/2 cebolla, picada",
+        "1 cda de aceite vegetal",
+        "1/2 cdta de sal"
+      ]
+    },
+    "instructions": {
+      "en-US": [
+        "Peel and cut yam into chunks. Boil in salted water until soft.",
+        "Blend tomatoes and onion, then cook with vegetable oil until thick.",
+        "Serve yam with tomato sauce on top."
+      ],
+      "fr-FR": [
+        "Épluchez et coupez l'igname en morceaux. Faites bouillir dans de l'eau salée jusqu'à tendreté.",
+        "Mixez les tomates et l'oignon, puis faites cuire avec l'huile végétale jusqu'à épaississement.",
+        "Servez l'igname avec la sauce tomate par-dessus."
+      ],
+      "es-ES": [
+        "Pele y corte el ñame en trozos. Hierva en agua con sal hasta que esté suave.",
+        "Licúe los tomates y la cebolla, luego cocine con aceite vegetal hasta espesar.",
+        "Sirva el ñame con la salsa de tomate encima."
+      ]
+    }
+  },
+  {
+    "id": "baked-banana-cinnamon",
+    "name": {
+      "en-US": "Oven-Baked Banana with Cinnamon and Light Honey",
+      "fr-FR": "Banane au Four avec Cannelle et Miel Léger",
+      "es-ES": "Banana Horneada con Canela y Miel Ligera"
+    },
+    "calories": 210,
+    "protein": 2,
+    "carbs": 52,
+    "fats": 1,
+    "category": "breakfast",
+    "countries": ["Nigeria", "Cameroon"],
+    "image": "/meals/nigeria/12.webp",
+    "ingredients": {
+      "en-US": [
+        "2 ripe bananas",
+        "1 tsp ground cinnamon",
+        "1 tbsp light honey"
+      ],
+      "fr-FR": [
+        "2 bananes mûres",
+        "1 c. à café de cannelle moulue",
+        "1 c. à soupe de miel léger"
+      ],
+      "es-ES": [
+        "2 plátanos maduros",
+        "1 cdta de canela molida",
+        "1 cda de miel ligera"
+      ]
+    },
+    "instructions": {
+      "en-US": [
+        "Preheat oven to 180°C (350°F).",
+        "Slice bananas lengthwise and place on baking tray.",
+        "Sprinkle with cinnamon and drizzle honey.",
+        "Bake for 12 minutes and serve warm."
+      ],
+      "fr-FR": [
+        "Préchauffez le four à 180°C.",
+        "Coupez les bananes dans le sens de la longueur et placez-les sur une plaque.",
+        "Saupoudrez de cannelle et arrosez de miel.",
+        "Faites cuire 12 minutes et servez chaud."
+      ],
+      "es-ES": [
+        "Precaliente el horno a 180°C.",
+        "Corte los plátanos a lo largo y colóquelos en una bandeja.",
+        "Espolvoree con canela y rocíe miel.",
+        "Hornee 12 minutos y sirva caliente."
+      ]
+    }
+  },
+  {
+    "id": "oatmeal-ogbono",
+    "name": {
+      "en-US": "Oatmeal Enriched with African Mango (Ogbono) Pieces",
+      "fr-FR": "Gruau d'Avoine Enrichi de Morceaux de Mangue Africaine (Ogbono)",
+      "es-ES": "Avena Enriquecida con Trozos de Mango Africano (Ogbono)"
+    },
+    "calories": 280,
+    "protein": 9,
+    "carbs": 50,
+    "fats": 6,
+    "category": "breakfast",
+    "countries": ["Nigeria", "Cameroon"],
+    "image": "/meals/nigeria/13.webp",
+    "ingredients": {
+      "en-US": [
+        "1/2 cup rolled oats",
+        "1 cup water or milk",
+        "2 tbsp African mango (ogbono) pieces",
+        "1 tsp honey"
+      ],
+      "fr-FR": [
+        "1/2 tasse de flocons d'avoine",
+        "1 tasse d'eau ou de lait",
+        "2 c. à soupe de morceaux de mangue africaine (ogbono)",
+        "1 c. à café de miel"
+      ],
+      "es-ES": [
+        "1/2 taza de avena",
+        "1 taza de agua o leche",
+        "2 cdas de trozos de mango africano (ogbono)",
+        "1 cdta de miel"
+      ]
+    },
+    "instructions": {
+      "en-US": [
+        "Boil water or milk and add oats.",
+        "Cook for 5 minutes while stirring.",
+        "Add ogbono pieces and honey.",
+        "Serve warm in a bowl."
+      ],
+      "fr-FR": [
+        "Faites bouillir l'eau ou le lait et ajoutez les flocons d'avoine.",
+        "Cuisez pendant 5 minutes en remuant.",
+        "Ajoutez les morceaux d’ogbono et le miel.",
+        "Servez chaud dans un bol."
+      ],
+      "es-ES": [
+        "Hierva agua o leche y agregue la avena.",
+        "Cocine durante 5 minutos removiendo.",
+        "Agregue los trozos de ogbono y miel.",
+        "Sirva caliente en un tazón."
+      ]
+    }
+  },
+  {
+    "id": "egusi-eba",
+    "name": {
+      "en-US": "Light Egusi Soup with Small Whole-Grain Eba Balls",
+      "fr-FR": "Soupe Légère d'Egusi avec Petites Boules d'Eba de Grains Entiers",
+      "es-ES": "Sopa Ligera de Egusi con Pequeñas Bolas de Eba Integral"
+    },
+    "calories": 390,
+    "protein": 15,
+    "carbs": 55,
+    "fats": 12,
+    "category": "breakfast",
+    "countries": ["Nigeria"],
+    "image": "/meals/nigeria/14.webp",
+    "ingredients": {
+      "en-US": [
+        "1/4 cup ground egusi seeds",
+        "1 cup spinach leaves",
+        "1/2 cup whole-grain garri (for eba)",
+        "2 cups hot water",
+        "1/2 tsp salt"
+      ],
+      "fr-FR": [
+        "1/4 tasse de graines d'egusi moulues",
+        "1 tasse de feuilles d'épinards",
+        "1/2 tasse de gari de grains entiers (pour eba)",
+        "2 tasses d'eau chaude",
+        "1/2 c. à café de sel"
+      ],
+      "es-ES": [
+        "1/4 taza de semillas de egusi molidas",
+        "1 taza de hojas de espinaca",
+        "1/2 taza de garri integral (para eba)",
+        "2 tazas de agua caliente",
+        "1/2 cdta de sal"
+      ]
+    },
+    "instructions": {
+      "en-US": [
+        "Boil water and mix garri to form small balls (eba).",
+        "Cook ground egusi in water with spinach and salt.",
+        "Serve the light soup with eba balls."
+      ],
+      "fr-FR": [
+        "Faites bouillir de l'eau et mélangez le gari pour former de petites boules (eba).",
+        "Faites cuire les graines d'egusi moulues dans l'eau avec les épinards et le sel.",
+        "Servez la soupe légère avec les boules d'eba."
+      ],
+      "es-ES": [
+        "Hierva agua y mezcle el garri para formar pequeñas bolas (eba).",
+        "Cocine las semillas de egusi molidas en agua con espinaca y sal.",
+        "Sirva la sopa ligera con las bolas de eba."
+      ]
+    }
+  },
+  {
+    "id": "sweetpotato-amala",
+    "name": {
+      "en-US": "Sweet Potato Amala with Vegetable Sauce",
+      "fr-FR": "Amala de Patate Douce avec Sauce aux Légumes",
+      "es-ES": "Amala de Batata Dulce con Salsa de Verduras"
+    },
+    "calories": 360,
     "protein": 9,
     "carbs": 72,
+    "fats": 6,
+    "category": "breakfast",
+    "countries": ["Nigeria", "Benin"],
+    "image": "/meals/nigeria/15.webp",
+    "ingredients": {
+      "en-US": [
+        "1 cup sweet potato flour",
+        "2 cups hot water",
+        "1 cup chopped spinach or ugu leaves",
+        "2 medium tomatoes, blended",
+        "1 tbsp vegetable oil",
+        "1/2 tsp salt"
+      ],
+      "fr-FR": [
+        "1 tasse de farine de patate douce",
+        "2 tasses d'eau chaude",
+        "1 tasse d'épinards ou feuilles d'ugu hachées",
+        "2 tomates moyennes, mixées",
+        "1 c. à soupe d'huile végétale",
+        "1/2 c. à café de sel"
+      ],
+      "es-ES": [
+        "1 taza de harina de batata dulce",
+        "2 tazas de agua caliente",
+        "1 taza de espinacas o hojas de ugu picadas",
+        "2 tomates medianos, licuados",
+        "1 cda de aceite vegetal",
+        "1/2 cdta de sal"
+      ]
+    },
+    "instructions": {
+      "en-US": [
+        "Boil water and add sweet potato flour gradually.",
+        "Stir quickly until it becomes smooth amala.",
+        "Cook blended tomatoes with oil and salt to make sauce.",
+        "Add spinach, cook for 3 minutes, and serve with amala."
+      ],
+      "fr-FR": [
+        "Faites bouillir l'eau et ajoutez la farine de patate douce progressivement.",
+        "Remuez rapidement jusqu'à obtenir une pâte lisse d'amala.",
+        "Faites cuire les tomates mixées avec l'huile et le sel pour faire la sauce.",
+        "Ajoutez les épinards, cuisez 3 minutes et servez avec l'amala."
+      ],
+      "es-ES": [
+        "Hierva agua y agregue la harina de batata dulce poco a poco.",
+        "Revuelva rápidamente hasta obtener un amala suave.",
+        "Cocine los tomates licuados con aceite y sal para hacer la salsa.",
+        "Agregue las espinacas, cocine 3 minutos y sirva con el amala."
+      ]
+    }
+  },
+  {
+    "id": "wholewheat-bread-avocado",
+    "name": {
+      "en-US": "Homemade Whole Wheat Nigerian Bread with Avocado",
+      "fr-FR": "Pain Nigérian Complet Maison avec Avocat",
+      "es-ES": "Pan Nigeriano Integral Casero con Aguacate"
+    },
+    "calories": 310,
+    "protein": 8,
+    "carbs": 55,
+    "fats": 9,
+    "category": "breakfast",
+    "countries": ["Nigeria", "Ghana"],
+    "image": "/meals/nigeria/16.webp",
+    "ingredients": {
+      "en-US": [
+        "2 slices whole wheat Nigerian bread",
+        "1/2 ripe avocado, mashed",
+        "1 pinch salt",
+        "1 tsp lemon juice"
+      ],
+      "fr-FR": [
+        "2 tranches de pain nigérian complet",
+        "1/2 avocat mûr, écrasé",
+        "1 pincée de sel",
+        "1 c. à café de jus de citron"
+      ],
+      "es-ES": [
+        "2 rebanadas de pan nigeriano integral",
+        "1/2 aguacate maduro, triturado",
+        "1 pizca de sal",
+        "1 cdta de jugo de limón"
+      ]
+    },
+    "instructions": {
+      "en-US": [
+        "Toast the bread slices lightly.",
+        "Mash avocado with salt and lemon juice.",
+        "Spread avocado mix on warm bread.",
+        "Serve immediately."
+      ],
+      "fr-FR": [
+        "Grillez légèrement les tranches de pain.",
+        "Écrasez l'avocat avec le sel et le jus de citron.",
+        "Étalez le mélange sur le pain chaud.",
+        "Servez immédiatement."
+      ],
+      "es-ES": [
+        "Tueste ligeramente las rebanadas de pan.",
+        "Triture el aguacate con sal y jugo de limón.",
+        "Unte la mezcla sobre el pan caliente.",
+        "Sirva de inmediato."
+      ]
+    }
+  },
+  {
+    "id": "baked-maize-wrap",
+    "name": {
+      "en-US": "Baked Maize Wrap (Masa) with Light Tomato Sauce",
+      "fr-FR": "Galette de Maïs (Masa) au Four avec Sauce Tomate Légère",
+      "es-ES": "Tortita de Maíz (Masa) Horneada con Salsa de Tomate Ligera"
+    },
+    "calories": 340,
+    "protein": 10,
+    "carbs": 65,
+    "fats": 7,
+    "category": "breakfast",
+    "countries": ["Nigeria", "Niger"],
+    "image": "/meals/nigeria/17.webp",
+    "ingredients": {
+      "en-US": [
+        "1 cup maize flour",
+        "1/2 cup warm water",
+        "1/4 tsp yeast",
+        "2 medium tomatoes, blended",
+        "1/2 onion, chopped",
+        "1 tsp vegetable oil"
+      ],
+      "fr-FR": [
+        "1 tasse de farine de maïs",
+        "1/2 tasse d'eau tiède",
+        "1/4 c. à café de levure",
+        "2 tomates moyennes, mixées",
+        "1/2 oignon, haché",
+        "1 c. à café d'huile végétale"
+      ],
+      "es-ES": [
+        "1 taza de harina de maíz",
+        "1/2 taza de agua tibia",
+        "1/4 cdta de levadura",
+        "2 tomates medianos, licuados",
+        "1/2 cebolla, picada",
+        "1 cdta de aceite vegetal"
+      ]
+    },
+    "instructions": {
+      "en-US": [
+        "Mix maize flour, yeast, and warm water to form a batter. Let rest 30 minutes.",
+        "Bake batter in oven at 180°C until firm.",
+        "Cook blended tomatoes and onion with oil for light sauce.",
+        "Serve masa with sauce on the side."
+      ],
+      "fr-FR": [
+        "Mélangez la farine de maïs, la levure et l'eau tiède pour obtenir une pâte. Laissez reposer 30 minutes.",
+        "Faites cuire la pâte au four à 180°C jusqu'à fermeté.",
+        "Faites cuire les tomates mixées et l'oignon avec l'huile pour une sauce légère.",
+        "Servez le masa avec la sauce à côté."
+      ],
+      "es-ES": [
+        "Mezcle harina de maíz, levadura y agua tibia para formar una masa. Deje reposar 30 minutos.",
+        "Hornee la masa a 180°C hasta que esté firme.",
+        "Cocine los tomates licuados y la cebolla con aceite para una salsa ligera.",
+        "Sirva el masa con la salsa al lado."
+      ]
+    }
+  },
+  {
+    "id": "quinoa-egusi",
+    "name": {
+      "en-US": "Quinoa with Light Egusi Sauce",
+      "fr-FR": "Quinoa avec Sauce Egusi Légère",
+      "es-ES": "Quinoa con Salsa Ligera de Egusi"
+    },
+    "calories": 350,
+    "protein": 12,
+    "carbs": 60,
+    "fats": 8,
+    "category": "breakfast",
+    "countries": ["Nigeria", "Ghana"],
+    "image": "/meals/nigeria/18.webp",
+    "ingredients": {
+      "en-US": [
+        "1 cup cooked quinoa",
+        "1/4 cup ground egusi seeds",
+        "1/2 cup spinach leaves",
+        "1/2 onion, chopped",
+        "1/2 tsp salt"
+      ],
+      "fr-FR": [
+        "1 tasse de quinoa cuit",
+        "1/4 tasse de graines d'egusi moulues",
+        "1/2 tasse de feuilles d'épinards",
+        "1/2 oignon, haché",
+        "1/2 c. à café de sel"
+      ],
+      "es-ES": [
+        "1 taza de quinoa cocida",
+        "1/4 taza de semillas de egusi molidas",
+        "1/2 taza de hojas de espinaca",
+        "1/2 cebolla, picada",
+        "1/2 cdta de sal"
+      ]
+    },
+    "instructions": {
+      "en-US": [
+        "Cook quinoa and set aside.",
+        "Boil egusi seeds with onion and salt until thick.",
+        "Add spinach and cook for 3 minutes.",
+        "Serve sauce over quinoa."
+      ],
+      "fr-FR": [
+        "Faites cuire le quinoa et réservez.",
+        "Faites bouillir les graines d'egusi avec l'oignon et le sel jusqu'à épaississement.",
+        "Ajoutez les épinards et cuisez 3 minutes.",
+        "Servez la sauce sur le quinoa."
+      ],
+      "es-ES": [
+        "Cocine la quinoa y reserve.",
+        "Hierva las semillas de egusi con cebolla y sal hasta espesar.",
+        "Agregue las espinacas y cocine 3 minutos.",
+        "Sirva la salsa sobre la quinoa."
+      ]
+    }
+  },
+  {
+    "id": "yamfufu-sesame",
+    "name": {
+      "en-US": "Yam Fufu with Light Sesame Sauce",
+      "fr-FR": "Fufu d'Igname avec Sauce Légère au Sésame",
+      "es-ES": "Fufu de Ñame con Salsa Ligera de Sésamo"
+    },
+    "calories": 370,
+    "protein": 11,
+    "carbs": 70,
+    "fats": 8,
+    "category": "breakfast",
+    "countries": ["Nigeria", "Togo"],
+    "image": "/meals/nigeria/19.webp",
+    "ingredients": {
+      "en-US": [
+        "2 cups yam flour",
+        "3 cups hot water",
+        "2 tbsp sesame paste",
+        "1/2 onion, chopped",
+        "1/2 tsp salt"
+      ],
+      "fr-FR": [
+        "2 tasses de farine d'igname",
+        "3 tasses d'eau chaude",
+        "2 c. à soupe de pâte de sésame",
+        "1/2 oignon, haché",
+        "1/2 c. à café de sel"
+      ],
+      "es-ES": [
+        "2 tazas de harina de ñame",
+        "3 tazas de agua caliente",
+        "2 cdas de pasta de sésamo",
+        "1/2 cebolla, picada",
+        "1/2 cdta de sal"
+      ]
+    },
+    "instructions": {
+      "en-US": [
+        "Boil water and add yam flour gradually while stirring.",
+        "Mix until smooth to form yam fufu.",
+        "Cook sesame paste with onion and salt to make sauce.",
+        "Serve yam fufu with sesame sauce."
+      ],
+      "fr-FR": [
+        "Faites bouillir de l'eau et ajoutez la farine d'igname progressivement en remuant.",
+        "Mélangez jusqu'à obtenir un fufu lisse.",
+        "Faites cuire la pâte de sésame avec l'oignon et le sel pour faire la sauce.",
+        "Servez le fufu d'igname avec la sauce au sésame."
+      ],
+      "es-ES": [
+        "Hierva agua y agregue la harina de ñame poco a poco mientras revuelve.",
+        "Mezcle hasta obtener un fufu suave.",
+        "Cocine la pasta de sésamo con cebolla y sal para hacer la salsa.",
+        "Sirva el fufu de ñame con la salsa de sésamo."
+      ]
+    }
+  },
+  {
+    "id": "peanut-soup-sweetpotato",
+    "name": {
+      "en-US": "Light Peanut Soup with Sweet Potato Chunks",
+      "fr-FR": "Soupe Légère d'Arachides avec Morceaux de Patate Douce",
+      "es-ES": "Sopa Ligera de Cacahuate con Trozos de Batata"
+    },
+    "calories": 330,
+    "protein": 14,
+    "carbs": 48,
+    "fats": 10,
+    "category": "breakfast",
+    "countries": ["Nigeria", "Ghana"],
+    "image": "/meals/nigeria/20.webp",
+    "ingredients": {
+      "en-US": [
+        "1/4 cup peanut butter",
+        "2 cups water",
+        "1 cup sweet potato chunks",
+        "1/2 onion, chopped",
+        "1/2 tsp salt"
+      ],
+      "fr-FR": [
+        "1/4 tasse de beurre d'arachide",
+        "2 tasses d'eau",
+        "1 tasse de morceaux de patate douce",
+        "1/2 oignon, haché",
+        "1/2 c. à café de sel"
+      ],
+      "es-ES": [
+        "1/4 taza de mantequilla de maní",
+        "2 tazas de agua",
+        "1 taza de trozos de batata",
+        "1/2 cebolla, picada",
+        "1/2 cdta de sal"
+      ]
+    },
+    "instructions": {
+      "en-US": [
+        "Boil water and add peanut butter, stirring until smooth.",
+        "Add sweet potato chunks and onion.",
+        "Cook until potatoes are soft.",
+        "Serve warm as a light soup."
+      ],
+      "fr-FR": [
+        "Faites bouillir l'eau et ajoutez le beurre d'arachide en remuant jusqu'à homogénéité.",
+        "Ajoutez les morceaux de patate douce et l'oignon.",
+        "Faites cuire jusqu'à ce que les patates soient tendres.",
+        "Servez chaud comme une soupe légère."
+      ],
+      "es-ES": [
+        "Hierva agua y agregue la mantequilla de maní, revolviendo hasta que quede suave.",
+        "Agregue los trozos de batata y la cebolla.",
+        "Cocine hasta que las batatas estén suaves.",
+        "Sirva caliente como una sopa ligera."
+      ]
+    }
+  },
+  {
+    "id": "baked-plantain-veg",
+    "name": {
+      "en-US": "Baked Plantain Stuffed with Vegetables",
+      "fr-FR": "Plantain Cuit au Four Farci aux Légumes",
+      "es-ES": "Plátano Horneado Relleno de Verduras"
+    },
+    "calories": 310,
+    "protein": 6,
+    "carbs": 62,
+    "fats": 7,
+    "category": "breakfast",
+    "countries": ["Nigeria", "Cameroon", "Ghana"],
+    "image": "/meals/nigeria/21.webp",
+    "ingredients": {
+      "en-US": [
+        "2 ripe plantains",
+        "1/2 cup diced bell peppers",
+        "1/4 cup chopped onions",
+        "1/4 cup chopped spinach",
+        "1 tbsp olive oil",
+        "1/2 tsp salt"
+      ],
+      "fr-FR": [
+        "2 plantains mûrs",
+        "1/2 tasse de poivrons en dés",
+        "1/4 tasse d'oignons hachés",
+        "1/4 tasse d'épinards hachés",
+        "1 c. à soupe d'huile d'olive",
+        "1/2 c. à café de sel"
+      ],
+      "es-ES": [
+        "2 plátanos maduros",
+        "1/2 taza de pimientos en cubos",
+        "1/4 taza de cebolla picada",
+        "1/4 taza de espinaca picada",
+        "1 cda de aceite de oliva",
+        "1/2 cdta de sal"
+      ]
+    },
+    "instructions": {
+      "en-US": [
+        "Preheat oven to 180°C (350°F).",
+        "Slice plantains lengthwise and scoop a little from the center.",
+        "Mix peppers, onions, and spinach with oil and salt.",
+        "Stuff the plantains with the mixture.",
+        "Bake for 20 minutes until golden. Serve warm."
+      ],
+      "fr-FR": [
+        "Préchauffez le four à 180°C.",
+        "Coupez les plantains dans le sens de la longueur et retirez un peu du centre.",
+        "Mélangez les poivrons, les oignons et les épinards avec l'huile et le sel.",
+        "Farcissez les plantains avec ce mélange.",
+        "Faites cuire 20 minutes jusqu'à doré. Servez chaud."
+      ],
+      "es-ES": [
+        "Precaliente el horno a 180°C.",
+        "Corte los plátanos a lo largo y retire un poco del centro.",
+        "Mezcle pimientos, cebolla y espinaca con aceite y sal.",
+        "Rellene los plátanos con la mezcla.",
+        "Hornee 20 minutos hasta que estén dorados. Sirva caliente."
+      ]
+    }
+  },
+  {
+    "id": "tamarind-ginger-pineapple-smoothie",
+    "name": {
+      "en-US": "Tamarind, Ginger, and Pineapple Smoothie",
+      "fr-FR": "Smoothie au Tamarin, Gingembre et Ananas",
+      "es-ES": "Batido de Tamarindo, Jengibre y Piña"
+    },
+    "calories": 180,
+    "protein": 2,
+    "carbs": 42,
+    "fats": 0,
+    "category": "breakfast",
+    "countries": ["Nigeria", "Ghana", "Kenya"],
+    "image": "/meals/nigeria/22.webp",
+    "ingredients": {
+      "en-US": [
+        "1/2 cup tamarind pulp",
+        "1 cup pineapple chunks",
+        "1 tsp grated ginger",
+        "1 cup cold water",
+        "1 tsp honey"
+      ],
+      "fr-FR": [
+        "1/2 tasse de pulpe de tamarin",
+        "1 tasse de morceaux d'ananas",
+        "1 c. à café de gingembre râpé",
+        "1 tasse d'eau froide",
+        "1 c. à café de miel"
+      ],
+      "es-ES": [
+        "1/2 taza de pulpa de tamarindo",
+        "1 taza de trozos de piña",
+        "1 cdta de jengibre rallado",
+        "1 taza de agua fría",
+        "1 cdta de miel"
+      ]
+    },
+    "instructions": {
+      "en-US": [
+        "Combine tamarind pulp, pineapple, ginger, and water in a blender.",
+        "Blend until smooth.",
+        "Add honey and blend again.",
+        "Serve chilled."
+      ],
+      "fr-FR": [
+        "Mélangez la pulpe de tamarin, l'ananas, le gingembre et l'eau dans un mixeur.",
+        "Mixez jusqu'à consistance lisse.",
+        "Ajoutez le miel et mixez encore.",
+        "Servez frais."
+      ],
+      "es-ES": [
+        "Combine pulpa de tamarindo, piña, jengibre y agua en una licuadora.",
+        "Mezcle hasta que quede suave.",
+        "Agregue miel y mezcle nuevamente.",
+        "Sirva frío."
+      ]
+    }
+  },
+  {
+    "id": "muesli-soymilk",
+    "name": {
+      "en-US": "Muesli with Soy Milk and Local Fruits",
+      "fr-FR": "Muesli avec Lait de Soja et Fruits Locaux",
+      "es-ES": "Muesli con Leche de Soja y Frutas Locales"
+    },
+    "calories": 250,
+    "protein": 9,
+    "carbs": 46,
+    "fats": 5,
+    "category": "breakfast",
+    "countries": ["Nigeria", "South Africa"],
+    "image": "/meals/nigeria/23.webp",
+    "ingredients": {
+      "en-US": [
+        "1/2 cup muesli",
+        "1 cup soy milk",
+        "1/2 sliced banana",
+        "1/4 cup diced pawpaw",
+        "1 tsp honey"
+      ],
+      "fr-FR": [
+        "1/2 tasse de muesli",
+        "1 tasse de lait de soja",
+        "1/2 banane tranchée",
+        "1/4 tasse de papaye en dés",
+        "1 c. à café de miel"
+      ],
+      "es-ES": [
+        "1/2 taza de muesli",
+        "1 taza de leche de soja",
+        "1/2 plátano en rodajas",
+        "1/4 taza de papaya en cubos",
+        "1 cdta de miel"
+      ]
+    },
+    "instructions": {
+      "en-US": [
+        "Pour soy milk into a bowl.",
+        "Add muesli, banana slices, and pawpaw.",
+        "Drizzle honey on top.",
+        "Serve immediately."
+      ],
+      "fr-FR": [
+        "Versez le lait de soja dans un bol.",
+        "Ajoutez le muesli, les tranches de banane et la papaye.",
+        "Arrosez de miel.",
+        "Servez immédiatement."
+      ],
+      "es-ES": [
+        "Vierta la leche de soja en un tazón.",
+        "Agregue muesli, rodajas de plátano y papaya.",
+        "Rocíe miel encima.",
+        "Sirva inmediatamente."
+      ]
+    }
+  },
+  {
+    "id": "light-jollof-brown-rice",
+    "name": {
+      "en-US": "Light Jollof Brown Rice",
+      "fr-FR": "Riz Jollof Complet Léger",
+      "es-ES": "Arroz Integral Jollof Ligero"
+    },
+    "calories": 310,
+    "protein": 8,
+    "carbs": 58,
+    "fats": 6,
+    "category": "breakfast",
+    "countries": ["Nigeria", "Ghana", "Senegal"],
+    "image": "/meals/nigeria/24.webp",
+    "ingredients": {
+      "en-US": [
+        "1 cup brown rice",
+        "2 medium tomatoes, blended",
+        "1/2 onion, chopped",
+        "1 tbsp vegetable oil",
+        "1/2 tsp salt"
+      ],
+      "fr-FR": [
+        "1 tasse de riz complet",
+        "2 tomates moyennes, mixées",
+        "1/2 oignon, haché",
+        "1 c. à soupe d'huile végétale",
+        "1/2 c. à café de sel"
+      ],
+      "es-ES": [
+        "1 taza de arroz integral",
+        "2 tomates medianos, licuados",
+        "1/2 cebolla, picada",
+        "1 cda de aceite vegetal",
+        "1/2 cdta de sal"
+      ]
+    },
+    "instructions": {
+      "en-US": [
+        "Cook onion and blended tomatoes in oil for 5 minutes.",
+        "Add rice, salt, and 2 cups of water.",
+        "Simmer on low heat until rice is soft.",
+        "Serve hot."
+      ],
+      "fr-FR": [
+        "Faites cuire l'oignon et les tomates mixées dans l'huile pendant 5 minutes.",
+        "Ajoutez le riz, le sel et 2 tasses d'eau.",
+        "Laissez mijoter à feu doux jusqu'à ce que le riz soit tendre.",
+        "Servez chaud."
+      ],
+      "es-ES": [
+        "Cocine la cebolla y los tomates licuados en aceite durante 5 minutos.",
+        "Agregue arroz, sal y 2 tazas de agua.",
+        "Cocine a fuego bajo hasta que el arroz esté suave.",
+        "Sirva caliente."
+      ]
+    }
+  },
+  {
+    "id": "adalu",
+    "name": {
+      "en-US": "Boiled Beans with Fresh Corn (Adalu)",
+      "fr-FR": "Haricots Bouillis avec Maïs Frais (Adalu)",
+      "es-ES": "Frijoles Hervidos con Maíz Fresco (Adalu)"
+    },
+    "calories": 330,
+    "protein": 15,
+    "carbs": 55,
+    "fats": 6,
+    "category": "breakfast",
+    "countries": ["Nigeria", "Benin"],
+    "image": "/meals/nigeria/25.webp",
+    "ingredients": {
+      "en-US": [
+        "1 cup brown beans",
+        "1/2 cup fresh corn kernels",
+        "1/2 onion, chopped",
+        "1 tbsp palm oil",
+        "1/2 tsp salt"
+      ],
+      "fr-FR": [
+        "1 tasse de haricots bruns",
+        "1/2 tasse de grains de maïs frais",
+        "1/2 oignon, haché",
+        "1 c. à soupe d'huile de palme",
+        "1/2 c. à café de sel"
+      ],
+      "es-ES": [
+        "1 taza de frijoles marrones",
+        "1/2 taza de granos de maíz fresco",
+        "1/2 cebolla, picada",
+        "1 cda de aceite de palma",
+        "1/2 cdta de sal"
+      ]
+    },
+    "instructions": {
+      "en-US": [
+        "Cook beans in water until almost soft.",
+        "Add corn, onion, palm oil, and salt.",
+        "Simmer until beans and corn are tender.",
+        "Serve warm."
+      ],
+      "fr-FR": [
+        "Faites cuire les haricots dans l'eau jusqu'à ce qu'ils soient presque tendres.",
+        "Ajoutez le maïs, l'oignon, l'huile de palme et le sel.",
+        "Laissez mijoter jusqu'à ce que les haricots et le maïs soient tendres.",
+        "Servez chaud."
+      ],
+      "es-ES": [
+        "Cocine los frijoles en agua hasta que estén casi suaves.",
+        "Agregue maíz, cebolla, aceite de palma y sal.",
+        "Cocine a fuego lento hasta que los frijoles y el maíz estén tiernos.",
+        "Sirva caliente."
+      ]
+    }
+  },
+  {
+    "id": "african-banana-pancake",
+    "name": {
+      "en-US": "African Banana Pancake (No Refined Sugar)",
+      "fr-FR": "Crêpe Africaine à la Banane (Sans Sucre Raffiné)",
+      "es-ES": "Panqueque Africano de Plátano (Sin Azúcar Refinado)"
+    },
+    "calories": 280,
+    "protein": 6,
+    "carbs": 55,
     "fats": 5,
     "category": "breakfast",
     "countries": ["Nigeria", "Ghana", "Cameroon"],
-    "image": "https://images.unsplash.com/photo-1617196038587-cc72bb6a2e0e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    "image": "/meals/nigeria/26.webp",
     "ingredients": {
       "en-US": [
-        "2 cups diced yam",
-        "2 cups water",
-        "1 tomato",
-        "1/2 onion",
-        "spinach",
-        "1 tsp palm oil"
+        "2 ripe bananas",
+        "1 cup whole wheat flour",
+        "1/2 cup milk",
+        "1 egg",
+        "1/2 tsp baking powder",
+        "1/2 tsp cinnamon"
       ],
       "fr-FR": [
-        "2 tasses d'igname en dés",
-        "2 tasses d'eau",
-        "1 tomate",
-        "1/2 oignon",
-        "épinards",
-        "1 c.à.c. d'huile de palme"
+        "2 bananes mûres",
+        "1 tasse de farine de blé complet",
+        "1/2 tasse de lait",
+        "1 œuf",
+        "1/2 c. à café de levure chimique",
+        "1/2 c. à café de cannelle"
       ],
       "es-ES": [
-        "2 tazas de ñame en cubos",
-        "2 tazas de agua",
-        "1 tomate",
-        "1/2 cebolla",
-        "espinacas",
-        "1 cdt de aceite de palma"
+        "2 plátanos maduros",
+        "1 taza de harina de trigo integral",
+        "1/2 taza de leche",
+        "1 huevo",
+        "1/2 cdta de levadura en polvo",
+        "1/2 cdta de canela"
       ]
     },
     "instructions": {
       "en-US": [
-        "Cook yam with water until tender",
-        "Add tomato, onion and spinach",
-        "Add palm oil if desired",
-        "Serve warm"
+        "Mash bananas in a bowl.",
+        "Add flour, milk, egg, baking powder, and cinnamon. Mix into a smooth batter.",
+        "Heat a pan and pour small circles of batter.",
+        "Cook each side for 2 minutes until golden.",
+        "Serve warm."
       ],
       "fr-FR": [
-        "Faites cuire l'igname avec eau jusqu'à tendreté",
-        "Ajoutez tomate, oignon et épinards",
-        "Ajoutez huile de palme si désiré",
-        "Servez chaud"
+        "Écrasez les bananes dans un bol.",
+        "Ajoutez la farine, le lait, l'œuf, la levure et la cannelle. Mélangez jusqu'à obtenir une pâte lisse.",
+        "Chauffez une poêle et versez de petits cercles de pâte.",
+        "Faites cuire chaque côté 2 minutes jusqu'à doré.",
+        "Servez chaud."
       ],
       "es-ES": [
-        "Cocine ñame con agua hasta que esté tierno",
-        "Agregue tomate, cebolla y espinacas",
-        "Añada aceite de palma si desea",
-        "Sirva caliente"
+        "Aplaste los plátanos en un bol.",
+        "Agregue harina, leche, huevo, levadura y canela. Mezcle hasta obtener una masa suave.",
+        "Caliente una sartén y vierta pequeños círculos de masa.",
+        "Cocine cada lado durante 2 minutos hasta dorado.",
+        "Sirva caliente."
       ]
     }
   },
   {
-    "id": "jollof-rice",
+    "id": "chia-bowl-coconut-mango",
     "name": {
-      "en-US": "Jollof Rice with Chicken",
-      "fr-FR": "Riz Jollof au Poulet",
-      "es-ES": "Arroz Jollof con Pollo"
+      "en-US": "Chia Bowl with Coconut Milk and Mango",
+      "fr-FR": "Bol de Chia au Lait de Coco et Mangue",
+      "es-ES": "Bowl de Chía con Leche de Coco y Mango"
     },
-    "calories": 480,
-    "protein": 28,
-    "carbs": 65,
-    "fats": 12,
-    "category": "lunch",
-    "countries": ["Nigeria", "Ghana", "Senegal", "Gambia"],
-    "image": "https://images.unsplash.com/photo-1596797038530-2c107229654b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    "calories": 240,
+    "protein": 6,
+    "carbs": 32,
+    "fats": 10,
+    "category": "breakfast",
+    "countries": ["Nigeria", "South Africa", "Kenya"],
+    "image": "/meals/nigeria/27.webp",
     "ingredients": {
       "en-US": [
-        "2 cups rice",
-        "500g chicken pieces",
-        "3 tomatoes",
-        "1 onion",
-        "2 tbsp tomato paste",
-        "bay leaves",
-        "thyme",
-        "stock cubes"
+        "1/4 cup chia seeds",
+        "1 cup coconut milk",
+        "1/2 mango, diced",
+        "1 tsp honey"
       ],
       "fr-FR": [
-        "2 tasses de riz",
-        "500g de morceaux de poulet",
-        "3 tomates",
-        "1 oignon",
-        "2 càs de pâte de tomate",
-        "feuilles de laurier",
-        "thym",
-        "cubes de bouillon"
+        "1/4 tasse de graines de chia",
+        "1 tasse de lait de coco",
+        "1/2 mangue en dés",
+        "1 c. à café de miel"
       ],
       "es-ES": [
-        "2 tazas de arroz",
-        "500g de trozos de pollo",
-        "3 tomates",
-        "1 cebolla",
-        "2 cdas de pasta de tomate",
-        "hojas de laurel",
-        "tomillo",
-        "cubos de caldo"
+        "1/4 taza de semillas de chía",
+        "1 taza de leche de coco",
+        "1/2 mango en cubos",
+        "1 cdta de miel"
       ]
     },
     "instructions": {
       "en-US": [
-        "Season and cook chicken until golden",
-        "Blend tomatoes and onions",
-        "Cook tomato blend with paste",
-        "Add rice and stock",
-        "Simmer until rice is tender"
+        "Soak chia seeds in coconut milk overnight or for at least 3 hours.",
+        "Stir well to remove clumps.",
+        "Top with diced mango and drizzle with honey.",
+        "Serve chilled."
       ],
       "fr-FR": [
-        "Assaisonnez et faites cuire le poulet jusqu'à dorure",
-        "Mixez tomates et oignons",
-        "Faites cuire le mélange avec pâte",
-        "Ajoutez riz et bouillon",
-        "Mijotez jusqu'à tendreté du riz"
+        "Faites tremper les graines de chia dans le lait de coco toute la nuit ou au moins 3 heures.",
+        "Remuez bien pour enlever les grumeaux.",
+        "Ajoutez la mangue en dés et un filet de miel.",
+        "Servez frais."
       ],
       "es-ES": [
-        "Sazone y cocine el pollo hasta dorar",
-        "Licúe tomates y cebollas",
-        "Cocine la mezcla con pasta",
-        "Agregue arroz y caldo",
-        "Cocine a fuego lento hasta que el arroz esté tierno"
+        "Remoje las semillas de chía en leche de coco durante la noche o al menos 3 horas.",
+        "Mezcle bien para quitar grumos.",
+        "Agregue mango en cubos y un chorrito de miel.",
+        "Sirva frío."
       ]
     }
   },
   {
-    "id": "couscous-vegetables",
+    "id": "african-couscous-okra",
     "name": {
-      "en-US": "Couscous with Mixed Vegetables",
-      "fr-FR": "Couscous aux Légumes Variés",
-      "es-ES": "Cuscús con Vegetales Mixtos"
+      "en-US": "African Couscous with Light Okra Sauce",
+      "fr-FR": "Couscous Africain avec Sauce Légère aux Gombos",
+      "es-ES": "Cuscús Africano con Salsa Ligera de Quimbombó"
     },
-    "calories": 320,
-    "protein": 12,
-    "carbs": 58,
-    "fats": 6,
-    "category": "lunch",
-    "countries": ["Morocco", "Algeria"],
-    "image": "https://images.unsplash.com/photo-1565895405229-71bec9b73dde?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    "calories": 310,
+    "protein": 9,
+    "carbs": 60,
+    "fats": 5,
+    "category": "breakfast",
+    "countries": ["Nigeria", "Senegal", "Mali"],
+    "image": "/meals/nigeria/28.webp",
     "ingredients": {
       "en-US": [
         "1 cup couscous",
-        "1 cup vegetable broth",
-        "1 zucchini",
-        "1 carrot",
-        "1/2 red pepper",
-        "chickpeas",
-        "olive oil",
-        "herbs"
+        "1 cup water",
+        "1/2 cup chopped okra",
+        "1 tomato, chopped",
+        "1/2 onion, chopped",
+        "1 tsp vegetable oil"
       ],
       "fr-FR": [
         "1 tasse de couscous",
-        "1 tasse de bouillon de légumes",
-        "1 courgette",
-        "1 carotte",
-        "1/2 poivron rouge",
-        "pois chiches",
-        "huile d'olive",
-        "herbes"
+        "1 tasse d'eau",
+        "1/2 tasse de gombos hachés",
+        "1 tomate, hachée",
+        "1/2 oignon, haché",
+        "1 c. à café d'huile végétale"
       ],
       "es-ES": [
         "1 taza de cuscús",
-        "1 taza de caldo de verduras",
-        "1 calabacín",
-        "1 zanahoria",
-        "1/2 pimiento rojo",
-        "garbanzos",
-        "aceite de oliva",
-        "hierbas"
+        "1 taza de agua",
+        "1/2 taza de quimbombó picado",
+        "1 tomate, picado",
+        "1/2 cebolla, picada",
+        "1 cdta de aceite vegetal"
       ]
     },
     "instructions": {
       "en-US": [
-        "Steam couscous with broth",
-        "Sauté vegetables until tender",
-        "Mix couscous with vegetables",
-        "Add chickpeas and herbs",
-        "Serve warm"
+        "Pour boiling water over couscous, cover, and let sit for 5 minutes.",
+        "Cook okra, tomato, and onion in oil for 5 minutes.",
+        "Serve couscous with light okra sauce on top."
       ],
       "fr-FR": [
-        "Faites cuire le couscous avec bouillon",
-        "Faites sauter les légumes",
-        "Mélangez couscous et légumes",
-        "Ajoutez pois chiches et herbes",
-        "Servez chaud"
+        "Versez de l'eau bouillante sur le couscous, couvrez et laissez reposer 5 minutes.",
+        "Faites cuire les gombos, la tomate et l'oignon dans l'huile pendant 5 minutes.",
+        "Servez le couscous avec la sauce légère aux gombos par-dessus."
       ],
       "es-ES": [
-        "Cocine el cuscús con caldo",
-        "Saltee las verduras hasta que estén tiernas",
-        "Mezcle cuscús con verduras",
-        "Agregue garbanzos y hierbas",
-        "Sirva caliente"
+        "Vierta agua hirviendo sobre el cuscús, cubra y deje reposar 5 minutos.",
+        "Cocine quimbombó, tomate y cebolla en aceite durante 5 minutos.",
+        "Sirva el cuscús con la salsa ligera de quimbombó encima."
       ]
     }
   },
   {
-    "id": "paella-vegetables",
+    "id": "cucumber-tomato-sardine-salad",
     "name": {
-      "en-US": "Vegetable Paella",
-      "fr-FR": "Paella aux Légumes",
-      "es-ES": "Paella de Verduras"
+      "en-US": "Cucumber, Tomato and Grilled Sardine Salad",
+      "fr-FR": "Salade de Concombre, Tomate et Sardine Grillée",
+      "es-ES": "Ensalada de Pepino, Tomate y Sardina a la Parrilla"
     },
-    "calories": 380,
-    "protein": 14,
-    "carbs": 72,
+    "calories": 220,
+    "protein": 15,
+    "carbs": 12,
+    "fats": 14,
+    "category": "breakfast",
+    "countries": ["Nigeria", "Ghana", "Morocco"],
+    "image": "/meals/nigeria/29.webp",
+    "ingredients": {
+      "en-US": [
+        "1 cucumber, sliced",
+        "2 tomatoes, diced",
+        "2 grilled sardines, flaked",
+        "1 tbsp olive oil",
+        "1/2 tsp salt"
+      ],
+      "fr-FR": [
+        "1 concombre, tranché",
+        "2 tomates, en dés",
+        "2 sardines grillées, émiettées",
+        "1 c. à soupe d'huile d'olive",
+        "1/2 c. à café de sel"
+      ],
+      "es-ES": [
+        "1 pepino, en rodajas",
+        "2 tomates, en cubos",
+        "2 sardinas a la parrilla, desmenuzadas",
+        "1 cda de aceite de oliva",
+        "1/2 cdta de sal"
+      ]
+    },
+    "instructions": {
+      "en-US": [
+        "Slice cucumber and dice tomatoes.",
+        "Flake grilled sardines into small pieces.",
+        "Mix all in a bowl with olive oil and salt.",
+        "Serve fresh."
+      ],
+      "fr-FR": [
+        "Coupez le concombre et les tomates.",
+        "Émiettez les sardines grillées en petits morceaux.",
+        "Mélangez le tout dans un bol avec l'huile d'olive et le sel.",
+        "Servez frais."
+      ],
+      "es-ES": [
+        "Corte el pepino y los tomates.",
+        "Desmenuce las sardinas a la parrilla en trozos pequeños.",
+        "Mezcle todo en un bol con aceite de oliva y sal.",
+        "Sirva fresco."
+      ]
+    }
+  },
+  {
+    "id": "boiled-yam-light-palm-oil",
+    "name": {
+      "en-US": "Boiled Yam with Light Palm Oil Sauce",
+      "fr-FR": "Igname Bouillie avec Sauce Légère à l’Huile de Palme",
+      "es-ES": "Ñame Hervido con Salsa Ligera de Aceite de Palma"
+    },
+    "calories": 300,
+    "protein": 5,
+    "carbs": 62,
     "fats": 8,
-    "category": "lunch",
-    "countries": ["Spain"],
-    "image": "https://images.unsplash.com/photo-1534080564583-6be75777b70a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    "category": "breakfast",
+    "countries": ["Nigeria", "Ghana"],
+    "image": "/meals/nigeria/30.webp",
     "ingredients": {
       "en-US": [
-        "2 cups bomba rice",
-        "4 cups vegetable stock",
-        "1 red pepper",
-        "green beans",
-        "lima beans",
-        "tomato",
-        "saffron",
-        "olive oil"
+        "2 cups yam chunks",
+        "1 tbsp palm oil",
+        "1/4 onion, chopped",
+        "1/2 tsp salt"
       ],
       "fr-FR": [
-        "2 tasses de riz bomba",
-        "4 tasses de bouillon de légumes",
-        "1 poivron rouge",
-        "haricots verts",
-        "fèves de lima",
-        "tomate",
-        "safran",
-        "huile d'olive"
+        "2 tasses de morceaux d'igname",
+        "1 c. à soupe d'huile de palme",
+        "1/4 d'oignon, haché",
+        "1/2 c. à café de sel"
       ],
       "es-ES": [
-        "2 tazas de arroz bomba",
-        "4 tazas de caldo de verduras",
-        "1 pimiento rojo",
-        "judías verdes",
-        "garrofón",
-        "tomate",
-        "azafrán",
-        "aceite de oliva"
+        "2 tazas de trozos de ñame",
+        "1 cda de aceite de palma",
+        "1/4 cebolla, picada",
+        "1/2 cdta de sal"
       ]
     },
     "instructions": {
       "en-US": [
-        "Heat oil in paella pan",
-        "Add vegetables and sauté",
-        "Add rice and stock with saffron",
-        "Cook without stirring for 18-20 minutes",
-        "Let rest before serving"
+        "Boil yam chunks in water with salt until tender.",
+        "Heat palm oil and fry onion lightly.",
+        "Pour palm oil sauce over yam.",
+        "Serve hot."
       ],
       "fr-FR": [
-        "Chauffez huile dans poêle à paella",
-        "Ajoutez légumes et faites sauter",
-        "Ajoutez riz et bouillon avec safran",
-        "Cuisez sans remuer 18-20 minutes",
-        "Laissez reposer avant de servir"
+        "Faites bouillir les morceaux d'igname dans l'eau avec du sel jusqu'à tendres.",
+        "Chauffez l'huile de palme et faites revenir légèrement l'oignon.",
+        "Versez la sauce d'huile de palme sur l'igname.",
+        "Servez chaud."
       ],
       "es-ES": [
-        "Caliente aceite en paellera",
-        "Agregue verduras y sofría",
-        "Añada arroz y caldo con azafrán",
-        "Cocine sin remover 18-20 minutos",
-        "Deje reposar antes de servir"
+        "Hierva los trozos de ñame en agua con sal hasta que estén tiernos.",
+        "Caliente el aceite de palma y sofría ligeramente la cebolla.",
+        "Vierta la salsa de aceite de palma sobre el ñame.",
+        "Sirva caliente."
       ]
     }
   },
   {
-    "id": "ratatouille",
+    "id": "wara-grilled-salad",
     "name": {
-      "en-US": "Traditional French Ratatouille",
-      "fr-FR": "Ratatouille Traditionnelle Française",
-      "es-ES": "Ratatouille Tradicional Francés"
+      "en-US": "African Tofu (Wara) Grilled with Salad",
+      "fr-FR": "Tofu Africain (Wara) Grillé avec Salade",
+      "es-ES": "Tofu Africano (Wara) a la Parrilla con Ensalada"
     },
-    "calories": 150,
-    "protein": 4,
-    "carbs": 18,
-    "fats": 7,
-    "category": "dinner",
-    "countries": ["France"],
-    "image": "https://images.unsplash.com/photo-1572441710795-1f347b9dbc1e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    "calories": 280,
+    "protein": 18,
+    "carbs": 12,
+    "fats": 16,
+    "category": "breakfast",
+    "countries": ["Nigeria", "Benin", "Ghana"],
+    "image": "/meals/nigeria/31.webp",
     "ingredients": {
       "en-US": [
-        "1 eggplant",
-        "2 zucchini",
-        "2 tomatoes",
-        "1 red pepper",
-        "1 onion",
-        "3 garlic cloves",
-        "herbes de Provence",
-        "olive oil"
+        "200g wara (African tofu)",
+        "1 tbsp olive oil",
+        "1/2 tsp salt",
+        "1 cup lettuce leaves",
+        "1 tomato, sliced",
+        "1/4 onion, sliced"
       ],
       "fr-FR": [
-        "1 aubergine",
-        "2 courgettes",
-        "2 tomates",
-        "1 poivron rouge",
-        "1 oignon",
-        "3 gousses d'ail",
-        "herbes de Provence",
-        "huile d'olive"
+        "200g de wara (tofu africain)",
+        "1 c. à soupe d'huile d'olive",
+        "1/2 c. à café de sel",
+        "1 tasse de feuilles de laitue",
+        "1 tomate, tranchée",
+        "1/4 d'oignon, tranché"
       ],
       "es-ES": [
-        "1 berenjena",
-        "2 calabacines",
-        "2 tomates",
-        "1 pimiento rojo",
-        "1 cebolla",
-        "3 dientes de ajo",
-        "hierbas provenzales",
-        "aceite de oliva"
+        "200g de wara (tofu africano)",
+        "1 cda de aceite de oliva",
+        "1/2 cdta de sal",
+        "1 taza de hojas de lechuga",
+        "1 tomate, en rodajas",
+        "1/4 cebolla, en rodajas"
       ]
     },
     "instructions": {
       "en-US": [
-        "Cut all vegetables into cubes",
-        "Sauté onion and garlic",
-        "Add vegetables layer by layer",
-        "Season with herbs",
-        "Simmer for 45 minutes"
+        "Cut wara into thick slices.",
+        "Brush with olive oil and sprinkle with salt.",
+        "Grill for 5 minutes on each side until golden.",
+        "Serve with lettuce, tomato, and onion salad."
       ],
       "fr-FR": [
-        "Coupez tous les légumes en cubes",
-        "Faites sauter oignon et ail",
-        "Ajoutez légumes couche par couche",
-        "Assaisonnez avec herbes",
-        "Mijotez 45 minutes"
+        "Coupez le wara en tranches épaisses.",
+        "Badigeonnez d'huile d'olive et saupoudrez de sel.",
+        "Grillez 5 minutes de chaque côté jusqu'à doré.",
+        "Servez avec une salade de laitue, tomate et oignon."
       ],
       "es-ES": [
-        "Corte todas las verduras en cubos",
-        "Sofría cebolla y ajo",
-        "Agregue verduras capa por capa",
-        "Sazone con hierbas",
-        "Cocine a fuego lento 45 minutos"
+        "Corte el wara en rebanadas gruesas.",
+        "Unte con aceite de oliva y espolvoree con sal.",
+        "Ase durante 5 minutos por cada lado hasta dorado.",
+        "Sirva con ensalada de lechuga, tomate y cebolla."
+      ]
+    }
+  },
+  {
+    "id": "maize-bread-hibiscus-jam",
+    "name": {
+      "en-US": "Whole Maize Bread with Homemade Hibiscus Jam (Zobo Jam)",
+      "fr-FR": "Pain de Maïs Complet avec Confiture Maison d'Hibiscus (Confiture Zobo)",
+      "es-ES": "Pan Integral de Maíz con Mermelada Casera de Hibisco (Mermelada Zobo)"
+    },
+    "calories": 320,
+    "protein": 9,
+    "carbs": 62,
+    "fats": 6,
+    "category": "breakfast",
+    "countries": ["Nigeria", "Cameroon"],
+    "image": "/meals/nigeria/32.webp",
+    "ingredients": {
+      "en-US": [
+        "2 slices whole maize bread",
+        "2 tbsp hibiscus jam (zobo jam)",
+        "1 tsp honey (optional)"
+      ],
+      "fr-FR": [
+        "2 tranches de pain de maïs complet",
+        "2 c. à soupe de confiture d'hibiscus (zobo)",
+        "1 c. à café de miel (facultatif)"
+      ],
+      "es-ES": [
+        "2 rebanadas de pan integral de maíz",
+        "2 cdas de mermelada de hibisco (zobo)",
+        "1 cdta de miel (opcional)"
+      ]
+    },
+    "instructions": {
+      "en-US": [
+        "Toast the maize bread lightly.",
+        "Spread hibiscus jam evenly on each slice.",
+        "Drizzle with honey if desired.",
+        "Serve warm."
+      ],
+      "fr-FR": [
+        "Faites griller légèrement le pain de maïs.",
+        "Étalez uniformément la confiture d'hibiscus sur chaque tranche.",
+        "Ajoutez un filet de miel si désiré.",
+        "Servez chaud."
+      ],
+      "es-ES": [
+        "Tueste ligeramente el pan de maíz.",
+        "Unte mermelada de hibisco de manera uniforme.",
+        "Agregue miel si lo desea.",
+        "Sirva caliente."
+      ]
+    }
+  },
+  {
+    "id": "sorghum-pap-milk",
+    "name": {
+      "en-US": "Sorghum Pap with Plant-Based Milk",
+      "fr-FR": "Bouillie de Sorgho avec Lait Végétal",
+      "es-ES": "Pap de Sorgo con Leche Vegetal"
+    },
+    "calories": 250,
+    "protein": 7,
+    "carbs": 48,
+    "fats": 4,
+    "category": "breakfast",
+    "countries": ["Nigeria", "Ghana"],
+    "image": "/meals/nigeria/33.webp",
+    "ingredients": {
+      "en-US": [
+        "1/2 cup sorghum flour (fermented)",
+        "1 cup hot water",
+        "1/2 cup plant-based milk (soy, almond, or oat)",
+        "1 tsp honey"
+      ],
+      "fr-FR": [
+        "1/2 tasse de farine de sorgho fermentée",
+        "1 tasse d'eau chaude",
+        "1/2 tasse de lait végétal (soja, amande ou avoine)",
+        "1 c. à café de miel"
+      ],
+      "es-ES": [
+        "1/2 taza de harina de sorgo fermentada",
+        "1 taza de agua caliente",
+        "1/2 taza de leche vegetal (soja, almendra o avena)",
+        "1 cdta de miel"
+      ]
+    },
+    "instructions": {
+      "en-US": [
+        "Mix sorghum flour with a little cold water to form a paste.",
+        "Pour boiling water into the paste while stirring until thick.",
+        "Add plant-based milk and honey.",
+        "Serve warm."
+      ],
+      "fr-FR": [
+        "Mélangez la farine de sorgho avec un peu d'eau froide pour former une pâte.",
+        "Versez de l'eau bouillante dans la pâte en remuant jusqu'à épaississement.",
+        "Ajoutez le lait végétal et le miel.",
+        "Servez chaud."
+      ],
+      "es-ES": [
+        "Mezcle la harina de sorgo con un poco de agua fría para formar una pasta.",
+        "Vierta agua hirviendo en la pasta mientras revuelve hasta espesar.",
+        "Agregue la leche vegetal y la miel.",
+        "Sirva caliente."
+      ]
+    }
+  },
+  {
+    "id": "okra-soup-amala",
+    "name": {
+      "en-US": "Light Okra Soup with Whole-Grain Amala",
+      "fr-FR": "Soupe Légère de Gombo avec Amala de Grains Entiers",
+      "es-ES": "Sopa Ligera de Quimbombó con Amala Integral"
+    },
+    "calories": 330,
+    "protein": 10,
+    "carbs": 60,
+    "fats": 8,
+    "category": "breakfast",
+    "countries": ["Nigeria"],
+    "image": "/meals/nigeria/34.webp",
+    "ingredients": {
+      "en-US": [
+        "1 cup chopped okra",
+        "1 tomato, diced",
+        "1/2 onion, chopped",
+        "1 tbsp vegetable oil",
+        "1/2 tsp salt",
+        "1 cup whole-grain amala"
+      ],
+      "fr-FR": [
+        "1 tasse de gombos hachés",
+        "1 tomate, en dés",
+        "1/2 oignon, haché",
+        "1 c. à soupe d'huile végétale",
+        "1/2 c. à café de sel",
+        "1 tasse d'amala complet"
+      ],
+      "es-ES": [
+        "1 taza de quimbombó picado",
+        "1 tomate, en cubos",
+        "1/2 cebolla, picada",
+        "1 cda de aceite vegetal",
+        "1/2 cdta de sal",
+        "1 taza de amala integral"
+      ]
+    },
+    "instructions": {
+      "en-US": [
+        "Cook okra, tomato, and onion in vegetable oil for 5–7 minutes.",
+        "Season with salt.",
+        "Serve with warm whole-grain amala balls."
+      ],
+      "fr-FR": [
+        "Faites cuire les gombos, la tomate et l'oignon dans l'huile végétale pendant 5 à 7 minutes.",
+        "Assaisonnez avec du sel.",
+        "Servez avec des boules d'amala complet chaud."
+      ],
+      "es-ES": [
+        "Cocine quimbombó, tomate y cebolla en aceite vegetal durante 5–7 minutos.",
+        "Sazone con sal.",
+        "Sirva con bolas de amala integral caliente."
+      ]
+    }
+  },
+  {
+    "id": "yam-pancake-baked",
+    "name": {
+      "en-US": "Baked Grated Yam Pancake",
+      "fr-FR": "Crêpe d'Igname Râpé au Four",
+      "es-ES": "Panqueque de Ñame Rallado al Horno"
+    },
+    "calories": 260,
+    "protein": 5,
+    "carbs": 52,
+    "fats": 4,
+    "category": "breakfast",
+    "countries": ["Nigeria"],
+    "image": "/meals/nigeria/35.webp",
+    "ingredients": {
+      "en-US": [
+        "1 cup grated yam",
+        "1 egg",
+        "1/4 onion, chopped",
+        "1/2 tsp salt",
+        "1 tsp vegetable oil"
+      ],
+      "fr-FR": [
+        "1 tasse d'igname râpé",
+        "1 œuf",
+        "1/4 d'oignon, haché",
+        "1/2 c. à café de sel",
+        "1 c. à café d'huile végétale"
+      ],
+      "es-ES": [
+        "1 taza de ñame rallado",
+        "1 huevo",
+        "1/4 cebolla, picada",
+        "1/2 cdta de sal",
+        "1 cdta de aceite vegetal"
+      ]
+    },
+    "instructions": {
+      "en-US": [
+        "Mix grated yam with egg, onion, and salt.",
+        "Brush a baking tray with oil and spread the mixture.",
+        "Bake at 180°C (350°F) for 20 minutes until golden.",
+        "Serve hot."
+      ],
+      "fr-FR": [
+        "Mélangez l'igname râpé avec l'œuf, l'oignon et le sel.",
+        "Badigeonnez une plaque de cuisson d'huile et étalez le mélange.",
+        "Faites cuire au four à 180°C pendant 20 minutes jusqu'à doré.",
+        "Servez chaud."
+      ],
+      "es-ES": [
+        "Mezcle el ñame rallado con huevo, cebolla y sal.",
+        "Unte una bandeja con aceite y extienda la mezcla.",
+        "Hornee a 180°C (350°F) durante 20 minutos hasta dorado.",
+        "Sirva caliente."
+      ]
+    }
+  },
+  {
+    "id": "vegetable-wrap-flatbread",
+    "name": {
+      "en-US": "Vegetable Wrap in Nigerian Flatbread",
+      "fr-FR": "Wrap de Légumes dans Pain Plat Nigérian",
+      "es-ES": "Wrap de Verduras en Pan Plano Nigeriano"
+    },
+    "calories": 290,
+    "protein": 8,
+    "carbs": 50,
+    "fats": 7,
+    "category": "breakfast",
+    "countries": ["Nigeria", "Ghana"],
+    "image": "/meals/nigeria/36.webp",
+    "ingredients": {
+      "en-US": [
+        "1 Nigerian flatbread (shawarma bread or chapati)",
+        "1/2 cup shredded lettuce",
+        "1/2 cup sliced tomato",
+        "1/4 cup grated carrot",
+        "1 tbsp light mayonnaise or yogurt sauce"
+      ],
+      "fr-FR": [
+        "1 pain plat nigérian (pain shawarma ou chapati)",
+        "1/2 tasse de laitue râpée",
+        "1/2 tasse de tomate tranchée",
+        "1/4 tasse de carotte râpée",
+        "1 c. à soupe de mayonnaise légère ou sauce au yaourt"
+      ],
+      "es-ES": [
+        "1 pan plano nigeriano (pan de shawarma o chapati)",
+        "1/2 taza de lechuga rallada",
+        "1/2 taza de tomate en rodajas",
+        "1/4 taza de zanahoria rallada",
+        "1 cda de mayonesa ligera o salsa de yogur"
+      ]
+    },
+    "instructions": {
+      "en-US": [
+        "Warm the flatbread on a pan for 1 minute.",
+        "Spread light mayonnaise or yogurt sauce.",
+        "Add lettuce, tomato, and carrot.",
+        "Roll into a wrap and serve."
+      ],
+      "fr-FR": [
+        "Chauffez le pain plat dans une poêle pendant 1 minute.",
+        "Étalez la mayonnaise légère ou la sauce au yaourt.",
+        "Ajoutez la laitue, la tomate et la carotte.",
+        "Roulez en wrap et servez."
+      ],
+      "es-ES": [
+        "Caliente el pan plano en una sartén durante 1 minuto.",
+        "Unte mayonesa ligera o salsa de yogur.",
+        "Agregue lechuga, tomate y zanahoria.",
+        "Enrolle en forma de wrap y sirva."
+      ]
+    }
+  },
+  {
+    "id": "green-juice-ugu",
+    "name": {
+      "en-US": "Green Juice with Ugu, Pineapple, and Ginger",
+      "fr-FR": "Jus Vert avec Ugu, Ananas et Gingembre",
+      "es-ES": "Jugo Verde con Ugu, Piña y Jengibre"
+    },
+    "calories": 160,
+    "protein": 2,
+    "carbs": 38,
+    "fats": 0,
+    "category": "breakfast",
+    "countries": ["Nigeria"],
+    "image": "/meals/nigeria/37.webp",
+    "ingredients": {
+      "en-US": [
+        "1 cup chopped ugu leaves (fluted pumpkin)",
+        "1 cup diced pineapple",
+        "1 tsp grated ginger",
+        "1/2 cup cold water"
+      ],
+      "fr-FR": [
+        "1 tasse de feuilles d'ugu hachées (courge à crête)",
+        "1 tasse d'ananas en dés",
+        "1 c. à café de gingembre râpé",
+        "1/2 tasse d'eau froide"
+      ],
+      "es-ES": [
+        "1 taza de hojas de ugu picadas (calabaza estriada)",
+        "1 taza de piña en cubos",
+        "1 cdta de jengibre rallado",
+        "1/2 taza de agua fría"
+      ]
+    },
+    "instructions": {
+      "en-US": [
+        "Blend ugu leaves, pineapple, ginger, and cold water until smooth.",
+        "Strain if desired.",
+        "Serve chilled."
+      ],
+      "fr-FR": [
+        "Mixez les feuilles d'ugu, l'ananas, le gingembre et l'eau froide jusqu'à consistance lisse.",
+        "Filtrez si désiré.",
+        "Servez frais."
+      ],
+      "es-ES": [
+        "Licúe hojas de ugu, piña, jengibre y agua fría hasta obtener una mezcla suave.",
+        "Cuele si lo desea.",
+        "Sirva frío."
+      ]
+    }
+  },
+  {
+    "id": "black-eyed-pea-salad",
+    "name": {
+      "en-US": "Black-Eyed Pea Salad with Tomato and Onion",
+      "fr-FR": "Salade de Niébé avec Tomate et Oignon",
+      "es-ES": "Ensalada de Frijol de Ojo Negro con Tomate y Cebolla"
+    },
+    "calories": 210,
+    "protein": 12,
+    "carbs": 34,
+    "fats": 3,
+    "category": "breakfast",
+    "countries": ["Nigeria", "Ghana"],
+    "image": "/meals/nigeria/38.webp",
+    "ingredients": {
+      "en-US": [
+        "1 cup cooked black-eyed peas",
+        "1 tomato, diced",
+        "1/4 onion, chopped",
+        "1 tbsp olive oil",
+        "1/2 tsp salt"
+      ],
+      "fr-FR": [
+        "1 tasse de niébé cuit",
+        "1 tomate, en dés",
+        "1/4 d'oignon, haché",
+        "1 c. à soupe d'huile d'olive",
+        "1/2 c. à café de sel"
+      ],
+      "es-ES": [
+        "1 taza de frijol de ojo negro cocido",
+        "1 tomate, en cubos",
+        "1/4 cebolla, picada",
+        "1 cda de aceite de oliva",
+        "1/2 cdta de sal"
+      ]
+    },
+    "instructions": {
+      "en-US": [
+        "Mix black-eyed peas, tomato, and onion in a bowl.",
+        "Add olive oil and salt, then toss well.",
+        "Serve cold or at room temperature."
+      ],
+      "fr-FR": [
+        "Mélangez le niébé, la tomate et l'oignon dans un bol.",
+        "Ajoutez l'huile d'olive et le sel, puis mélangez bien.",
+        "Servez froid ou à température ambiante."
+      ],
+      "es-ES": [
+        "Mezcle frijol de ojo negro, tomate y cebolla en un tazón.",
+        "Agregue aceite de oliva y sal, mezcle bien.",
+        "Sirva frío o a temperatura ambiente."
+      ]
+    }
+  },
+  {
+    "id": "scrambled-eggs-tomato-pepper",
+    "name": {
+      "en-US": "Scrambled Eggs with Tomato, Onion, and African Pepper",
+      "fr-FR": "Œufs Brouillés avec Tomate, Oignon et Piment Africain",
+      "es-ES": "Huevos Revueltos con Tomate, Cebolla y Pimienta Africana"
+    },
+    "calories": 280,
+    "protein": 14,
+    "carbs": 8,
+    "fats": 22,
+    "category": "breakfast",
+    "countries": ["Nigeria", "Cameroon"],
+    "image": "/meals/nigeria/39.webp",
+    "ingredients": {
+      "en-US": [
+        "2 eggs",
+        "1 tomato, diced",
+        "1/4 onion, chopped",
+        "1 small African pepper (scotch bonnet), chopped",
+        "1 tsp vegetable oil",
+        "1/4 tsp salt"
+      ],
+      "fr-FR": [
+        "2 œufs",
+        "1 tomate, en dés",
+        "1/4 d'oignon, haché",
+        "1 petit piment africain (scotch bonnet), haché",
+        "1 c. à café d'huile végétale",
+        "1/4 c. à café de sel"
+      ],
+      "es-ES": [
+        "2 huevos",
+        "1 tomate, en cubos",
+        "1/4 cebolla, picada",
+        "1 pimiento africano pequeño (scotch bonnet), picado",
+        "1 cdta de aceite vegetal",
+        "1/4 cdta de sal"
+      ]
+    },
+    "instructions": {
+      "en-US": [
+        "Heat oil in a pan, add tomato, onion, and pepper, and cook 3 minutes.",
+        "Beat eggs, add salt, and pour into the pan.",
+        "Scramble until cooked through.",
+        "Serve warm."
+      ],
+      "fr-FR": [
+        "Faites chauffer l'huile dans une poêle, ajoutez la tomate, l'oignon et le piment, et cuisez 3 minutes.",
+        "Battez les œufs, ajoutez le sel et versez dans la poêle.",
+        "Brouillez jusqu'à cuisson complète.",
+        "Servez chaud."
+      ],
+      "es-ES": [
+        "Caliente el aceite en una sartén, agregue tomate, cebolla y pimiento, cocine 3 minutos.",
+        "Bata los huevos, agregue sal y vierta en la sartén.",
+        "Revuelva hasta que estén bien cocidos.",
+        "Sirva caliente."
+      ]
+    }
+  },
+  {
+    "id": "oatmeal-dates-cashews",
+    "name": {
+      "en-US": "Oatmeal Porridge with Dates and Cashew Nuts",
+      "fr-FR": "Bouillie d'Avoine avec Dattes et Noix de Cajou",
+      "es-ES": "Gachas de Avena con Dátiles y Anacardos"
+    },
+    "calories": 310,
+    "protein": 9,
+    "carbs": 54,
+    "fats": 10,
+    "category": "breakfast",
+    "countries": ["Nigeria", "Ghana"],
+    "image": "/meals/nigeria/40.webp",
+    "ingredients": {
+      "en-US": [
+        "1/2 cup rolled oats",
+        "1 cup water or milk",
+        "3 dates, chopped",
+        "2 tbsp cashew nuts",
+        "1 tsp honey"
+      ],
+      "fr-FR": [
+        "1/2 tasse de flocons d'avoine",
+        "1 tasse d'eau ou de lait",
+        "3 dattes, hachées",
+        "2 c. à soupe de noix de cajou",
+        "1 c. à café de miel"
+      ],
+      "es-ES": [
+        "1/2 taza de avena en hojuelas",
+        "1 taza de agua o leche",
+        "3 dátiles, picados",
+        "2 cdas de anacardos",
+        "1 cdta de miel"
+      ]
+    },
+    "instructions": {
+      "en-US": [
+        "Cook oats with water or milk for 5 minutes until soft.",
+        "Stir in chopped dates and honey.",
+        "Top with cashew nuts.",
+        "Serve warm."
+      ],
+      "fr-FR": [
+        "Faites cuire les flocons d'avoine avec de l'eau ou du lait pendant 5 minutes jusqu'à tendreté.",
+        "Ajoutez les dattes hachées et le miel.",
+        "Parsemez de noix de cajou.",
+        "Servez chaud."
+      ],
+      "es-ES": [
+        "Cocine la avena con agua o leche durante 5 minutos hasta que esté suave.",
+        "Agregue los dátiles picados y la miel.",
+        "Cubra con anacardos.",
+        "Sirva caliente."
+      ]
+    }
+  },
+  {
+    "id": "maize-kunu-milk",
+    "name": {
+      "en-US": "Maize Kunu with Skimmed Milk",
+      "fr-FR": "Kunu de Maïs avec Lait Écrémé",
+      "es-ES": "Kunu de Maíz con Leche Desnatada"
+    },
+    "calories": 220,
+    "protein": 6,
+    "carbs": 42,
+    "fats": 2,
+    "category": "breakfast",
+    "countries": ["Nigeria", "Ghana"],
+    "image": "/meals/nigeria/41.webp",
+    "ingredients": {
+      "en-US": [
+        "1/2 cup maize flour",
+        "1 cup hot water",
+        "1/2 cup skimmed milk",
+        "1 tsp sugar (optional)"
+      ],
+      "fr-FR": [
+        "1/2 tasse de farine de maïs",
+        "1 tasse d'eau chaude",
+        "1/2 tasse de lait écrémé",
+        "1 c. à café de sucre (facultatif)"
+      ],
+      "es-ES": [
+        "1/2 taza de harina de maíz",
+        "1 taza de agua caliente",
+        "1/2 taza de leche desnatada",
+        "1 cdta de azúcar (opcional)"
+      ]
+    },
+    "instructions": {
+      "en-US": [
+        "Mix maize flour with a little cold water to form a smooth paste.",
+        "Add hot water gradually while stirring until thick.",
+        "Pour in skimmed milk and stir well.",
+        "Serve warm."
+      ],
+      "fr-FR": [
+        "Mélangez la farine de maïs avec un peu d'eau froide pour obtenir une pâte lisse.",
+        "Ajoutez l'eau chaude progressivement en remuant jusqu'à épaississement.",
+        "Versez le lait écrémé et mélangez bien.",
+        "Servez chaud."
+      ],
+      "es-ES": [
+        "Mezcle la harina de maíz con un poco de agua fría hasta formar una pasta suave.",
+        "Agregue agua caliente gradualmente mientras revuelve hasta espesar.",
+        "Añada la leche desnatada y mezcle bien.",
+        "Sirva caliente."
+      ]
+    }
+  },
+  {
+    "id": "grilled-yam-pepper-sauce",
+    "name": {
+      "en-US": "Grilled Yam with Fresh Pepper Sauce",
+      "fr-FR": "Igname Grillé avec Sauce au Piment Frais",
+      "es-ES": "Ñame a la Parrilla con Salsa de Pimiento Fresco"
+    },
+    "calories": 240,
+    "protein": 3,
+    "carbs": 52,
+    "fats": 1,
+    "category": "breakfast",
+    "countries": ["Nigeria", "Ghana"],
+    "image": "/meals/nigeria/42.webp",
+    "ingredients": {
+      "en-US": [
+        "1 medium yam, peeled and sliced",
+        "1 tbsp vegetable oil",
+        "1/2 tsp salt",
+        "1 small fresh chili pepper, blended",
+        "1 tomato, blended"
+      ],
+      "fr-FR": [
+        "1 igname moyen, pelé et tranché",
+        "1 c. à soupe d'huile végétale",
+        "1/2 c. à café de sel",
+        "1 petit piment frais, mixé",
+        "1 tomate, mixée"
+      ],
+      "es-ES": [
+        "1 ñame mediano, pelado y en rodajas",
+        "1 cda de aceite vegetal",
+        "1/2 cdta de sal",
+        "1 pimiento fresco pequeño, licuado",
+        "1 tomate, licuado"
+      ]
+    },
+    "instructions": {
+      "en-US": [
+        "Brush yam slices with vegetable oil and sprinkle with salt.",
+        "Grill on medium heat for 5-7 minutes per side until tender.",
+        "Blend chili and tomato to make fresh pepper sauce.",
+        "Serve yam with sauce on top."
+      ],
+      "fr-FR": [
+        "Badigeonnez les tranches d'igname d'huile végétale et saupoudrez de sel.",
+        "Grillez à feu moyen 5-7 minutes de chaque côté jusqu'à tendreté.",
+        "Mixez le piment et la tomate pour faire la sauce au piment frais.",
+        "Servez l'igname avec la sauce dessus."
+      ],
+      "es-ES": [
+        "Unte las rodajas de ñame con aceite vegetal y espolvoree sal.",
+        "Ase a fuego medio 5-7 minutos por cada lado hasta que estén tiernos.",
+        "Licúe el pimiento y el tomate para hacer la salsa de pimiento fresco.",
+        "Sirva el ñame con la salsa encima."
+      ]
+    }
+  },
+  {
+    "id": "sweet-potato-flatbread-bean-sauce",
+    "name": {
+      "en-US": "Sweet Potato Flatbread with Bean Sauce",
+      "fr-FR": "Pain Plat de Patate Douce avec Sauce aux Haricots",
+      "es-ES": "Pan Plano de Batata con Salsa de Frijoles"
+    },
+    "calories": 300,
+    "protein": 9,
+    "carbs": 60,
+    "fats": 4,
+    "category": "breakfast",
+    "countries": ["Nigeria"],
+    "image": "/meals/nigeria/43.webp",
+    "ingredients": {
+      "en-US": [
+        "1 medium sweet potato, boiled and mashed",
+        "1 cup all-purpose flour",
+        "1/2 tsp salt",
+        "1/2 cup cooked beans (black-eyed peas or brown beans)",
+        "1 tsp palm oil or vegetable oil"
+      ],
+      "fr-FR": [
+        "1 patate douce moyenne, bouillie et écrasée",
+        "1 tasse de farine tout usage",
+        "1/2 c. à café de sel",
+        "1/2 tasse de haricots cuits (niébé ou haricots bruns)",
+        "1 c. à café d'huile de palme ou végétale"
+      ],
+      "es-ES": [
+        "1 batata mediana, hervida y triturada",
+        "1 taza de harina de trigo",
+        "1/2 cdta de sal",
+        "1/2 taza de frijoles cocidos (frijol de ojo negro o frijoles marrones)",
+        "1 cdta de aceite de palma o vegetal"
+      ]
+    },
+    "instructions": {
+      "en-US": [
+        "Mix mashed sweet potato with flour and salt to form a dough.",
+        "Roll into flatbreads and cook on a non-stick pan for 3-4 minutes per side.",
+        "Heat beans with a little oil to make a sauce.",
+        "Serve flatbread with bean sauce."
+      ],
+      "fr-FR": [
+        "Mélangez la patate douce écrasée avec la farine et le sel pour former une pâte.",
+        "Roulez en pains plats et cuisez dans une poêle antiadhésive 3-4 minutes de chaque côté.",
+        "Chauffez les haricots avec un peu d'huile pour faire une sauce.",
+        "Servez le pain plat avec la sauce aux haricots."
+      ],
+      "es-ES": [
+        "Mezcle la batata triturada con harina y sal para formar una masa.",
+        "Forme panes planos y cocine en sartén antiadherente 3-4 minutos por lado.",
+        "Caliente los frijoles con un poco de aceite para hacer la salsa.",
+        "Sirva el pan plano con la salsa de frijoles."
+      ]
+    }
+  },
+  {
+    "id": "shredded-chicken-sandwich",
+    "name": {
+      "en-US": "Shredded Chicken Sandwich with Local Vegetables",
+      "fr-FR": "Sandwich de Poulet Effiloché avec Légumes Locaux",
+      "es-ES": "Sándwich de Pollo Desmenuzado con Verduras Locales"
+    },
+    "calories": 350,
+    "protein": 25,
+    "carbs": 40,
+    "fats": 10,
+    "category": "breakfast",
+    "countries": ["Nigeria", "Ghana"],
+    "image": "/meals/nigeria/44.webp",
+    "ingredients": {
+      "en-US": [
+        "2 slices whole wheat bread",
+        "1/2 cup cooked shredded chicken",
+        "1/4 cup chopped lettuce",
+        "1/4 tomato, sliced",
+        "1 tsp mayonnaise or yogurt"
+      ],
+      "fr-FR": [
+        "2 tranches de pain complet",
+        "1/2 tasse de poulet cuit effiloché",
+        "1/4 tasse de laitue hachée",
+        "1/4 tomate, tranchée",
+        "1 c. à café de mayonnaise ou yaourt"
+      ],
+      "es-ES": [
+        "2 rebanadas de pan integral",
+        "1/2 taza de pollo cocido desmenuzado",
+        "1/4 taza de lechuga picada",
+        "1/4 tomate, en rodajas",
+        "1 cdta de mayonesa o yogur"
+      ]
+    },
+    "instructions": {
+      "en-US": [
+        "Toast the bread lightly.",
+        "Mix shredded chicken with mayonnaise.",
+        "Layer lettuce and tomato on bread.",
+        "Add chicken mixture and assemble sandwich.",
+        "Serve immediately."
+      ],
+      "fr-FR": [
+        "Grillez légèrement le pain.",
+        "Mélangez le poulet effiloché avec la mayonnaise.",
+        "Disposez la laitue et la tomate sur le pain.",
+        "Ajoutez le mélange de poulet et assemblez le sandwich.",
+        "Servez immédiatement."
+      ],
+      "es-ES": [
+        "Tueste ligeramente el pan.",
+        "Mezcle el pollo desmenuzado con mayonesa.",
+        "Coloque la lechuga y el tomate sobre el pan.",
+        "Agregue la mezcla de pollo y arme el sándwich.",
+        "Sirva inmediatamente."
+      ]
+    }
+  },
+  {
+    "id": "light-nigerian-corn-pancake",
+    "name": {
+      "en-US": "Light Nigerian Corn Pancake",
+      "fr-FR": "Crêpe Légère de Maïs Nigérian",
+      "es-ES": "Panqueque Ligero de Maíz Nigeriano"
+    },
+    "calories": 230,
+    "protein": 6,
+    "carbs": 45,
+    "fats": 4,
+    "category": "breakfast",
+    "countries": ["Nigeria"],
+    "image": "/meals/nigeria/45.webp",
+    "ingredients": {
+      "en-US": [
+        "1/2 cup cornmeal",
+        "1/2 cup water",
+        "1 egg",
+        "1/4 tsp salt",
+        "1 tsp vegetable oil"
+      ],
+      "fr-FR": [
+        "1/2 tasse de semoule de maïs",
+        "1/2 tasse d'eau",
+        "1 œuf",
+        "1/4 c. à café de sel",
+        "1 c. à café d'huile végétale"
+      ],
+      "es-ES": [
+        "1/2 taza de harina de maíz",
+        "1/2 taza de agua",
+        "1 huevo",
+        "1/4 cdta de sal",
+        "1 cdta de aceite vegetal"
+      ]
+    },
+    "instructions": {
+      "en-US": [
+        "Mix cornmeal with water, egg, and salt to form a batter.",
+        "Heat oil on a pan.",
+        "Pour batter into small rounds and cook 2–3 minutes per side.",
+        "Serve warm."
+      ],
+      "fr-FR": [
+        "Mélangez la semoule de maïs avec l'eau, l'œuf et le sel pour former une pâte.",
+        "Chauffez l'huile dans une poêle.",
+        "Versez la pâte en petits ronds et cuisez 2–3 minutes de chaque côté.",
+        "Servez chaud."
+      ],
+      "es-ES": [
+        "Mezcle la harina de maíz con agua, huevo y sal para formar una masa.",
+        "Caliente el aceite en una sartén.",
+        "Vierta la masa en pequeños círculos y cocine 2–3 minutos por lado.",
+        "Sirva caliente."
+      ]
+    }
+  },
+  {
+    "id": "baked-sweet-potato-bean-sauce",
+    "name": {
+      "en-US": "Baked Sweet Potato with Light Bean Sauce",
+      "fr-FR": "Patate Douce au Four avec Sauce aux Haricots Légère",
+      "es-ES": "Batata Dulce Horneada con Salsa de Frijoles Ligera"
+    },
+    "calories": 280,
+    "protein": 8,
+    "carbs": 58,
+    "fats": 3,
+    "category": "breakfast",
+    "countries": ["Nigeria"],
+    "image": "/meals/nigeria/46.webp",
+    "ingredients": {
+      "en-US": [
+        "1 medium sweet potato, washed and halved",
+        "1/2 cup cooked beans (black-eyed peas or brown beans)",
+        "1 tsp vegetable oil",
+        "1/4 tsp salt",
+        "1 small onion, chopped"
+      ],
+      "fr-FR": [
+        "1 patate douce moyenne, lavée et coupée en deux",
+        "1/2 tasse de haricots cuits (niébé ou haricots bruns)",
+        "1 c. à café d'huile végétale",
+        "1/4 c. à café de sel",
+        "1 petit oignon, haché"
+      ],
+      "es-ES": [
+        "1 batata mediana, lavada y partida por la mitad",
+        "1/2 taza de frijoles cocidos (frijol de ojo negro o frijoles marrones)",
+        "1 cdta de aceite vegetal",
+        "1/4 cdta de sal",
+        "1 cebolla pequeña, picada"
+      ]
+    },
+    "instructions": {
+      "en-US": [
+        "Bake sweet potato at 200°C (400°F) for 30–35 minutes until tender.",
+        "Heat oil in a pan, sauté onion, add cooked beans, and salt to make sauce.",
+        "Serve baked sweet potato with bean sauce on top."
+      ],
+      "fr-FR": [
+        "Faites cuire la patate douce au four à 200°C pendant 30-35 minutes jusqu'à tendreté.",
+        "Chauffez l'huile dans une poêle, faites revenir l'oignon, ajoutez les haricots cuits et le sel pour faire la sauce.",
+        "Servez la patate douce avec la sauce aux haricots dessus."
+      ],
+      "es-ES": [
+        "Hornee la batata a 200°C durante 30–35 minutos hasta que esté tierna.",
+        "Caliente el aceite en una sartén, sofría la cebolla, agregue los frijoles cocidos y la sal para hacer la salsa.",
+        "Sirva la batata horneada con la salsa de frijoles encima."
+      ]
+    }
+  },
+  {
+    "id": "zobo-juice-dates-snacks",
+    "name": {
+      "en-US": "Hibiscus (Zobo) Juice Sweetened with Dates Served with Light Snacks",
+      "fr-FR": "Jus d'Hibiscus (Zobo) Sucré aux Dattes avec Encas Légers",
+      "es-ES": "Jugo de Hibisco (Zobo) Endulzado con Dátiles Servido con Bocadillos Ligeros"
+    },
+    "calories": 120,
+    "protein": 1,
+    "carbs": 28,
+    "fats": 0,
+    "category": "breakfast",
+    "countries": ["Nigeria"],
+    "image": "/meals/nigeria/47.webp",
+    "ingredients": {
+      "en-US": [
+        "1 cup dried hibiscus petals (Zobo)",
+        "3 dates, pitted",
+        "3 cups water",
+        "Light snacks like roasted peanuts or plantain chips"
+      ],
+      "fr-FR": [
+        "1 tasse de pétales d'hibiscus séchés (Zobo)",
+        "3 dattes dénoyautées",
+        "3 tasses d'eau",
+        "Encas légers comme cacahuètes grillées ou chips de plantain"
+      ],
+      "es-ES": [
+        "1 taza de pétalos de hibisco secos (Zobo)",
+        "3 dátiles sin hueso",
+        "3 tazas de agua",
+        "Bocadillos ligeros como maní tostado o chips de plátano"
+      ]
+    },
+    "instructions": {
+      "en-US": [
+        "Boil hibiscus petals in water for 10 minutes.",
+        "Blend with dates until smooth.",
+        "Strain and chill in refrigerator.",
+        "Serve with light snacks."
+      ],
+      "fr-FR": [
+        "Faites bouillir les pétales d'hibiscus dans l'eau pendant 10 minutes.",
+        "Mixez avec les dattes jusqu'à obtenir une consistance lisse.",
+        "Filtrez et réfrigérez.",
+        "Servez avec des encas légers."
+      ],
+      "es-ES": [
+        "Hierva los pétalos de hibisco en agua durante 10 minutos.",
+        "Licúe con los dátiles hasta obtener una mezcla suave.",
+        "Cuele y enfríe en el refrigerador.",
+        "Sirva con bocadillos ligeros."
+      ]
+    }
+  },
+  {
+    "id": "boiled-black-eyed-peas-tomato-sauce",
+    "name": {
+      "en-US": "Boiled Black-Eyed Peas with Fresh Tomato Sauce",
+      "fr-FR": "Niébé Bouilli avec Sauce Tomate Fraîche",
+      "es-ES": "Frijoles de Ojo Negro Hervidos con Salsa de Tomate Fresca"
+    },
+    "calories": 230,
+    "protein": 12,
+    "carbs": 40,
+    "fats": 2,
+    "category": "breakfast",
+    "countries": ["Nigeria", "Ghana"],
+    "image": "/meals/nigeria/48.webp",
+    "ingredients": {
+      "en-US": [
+        "1 cup black-eyed peas, soaked and boiled",
+        "2 medium tomatoes, blended",
+        "1 small onion, chopped",
+        "1 tsp vegetable oil",
+        "1/4 tsp salt"
+      ],
+      "fr-FR": [
+        "1 tasse de niébé, trempé et bouilli",
+        "2 tomates moyennes, mixées",
+        "1 petit oignon, haché",
+        "1 c. à café d'huile végétale",
+        "1/4 c. à café de sel"
+      ],
+      "es-ES": [
+        "1 taza de frijoles de ojo negro, remojados y hervidos",
+        "2 tomates medianos, licuados",
+        "1 cebolla pequeña, picada",
+        "1 cdta de aceite vegetal",
+        "1/4 cdta de sal"
+      ]
+    },
+    "instructions": {
+      "en-US": [
+        "Cook black-eyed peas until tender.",
+        "Heat oil in a pan, sauté onions, add blended tomatoes and salt.",
+        "Simmer 5 minutes and serve over beans."
+      ],
+      "fr-FR": [
+        "Faites cuire le niébé jusqu'à tendreté.",
+        "Chauffez l'huile dans une poêle, faites revenir l'oignon, ajoutez les tomates mixées et le sel.",
+        "Laissez mijoter 5 minutes et servez sur les haricots."
+      ],
+      "es-ES": [
+        "Cocine los frijoles de ojo negro hasta que estén tiernos.",
+        "Caliente el aceite en una sartén, sofría la cebolla, agregue los tomates licuados y la sal.",
+        "Hierva a fuego lento 5 minutos y sirva sobre los frijoles."
+      ]
+    }
+  },
+  {
+    "id": "whole-coconut-bread-green-tea",
+    "name": {
+      "en-US": "Whole Coconut Nigerian Bread with Green Tea",
+      "fr-FR": "Pain Nigérian à la Noix de Coco avec Thé Vert",
+      "es-ES": "Pan Nigeriano de Coco Integral con Té Verde"
+    },
+    "calories": 310,
+    "protein": 8,
+    "carbs": 58,
+    "fats": 7,
+    "category": "breakfast",
+    "countries": ["Nigeria"],
+    "image": "/meals/nigeria/49.webp",
+    "ingredients": {
+      "en-US": [
+        "2 slices whole coconut bread (homemade or store-bought)",
+        "1 cup brewed green tea",
+        "1 tsp honey (optional)"
+      ],
+      "fr-FR": [
+        "2 tranches de pain à la noix de coco (fait maison ou acheté)",
+        "1 tasse de thé vert infusé",
+        "1 c. à café de miel (facultatif)"
+      ],
+      "es-ES": [
+        "2 rebanadas de pan de coco integral (casero o comprado)",
+        "1 taza de té verde preparado",
+        "1 cdta de miel (opcional)"
+      ]
+    },
+    "instructions": {
+      "en-US": [
+        "Toast the coconut bread lightly.",
+        "Brew green tea and add honey if desired.",
+        "Serve bread with green tea."
+      ],
+      "fr-FR": [
+        "Grillez légèrement le pain à la noix de coco.",
+        "Préparez le thé vert et ajoutez du miel si désiré.",
+        "Servez le pain avec le thé vert."
+      ],
+      "es-ES": [
+        "Tueste ligeramente el pan de coco.",
+        "Prepare el té verde y agregue miel si lo desea.",
+        "Sirva el pan con el té verde."
+      ]
+    }
+  },
+  {
+    "id": "mango-banana-coconut-smoothie-bowl",
+    "name": {
+      "en-US": "Mango, Banana and Coconut Smoothie Bowl",
+      "fr-FR": "Bol Smoothie Mangue, Banane et Noix de Coco",
+      "es-ES": "Tazón de Batido de Mango, Plátano y Coco"
+    },
+    "calories": 280,
+    "protein": 4,
+    "carbs": 60,
+    "fats": 5,
+    "category": "breakfast",
+    "countries": ["Nigeria", "Ghana"],
+    "image": "/meals/nigeria/50.webp",
+    "ingredients": {
+      "en-US": [
+        "1/2 cup mango chunks",
+        "1/2 banana, sliced",
+        "1/4 cup coconut milk",
+        "1 tsp chia seeds (optional)",
+        "1/4 cup granola (optional)"
+      ],
+      "fr-FR": [
+        "1/2 tasse de morceaux de mangue",
+        "1/2 banane, tranchée",
+        "1/4 tasse de lait de coco",
+        "1 c. à café de graines de chia (facultatif)",
+        "1/4 tasse de granola (facultatif)"
+      ],
+      "es-ES": [
+        "1/2 taza de trozos de mango",
+        "1/2 plátano, en rodajas",
+        "1/4 taza de leche de coco",
+        "1 cdta de semillas de chía (opcional)",
+        "1/4 taza de granola (opcional)"
+      ]
+    },
+    "instructions": {
+      "en-US": [
+        "Blend mango, banana, and coconut milk until smooth.",
+        "Pour into a bowl, top with chia seeds and granola if desired.",
+        "Serve immediately."
+      ],
+      "fr-FR": [
+        "Mixez la mangue, la banane et le lait de coco jusqu'à consistance lisse.",
+        "Versez dans un bol, ajoutez les graines de chia et le granola si désiré.",
+        "Servez immédiatement."
+      ],
+      "es-ES": [
+        "Licúe mango, plátano y leche de coco hasta obtener una mezcla suave.",
+        "Vierta en un tazón, agregue semillas de chía y granola si lo desea.",
+        "Sirva inmediatamente."
       ]
     }
   }
