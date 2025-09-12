@@ -25,9 +25,10 @@ export default function Settings() {
     age: '',
     weight: '',
     height: '',
-    sex: '',
-    activityLevel: '',
-    goal: ''
+    targetWeight: '',
+    gender: '',
+    exerciseLevel: '',
+    diet: [] as string[]
   });
   const [isSaving, setIsSaving] = useState(false);
   // Plan system removed - no longer needed
@@ -35,30 +36,18 @@ export default function Settings() {
   // Plan system removed
 
   useEffect(() => {
-    // Load existing user data from localStorage and state
-    const savedUserData = localStorage.getItem('userData');
-    let userData = state.userData;
-    
-    if (savedUserData) {
-      try {
-        const parsedData = JSON.parse(savedUserData);
-        userData = { ...userData, ...parsedData };
-      } catch (error) {
-        console.error('Error parsing saved user data:', error);
-      }
-    }
-    
-    // Also check userProfile from state for onboarding data
+    // Load data from state userProfile only
     const userProfile = state.userData?.userProfile;
     
     setFormData({
-      name: userData.name || userProfile?.name || '',
-      age: userData.age?.toString() || userProfile?.age?.toString() || '',
-      weight: userData.weight?.toString() || userProfile?.weight?.toString() || '',
-      height: userData.height?.toString() || userProfile?.height?.toString() || '',
-      sex: userData.sex || userProfile?.gender || '',
-      activityLevel: userData.activityLevel || userProfile?.exerciseLevel || '',
-      goal: userData.goal || userProfile?.goal || ''
+      name: userProfile?.name || '',
+      age: userProfile?.age?.toString() || '',
+      weight: userProfile?.weight?.toString() || '',
+      height: userProfile?.height?.toString() || '',
+      targetWeight: userProfile?.targetWeight?.toString() || '',
+      gender: userProfile?.gender || '',
+      exerciseLevel: userProfile?.exerciseLevel || '',
+      diet: userProfile?.diet || []
     });
   }, [state.userData]);
 
@@ -74,30 +63,17 @@ export default function Settings() {
     try {
       const updatedData = {
         name: formData.name,
-        age: formData.age ? parseInt(formData.age) : undefined,
-        weight: formData.weight ? parseFloat(formData.weight) : undefined,
-        height: formData.height ? parseFloat(formData.height) : undefined,
-        sex: formData.sex,
-        activityLevel: formData.activityLevel,
-        goal: formData.goal
+        age: formData.age ? parseInt(formData.age) : 0,
+        weight: formData.weight ? parseFloat(formData.weight) : 0,
+        height: formData.height ? parseFloat(formData.height) : 0,
+        targetWeight: formData.targetWeight ? parseFloat(formData.targetWeight) : 0,
+        gender: formData.gender as 'male' | 'female' | 'other',
+        exerciseLevel: formData.exerciseLevel as 'sedentary' | 'light' | 'moderate' | 'active' | 'very_active',
+        diet: formData.diet
       };
       
       // Save to context
       updateUserProfile(updatedData);
-      
-      // Save to localStorage for persistence
-      const existingData = localStorage.getItem('userData');
-      let userData = {};
-      if (existingData) {
-        try {
-          userData = JSON.parse(existingData);
-        } catch (error) {
-          console.error('Error parsing existing user data:', error);
-        }
-      }
-      
-      const mergedData = { ...userData, ...updatedData };
-      localStorage.setItem('userData', JSON.stringify(mergedData));
       
       // Show success message (you can integrate with your toast system)
       alert('Settings saved successfully!');
@@ -182,14 +158,15 @@ export default function Settings() {
                 />
               </div>
               <div>
-                <Label htmlFor="sex">{t('onboarding.fields.gender')}</Label>
-                <Select value={formData.sex} onValueChange={(value) => handleInputChange('sex', value)}>
+                <Label htmlFor="gender">{t('onboarding.fields.gender')}</Label>
+                <Select value={formData.gender} onValueChange={(value) => handleInputChange('gender', value)}>
                   <SelectTrigger>
                     <SelectValue placeholder={t('onboarding.fields.gender')} />
                   </SelectTrigger>
                   <SelectContent>
                     <SelectItem value="male">{t('onboarding.fields.genderOptions.male')}</SelectItem>
                     <SelectItem value="female">{t('onboarding.fields.genderOptions.female')}</SelectItem>
+                    <SelectItem value="other">{t('onboarding.fields.genderOptions.other')}</SelectItem>
                   </SelectContent>
                 </Select>
               </div>
@@ -207,14 +184,14 @@ export default function Settings() {
           <CardContent className="space-y-4">
             <div className="grid grid-cols-2 gap-4">
               <div>
-                <Label htmlFor="weight">{t('onboarding.fields.targetWeight')}</Label>
+                <Label htmlFor="weight">{t('onboarding.fields.weight')}</Label>
                 <Input
                   id="weight"
                   type="number"
                   step="0.1"
                   value={formData.weight}
                   onChange={(e) => handleInputChange('weight', e.target.value)}
-                  placeholder={t('onboarding.fields.targetWeightPlaceholder')}
+                  placeholder={t('onboarding.fields.weightPlaceholder')}
                 />
               </div>
               <div>
@@ -227,6 +204,18 @@ export default function Settings() {
                   placeholder={t('onboarding.fields.heightPlaceholder')}
                 />
               </div>
+            </div>
+            
+            <div>
+              <Label htmlFor="targetWeight">{t('onboarding.fields.targetWeight')}</Label>
+              <Input
+                id="targetWeight"
+                type="number"
+                step="0.1"
+                value={formData.targetWeight}
+                onChange={(e) => handleInputChange('targetWeight', e.target.value)}
+                placeholder={t('onboarding.fields.targetWeightPlaceholder')}
+              />
             </div>
           </CardContent>
         </Card>
@@ -252,29 +241,17 @@ export default function Settings() {
           </CardHeader>
           <CardContent className="space-y-4">
             <div>
-              <Label htmlFor="activityLevel">{t('onboarding.fields.exerciseLevel')}</Label>
-              <Select value={formData.activityLevel} onValueChange={(value) => handleInputChange('activityLevel', value)}>
+              <Label htmlFor="exerciseLevel">{t('onboarding.fields.exerciseLevel')}</Label>
+              <Select value={formData.exerciseLevel} onValueChange={(value) => handleInputChange('exerciseLevel', value)}>
                 <SelectTrigger>
                   <SelectValue placeholder={t('onboarding.fields.exerciseLevel')} />
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="sedentary">{t('onboarding.fields.exerciseOptions.sedentary')}</SelectItem>
+                  <SelectItem value="light">{t('onboarding.fields.exerciseOptions.light')}</SelectItem>
                   <SelectItem value="moderate">{t('onboarding.fields.exerciseOptions.moderate')}</SelectItem>
                   <SelectItem value="active">{t('onboarding.fields.exerciseOptions.active')}</SelectItem>
-                </SelectContent>
-              </Select>
-            </div>
-            
-            <div>
-              <Label htmlFor="goal">{t('onboarding.fields.diet')}</Label>
-              <Select value={formData.goal} onValueChange={(value) => handleInputChange('goal', value)}>
-                <SelectTrigger>
-                  <SelectValue placeholder={t('onboarding.fields.diet')} />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="lose">Perder Peso</SelectItem>
-                  <SelectItem value="maintain">Manter Peso</SelectItem>
-                  <SelectItem value="gain">Ganhar Peso</SelectItem>
+                  <SelectItem value="very_active">{t('onboarding.fields.exerciseOptions.very_active')}</SelectItem>
                 </SelectContent>
               </Select>
             </div>

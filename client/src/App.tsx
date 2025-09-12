@@ -1,9 +1,9 @@
 import React from "react";
-import { Router, Route, Switch } from "wouter";
+import { Router, Route, Switch, useLocation } from "wouter";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "./components/ui/toaster";
 import { ThemeProvider } from "./components/ThemeProvider";
-import { AppProvider } from "./contexts/AppContext";
+import { AppProvider, useApp } from "./contexts/AppContext";
 import BottomNavigation from "./components/BottomNavigation";
 import { FloatingActionButton } from "./components/FloatingActionButton";
 
@@ -27,9 +27,25 @@ import NotFound from "./pages/not-found";
 
 const queryClient = new QueryClient();
 
+function OnboardingRedirect() {
+  const { state } = useApp();
+  const [, setLocation] = useLocation();
+
+  React.useEffect(() => {
+    // Check if user has completed onboarding
+    if (!state.isOnboarded && !state.userData.userProfile.name) {
+      // Redirect to onboarding for first-time users
+      setLocation("/onboarding");
+    }
+  }, [state.isOnboarded, state.userData.userProfile.name, setLocation]);
+
+  return null;
+}
+
 function AppContent() {
   return (
     <div className="min-h-screen bg-background">
+      <OnboardingRedirect />
       <main className="pb-20">
         <Switch>
           <Route path="/" component={Dashboard} />

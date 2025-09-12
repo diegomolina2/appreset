@@ -5,11 +5,14 @@ const USER_DATA_KEY = "user_data";
 export const defaultUserData: UserData = {
   userProfile: {
     name: "",
-    age: null,
-    height: null,
-    weight: null,
-    language: "en-NG",
-    darkMode: false,
+    age: 0,
+    height: 0,
+    weight: 0,
+    targetWeight: 0,
+    gender: "other",
+    exerciseLevel: "sedentary",
+    diet: [],
+    language: "en-US",
   },
   favorites: {
     exercises: [],
@@ -29,9 +32,21 @@ export const defaultUserData: UserData = {
  */
 export function loadUserData(): UserData {
   try {
-    const data = localStorage.getItem(USER_DATA_KEY);
+    // Try to load from the current key first
+    let data = localStorage.getItem(USER_DATA_KEY);
     if (data) {
       return JSON.parse(data) as UserData;
+    }
+    
+    // Migration: Try to load from legacy "userData" key and migrate
+    data = localStorage.getItem("userData");
+    if (data) {
+      const userData = JSON.parse(data) as UserData;
+      // Migrate to new key
+      saveUserData(userData);
+      // Remove old key
+      localStorage.removeItem("userData");
+      return userData;
     }
   } catch (err) {
     console.error("Error loading user data:", err);
@@ -149,23 +164,10 @@ export function getCurrentStreak(dates: string[]): number {
   return streak;
 }
 
-export const getUserData = (): UserData => {
-  const data = localStorage.getItem("userData");
-  if (!data) {
-    return defaultUserData;
-  }
-  try {
-    return JSON.parse(data);
-  } catch {
-    return defaultUserData;
-  }
-};
+// Removed getUserData and clearUserDataStorage as they used inconsistent storage keys.
+// Use loadUserData and clearUserData instead for consistent key usage.
 
 export const getCurrentStreakValue = (): number => {
-  const userData = getUserData();
+  const userData = loadUserData();
   return userData.streaks?.current || 0;
-};
-
-export const clearUserDataStorage = (): void => {
-  localStorage.removeItem("userData");
 };

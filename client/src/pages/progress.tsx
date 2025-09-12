@@ -38,6 +38,7 @@ import {
   Download,
   Upload,
   Utensils,
+  User,
 } from "lucide-react";
 import { useTranslation } from "../hooks/useTranslation";
 import { useApp } from "../contexts/AppContext";
@@ -130,7 +131,7 @@ export default function Progress() {
         ? userData.weights[userData.weights.length - 1].weight
         : null;
 
-    const profileWeight = userData.weight || userData.userProfile?.weight;
+    const profileWeight = userData.userProfile?.weight;
 
     return latestWeight || profileWeight || 70;
   };
@@ -138,15 +139,13 @@ export default function Progress() {
   // Get user's saved profile data
   const getUserProfileData = () => {
     const profile = userData.userProfile || {};
-    const savedData = userData;
 
     return {
       weight: getCurrentUserWeight(),
-      height: savedData.height || profile.height || 175,
-      age: savedData.age || profile.age || 30,
-      sex: savedData.sex || profile.gender || "male",
-      activityLevel:
-        savedData.activityLevel || profile.exerciseLevel || "moderate",
+      height: profile.height || 175,
+      age: profile.age || 30,
+      sex: profile.gender || "male",
+      activityLevel: profile.exerciseLevel || "moderate",
     };
   };
 
@@ -453,6 +452,64 @@ export default function Progress() {
       </header>
 
       <div className="px-4 py-6">
+        {/* User Profile Information Card */}
+        <Card className="mb-6">
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2">
+              <User className="w-5 h-5 text-blue-500" />
+              Personal Information
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              <div className="text-center">
+                <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">
+                  {userData.userProfile?.name || 'No name set'}
+                </div>
+                <div className="text-sm text-gray-600 dark:text-gray-400">Name</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-green-600 dark:text-green-400">
+                  {userData.userProfile?.age || 0}
+                </div>
+                <div className="text-sm text-gray-600 dark:text-gray-400">Age</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-purple-600 dark:text-purple-400">
+                  {getCurrentUserWeight()} kg
+                </div>
+                <div className="text-sm text-gray-600 dark:text-gray-400">Current Weight</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-orange-600 dark:text-orange-400">
+                  {userData.userProfile?.targetWeight || 0} kg
+                </div>
+                <div className="text-sm text-gray-600 dark:text-gray-400">Target Weight</div>
+              </div>
+            </div>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mt-4">
+              <div className="text-center">
+                <div className="text-lg font-semibold text-gray-700 dark:text-gray-300">
+                  {userData.userProfile?.height || 0} cm
+                </div>
+                <div className="text-sm text-gray-600 dark:text-gray-400">Height</div>
+              </div>
+              <div className="text-center">
+                <div className="text-lg font-semibold text-gray-700 dark:text-gray-300 capitalize">
+                  {userData.userProfile?.gender || 'Not set'}
+                </div>
+                <div className="text-sm text-gray-600 dark:text-gray-400">Gender</div>
+              </div>
+              <div className="text-center">
+                <div className="text-lg font-semibold text-gray-700 dark:text-gray-300 capitalize">
+                  {userData.userProfile?.exerciseLevel?.replace('_', ' ') || 'Not set'}
+                </div>
+                <div className="text-sm text-gray-600 dark:text-gray-400">Activity Level</div>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+
         <Tabs defaultValue="journal" className="w-full">
           <TabsList className="grid w-full grid-cols-5">
             <TabsTrigger value="journal">📖 Journal</TabsTrigger>
