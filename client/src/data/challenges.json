@@ -1,161 +1,258 @@
 [
   {
     "id": "14-day-slim-down",
-      "name": {
-      "en-NG": "14-Day Slim Down Challenge",
-      "fr-CI": "Défi Minceur 14 Jours",
-      "en-GH": "14-Day Slim Down Challenge",
-      "en-KE": "14-Day Slim Down Challenge",
-      "en-ZA": "14-Day Slim Down Challenge"
+    "name": {
+      "en-US": "14-Day Slim Down Challenge",
+      "fr-FR": "Défi Minceur 14 Jours",
+      "es-ES": "Desafío de Adelgazamiento 14 Días"
     },
     "description": {
-      "en-NG": "A quick-start weight loss plan with daily tasks to boost metabolism and burn fat.",
-      "fr-CI": "Un plan de perte de poids rapide avec des tâches quotidiennes pour stimuler le métabolisme et brûler les graisses.",
-      "en-GH": "A quick-start weight loss plan with daily tasks to boost metabolism and burn fat.",
-      "en-KE": "A quick-start weight loss plan with daily tasks to boost metabolism and burn fat.",
-      "en-ZA": "A quick-start weight loss plan with daily tasks to boost metabolism and burn fat."
+      "en-US": "A quick-start weight loss plan with daily tasks to boost metabolism and burn fat.",
+      "fr-FR": "Un plan de perte de poids rapide avec des tâches quotidiennes pour stimuler le métabolisme et brûler les graisses.",
+      "es-ES": "Un plan de pérdida de peso rápido con tareas diarias para acelerar el metabolismo y quemar grasa."
     },
     "days": 14,
     "dailyTasks": [
-      { "day": 1, "tasks": ["Log your weight", "Drink at least 2L of water", "Complete 15 min of Jumping Jacks", "Eat Jollof Rice for lunch", "Mark your mood"] },
-  { "day": 2, "tasks": ["Drink 2.5L of water", "Complete 20 squats", "Eat Egusi Soup for dinner", "Avoid sugar", "Log your mood"] },
-  { "day": 3, "tasks": ["Log your weight", "Do 10 push-ups", "Eat Moi Moi for breakfast", "Drink green tea", "Mark your mood"] },
-  { "day": 4, "tasks": ["Drink 2L water", "Complete 1 min plank", "Eat Grilled Tilapia with Attiéké", "Avoid junk food", "Log your mood"] },
-  { "day": 5, "tasks": ["Log your weight", "Complete 15 lunges", "Eat Akara snack", "Drink herbal tea", "Mark your mood"] },
-  { "day": 6, "tasks": ["Drink 2.5L water", "Complete 20 jumping jacks", "Eat Peanut Stew for dinner", "Avoid added sugars", "Log your mood"] },
-  { "day": 7, "tasks": ["Log your weight", "Complete 10 burpees", "Eat Kelewele as snack", "Drink lemon water", "Mark your mood"] },
-  { "day": 8, "tasks": ["Drink 2L water", "Complete 20 squats", "Eat Alloco for lunch", "Avoid processed foods", "Log your mood"] },
-  { "day": 9, "tasks": ["Log your weight", "Complete 15 push-ups", "Eat Abacha (African Salad) for dinner", "Drink green tea", "Mark your mood"] },
-  { "day": 10, "tasks": ["Drink 2.5L water", "Complete 1 min plank", "Eat Yam Porridge", "Avoid sugar", "Log your mood"] },
-  { "day": 11, "tasks": ["Log your weight", "Complete 10 lunges", "Eat Cassava Leaves Stew", "Drink herbal tea", "Mark your mood"] },
-  { "day": 12, "tasks": ["Drink 2L water", "Complete 20 jumping jacks", "Eat Banku & Okro for lunch", "Avoid junk food", "Log your mood"] },
-  { "day": 13, "tasks": ["Log your weight", "Complete 10 burpees", "Eat Fufu with Okra Soup", "Drink lemon water", "Mark your mood"] },
-  { "day": 14, "tasks": ["Drink 2.5L water", "Complete 30 min mixed exercises", "Eat Grilled Chicken with Attiéké", "Reflect on progress", "Celebrate your success!"] }
+      { 
+        "day": 1, 
+        "tasks": {
+          "en-US": ["Log your weight", "Drink at least 2L of water", "Complete 15 min of Jumping Jacks", "Eat Jollof Rice for lunch", "Mark your mood"],
+          "fr-FR": ["Enregistrez votre poids", "Buvez au moins 2L d'eau", "Faites 15 min de jumping jacks", "Mangez du riz Jollof pour le déjeuner", "Notez votre humeur"],
+          "es-ES": ["Registra tu peso", "Bebe al menos 2L de agua", "Completa 15 min de saltos", "Come arroz Jollof para almorzar", "Marca tu estado de ánimo"]
+        }
+      },
+      { 
+        "day": 2, 
+        "tasks": {
+          "en-US": ["Drink 2.5L of water", "Complete 20 squats", "Eat Egusi Soup for dinner", "Avoid sugar", "Log your mood"],
+          "fr-FR": ["Buvez 2,5L d'eau", "Faites 20 squats", "Mangez de la soupe Egusi pour le dîner", "Évitez le sucre", "Enregistrez votre humeur"],
+          "es-ES": ["Bebe 2.5L de agua", "Completa 20 sentadillas", "Come sopa Egusi para cenar", "Evita el azúcar", "Registra tu estado de ánimo"]
+        }
+      },
+      { 
+        "day": 3, 
+        "tasks": {
+          "en-US": ["Log your weight", "Do 10 push-ups", "Eat Moi Moi for breakfast", "Drink green tea", "Mark your mood"],
+          "fr-FR": ["Enregistrez votre poids", "Faites 10 pompes", "Mangez du Moi Moi pour le petit-déjeuner", "Buvez du thé vert", "Notez votre humeur"],
+          "es-ES": ["Registra tu peso", "Haz 10 flexiones", "Come Moi Moi para desayunar", "Bebe té verde", "Marca tu estado de ánimo"]
+        }
+      },
+      { 
+        "day": 4, 
+        "tasks": {
+          "en-US": ["Drink 2L water", "Complete 1 min plank", "Eat Grilled Tilapia with Attiéké", "Avoid junk food", "Log your mood"],
+          "fr-FR": ["Buvez 2L d'eau", "Faites 1 min de planche", "Mangez du tilapia grillé avec attiéké", "Évitez la malbouffe", "Enregistrez votre humeur"],
+          "es-ES": ["Bebe 2L de agua", "Completa 1 min de plancha", "Come tilapia a la parrilla con attiéké", "Evita la comida chatarra", "Registra tu estado de ánimo"]
+        }
+      },
+      { 
+        "day": 5, 
+        "tasks": {
+          "en-US": ["Log your weight", "Complete 15 lunges", "Eat Akara snack", "Drink herbal tea", "Mark your mood"],
+          "fr-FR": ["Enregistrez votre poids", "Faites 15 fentes", "Mangez des beignets Akara", "Buvez une tisane", "Notez votre humeur"],
+          "es-ES": ["Registra tu peso", "Completa 15 zancadas", "Come bocadillo Akara", "Bebe té de hierbas", "Marca tu estado de ánimo"]
+        }
+      },
+      { 
+        "day": 6, 
+        "tasks": {
+          "en-US": ["Drink 2.5L water", "Complete 20 jumping jacks", "Eat Peanut Stew for dinner", "Avoid added sugars", "Log your mood"],
+          "fr-FR": ["Buvez 2,5L d'eau", "Faites 20 jumping jacks", "Mangez un ragoût d'arachides pour le dîner", "Évitez les sucres ajoutés", "Enregistrez votre humeur"],
+          "es-ES": ["Bebe 2.5L de agua", "Completa 20 saltos", "Come estofado de maní para cenar", "Evita azúcares añadidos", "Registra tu estado de ánimo"]
+        }
+      },
+      { 
+        "day": 7, 
+        "tasks": {
+          "en-US": ["Log your weight", "Complete 10 burpees", "Eat Kelewele as snack", "Drink lemon water", "Mark your mood"],
+          "fr-FR": ["Enregistrez votre poids", "Faites 10 burpees", "Mangez du Kelewele comme collation", "Buvez de l'eau citronnée", "Notez votre humeur"],
+          "es-ES": ["Registra tu peso", "Completa 10 burpees", "Come Kelewele como bocadillo", "Bebe agua con limón", "Marca tu estado de ánimo"]
+        }
+      },
+      { 
+        "day": 8, 
+        "tasks": {
+          "en-US": ["Drink 2L water", "Complete 20 squats", "Eat Alloco for lunch", "Avoid processed foods", "Log your mood"],
+          "fr-FR": ["Buvez 2L d'eau", "Faites 20 squats", "Mangez de l'Alloco pour le déjeuner", "Évitez les aliments transformés", "Enregistrez votre humeur"],
+          "es-ES": ["Bebe 2L de agua", "Completa 20 sentadillas", "Come Alloco para almorzar", "Evita alimentos procesados", "Registra tu estado de ánimo"]
+        }
+      },
+      { 
+        "day": 9, 
+        "tasks": {
+          "en-US": ["Log your weight", "Complete 15 push-ups", "Eat Abacha (African Salad) for dinner", "Drink green tea", "Mark your mood"],
+          "fr-FR": ["Enregistrez votre poids", "Faites 15 pompes", "Mangez de l'Abacha (salade africaine) pour le dîner", "Buvez du thé vert", "Notez votre humeur"],
+          "es-ES": ["Registra tu peso", "Completa 15 flexiones", "Come Abacha (ensalada africana) para cenar", "Bebe té verde", "Marca tu estado de ánimo"]
+        }
+      },
+      { 
+        "day": 10, 
+        "tasks": {
+          "en-US": ["Drink 2.5L water", "Complete 1 min plank", "Eat Yam Porridge", "Avoid sugar", "Log your mood"],
+          "fr-FR": ["Buvez 2,5L d'eau", "Faites 1 min de planche", "Mangez de la bouillie d'igname", "Évitez le sucre", "Enregistrez votre humeur"],
+          "es-ES": ["Bebe 2.5L de agua", "Completa 1 min de plancha", "Come papilla de ñame", "Evita el azúcar", "Registra tu estado de ánimo"]
+        }
+      },
+      { 
+        "day": 11, 
+        "tasks": {
+          "en-US": ["Log your weight", "Complete 10 lunges", "Eat Cassava Leaves Stew", "Drink herbal tea", "Mark your mood"],
+          "fr-FR": ["Enregistrez votre poids", "Faites 10 fentes", "Mangez un ragoût de feuilles de manioc", "Buvez une tisane", "Notez votre humeur"],
+          "es-ES": ["Registra tu peso", "Completa 10 zancadas", "Come estofado de hojas de yuca", "Bebe té de hierbas", "Marca tu estado de ánimo"]
+        }
+      },
+      { 
+        "day": 12, 
+        "tasks": {
+          "en-US": ["Drink 2L water", "Complete 20 jumping jacks", "Eat Banku & Okro for lunch", "Avoid junk food", "Log your mood"],
+          "fr-FR": ["Buvez 2L d'eau", "Faites 20 jumping jacks", "Mangez du Banku et Okro pour le déjeuner", "Évitez la malbouffe", "Enregistrez votre humeur"],
+          "es-ES": ["Bebe 2L de agua", "Completa 20 saltos", "Come Banku y Okro para almorzar", "Evita la comida chatarra", "Registra tu estado de ánimo"]
+        }
+      },
+      { 
+        "day": 13, 
+        "tasks": {
+          "en-US": ["Log your weight", "Complete 10 burpees", "Eat Fufu with Okra Soup", "Drink lemon water", "Mark your mood"],
+          "fr-FR": ["Enregistrez votre poids", "Faites 10 burpees", "Mangez du Fufu avec soupe de gombo", "Buvez de l'eau citronnée", "Notez votre humeur"],
+          "es-ES": ["Registra tu peso", "Completa 10 burpees", "Come Fufu con sopa de okra", "Bebe agua con limón", "Marca tu estado de ánimo"]
+        }
+      },
+      { 
+        "day": 14, 
+        "tasks": {
+          "en-US": ["Drink 2.5L water", "Complete 30 min mixed exercises", "Eat Grilled Chicken with Attiéké", "Reflect on progress", "Celebrate your success!"],
+          "fr-FR": ["Buvez 2,5L d'eau", "Faites 30 min d'exercices mixtes", "Mangez du poulet grillé avec attiéké", "Réfléchissez sur vos progrès", "Célébrez votre succès !"],
+          "es-ES": ["Bebe 2.5L de agua", "Completa 30 min de ejercicios mixtos", "Come pollo a la parrilla con attiéké", "Reflexiona sobre tu progreso", "¡Celebra tu éxito!"]
+        }
+      }
     ]
   },
   {
     "id": "7-day-detox",
-      "name": {
-      "en-NG": "7-Day Detox",
-      "fr-CI": "Détox 7 Jours",
-      "en-GH": "7-Day Detox",
-      "en-KE": "7-Day Detox",
-      "en-ZA": "7-Day Detox"
+    "name": {
+      "en-US": "7-Day Detox",
+      "fr-FR": "Détox 7 Jours",
+      "es-ES": "Detox de 7 Días"
     },
     "description": {
-      "en-NG": "Cleanse your body and reset your habits in just 7 days.",
-      "fr-CI": "Nettoyez votre corps et réinitialisez vos habitudes en seulement 7 jours.",
-      "en-GH": "Cleanse your body and reset your habits in just 7 days.",
-      "en-KE": "Cleanse your body and reset your habits in just 7 days.",
-      "en-ZA": "Cleanse your body and reset your habits in just 7 days."
+      "en-US": "Cleanse your body and reset your habits in just 7 days.",
+      "fr-FR": "Nettoyez votre corps et réinitialisez vos habitudes en seulement 7 jours.",
+      "es-ES": "Limpia tu cuerpo y reinicia tus hábitos en solo 7 días."
     },
     "days": 7,
     "dailyTasks": [
-      { "day": 1, "tasks": ["Start day with lemon water", "Eat clean breakfast (Puff-Puff)", "Avoid sugar", "Complete 15 min light exercise", "Reflect on your progress"] },
-  { "day": 2, "tasks": ["Start day with warm water", "Eat Coconut Rice for lunch", "Avoid caffeine", "Complete 20 squats", "Log your mood"] },
-  { "day": 3, "tasks": ["Drink herbal tea", "Eat Beans & Fried Plantain", "Avoid processed foods", "Complete 1 min plank", "Reflect on your progress"] },
-  { "day": 4, "tasks": ["Start with lemon water", "Eat Garri with soup", "Avoid sugar", "Complete 10 push-ups", "Log your mood"] },
-  { "day": 5, "tasks": ["Drink 2L water", "Eat Jollof Rice", "Avoid alcohol", "Complete 20 lunges", "Reflect on your progress"] },
-  { "day": 6, "tasks": ["Start day with warm water", "Eat Attiéké with Fish", "Avoid sugar", "Complete 15 jumping jacks", "Log your mood"] },
-  { "day": 7, "tasks": ["Drink herbal tea", "Eat Peanut Stew", "Complete 30 min light exercise", "Reflect and plan next steps", "Celebrate your detox success!"] }
+      { 
+        "day": 1, 
+        "tasks": {
+          "en-US": ["Start day with lemon water", "Eat clean breakfast (Puff-Puff)", "Avoid sugar", "Complete 15 min light exercise", "Reflect on your progress"],
+          "fr-FR": ["Commencez la journée avec de l'eau citronnée", "Prenez un petit-déjeuner sain (Puff-Puff)", "Évitez le sucre", "Faites 15 min d'exercice léger", "Réfléchissez sur vos progrès"],
+          "es-ES": ["Comienza el día con agua con limón", "Come un desayuno limpio (Puff-Puff)", "Evita el azúcar", "Completa 15 min de ejercicio ligero", "Reflexiona sobre tu progreso"]
+        }
+      },
+      { 
+        "day": 2, 
+        "tasks": {
+          "en-US": ["Start day with warm water", "Eat Coconut Rice for lunch", "Avoid caffeine", "Complete 20 squats", "Log your mood"],
+          "fr-FR": ["Commencez la journée avec de l'eau tiède", "Mangez du riz à la noix de coco pour le déjeuner", "Évitez la caféine", "Faites 20 squats", "Enregistrez votre humeur"],
+          "es-ES": ["Comienza el día con agua tibia", "Come arroz con coco para almorzar", "Evita la cafeína", "Completa 20 sentadillas", "Registra tu estado de ánimo"]
+        }
+      },
+      { 
+        "day": 3, 
+        "tasks": {
+          "en-US": ["Drink green tea", "Eat Fish and Chips (African style) for dinner", "Avoid processed food", "Do 10 min meditation", "Log water intake"],
+          "fr-FR": ["Buvez du thé vert", "Mangez du poisson et des frites (style africain) pour le dîner", "Évitez les aliments transformés", "Faites 10 min de méditation", "Enregistrez votre consommation d'eau"],
+          "es-ES": ["Bebe té verde", "Come pescado y papas fritas (estilo africano) para cenar", "Evita alimentos procesados", "Haz 10 min de meditación", "Registra tu consumo de agua"]
+        }
+      },
+      { 
+        "day": 4, 
+        "tasks": {
+          "en-US": ["Start with herbal tea", "Eat Thieboudienne for lunch", "Avoid alcohol", "Complete 15 min yoga", "Practice gratitude"],
+          "fr-FR": ["Commencez avec une tisane", "Mangez du Thieboudienne pour le déjeuner", "Évitez l'alcool", "Faites 15 min de yoga", "Pratiquez la gratitude"],
+          "es-ES": ["Comienza con té de hierbas", "Come Thieboudienne para almorzar", "Evita el alcohol", "Completa 15 min de yoga", "Practica la gratitud"]
+        }
+      },
+      { 
+        "day": 5, 
+        "tasks": {
+          "en-US": ["Drink detox water", "Eat Pepper Soup for dinner", "Avoid refined sugar", "Take a 20 min walk", "Journal your feelings"],
+          "fr-FR": ["Buvez de l'eau détox", "Mangez de la soupe au poivre pour le dîner", "Évitez le sucre raffiné", "Faites une marche de 20 min", "Tenez un journal de vos sentiments"],
+          "es-ES": ["Bebe agua detox", "Come sopa de pimienta para cenar", "Evita azúcar refinado", "Camina 20 min", "Anota tus sentimientos en un diario"]
+        }
+      },
+      { 
+        "day": 6, 
+        "tasks": {
+          "en-US": ["Morning lemon water", "Eat Grilled Fish with Plantains", "Avoid dairy", "Do 25 min exercise", "Practice deep breathing"],
+          "fr-FR": ["Eau citronnée du matin", "Mangez du poisson grillé avec des bananes plantains", "Évitez les produits laitiers", "Faites 25 min d'exercice", "Pratiquez la respiration profonde"],
+          "es-ES": ["Agua con limón matutina", "Come pescado a la parrilla con plátanos", "Evita lácteos", "Haz 25 min de ejercicio", "Practica respiración profunda"]
+        }
+      },
+      { 
+        "day": 7, 
+        "tasks": {
+          "en-US": ["Final detox water", "Celebrate with healthy Attiéké meal", "Reflect on the week", "Complete 30 min exercise", "Plan your next steps"],
+          "fr-FR": ["Dernière eau détox", "Célébrez avec un repas sain d'attiéké", "Réfléchissez sur la semaine", "Faites 30 min d'exercice", "Planifiez vos prochaines étapes"],
+          "es-ES": ["Agua detox final", "Celebra con una comida saludable de attiéké", "Reflexiona sobre la semana", "Completa 30 min de ejercicio", "Planifica tus próximos pasos"]
+        }
+      }
     ]
   },
   {
-    "id": "30-day-no-sugar",
-      "name": {
-      "en-NG": "30-Day No Sugar",
-      "fr-CI": "30 jours sans sucre",
-      "en-GH": "30-Day No Sugar",
-      "en-KE": "30-Day No Sugar",
-      "en-ZA": "30-Day No Sugar"
+    "id": "30-day-strength",
+    "name": {
+      "en-US": "30-Day Strength Builder",
+      "fr-FR": "Constructeur de Force 30 Jours",
+      "es-ES": "Constructor de Fuerza 30 Días"
     },
     "description": {
-      "en-NG": "Break your sugar habit and boost your health in 30 days.",
-      "fr-CI": "Briser votre habitude de sucre et améliorer votre santé en 30 jours.",
-      "en-GH": "Break your sugar habit and boost your health in 30 days.",
-      "en-KE": "Break your sugar habit and boost your health in 30 days.",
-      "en-ZA": "Break your sugar habit and boost your health in 30 days."
+      "en-US": "Build muscle and increase strength with progressive daily workouts.",
+      "fr-FR": "Développez vos muscles et augmentez votre force avec des entraînements quotidiens progressifs.",
+      "es-ES": "Desarrolla músculo y aumenta la fuerza con entrenamientos diarios progresivos."
     },
     "days": 30,
     "dailyTasks": [
-      { "day": 1, "tasks": ["Log weight", "Drink 2L water", "Replace soda with water", "Eat grilled fish", "Mark your mood"] },
-  { "day": 2, "tasks": ["Eat fruit instead of dessert", "Do 15 min of light cardio", "Drink lemon water", "Log your mood"] },
-  { "day": 3, "tasks": ["Avoid packaged snacks", "Drink herbal tea", "Eat fresh salad", "Log your mood"] },
-  { "day": 4, "tasks": ["Log weight", "Drink 2.5L water", "Eat Peanut Stew", "Walk for 20 minutes", "Mark your mood"] },
-  { "day": 5, "tasks": ["Eat nuts as snack", "Avoid bread", "Do 10 squats", "Log your mood"] },
-  { "day": 6, "tasks": ["Drink green tea", "Eat cassava with vegetables", "Avoid alcohol", "Mark your mood"] },
-  { "day": 7, "tasks": ["Log weight", "Cook at home only", "Do 15 min stretching", "Log your mood"] },
-  { "day": 8, "tasks": ["Drink 2L water", "Eat more vegetables", "Avoid juice", "Log your mood"] },
-  { "day": 9, "tasks": ["Log weight", "Eat grilled chicken", "Complete 20 push-ups", "Mark your mood"] },
-  { "day": 10, "tasks": ["Eat beans & plantain", "Drink lemon water", "Avoid processed food", "Log your mood"] },
-  { "day": 11, "tasks": ["Log weight", "Eat jollof rice", "Do 15 squats", "Log your mood"] },
-  { "day": 12, "tasks": ["Avoid chocolate", "Drink green tea", "Eat fruit salad", "Log your mood"] },
-  { "day": 13, "tasks": ["Log weight", "Do yoga for 20 min", "Eat peanut stew", "Log your mood"] },
-  { "day": 14, "tasks": ["Drink 2.5L water", "Avoid fried foods", "Eat steamed vegetables", "Log your mood"] },
-  { "day": 15, "tasks": ["Log weight", "Eat home-cooked meal", "Do 15 push-ups", "Mark your mood"] },
-  { "day": 16, "tasks": ["Avoid pastries", "Eat grilled tilapia", "Walk 20 min", "Log your mood"] },
-  { "day": 17, "tasks": ["Log weight", "Drink herbal tea", "Eat fufu & okra", "Log your mood"] },
-  { "day": 18, "tasks": ["Eat yam porridge", "Avoid soda", "Stretch 15 min", "Log your mood"] },
-  { "day": 19, "tasks": ["Log weight", "Drink lemon water", "Eat fresh salad", "Log your mood"] },
-  { "day": 20, "tasks": ["Eat cassava leaves stew", "Do squats & lunges", "Log your mood"] },
-  { "day": 21, "tasks": ["Log weight", "Drink green tea", "Eat grilled chicken", "Log your mood"] },
-  { "day": 22, "tasks": ["Avoid sugar drinks", "Eat banku & okro", "Do plank for 1 min", "Log your mood"] },
-  { "day": 23, "tasks": ["Log weight", "Drink 2L water", "Eat peanut stew", "Log your mood"] },
-  { "day": 24, "tasks": ["Eat grilled fish", "Walk 20 min", "Avoid candy", "Log your mood"] },
-  { "day": 25, "tasks": ["Log weight", "Drink herbal tea", "Eat moi moi", "Log your mood"] },
-  { "day": 26, "tasks": ["Eat fresh fruits", "Do yoga", "Avoid biscuits", "Log your mood"] },
-  { "day": 27, "tasks": ["Log weight", "Eat jollof rice", "Drink green tea", "Log your mood"] },
-  { "day": 28, "tasks": ["Avoid desserts", "Eat abacha", "Do 20 squats", "Log your mood"] },
-  { "day": 29, "tasks": ["Log weight", "Eat grilled chicken", "Walk 20 min", "Log your mood"] },
-  { "day": 30, "tasks": ["Drink 2.5L water", "Eat home-cooked meal", "Reflect and celebrate success!", "Log your mood"] }
+      { 
+        "day": 1, 
+        "tasks": {
+          "en-US": ["10 push-ups", "20 squats", "30 sec plank", "Eat protein-rich meal", "Log your workout"],
+          "fr-FR": ["10 pompes", "20 squats", "30 sec de planche", "Mangez un repas riche en protéines", "Enregistrez votre entraînement"],
+          "es-ES": ["10 flexiones", "20 sentadillas", "30 seg de plancha", "Come una comida rica en proteínas", "Registra tu entrenamiento"]
+        }
+      },
+      { 
+        "day": 2, 
+        "tasks": {
+          "en-US": ["12 push-ups", "25 squats", "45 sec plank", "Drink protein shake", "Rest and recover"],
+          "fr-FR": ["12 pompes", "25 squats", "45 sec de planche", "Buvez un shake protéiné", "Reposez-vous et récupérez"],
+          "es-ES": ["12 flexiones", "25 sentadillas", "45 seg de plancha", "Bebe batido de proteínas", "Descansa y recupérate"]
+        }
+      }
     ]
   },
   {
-    "id": "28-day-full-body-reset",
-      "name": {
-      "en-NG": "28-Day Full Body Reset",
-      "fr-CI": "Réinitialisation complète du corps en 28 jours",
-      "en-GH": "28-Day Full Body Reset",
-      "en-KE": "28-Day Full Body Reset",
-      "en-ZA": "28-Day Full Body Reset"
+    "id": "21-day-mindful-eating",
+    "name": {
+      "en-US": "21-Day Mindful Eating",
+      "fr-FR": "Alimentation Consciente 21 Jours",
+      "es-ES": "Alimentación Consciente 21 Días"
     },
     "description": {
-      "en-NG": "Complete body transformation with comprehensive daily tasks.",
-      "fr-CI": "Transformation corporelle complète avec des tâches quotidiennes complètes.",
-      "en-GH": "Complete body transformation with comprehensive daily tasks.",
-      "en-KE": "Complete body transformation with comprehensive daily tasks.",
-      "en-ZA": "Complete body transformation with comprehensive daily tasks."
+      "en-US": "Develop a healthy relationship with food through mindful eating practices.",
+      "fr-FR": "Développez une relation saine avec la nourriture grâce aux pratiques d'alimentation consciente.",
+      "es-ES": "Desarrolla una relación saludable con la comida a través de prácticas de alimentación consciente."
     },
-    "days": 28,
+    "days": 21,
     "dailyTasks": [
-      { "day": 1, "tasks": ["Log weight and measurements", "Drink 2L water", "Complete 10 push-ups", "Eat balanced breakfast", "Plan your week"] },
-  { "day": 2, "tasks": ["Morning stretching routine", "Drink herbal tea", "Complete 20 squats", "Eat protein-rich lunch", "Log your mood"] },
-  { "day": 3, "tasks": ["Log weight", "Drink 2.5L water", "Do 15 lunges", "Eat vegetable-rich dinner", "Practice gratitude"] },
-  { "day": 4, "tasks": ["Complete 1 min plank", "Drink green tea", "Eat whole grains", "Avoid processed foods", "Log your mood"] },
-  { "day": 5, "tasks": ["Log weight", "Complete 15 jumping jacks", "Drink 2L water", "Eat lean protein", "Reflect on progress"] },
-  { "day": 6, "tasks": ["Do yoga session", "Eat colorful vegetables", "Drink herbal tea", "Practice mindfulness", "Log your mood"] },
-  { "day": 7, "tasks": ["Log measurements", "Complete full body workout", "Eat balanced meals", "Plan next week", "Celebrate weekly success"] },
-  { "day": 8, "tasks": ["Morning meditation", "Drink 2.5L water", "Complete 25 squats", "Eat healthy fats", "Journal your thoughts"] },
-  { "day": 9, "tasks": ["Log weight", "Do strength training", "Eat antioxidant-rich foods", "Avoid sugar", "Log your mood"] },
-  { "day": 10, "tasks": ["Complete cardio session", "Drink green smoothie", "Eat whole foods", "Practice breathing exercises", "Reflect on habits"] },
-  { "day": 11, "tasks": ["Log weight", "Do flexibility training", "Drink 2L water", "Eat mindfully", "Practice gratitude"] },
-  { "day": 12, "tasks": ["Complete HIIT workout", "Eat balanced breakfast", "Drink herbal tea", "Avoid processed foods", "Log your mood"] },
-  { "day": 13, "tasks": ["Log weight", "Do resistance training", "Eat protein-rich meals", "Drink 2.5L water", "Practice self-care"] },
-  { "day": 14, "tasks": ["Log measurements", "Complete active recovery", "Eat nutritious foods", "Plan healthy week", "Celebrate bi-weekly progress"] },
-  { "day": 15, "tasks": ["Morning workout", "Drink detox water", "Eat clean meals", "Practice mindfulness", "Log your mood"] },
-  { "day": 16, "tasks": ["Log weight", "Do core strengthening", "Eat whole grains", "Avoid sugary drinks", "Reflect on journey"] },
-  { "day": 17, "tasks": ["Complete endurance training", "Drink green tea", "Eat lean proteins", "Practice stress management", "Log your mood"] },
-  { "day": 18, "tasks": ["Log weight", "Do balance exercises", "Eat colorful vegetables", "Drink 2L water", "Practice gratitude"] },
-  { "day": 19, "tasks": ["Complete strength circuit", "Eat healthy fats", "Drink herbal tea", "Avoid processed foods", "Log your mood"] },
-  { "day": 20, "tasks": ["Log weight", "Do mobility work", "Eat nutrient-dense foods", "Practice mindful eating", "Reflect on changes"] },
-  { "day": 21, "tasks": ["Log measurements", "Complete full body workout", "Eat balanced meals", "Plan final week", "Celebrate three weeks"] },
-  { "day": 22, "tasks": ["Morning yoga", "Drink 2.5L water", "Eat clean breakfast", "Practice meditation", "Log your mood"] },
-  { "day": 23, "tasks": ["Log weight", "Do high-intensity workout", "Eat protein-rich foods", "Avoid sugar", "Practice self-reflection"] },
-  { "day": 24, "tasks": ["Complete cardio session", "Drink green smoothie", "Eat whole foods", "Practice breathing", "Log your mood"] },
-  { "day": 25, "tasks": ["Log weight", "Do strength training", "Eat mindfully", "Drink herbal tea", "Practice gratitude"] },
-  { "day": 26, "tasks": ["Complete conditioning workout", "Eat balanced nutrition", "Drink 2L water", "Avoid processed foods", "Log your mood"] },
-  { "day": 27, "tasks": ["Log weight", "Do recovery exercises", "Eat celebrating meal", "Practice mindfulness", "Reflect on transformation"] },
-  { "day": 28, "tasks": ["Log final measurements", "Complete celebration workout", "Eat balanced meals", "Plan future goals", "Celebrate full transformation!"] }
+      { 
+        "day": 1, 
+        "tasks": {
+          "en-US": ["Eat breakfast without distractions", "Chew each bite 20 times", "Note hunger levels", "Practice gratitude before meals", "Log your eating experience"],
+          "fr-FR": ["Prenez le petit-déjeuner sans distractions", "Mâchez chaque bouchée 20 fois", "Notez vos niveaux de faim", "Pratiquez la gratitude avant les repas", "Enregistrez votre expérience alimentaire"],
+          "es-ES": ["Desayuna sin distracciones", "Mastica cada bocado 20 veces", "Nota los niveles de hambre", "Practica gratitud antes de las comidas", "Registra tu experiencia alimentaria"]
+        }
+      }
     ]
   }
 ]
