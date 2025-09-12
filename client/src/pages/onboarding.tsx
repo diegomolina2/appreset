@@ -62,7 +62,6 @@ export default function Onboarding() {
     } else {
       // Complete onboarding
       updateUserProfile(profile as UserProfile);
-      dispatch({ type: "SET_ONBOARDED", payload: true });
       setLocation("/dashboard");
     }
   };

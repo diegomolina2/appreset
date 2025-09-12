@@ -77,14 +77,21 @@ function appReducer(state: AppState, action: AppAction): AppState {
     case "SET_USER_DATA":
       return { ...state, userData: action.payload };
 
-    case "UPDATE_USER_PROFILE":
+    case "UPDATE_USER_PROFILE": {
+      const updatedUserData = {
+        ...state.userData,
+        userProfile: { ...state.userData.userProfile, ...action.payload },
+      };
+      
+      // Check if onboarding should be considered complete after profile update
+      const hasCompletedOnboarding = !!(updatedUserData.userProfile.name && updatedUserData.userProfile.name.trim());
+      
       return {
         ...state,
-        userData: {
-          ...state.userData,
-          userProfile: { ...state.userData.userProfile, ...action.payload },
-        },
+        userData: updatedUserData,
+        isOnboarded: hasCompletedOnboarding,
       };
+    }
 
     case "SET_LANGUAGE":
       return { ...state, currentLanguage: action.payload };
@@ -323,9 +330,9 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
     const userData = loadUserData();
     dispatch({ type: "SET_USER_DATA", payload: userData });
 
-    if (userData.userProfile.name) {
-      dispatch({ type: "SET_ONBOARDED", payload: true });
-    }
+    // Set onboarded status based on whether user has a name
+    const hasCompletedOnboarding = !!(userData.userProfile.name && userData.userProfile.name.trim());
+    dispatch({ type: "SET_ONBOARDED", payload: hasCompletedOnboarding });
 
     if (userData.userProfile.language) {
       dispatch({
