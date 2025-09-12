@@ -32,12 +32,12 @@ function OnboardingRedirect() {
   const [, setLocation] = useLocation();
 
   React.useEffect(() => {
-    // Check if user has completed onboarding
-    if (!state.isOnboarded && !state.userData.userProfile.name) {
-      // Redirect to onboarding for first-time users
+    // Check if user's name is empty
+    if (!state.userData.userProfile.name) {
+      // Redirect to onboarding when name is empty
       setLocation("/onboarding");
     }
-  }, [state.isOnboarded, state.userData.userProfile.name, setLocation]);
+  }, [state.userData.userProfile.name, setLocation]);
 
   return null;
 }
