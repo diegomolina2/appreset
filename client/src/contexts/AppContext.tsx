@@ -109,6 +109,7 @@ function appReducer(state: AppState, action: AppAction): AppState {
         completedDays: [],
         isActive: true,
         startDate: new Date().toISOString().split("T")[0],
+        language: currentLanguage, // Store the language used when creating the challenge
         dailyTasks: challengeTemplate.dailyTasks.map((task) => {
           // Get the tasks array for the current language
           const languageTasks = task.tasks[currentLanguage] || task.tasks['en-US'] || [];
@@ -139,7 +140,7 @@ function appReducer(state: AppState, action: AppAction): AppState {
 
       const updatedChallenge = { ...challenge };
       const dayTask = updatedChallenge.dailyTasks.find((t) => t.day === day);
-      if (dayTask) {
+      if (dayTask && taskIndex >= 0 && taskIndex < dayTask.completed.length) {
         dayTask.completed[taskIndex] = true;
 
         const allTasksCompleted = dayTask.completed.every((c) => c);
@@ -174,7 +175,7 @@ function appReducer(state: AppState, action: AppAction): AppState {
 
       const updatedChallenge = { ...challenge };
       const dayTask = updatedChallenge.dailyTasks.find((t) => t.day === day);
-      if (dayTask) {
+      if (dayTask && taskIndex >= 0 && taskIndex < dayTask.completed.length) {
         dayTask.completed[taskIndex] = false;
         if (updatedChallenge.completedDays.includes(day)) {
           updatedChallenge.completedDays =

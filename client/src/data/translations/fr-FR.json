@@ -168,7 +168,17 @@
     "ingredients": "Ingrédients",
     "preparation": "Instructions de préparation",
     "noMealsFound": "Aucun repas trouvé",
-    "adjustSearchFilters": "Essayez d'ajuster vos termes de recherche ou filtres"
+    "adjustSearchFilters": "Essayez d'ajuster vos termes de recherche ou filtres",
+    "resultsCount": "{{count}} repas trouvé",
+    "resultsCountPlural": "{{count}} repas trouvés",
+    "view": "Voir",
+    "logMeal": "Enregistrer le repas",
+    "calories": "Calories",
+    "protein": "Protéines",
+    "carbs": "Glucides",
+    "fats": "Graisses",
+    "ingredients": "Ingrédients", 
+    "preparation": "Préparation"
   },
   "progress": {
     "title": "Progression",

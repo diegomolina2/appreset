@@ -24,6 +24,7 @@ export interface Challenge {
   completedDays: number[];
   isActive: boolean;
   startDate?: string;
+  language?: string; // Store the language used when the challenge was created
   accessPlans?: number[];
 }
 

@@ -152,7 +152,17 @@
     "mealCount": "{{count}} comida",
     "mealCountPlural": "{{count}} comidas",
     "noMealsFound": "No se encontraron comidas",
-    "adjustSearchFilters": "Intenta ajustar tus términos de búsqueda o filtros"
+    "adjustSearchFilters": "Intenta ajustar tus términos de búsqueda o filtros",
+    "resultsCount": "{{count}} comida encontrada",
+    "resultsCountPlural": "{{count}} comidas encontradas",
+    "view": "Ver",
+    "logMeal": "Registrar comida",
+    "calories": "Calorías",
+    "protein": "Proteínas",
+    "carbs": "Carbohidratos",
+    "fats": "Grasas",
+    "ingredients": "Ingredientes",
+    "preparation": "Preparación"
   },
   "progress": {
     "title": "Progreso",

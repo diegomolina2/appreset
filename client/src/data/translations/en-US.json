@@ -168,7 +168,17 @@
       "Pro": "Pro"
     },
     "noMealsFound": "No meals found",
-    "adjustSearchFilters": "Try adjusting your search terms or filters"
+    "adjustSearchFilters": "Try adjusting your search terms or filters",
+    "resultsCount": "{{count}} meal found",
+    "resultsCountPlural": "{{count}} meals found",
+    "view": "View",
+    "logMeal": "Log Meal",
+    "calories": "Calories",
+    "protein": "Protein",
+    "carbs": "Carbs", 
+    "fats": "Fats",
+    "ingredients": "Ingredients",
+    "preparation": "Preparation"
   },
   "progress": {
     "title": "Progress",

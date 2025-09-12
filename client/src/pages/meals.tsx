@@ -275,8 +275,8 @@ function Meals() {
             {/* Results Count */}
             <div className="text-sm text-muted-foreground">
               {filteredMeals.length === 1 
-                ? t("meals.mealCount", { count: filteredMeals.length })
-                : t("meals.mealCountPlural", { count: filteredMeals.length })} {t("meals.found")}
+                ? t("meals.resultsCount", { count: filteredMeals.length })
+                : t("meals.resultsCountPlural", { count: filteredMeals.length })}
             </div>
 
             {/* Meals Grid */}

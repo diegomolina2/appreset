@@ -166,7 +166,9 @@ export default function Challenges() {
     // Get today's tasks for the current day
     const currentDay = challenge.currentDay || 1;
     const todayTasks = challenge.dailyTasks && challenge.dailyTasks.find((task: any) => task.day === currentDay);
-    const tasks = todayTasks ? (todayTasks.tasks[currentLanguage] || todayTasks.tasks['en-US'] || []) : [];
+    // Use the same language that was used when the challenge was created to maintain index consistency
+    const challengeLanguage = challenge.language || 'en-US'; 
+    const tasks = todayTasks ? (todayTasks.tasks[challengeLanguage] || todayTasks.tasks['en-US'] || []) : [];
 
     return (
       <Card className="overflow-hidden hover:shadow-xl transition-all duration-300">
