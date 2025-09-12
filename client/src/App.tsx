@@ -27,28 +27,32 @@ import NotFound from "./pages/not-found";
 
 const queryClient = new QueryClient();
 
-function OnboardingRedirect() {
+function DashboardWithOnboardingCheck() {
   const { state } = useApp();
   const [, setLocation] = useLocation();
 
   React.useEffect(() => {
-    // Check if user has completed onboarding
+    // Check if user has completed onboarding only for the root path
     if (!state.isOnboarded) {
-      // Redirect to onboarding for users who haven't completed it
       setLocation("/onboarding");
     }
   }, [state.isOnboarded, setLocation]);
 
+  // If onboarding is complete, render the Dashboard
+  if (state.isOnboarded) {
+    return <Dashboard />;
+  }
+
+  // While checking onboarding status, return null (will redirect)
   return null;
 }
 
 function AppContent() {
   return (
     <div className="min-h-screen bg-background">
-      <OnboardingRedirect />
       <main className="pb-20">
         <Switch>
-          <Route path="/" component={Dashboard} />
+          <Route path="/" component={DashboardWithOnboardingCheck} />
           <Route path="/dashboard" component={Dashboard} />
           <Route path="/challenges" component={Challenges} />
           <Route path="/exercises" component={Exercises} />
