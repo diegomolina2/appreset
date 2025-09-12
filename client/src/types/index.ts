@@ -12,8 +12,12 @@ export interface UserProfile {
 
 export interface Challenge {
   id: string;
-  name: string;
-  description: string;
+  name: {
+    [key: string]: string; // e.g., "en-US": "Challenge Name", "fr-FR": "Nom du Défi"
+  };
+  description: {
+    [key: string]: string; // e.g., "en-US": "Challenge Description", "fr-FR": "Description du Défi"
+  };
   days: number;
   dailyTasks: DailyTask[];
   currentDay: number;
@@ -25,7 +29,9 @@ export interface Challenge {
 
 export interface DailyTask {
   day: number;
-  tasks: string[];
+  tasks: {
+    [key: string]: string[]; // e.g., "en-US": ["Task 1", "Task 2"], "fr-FR": ["Tâche 1", "Tâche 2"]
+  };
   completed: boolean[];
 }
 

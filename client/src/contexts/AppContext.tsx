@@ -102,16 +102,21 @@ function appReducer(state: AppState, action: AppAction): AppState {
       );
       if (!challengeTemplate) return state;
 
+      const currentLanguage = state.currentLanguage;
       const newChallenge: Challenge = {
         ...challengeTemplate,
         currentDay: 1,
         completedDays: [],
         isActive: true,
         startDate: new Date().toISOString().split("T")[0],
-        dailyTasks: challengeTemplate.dailyTasks.map((task) => ({
-          ...task,
-          completed: new Array(task.tasks.length).fill(false),
-        })),
+        dailyTasks: challengeTemplate.dailyTasks.map((task) => {
+          // Get the tasks array for the current language
+          const languageTasks = task.tasks[currentLanguage] || task.tasks['en-US'] || [];
+          return {
+            ...task,
+            completed: new Array(languageTasks.length).fill(false),
+          };
+        }),
       };
 
       return {
@@ -226,30 +231,10 @@ function appReducer(state: AppState, action: AppAction): AppState {
 
     case "LOG_MOOD": {
       const today = new Date().toISOString().split('T')[0];
-    const time = new Date().toLocaleTimeString();
-
-    const moodLog = {
-      date: today,
-      mood: action.payload,
-      time,
-      timestamp: new Date().toISOString()
-    };
-
-    const existingLogs = state.userData.moodLogs || [];
-    const updatedLogs = [...existingLogs, moodLog];
-
-    const updatedUserData = {
-      ...state.userData,
-      moodLogs: updatedLogs
-    };
-
-    dispatch({
-      type: 'SET_USER_DATA',
-      payload: updatedUserData
-    });
-
-    // Save to localStorage
-    localStorage.setItem('userData', JSON.stringify(updatedUserData));
+      const updatedMoods = state.userData.moods.filter(
+        (m) => m.date !== today,
+      );
+      updatedMoods.push({ date: today, mood: action.payload });
 
       return {
         ...state,
@@ -262,31 +247,17 @@ function appReducer(state: AppState, action: AppAction): AppState {
 
     case "LOG_WATER": {
       const today = new Date().toISOString().split('T')[0];
-    const time = new Date().toLocaleTimeString();
+      const time = new Date().toLocaleTimeString();
 
-    const waterLog = {
-      id: `water-${Date.now()}`,
-      date: today,
-      liters: action.payload,
-      time,
-      timestamp: new Date().toISOString()
-    };
+      const waterLogEntry = {
+        id: `water-${Date.now()}`,
+        date: today,
+        liters: action.payload,
+        time,
+        timestamp: new Date().toISOString()
+      };
 
-    const existingLogs = state.userData.waterLog || [];
-    const updatedLogs = [...existingLogs, waterLog];
-
-    const updatedUserData = {
-      ...state.userData,
-      waterLog: updatedLogs
-    };
-
-    dispatch({
-      type: 'SET_USER_DATA',
-      payload: updatedUserData
-    });
-
-    // Save to localStorage
-    localStorage.setItem('userData', JSON.stringify(updatedUserData));
+      const updatedWaterLog = [...state.userData.waterLog, waterLogEntry];
 
       return {
         ...state,
@@ -413,60 +384,11 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
   };
 
   const logMood = (mood: number) => {
-    const today = new Date().toISOString().split('T')[0];
-    const time = new Date().toLocaleTimeString();
-
-    const moodLog = {
-      date: today,
-      mood,
-      time,
-      timestamp: new Date().toISOString()
-    };
-
-    const existingLogs = state.userData.moodLogs || [];
-    const updatedLogs = [...existingLogs, moodLog];
-
-    const updatedUserData = {
-      ...state.userData,
-      moodLogs: updatedLogs
-    };
-
-    dispatch({
-      type: 'SET_USER_DATA',
-      payload: updatedUserData
-    });
-
-    // Save to localStorage
-    localStorage.setItem('userData', JSON.stringify(updatedUserData));
+    dispatch({ type: "LOG_MOOD", payload: mood });
   };
 
   const logWater = (liters: number) => {
-    const today = new Date().toISOString().split('T')[0];
-    const time = new Date().toLocaleTimeString();
-
-    const waterLog = {
-      id: `water-${Date.now()}`,
-      date: today,
-      liters,
-      time,
-      timestamp: new Date().toISOString()
-    };
-
-    const existingLogs = state.userData.waterLog || [];
-    const updatedLogs = [...existingLogs, waterLog];
-
-    const updatedUserData = {
-      ...state.userData,
-      waterLog: updatedLogs
-    };
-
-    dispatch({
-      type: 'SET_USER_DATA',
-      payload: updatedUserData
-    });
-
-    // Save to localStorage
-    localStorage.setItem('userData', JSON.stringify(updatedUserData));
+    dispatch({ type: "LOG_WATER", payload: liters });
   };
 
   const logCalories = (calories: number) => {

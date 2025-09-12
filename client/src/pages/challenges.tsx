@@ -31,6 +31,22 @@ export default function Challenges() {
     return '';
   };
 
+  // Helper function to get translated text from multilingual objects
+  const getTranslatedText = (textObj: { [key: string]: string } | string, fallback?: string): string => {
+    if (typeof textObj === 'string') return textObj;
+    if (typeof textObj === 'object' && textObj !== null) {
+      // Try current language first
+      const currentLang = state.currentLanguage;
+      if (textObj[currentLang]) return textObj[currentLang];
+      // Fallback to en-US
+      if (textObj['en-US']) return textObj['en-US'];
+      // Fallback to first available language
+      const firstKey = Object.keys(textObj)[0];
+      if (firstKey && textObj[firstKey]) return textObj[firstKey];
+    }
+    return fallback || '';
+  };
+
   // All challenges are accessible - no need to check access
 
   const { userData } = state;
@@ -144,6 +160,13 @@ export default function Challenges() {
 
   const ActiveChallengeCard = ({ challenge }: { challenge: any }) => {
     const progress = (challenge.completedDays.length / challenge.days) * 100;
+    const { state, completeTask, uncompleteTask } = useApp();
+    const { currentLanguage } = useTranslation();
+    
+    // Get today's tasks for the current day
+    const currentDay = challenge.currentDay || 1;
+    const todayTasks = challenge.dailyTasks && challenge.dailyTasks.find((task: any) => task.day === currentDay);
+    const tasks = todayTasks ? (todayTasks.tasks[currentLanguage] || todayTasks.tasks['en-US'] || []) : [];
 
     return (
       <Card className="overflow-hidden hover:shadow-xl transition-all duration-300">
@@ -151,11 +174,11 @@ export default function Challenges() {
 
         <CardHeader className="pb-4">
           <CardTitle className="text-xl font-bold text-gray-800 dark:text-gray-100 mb-2">
-            {typeof challenge.name === 'string' ? challenge.name : safeTranslate(challenge.name)}
+            {getTranslatedText(challenge.name)}
           </CardTitle>
 
           <p className="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">
-            {typeof challenge.description === 'string' ? challenge.description : safeTranslate(challenge.description)}
+            {getTranslatedText(challenge.description)}
           </p>
 
           <Progress value={progress} className="mb-4" />
@@ -167,7 +190,51 @@ export default function Challenges() {
         </CardHeader>
 
         <CardContent className="pt-0">
-          <Button className="w-full" onClick={() => restartChallenge(challenge.id)}>
+          {/* Today's Tasks Checklist */}
+          <div className="mb-6">
+            <h4 className="font-semibold text-gray-800 dark:text-gray-100 mb-3">
+              {t('challenges.todaysTasks')} - {t('challenges.day')} {currentDay}
+            </h4>
+            <div className="space-y-3">
+              {tasks.map((task: string, taskIndex: number) => {
+                const isCompleted = todayTasks?.completed && todayTasks.completed[taskIndex];
+                return (
+                  <div key={taskIndex} className="flex items-start gap-3 p-3 bg-gray-50 dark:bg-gray-800 rounded-lg">
+                    <button
+                      onClick={() => {
+                        if (isCompleted) {
+                          uncompleteTask(challenge.id, currentDay, taskIndex);
+                        } else {
+                          completeTask(challenge.id, currentDay, taskIndex);
+                        }
+                      }}
+                      className={`flex-shrink-0 w-5 h-5 rounded border-2 flex items-center justify-center transition-colors ${
+                        isCompleted
+                          ? 'bg-green-500 border-green-500 text-white'
+                          : 'border-gray-300 dark:border-gray-600 hover:border-green-400'
+                      }`}
+                      data-testid={`task-checkbox-${taskIndex}`}
+                    >
+                      {isCompleted && <CheckCircle className="w-3 h-3" />}
+                    </button>
+                    <span className={`text-sm ${
+                      isCompleted 
+                        ? 'text-gray-500 dark:text-gray-400 line-through' 
+                        : 'text-gray-700 dark:text-gray-300'
+                    }`}>
+                      {task}
+                    </span>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+
+          <Button 
+            className="w-full" 
+            onClick={() => handleRestartChallenge(challenge.id)}
+            data-testid="restart-challenge-button"
+          >
             {t('challenges.restartChallenge')}
           </Button>
         </CardContent>
@@ -217,11 +284,11 @@ export default function Challenges() {
             <Card key={challenge.id} className="overflow-hidden hover:shadow-xl transition-all duration-300">
               <CardHeader>
                 <CardTitle>
-                  {typeof challenge.name === 'string' ? challenge.name : safeTranslate(challenge.name)}
+                  {getTranslatedText(challenge.name)}
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <p>{typeof challenge.description === 'string' ? challenge.description : safeTranslate(challenge.description)}</p>
+                <p>{getTranslatedText(challenge.description)}</p>
                 <Badge variant="secondary" className="mt-2">
                   {safeTranslate('completedBadge') || 'Concluído'}
                 </Badge>
