@@ -102,7 +102,13 @@
     "noActiveChallenges": "You have no active challenges.",
     "noCompletedChallenges": "No challenges completed yet.",
     "upgradeMessage": "Your access has expired. Upgrade your plan to continue.",
-    "upgradeAction": "Upgrade Plan"
+    "upgradeAction": "Upgrade Plan",
+    "daysCompleted": "Days Completed",
+    "active": "Active",
+    "available": "Available",
+    "tasks": "tasks",
+    "challengeProgress": "Challenge Progress", 
+    "done": "Done"
   },
   "exercises": {
     "title": "Exercise Library",

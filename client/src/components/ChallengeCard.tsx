@@ -25,8 +25,11 @@ export function ChallengeCard({ challenge, onStart, onContinue, onViewDetails, o
 
   const progressPercentage = (challenge.completedDays.length / challenge.days) * 100;
   const currentDayTasks = challenge.dailyTasks.find(task => task.day === challenge.currentDay);
+  // Use the same language that was used when the challenge was created to maintain index consistency
+  const challengeLanguage = challenge.language || 'en-US'; 
+  const tasks = currentDayTasks ? (currentDayTasks.tasks[challengeLanguage] || currentDayTasks.tasks['en-US'] || []) : [];
   const completedTasksCount = currentDayTasks?.completed.filter(Boolean).length || 0;
-  const totalTasksCount = currentDayTasks?.tasks.length || 0;
+  const totalTasksCount = tasks.length;
   const allTasksCompleted = completedTasksCount === totalTasksCount && totalTasksCount > 0;
 
   // Check if all tasks were just completed
@@ -138,7 +141,7 @@ export function ChallengeCard({ challenge, onStart, onContinue, onViewDetails, o
               <h4 className="font-semibold text-gray-800 dark:text-gray-100">
                 {t('challenges.todayTasks')}:
               </h4>
-              {currentDayTasks?.tasks.map((task, index) => (
+              {tasks.map((task, index) => (
                 <div key={index} className="flex items-center justify-between p-3 bg-gray-50 dark:bg-gray-800 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
                   <div className="flex items-center space-x-3">
                     <button

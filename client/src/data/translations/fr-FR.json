@@ -102,7 +102,13 @@
     "noActiveChallenges": "Vous n'avez aucun défi actif.",
     "noCompletedChallenges": "Aucun défi complété pour le moment.",
     "upgradeMessage": "Votre accès a expiré. Mettez à jour votre plan pour continuer.",
-    "upgradeAction": "Mettre à jour le plan"
+    "upgradeAction": "Mettre à jour le plan",
+    "daysCompleted": "Jours Complétés",
+    "active": "Actif",
+    "available": "Disponible",
+    "tasks": "tâches",
+    "challengeProgress": "Progrès du Défi",
+    "done": "Terminé"
   },
   "exercises": {
     "title": "Bibliothèque d'exercices",
